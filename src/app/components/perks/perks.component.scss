@@ -1,0 +1,15 @@
+.card-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.card {
+  width: 250px;
+  border: 1pt solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+p {
+  margin: 0;
+}

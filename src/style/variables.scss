@@ -1,0 +1,105 @@
+$dark-text: #25282d;
+$gray-text: #4c525b;
+$light-text: white;
+$background: #f4f6f8;
+
+$palette-map: (
+  primary: (
+    300: #81a5ff, // for mat-slide-toggle bug
+    600: #3e00ff, // --
+    900: #3520bf, // --
+    light: #eaecff,
+    light-accent: #81a5ff,
+    default: #3e00ff,
+    dark: #1801b4,
+    contrast: (
+      light: $dark-text,
+      light-accent: $dark-text,
+      default: $light-text,
+      dark: $light-text,
+    )
+  ),
+  success: (
+    light: #ebf7ef,
+    light-accent: #80e1ae,
+    default: #1deea1,
+    dark: #029260,
+    contrast: (
+      light: $dark-text,
+      light-accent: $dark-text,
+      default: $light-text,
+      dark: $light-text,
+    )
+  ),
+  warn: (
+    light: #fceec0,
+    light-accent: #ffc74d,
+    default: #ffb007,
+    dark: #d35800,
+    contrast: (
+      light: $dark-text,
+      light-accent: $dark-text,
+      default: $dark-text,
+      dark: $light-text,
+    )
+  ),
+  error: (
+    light: #fce8ea,
+    light-accent: #e7828d,
+    default: #e41429,
+    dark: #a10515,
+    contrast: (
+      light: $dark-text,
+      light-accent: $dark-text,
+      default: $light-text,
+      dark: $light-text,
+    )
+  ),
+  "gray": (
+    lighter: #f4f4f4,
+    light: #ebedf1,
+    light-accent: #c6c6c6,
+    default: #8b8f9b,
+    dark: #636773,
+    contrast: (
+      lighter: $dark-text,
+      light: $dark-text,
+      light-accent: $dark-text,
+      default: $dark-text,
+      dark: $light-text,
+    )
+  )
+);
+
+$primaryLight: map-get($palette-map, primary, light);
+$primaryLightAccent: map-get($palette-map, primary, light-accent);
+$primary: map-get($palette-map, primary, default);
+$primaryDark: map-get($palette-map, primary, dark);
+
+$successLight: map-get($palette-map, success, light);
+$successLightAccent: map-get($palette-map, success, light-accent);
+$success: map-get($palette-map, success, default);
+$successDark: map-get($palette-map, success, dark);
+
+$warnLight: map-get($palette-map, warn, light);
+$warnLightAccent: map-get($palette-map, warn, light-accent);
+$warn: map-get($palette-map, warn, default);
+$warnDark: map-get($palette-map, warn, dark);
+
+$errorLight: map-get($palette-map, error, light);
+$errorLightAccent: map-get($palette-map, error, light-accent);
+$error: map-get($palette-map, error, default);
+$errorDark: map-get($palette-map, error, dark);
+
+$grayLighter: map-get($palette-map, "gray", lighter);
+$grayLight: map-get($palette-map, "gray", light);
+$grayLightAccent: map-get($palette-map, "gray", light-accent);
+$gray: map-get($palette-map, "gray", default);
+$grayDark: map-get($palette-map, "gray", dark);
+
+$teal: #00ded4;
+$cyan: #00deff;
+$lightPurple: #bba5ff;
+
+
+$borderRadius: 6pt;
