@@ -1,12 +1,9 @@
 <h3>Origin</h3>
-<select>
-  <option>Brotherhood of Steel</option>
-  <option>Ghoul</option>
-  <option>Super Mutant</option>
-  <option>Mister Handy</option>
-  <option>Survivor</option>
-  <option>Vault Dweller</option>
-</select>
+<form #form="ngForm">
+  <select name="eh" [(ngModel)]="selectedOrigin">
+    <option *ngFor="let option of options" [value]="option.name">{{option.name}}</option>
+  </select>
+</form>
 
-<p>Trait: The Chain that Binds</p>
-<p>You gain one additional Tag skill, which must be one of Energy Weapons, Science, or Repair.</p>
+<p>Trait: {{selectedOrigin.trait.name}}</p>
+<p>{{selectedOrigin.trait.description}}</p>

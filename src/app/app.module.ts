@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,7 +26,9 @@ import { OriginComponent } from './components/origin/origin.component';
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSelectModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
