@@ -13,6 +13,8 @@ import { StatsComponent } from './components/stats/stats.component';
 import { PerksComponent } from './components/perks/perks.component';
 import { OriginComponent } from './components/origin/origin.component';
 import { SelectComponent } from './components/form/select/select.component';
+import { InputComponent } from './components/form/input/input.component';
+import { NumberInputComponent } from './components/form/number-input/number-input.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SelectComponent } from './components/form/select/select.component';
     StatsComponent,
     PerksComponent,
     OriginComponent,
-    SelectComponent
+    SelectComponent,
+    InputComponent,
+    NumberInputComponent
   ],
   imports: [
     BrowserModule,

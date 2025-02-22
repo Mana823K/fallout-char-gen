@@ -1,13 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-select',
+  selector: 'app-input',
   standalone: false,
-  templateUrl: './select.component.html',
-  styleUrl: './select.component.scss'
+  templateUrl: './input.component.html',
+  styleUrl: './input.component.scss'
 })
-export class SelectComponent {
-  @Input() options: string[] = [];
+export class InputComponent {
   @Input() value: string = "";
   @Output() valueChange = new EventEmitter<string>();
   @Input() inputName!: string;

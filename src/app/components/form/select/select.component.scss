@@ -1,7 +1,7 @@
 @import "../../../../style/variables.scss";
 
 .select {
-  height: $inputHeight;
+  height: 20pt;
   padding: 2pt;
-  border-radius: 6pt;
+  border-radius: $borderRadius;
 }

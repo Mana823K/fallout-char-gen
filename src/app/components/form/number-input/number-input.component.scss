@@ -1,0 +1,22 @@
+@import "../../../../style/variables.scss";
+@import "../../../../style/colors.scss";
+
+.input {
+  font-size: 12pt;
+  height: 16pt;
+  width: 50px;
+  padding: 2pt;
+  padding-left: 5pt;
+  border: 1px solid $dark-text;
+  border-radius: $borderRadius;
+  box-shadow: none;
+}
+
+.input:active {
+  border-color: $primary;
+  outline: 1px solid $primary;
+}
+.input:focus {
+  border-color: $primary;
+  outline: 1px solid $primary;
+}
