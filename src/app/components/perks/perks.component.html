@@ -1,35 +1,9 @@
 <h3>Perks</h3>
 <div class="card-container">
-  <div class="card">
-    <p>Action Boy / Girl</p>
-    <p>Ranks: 1</p>
-    <p>Requirements: None</p>
-    <p>When you spend AP to take an additional major action, you do not suffer the
-      increased skill test difficulty during your
-      second action.</p>
-  </div>
-  <div class="card">
-    <p>Action Boy / Girl</p>
-    <p>Ranks: 1</p>
-    <p>Requirements: None</p>
-    <p>When you spend AP to take an additional major action, you do not suffer the
-      increased skill test difficulty during your
-      second action.</p>
-  </div>
-  <div class="card">
-    <p>Action Boy / Girl</p>
-    <p>Ranks: 1</p>
-    <p>Requirements: None</p>
-    <p>When you spend AP to take an additional major action, you do not suffer the
-      increased skill test difficulty during your
-      second action.</p>
-  </div>
-  <div class="card">
-    <p>Action Boy / Girl</p>
-    <p>Ranks: 1</p>
-    <p>Requirements: None</p>
-    <p>When you spend AP to take an additional major action, you do not suffer the
-      increased skill test difficulty during your
-      second action.</p>
+  <div *ngFor="let perk of perkOptions" class="card">
+    <p>{{perk.name}}</p>
+    <p>Ranks: {{perk.maxRanks}}</p>
+    <p>Requirements: {{perk.requirements}}</p>
+    <p>{{perk.description}}</p>
   </div>
 </div>

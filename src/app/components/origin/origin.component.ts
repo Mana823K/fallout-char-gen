@@ -10,9 +10,10 @@ import { CharacterService } from '../../services/character.service';
   styleUrl: './origin.component.scss'
 })
 export class OriginComponent {
-  get options(): Origin[] { return this.dataService.origins; }
-  get selectedOrigin(): Origin  { return this.characterService.character.origin; }
-  set selectedOrigin(value: string) { this.characterService.character.origin = this.options.find(x => x.name == value) ?? new Origin() }
+  get options(): string[] { return this.dataService.origins.map(x => x.name); }
+  get origin(): Origin  { return this.characterService.origin; }
+  set origin(value: string) { this.characterService.origin = this.dataService.origins.find(x => x.name == value) ?? new Origin() }
 
   constructor(private dataService: DataService, private characterService: CharacterService) { }
+
 }

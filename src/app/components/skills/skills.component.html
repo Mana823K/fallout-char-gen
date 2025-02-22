@@ -1,41 +1,9 @@
 <h3>Skills</h3>
 
-<div style="display: flex; align-items: anchor-center;">
-  <mat-checkbox></mat-checkbox>
-  <p>Athletics</p>
+<div *ngFor="let skill of skills" class="skill">
+  <mat-checkbox [(ngModel)]="skill.isTagged" ></mat-checkbox>
+  <p>{{skill.name}}</p>
   <mat-icon>keyboard_arrow_left</mat-icon>
-  <input type="number" style="width: 30px;">
-  <mat-icon>keyboard_arrow_right</mat-icon>
-</div>
-
-<div style="display: flex; align-items: anchor-center;">
-  <mat-checkbox></mat-checkbox>
-  <p>Barter</p>
-  <mat-icon>keyboard_arrow_left</mat-icon>
-  <input type="number" style="width: 30px;">
-  <mat-icon>keyboard_arrow_right</mat-icon>
-</div>
-
-<div style="display: flex; align-items: anchor-center;">
-  <mat-checkbox></mat-checkbox>
-  <p>Big Guns</p>
-  <mat-icon>keyboard_arrow_left</mat-icon>
-  <input type="number" style="width: 30px;">
-  <mat-icon>keyboard_arrow_right</mat-icon>
-</div>
-
-<div style="display: flex; align-items: anchor-center;">
-  <mat-checkbox></mat-checkbox>
-  <p>Energy Weapons</p>
-  <mat-icon>keyboard_arrow_left</mat-icon>
-  <input type="number" style="width: 30px;">
-  <mat-icon>keyboard_arrow_right</mat-icon>
-</div>
-
-<div style="display: flex; align-items: anchor-center;">
-  <mat-checkbox></mat-checkbox>
-  <p>Explosives</p>
-  <mat-icon>keyboard_arrow_left</mat-icon>
-  <input type="number" style="width: 30px;">
+  <input [(ngModel)]="skill.ranks" type="number" class="skill-input">
   <mat-icon>keyboard_arrow_right</mat-icon>
 </div>

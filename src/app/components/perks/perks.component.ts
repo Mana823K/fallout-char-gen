@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { CharacterService } from '../../services/character.service';
+import { DataService } from '../../services/data.service';
+import { Perk } from '../../models/perk';
 
 @Component({
   selector: 'app-perks',
@@ -7,5 +10,9 @@ import { Component } from '@angular/core';
   styleUrl: './perks.component.scss'
 })
 export class PerksComponent {
+  get perkOptions(): Perk[] { return this.dataService.perks; }
+  get perks(): Perk[] { return this.characterService.perks; }
+  set perks(value: Perk[]) { this.characterService.perks = value; }
 
+  constructor(private characterService: CharacterService, private dataService: DataService) { }
 }

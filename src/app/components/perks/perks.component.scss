@@ -1,11 +1,17 @@
+@import "./../../../style/variables.scss";
+
 .card-container {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
 .card {
-  width: 250px;
-  border: 1pt solid black;
+  background-color: $primaryLight;
+  color: $primaryDark;
+  width: 200px;
+  border: 1pt solid $primary;
   border-radius: 1rem;
   padding: 1rem;
 }

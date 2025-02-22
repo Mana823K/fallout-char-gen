@@ -1,9 +1,7 @@
 <h3>Origin</h3>
 <form #form="ngForm">
-  <select name="eh" [(ngModel)]="selectedOrigin">
-    <option *ngFor="let option of options" [value]="option.name">{{option.name}}</option>
-  </select>
+  <app-select inputName="originSelect" [value]="origin.name" (valueChange)="origin = $event" [options]="options"></app-select>
 </form>
 
-<p>Trait: {{selectedOrigin.trait.name}}</p>
-<p>{{selectedOrigin.trait.description}}</p>
+<p>Trait: {{origin.trait.name}}</p>
+<p>{{origin.trait.description}}</p>

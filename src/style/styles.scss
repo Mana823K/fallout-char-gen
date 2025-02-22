@@ -1,1 +1,6 @@
 @import "./theme.scss";
+@import "./colors.scss";
+
+body {
+  background-color: $background;
+}

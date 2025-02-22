@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CharacterService } from '../../services/character.service';
-import { Character } from '../../models/character';
+import { Special } from '../../models/special';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-special-attributes',
@@ -9,8 +10,7 @@ import { Character } from '../../models/character';
   styleUrl: './special-attributes.component.scss'
 })
 export class SpecialAttributesComponent {
-  get character(): Character { return this.characterService.character; }
-  set character(value: Character) { this.characterService.character = value; }
+  get special(): Special { return this.characterService.special; }
 
   constructor(private characterService: CharacterService) { }
 }

@@ -2,7 +2,8 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-@import "./variables.scss";
+@use "sass:map";
+@import "./colors.scss";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -13,18 +14,18 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$custom-primary: mat.m2-define-palette(map-get($palette-map, primary), default, light, dark);
-$custom-success: mat.m2-define-palette(map-get($palette-map, success), default, light, dark);
+$custom-primary: mat.m2-define-palette(map.get($palette-map, primary), default, light, dark);
+$custom-accent: mat.m2-define-palette(map.get($palette-map, accent), default, light, dark);
 
 // The warn palette is optional (defaults to red).
-$custom-error: mat.m2-define-palette(map-get($palette-map, error), default, light, dark);
+$custom-error: mat.m2-define-palette(map.get($palette-map, error), default, light, dark);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
 $custom-theme: mat.m2-define-light-theme((
   color: (
     primary: $custom-primary,
-    accent: $custom-primary,
+    accent: $custom-accent,
     warn: $custom-error,
   )
 ));

@@ -12,6 +12,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { PerksComponent } from './components/perks/perks.component';
 import { OriginComponent } from './components/origin/origin.component';
+import { SelectComponent } from './components/form/select/select.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { OriginComponent } from './components/origin/origin.component';
     SkillsComponent,
     StatsComponent,
     PerksComponent,
-    OriginComponent
+    OriginComponent,
+    SelectComponent
   ],
   imports: [
     BrowserModule,
