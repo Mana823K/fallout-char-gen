@@ -36,9 +36,7 @@ import { NumberInputComponent } from './components/form/number-input/number-inpu
     MatSelectModule,
     FormsModule
   ],
-  providers: [
-    provideClientHydration(withEventReplay())
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

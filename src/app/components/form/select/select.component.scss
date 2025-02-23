@@ -1,7 +1,17 @@
 @import "../../../../style/variables.scss";
+@import "../../../../style/colors.scss";
 
 .select {
   height: 20pt;
   padding: 2pt;
   border-radius: $borderRadius;
+}
+
+.select:active {
+  border-color: $primary;
+  outline: 1px solid $primary;
+}
+.select:focus {
+  border-color: $primary;
+  outline: 1px solid $primary;
 }

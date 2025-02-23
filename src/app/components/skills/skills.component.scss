@@ -1,8 +1,17 @@
 .skill {
   display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.skill-name {
+  display: flex;
   align-items: anchor-center;
+  gap: 0.5rem;
+  width: 200px;
 }
 
 .skill-input {
-  width: 30px;
+  display: flex;
+  align-items: anchor-center;
 }

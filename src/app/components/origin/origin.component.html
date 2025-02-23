@@ -2,6 +2,7 @@
 <form #form="ngForm">
   <app-select inputName="originSelect" [value]="origin.name" (valueChange)="origin = $event" [options]="options"></app-select>
 </form>
+{{origin.name}}
 
 <p>Trait: {{origin.trait.name}}</p>
 <p>{{origin.trait.description}}</p>

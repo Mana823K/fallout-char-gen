@@ -27,7 +27,7 @@ export class DataService {
     {
       name: "Super Mutant",
       trait: {
-        name: "Forced Evolutio",
+        name: "Forced Evolution",
         description: "Your initial Strength and Endurance attributes are increased by +2 each, and your maximum Strength and Endurance are increased to 12, but your maximum Intelligence and Charisma are both reduced to 6. You may not have more than 4 ranks in any skill. You are completely immune to radiation and poison damage.",
         effect: null
       }

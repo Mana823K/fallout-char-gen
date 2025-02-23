@@ -1,9 +1,13 @@
 <h3>Skills</h3>
 
 <div *ngFor="let skill of skills" class="skill">
-  <mat-checkbox [(ngModel)]="skill.isTagged" ></mat-checkbox>
-  <p>{{skill.name}}</p>
-  <mat-icon>keyboard_arrow_left</mat-icon>
-  <input [(ngModel)]="skill.ranks" type="number" class="skill-input">
-  <mat-icon>keyboard_arrow_right</mat-icon>
+  <div class="skill-name">
+    <mat-checkbox color="primary" [(ngModel)]="skill.isTagged" ></mat-checkbox>
+    <p>{{skill.name}}</p>
+  </div>
+  <div class="skill-input">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+    <app-number-input [(value)]="skill.ranks"></app-number-input>
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </div>
 </div>

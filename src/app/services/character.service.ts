@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { DataService } from "./data.service";
 import { Origin } from "../models/origin";
-import { Special } from "../models/special";
+import { Special, SpecialData } from "../models/special";
 import { Perk } from "../models/perk";
 import { Skill } from "../models/skill";
 import { Stats } from "../models/stats";
@@ -11,9 +11,21 @@ import { Defs } from "../models/defaults";
   providedIn: "root"
 })
 export class CharacterService {
-  origin: Origin = new Origin();
+  readonly ORIGIN_NAME = "Origin";
+  private _origin: Origin = new Origin();
+  public get origin(): Origin {
+    return this._origin;
+  }
+  public set origin(value: Origin) {
+    this._origin = value;
+    this.onOriginChanged();
+  }
+
+  readonly SPECIAL_NAME = "Special";
   special: Special = new Special();
+  readonly PERK_NAME = "Perks";
   perks: Perk[] = [];
+  readonly SKILL_NAME = "Skills";
   skills: Skill[] = [];
   stats: Stats = new Stats();
 
@@ -24,11 +36,22 @@ export class CharacterService {
   }
 
   initCharacter() {
+    var originData = localStorage.getItem(this.ORIGIN_NAME);
+    this.origin = originData ? JSON.parse(originData) : new Origin();
+
+    var specialData = localStorage.getItem(this.SPECIAL_NAME);
+    this.special = specialData ? Special.map(JSON.parse(specialData)) : new Special();
+
     this.skills = this.dataService.skills;
+  }
+
+  onOriginChanged() {
+    localStorage.setItem(this.ORIGIN_NAME, JSON.stringify(this.origin));
   }
 
   onSpecialChanged() {
     this.updateStats();
+    localStorage.setItem(this.SPECIAL_NAME, JSON.stringify(new SpecialData(this.special)));
   }
 
   updateStats() {
