@@ -23,10 +23,13 @@ export class CharacterService {
 
   readonly SPECIAL_NAME = "Special";
   special: Special = new Special();
+
   readonly PERK_NAME = "Perks";
   perks: Perk[] = [];
+
   readonly SKILL_NAME = "Skills";
   skills: Skill[] = [];
+
   stats: Stats = new Stats();
 
   constructor(private dataService: DataService) {
@@ -36,8 +39,8 @@ export class CharacterService {
   }
 
   initCharacter() {
-    var originData = localStorage.getItem(this.ORIGIN_NAME);
-    this.origin = originData ? JSON.parse(originData) : new Origin();
+    var originName = localStorage.getItem(this.ORIGIN_NAME);
+    this.origin = this.dataService.origins.find(x => x.name == originName) ?? new Origin();
 
     var specialData = localStorage.getItem(this.SPECIAL_NAME);
     this.special = specialData ? Special.map(JSON.parse(specialData)) : new Special();
@@ -46,7 +49,7 @@ export class CharacterService {
   }
 
   onOriginChanged() {
-    localStorage.setItem(this.ORIGIN_NAME, JSON.stringify(this.origin));
+    localStorage.setItem(this.ORIGIN_NAME, this.origin.name);
   }
 
   onSpecialChanged() {

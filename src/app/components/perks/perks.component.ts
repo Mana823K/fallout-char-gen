@@ -15,4 +15,18 @@ export class PerksComponent {
   set perks(value: Perk[]) { this.characterService.perks = value; }
 
   constructor(private characterService: CharacterService, private dataService: DataService) { }
+
+  getRequirements(perk: Perk): string {
+    var result = "";
+
+    if (perk.requiredSpecial.length > 0) {
+      result += perk.requiredSpecial.map(x => `${x.specialName} ${x.points}`).join(", ");
+    }
+
+    if (perk.requiredLevel > 0) {
+      result += `, Level ${perk.requiredLevel}+`;
+    }
+
+    return result.length > 0 ? result : "None";
+  }
 }

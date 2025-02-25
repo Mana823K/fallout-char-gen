@@ -3,7 +3,7 @@
   <div *ngFor="let perk of perkOptions" class="card">
     <p>{{perk.name}}</p>
     <p>Ranks: {{perk.maxRanks}}</p>
-    <p>Requirements: {{perk.requirements}}</p>
+    <p>Requirements: {{getRequirements(perk)}}</p>
     <p>{{perk.description}}</p>
   </div>
 </div>

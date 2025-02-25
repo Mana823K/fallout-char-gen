@@ -1,3 +1,4 @@
+import perksData from "../assets/perks.json";
 import { Injectable } from "@angular/core";
 import { Origin } from "../models/origin";
 import { Perk } from "../models/perk";
@@ -58,64 +59,7 @@ export class DataService {
     },
   ];
 
-  perks: Perk[] = [
-    {
-      name: "Action Boy / Girl",
-      maxRanks: 1,
-      requirements: "None",
-      description: "When you spend AP to take an additional major action, you do not suffer the increased skill test difficulty during your second action.",
-      ranks: 0,
-      isSelected: false
-    },
-    {
-      name: "Adamantium Skeleton",
-      maxRanks: 3,
-      requirements: "END 7, Level 1+",
-      description: "When you suffer damage, the amount of damage needed to inflict a critical hit on you increases by your rank in this perk. For example, if you have one rank in this perk, you suffer a critical hit from 6 or more damage, rather than 5 or more. Each time you take this perk, the level requirement increases by 3",
-      ranks: 0,
-      isSelected: false
-    },
-    {
-      name: "Adrenalin Rush",
-      maxRanks: 1,
-      requirements: "STR 7",
-      description: "When your health is below its maximum value, you count your STR score as 10 for all purposes when attempting a STR-based skill test or melee attack.",
-      ranks: 0,
-      isSelected: false
-    },
-    {
-      name: "Animal Friend",
-      maxRanks: 2,
-      requirements: "CHA 6, Level 1+",
-      description: "At rank 1, whenever a creature NPC with the Mammal, Lizard, or Insect keyword would attack you, roll 1DCD  : on any result other than an Effect, the creature chooses not to attack you, although it may still attack another character it can target",
-      ranks: 0,
-      isSelected: false
-    },
-    {
-      name: "Aquaboy / Aquabirl",
-      maxRanks: 2,
-      requirements: "END 5, Level 1+",
-      description: "Water is your ally. At rank 1, you no longer take radiation damage from swimming in irradiated water, and you can hold your breath for twice as long as normal. At rank 2, enemies add +2 to the difficulty to tests to detect you while you are submerged underwater. Each time you take this perk, the level requirement increases by 3.",
-      ranks: 0,
-      isSelected: false
-    },
-    {
-      name: "Armorer",
-      maxRanks: 4,
-      requirements: "STR 5, INT 6",
-      description: "You can modify armor with armor mods. Each rank in this perk unlocks an additional rank of mods: rank 1 unlocks rank 1 mods, rank 2 unlocks rank 2 mods, etc",
-      ranks: 0,
-      isSelected: false
-    },
-    {
-      name: "Awareness",
-      maxRanks: 1,
-      requirements: "PER 7",
-      description: "When you take the Aim minor action at a target within Close range, you spot their weaknesses and can attack more efficiently. The next attack you make against that target gains the Piercing 1 damage effect, or improves the rating of any existing Piercing X damage effect by 1",
-      ranks: 0,
-      isSelected: false
-    },
-  ];
+  perks: Perk[] = perksData as Perk[];
 
   skills: Skill[] = [
     {
