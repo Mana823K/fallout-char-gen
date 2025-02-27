@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Athletics",
+    "attribute": "STR",
+    "detail": "Lifting, pushing, pulling, jumping, running, and swimming"
+  },
+  {
+    "name": "Barter",
+    "attribute": "CHA",
+    "detail": "Buying and selling"
+  },
+  {
+    "name": "Big Guns",
+    "attribute": "END",
+    "detail": "Using heavy weapons such as miniguns, Fat Mans, gatling lasers, and gauss weapons"
+  },
+  {
+    "name": "Energy Weapons",
+    "attribute": "PER",
+    "detail": "Using energy weapons such as laser guns, plasma guns, and gauss weapons"
+  },
+  {
+    "name": "Explosives",
+    "attribute": "PER",
+    "detail": "Blowing things up, or stopping them from doing that"
+  },
+  {
+    "name": "Lockpick",
+    "attribute": "PER",
+    "detail": "Opening locks without the key"
+  },
+  {
+    "name": "Medicine",
+    "attribute": "INT",
+    "detail": "Healing people and stabilizing the dying"
+  },
+  {
+    "name": "Melee Weapons",
+    "attribute": "STR",
+    "detail": "Fighting people with bats, clubs, knives, boards, wrenches, and sledges"
+  },
+  {
+    "name": "Pilot",
+    "attribute": "PER",
+    "detail": "Flying and driving"
+  },
+  {
+    "name": "Repair",
+    "attribute": "INT",
+    "detail": "Fixing stuff, crafting things, and building machines"
+  },
+  {
+    "name": "Science",
+    "attribute": "INT",
+    "detail": "Hacking, programming, and brewing chems"
+  },
+  {
+    "name": "Small Guns",
+    "attribute": "AGI",
+    "detail": "Shooting people with pistols, rifles, and shotguns"
+  },
+  {
+    "name": "Sneak",
+    "attribute": "AGI",
+    "detail": "Moving quietly and staying hidden"
+  },
+  {
+    "name": "Speach",
+    "attribute": "CHA",
+    "detail": "Making friends, influencing people, and lying to them if you have to"
+  },
+  {
+    "name": "Survival",
+    "attribute": "END",
+    "detail": "Foraging, hunting, cooking, and enduring the wastes"
+  },
+  {
+    "name": "Throwing",
+    "attribute": "AGI",
+    "detail": "Launching weapons from your hands, like spears or knives"
+  },
+  {
+    "name": "Unarmed",
+    "attribute": "STR",
+    "detail": "Fighting without a weapon by making unarmed attacks"
+  }
+]
