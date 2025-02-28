@@ -1,6 +1,6 @@
 @import "./../../../style/colors.scss";
 
-.card-container {
+.cards-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -14,6 +14,33 @@
   border: 1pt solid $primary;
   border-radius: 1rem;
   padding: 1rem;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: $primaryLightAccent;
+}
+
+.disabled-card {
+  background-color: $grayDark;
+  color: $dark-text;
+  border-color: $dark-text;
+  cursor: default;
+}
+
+.disabled-card:hover {
+  background-color: $grayDark;
+}
+
+.selected-card {
+  background-color: $accentLight;
+  color: $accentDark;
+  border-color: $accent;
+  outline: 1pt solid $accent;
+}
+
+.selected-card:hover {
+  background-color: $accentLightAccent;
 }
 
 p {

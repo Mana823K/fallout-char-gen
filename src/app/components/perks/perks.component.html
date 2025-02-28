@@ -1,9 +1,9 @@
 <h3>Perks</h3>
-<div class="card-container">
-  <div *ngFor="let perk of perkOptions" class="card">
+<div class="cards-container">
+  <div *ngFor="let perk of perks" class="card" [ngClass]="{'disabled-card': !perk.isAvailable, 'selected-card': perk.isSelected}" (click)="perkSelected(perk)">
     <p>{{perk.name}}</p>
     <p>Ranks: {{perk.maxRanks}}</p>
-    <p>Requirements: {{getRequirements(perk)}}</p>
+    <p>Requirements: {{getRequirementsText(perk)}}</p>
     <p>{{perk.description}}</p>
   </div>
 </div>

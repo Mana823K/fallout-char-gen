@@ -30,6 +30,7 @@ export class CharacterService {
   skills: Skill[] = [];
 
   stats: Stats = new Stats();
+  level: number = 0;
 
   constructor(private dataService: DataService) {
     this.initCharacter();
@@ -47,10 +48,9 @@ export class CharacterService {
     this.perks = this.dataService.perks;
     var perksData = localStorage.getItem(this.PERK_NAME);
     var perkNames: string[] = perksData ? JSON.parse(perksData).split(";") : [];
-    console.log(this.perks)
     this.perks.forEach(x => {
       x.isSelected = perkNames.includes(x.name);
-      x.updateAvailability(this.special);
+      x.updateAvailability(this.special, this.level);
     });
 
     this.skills = this.dataService.skills;
@@ -62,7 +62,7 @@ export class CharacterService {
 
   onSpecialChanged() {
     this.stats.updateStats(this.special);
-    this.perks.forEach(x => x.updateAvailability(this.special));
+    this.perks.forEach(x => x.updateAvailability(this.special, this.level));
     localStorage.setItem(this.SPECIAL_NAME, JSON.stringify(new SpecialData(this.special)));
   }
 

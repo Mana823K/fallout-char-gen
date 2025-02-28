@@ -1,4 +1,5 @@
 import { Special } from "./special";
+import { SpecialAbbreviationEnum } from "./special-abbreviation-enum";
 
 export class Perk {
   name: string = "";
@@ -9,10 +10,39 @@ export class Perk {
 
   ranks: number = 0;
   isSelected: boolean = false;
-  isAvailable: boolean = false;
+  isAvailable: boolean = true;
 
-  updateAvailability(special: Special) {
-    this.isAvailable = true;
+  updateAvailability(special: Special, level: number) {
+    if (level < this.requiredLevel) {
+      this.isAvailable = false;
+      return;
+    }
+
+    for (let req of this.requiredSpecial) {
+      switch (req.specialName) {
+        case SpecialAbbreviationEnum.STR:
+          this.isAvailable = special.strength >= req.points;
+          break;
+        case SpecialAbbreviationEnum.PER:
+          this.isAvailable = special.perception >= req.points;
+          break;
+        case SpecialAbbreviationEnum.END:
+          this.isAvailable = special.endurance >= req.points;
+          break;
+        case SpecialAbbreviationEnum.CHA:
+          this.isAvailable = special.charisma >= req.points;
+          break;
+        case SpecialAbbreviationEnum.INT:
+          this.isAvailable = special.intelligence >= req.points;
+          break;
+        case SpecialAbbreviationEnum.AGI:
+          this.isAvailable = special.agility >= req.points;
+          break;
+        case SpecialAbbreviationEnum.LCK:
+          this.isAvailable = special.luck >= req.points;
+          break;
+      }
+    }
   }
 }
 
