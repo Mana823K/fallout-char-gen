@@ -2,12 +2,12 @@
 
 <div *ngFor="let skill of skills" class="skill">
   <div class="skill-name">
-    <mat-checkbox color="primary" [(ngModel)]="skill.isTagged" ></mat-checkbox>
+    <mat-checkbox color="primary" [(ngModel)]="skill.isTagged" (ngModelChange)="onSkillChange()"></mat-checkbox>
     <p>{{skill.name}}</p>
   </div>
   <div class="skill-input">
-    <mat-icon>keyboard_arrow_left</mat-icon>
-    <app-number-input [(value)]="skill.ranks"></app-number-input>
-    <mat-icon>keyboard_arrow_right</mat-icon>
+    <mat-icon (click)="decreaseRank(skill)" class="arrow-icon">keyboard_arrow_left</mat-icon>
+    <app-number-input [(value)]="skill.ranks" (valueChange)="onSkillChange()"></app-number-input>
+    <mat-icon (click)="increaseRank(skill)" class="arrow-icon">keyboard_arrow_right</mat-icon>
   </div>
 </div>

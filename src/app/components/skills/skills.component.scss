@@ -1,3 +1,6 @@
+@import "./../../../style/colors.scss";
+@import "./../../../style/variables.scss";
+
 .skill {
   display: flex;
   justify-content: space-between;
@@ -14,4 +17,19 @@
 .skill-input {
   display: flex;
   align-items: anchor-center;
+  gap: 0.5rem;
+}
+
+.arrow-icon {
+  font-size: 20pt;
+  border-radius: $borderRadius;
+  padding: 0.5rem 0;
+}
+
+.arrow-icon:hover {
+  background-color: $grayLight;
+}
+
+.arrow-icon:active {
+  background-color: $grayLightAccent;
 }

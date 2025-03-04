@@ -16,6 +16,9 @@ export class AppComponent {
   special: Special = new Special();
   level: number = 0;
 
+  specialPoints: number = 0;
+  skillTags: number = 0;
+
   onSpecialChanged(special: Special) {
     this.special = special;
     this.statsComponent?.updateStats();

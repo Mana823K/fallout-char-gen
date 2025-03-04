@@ -22,3 +22,15 @@ export class SkillData {
     return result;
   }
 }
+
+export class SkillSaveData {
+  name: string = "";
+  isTagged: boolean = false;
+  ranks: number = 0;
+
+  constructor(skill: Skill) {
+    this.name = skill.name;
+    this.isTagged = skill.isTagged;
+    this.ranks = skill.ranks;
+  }
+}
