@@ -1,7 +1,7 @@
 <div class="container">
   <app-origin></app-origin>
-  <app-stats></app-stats>
-  <app-special-attributes></app-special-attributes>
-  <app-perks></app-perks>
+  <app-stats #statsComponent [special]="special"></app-stats>
+  <app-special-attributes (specialChanged)="onSpecialChanged($event)"></app-special-attributes>
+  <app-perks #perksComponent [special]="special" [level]="level"></app-perks>
   <app-skills></app-skills>
 </div>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { CharacterService } from '../../services/character.service';
 import { Skill } from '../../models/skill';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-skills',
@@ -9,8 +9,9 @@ import { Skill } from '../../models/skill';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-  get skills(): Skill[] { return this.characterService.skills; }
-  set skills(value: Skill[]) { this.characterService.skills = value; }
+  skills: Skill[] = [];
 
-  constructor(private characterService: CharacterService) { }
+  constructor(private dataService: DataService) {
+    this.skills = this.dataService.skills;
+  }
 }

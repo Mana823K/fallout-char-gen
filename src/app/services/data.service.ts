@@ -10,9 +10,9 @@ import { Skill, SkillData } from "../models/skill";
   providedIn: "root"
 })
 export class DataService {
-  origins: Origin[] = originsData as Origin[];
+  get origins(): Origin[] { return originsData as Origin[]; }
 
-  perks: Perk[] = (perksData as PerkData[]).map(PerkData.map);
+  get perks(): Perk[] { return (perksData as PerkData[]).map(PerkData.map); }
 
-  skills: Skill[] = (skillsData as SkillData[]).map(SkillData.map);
+  get skills(): Skill[] { return (skillsData as SkillData[]).map(SkillData.map); }
 }

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { CharacterService } from '../../services/character.service';
+import { Component, Input } from '@angular/core';
 import { Stats } from '../../models/stats';
+import { Special } from '../../models/special';
 
 @Component({
   selector: 'app-stats',
@@ -9,8 +9,12 @@ import { Stats } from '../../models/stats';
   styleUrl: './stats.component.scss'
 })
 export class StatsComponent {
-  get stats(): Stats { return this.characterService.stats; }
-  set stats(value: Stats) { this.characterService.stats = value; }
+  stats: Stats = new Stats();
+  @Input() special: Special = new Special();
 
-  constructor(private characterService: CharacterService) { }
+  constructor() { }
+
+  updateStats() {
+    this.stats.updateStats(this.special);
+  }
 }

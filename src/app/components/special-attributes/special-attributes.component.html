@@ -2,36 +2,36 @@
 <div class="container">
   <div>
     <p>STR</p>
-    <app-number-input [(value)]="special.strength"></app-number-input>
+    <app-number-input [(value)]="special.strength" (valueChange)="onSpecialChanged()"></app-number-input>
   </div>
 
   <div>
     <p>PER</p>
-    <app-number-input [(value)]="special.perception"></app-number-input>
+    <app-number-input [(value)]="special.perception" (valueChange)="onSpecialChanged()"></app-number-input>
   </div>
 
   <div>
     <p>END</p>
-    <app-number-input [(value)]="special.endurance"></app-number-input>
+    <app-number-input [(value)]="special.endurance" (valueChange)="onSpecialChanged()"></app-number-input>
   </div>
 
   <div>
     <p>CHA</p>
-    <app-number-input [(value)]="special.charisma"></app-number-input>
+    <app-number-input [(value)]="special.charisma" (valueChange)="onSpecialChanged()"></app-number-input>
   </div>
 
   <div>
     <p>INT</p>
-    <app-number-input [(value)]="special.intelligence"></app-number-input>
+    <app-number-input [(value)]="special.intelligence" (valueChange)="onSpecialChanged()"></app-number-input>
   </div>
 
   <div>
     <p>AGI</p>
-    <app-number-input [(value)]="special.agility"></app-number-input>
+    <app-number-input [(value)]="special.agility" (valueChange)="onSpecialChanged()"></app-number-input>
   </div>
 
   <div>
     <p>LCK</p>
-    <app-number-input [(value)]="special.luck"></app-number-input>
+    <app-number-input [(value)]="special.luck" (valueChange)="onSpecialChanged()"></app-number-input>
   </div>
 </div>

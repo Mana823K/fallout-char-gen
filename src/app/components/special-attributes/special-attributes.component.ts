@@ -1,7 +1,5 @@
-import { Component } from '@angular/core';
-import { CharacterService } from '../../services/character.service';
-import { Special } from '../../models/special';
-import { Subject } from 'rxjs';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Special, SpecialData } from '../../models/special';
 
 @Component({
   selector: 'app-special-attributes',
@@ -9,8 +7,23 @@ import { Subject } from 'rxjs';
   templateUrl: './special-attributes.component.html',
   styleUrl: './special-attributes.component.scss'
 })
-export class SpecialAttributesComponent {
-  get special(): Special { return this.characterService.special; }
+export class SpecialAttributesComponent implements OnInit {
+  readonly STORAGE_NAME = "Special";
+  special: Special = new Special();
 
-  constructor(private characterService: CharacterService) { }
+  @Output() specialChanged = new EventEmitter<Special>();
+
+  constructor() {
+    var specialData = localStorage.getItem(this.STORAGE_NAME);
+    this.special = specialData ? Special.map(JSON.parse(specialData)) : new Special();
+  }
+
+  ngOnInit(): void {
+    this.specialChanged.emit(this.special);
+  }
+
+  onSpecialChanged() {
+    localStorage.setItem(this.STORAGE_NAME, JSON.stringify(new SpecialData(this.special)));
+    this.specialChanged.emit(this.special);
+  }
 }

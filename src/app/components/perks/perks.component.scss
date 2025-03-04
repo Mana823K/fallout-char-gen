@@ -22,14 +22,14 @@
 }
 
 .disabled-card {
-  background-color: $grayDark;
-  color: $dark-text;
-  border-color: $dark-text;
+  background-color: $grayLight;
+  color: $gray-text;
+  border-color: $grayLightAccent;
   cursor: default;
 }
 
 .disabled-card:hover {
-  background-color: $grayDark;
+  background-color: $grayLight;
 }
 
 .selected-card {
