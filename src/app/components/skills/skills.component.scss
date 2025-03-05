@@ -26,10 +26,14 @@
   padding: 0.5rem 0;
 }
 
-.arrow-icon:hover {
+.arrow-icon-active:hover {
   background-color: $grayLight;
 }
 
-.arrow-icon:active {
+.arrow-icon-active:active {
   background-color: $grayLightAccent;
+}
+
+.arrow-icon-disabled {
+  color: $gray-text;
 }

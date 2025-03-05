@@ -30,4 +30,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npm run ng -- deploy --repo="https://github.com/mana823k/fallout-char-gen.git" --base-href=/fallout-char-gen/
+          npm run ng -- deploy --repo="https://github.com/mana823k/fallout-char-gen.git" --base-href=/fallout-char-gen/ --name=mana823k --email=toth.alexandra96p@gmail.com

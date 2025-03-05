@@ -9,7 +9,12 @@ import { Special, SpecialData } from '../../models/special';
 })
 export class SpecialAttributesComponent implements OnInit {
   readonly STORAGE_NAME = "Special";
+  readonly MAX_POINTS = 40;
   special: Special = new Special();
+
+  get minPoints(): number { return Special.MIN_VALUE; }
+  get maxPoints(): number { return Special.MAX_VALUE; }
+  get pointsLeft(): number { return this.MAX_POINTS - this.special.pointsSum; }
 
   @Output() specialChanged = new EventEmitter<Special>();
 

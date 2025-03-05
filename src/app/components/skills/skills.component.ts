@@ -1,6 +1,7 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Skill, SkillSaveData } from '../../models/skill';
 import { DataService } from '../../services/data.service';
+import { Special } from '../../models/special';
 
 @Component({
   selector: 'app-skills',
@@ -9,10 +10,17 @@ import { DataService } from '../../services/data.service';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent implements OnInit {
-  readonly STORAGE_NAME = "Skills"
+  readonly STORAGE_NAME = "Skills";
+  readonly DEF_TAG_COUNT = 3;
+
   skills: Skill[] = [];
 
+  @Input() special: Special = new Special();
+  @Input() level: number = 0;
   @Output() skillChanged = new EventEmitter<Skill[]>();
+
+  get availableTagCount(): number { return this.DEF_TAG_COUNT; }
+  get tagCount(): number { return this.skills.filter(x => x.isTagged).length; }
 
   constructor(private dataService: DataService) {
     this.skills = this.dataService.skills;
@@ -38,11 +46,17 @@ export class SkillsComponent implements OnInit {
   }
 
   decreaseRank(skill: Skill) {
-   skill.ranks--;
-   this.onSkillChange();
+    if (skill.ranks <= 0) {
+      return;
+    }
+    skill.ranks--;
+    this.onSkillChange();
   }
 
   increaseRank(skill: Skill) {
+    if (skill.ranks >= 6) {
+      return;
+    }
     skill.ranks++;
     this.onSkillChange();
   }

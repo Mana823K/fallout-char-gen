@@ -1,13 +1,19 @@
-import { BehaviorSubject } from "rxjs";
-
 export class Special {
-  strength: number = 4;
-  perception: number = 4;
-  endurance: number = 4;
-  charisma: number = 4;
-  intelligence: number = 4;
-  agility: number = 4;
-  luck: number = 4;
+  static MIN_VALUE = 4;
+  static MAX_VALUE = 10;
+
+  strength: number = 5;
+  perception: number = 5;
+  endurance: number = 5;
+  charisma: number = 5;
+  intelligence: number = 5;
+  agility: number = 5;
+  luck: number = 5;
+
+  get pointsSum(): number {
+    return this.strength + this.perception + this.endurance
+    + this.charisma + this.intelligence + this.agility + this.luck;
+  }
 
   static map(data: SpecialData): Special {
     let result = new Special();
@@ -25,13 +31,13 @@ export class Special {
 }
 
 export class SpecialData {
-  strength: number = 4;
-  perception: number = 4;
-  endurance: number = 4;
-  charisma: number = 4;
-  intelligence: number = 4;
-  agility: number = 4;
-  luck: number = 4;
+  strength: number = 5;
+  perception: number = 5;
+  endurance: number = 5;
+  charisma: number = 5;
+  intelligence: number = 5;
+  agility: number = 5;
+  luck: number = 5;
 
   constructor(original: Special) {
     return {

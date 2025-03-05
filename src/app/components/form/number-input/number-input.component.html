@@ -1,1 +1,7 @@
-<input type="number" [name]="inputName" [ngModel]="value" (ngModelChange)="valueChange.emit($event)" class="input">
+<input type="number"
+      [name]="inputName"
+      [ngModel]="value"
+      (ngModelChange)="onChange($event)"
+      [min]="min == undefined ? null: min"
+      [max]="max == undefined ? null : max"
+      class="input">

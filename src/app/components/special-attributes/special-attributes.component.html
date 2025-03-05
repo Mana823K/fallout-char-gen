@@ -1,37 +1,59 @@
 <h3>S.P.E.C.I.A.L.</h3>
+<p [ngClass]="{'points-left-error': pointsLeft < 0}"><span class="points-left-label">Points left:</span> {{pointsLeft}}</p>
 <div class="container">
   <div>
-    <p>STR</p>
-    <app-number-input [(value)]="special.strength" (valueChange)="onSpecialChanged()"></app-number-input>
+    <p class="input-label">STR</p>
+    <app-number-input [(value)]="special.strength"
+                      (valueChange)="onSpecialChanged()"
+                      [min]="minPoints"
+                      [max]="maxPoints"></app-number-input>
   </div>
 
   <div>
-    <p>PER</p>
-    <app-number-input [(value)]="special.perception" (valueChange)="onSpecialChanged()"></app-number-input>
+    <p class="input-label">PER</p>
+    <app-number-input [(value)]="special.perception"
+                      (valueChange)="onSpecialChanged()"
+                      [min]="minPoints"
+                      [max]="maxPoints"></app-number-input>
   </div>
 
   <div>
-    <p>END</p>
-    <app-number-input [(value)]="special.endurance" (valueChange)="onSpecialChanged()"></app-number-input>
+    <p class="input-label">END</p>
+    <app-number-input [(value)]="special.endurance"
+                      (valueChange)="onSpecialChanged()"
+                      [min]="minPoints"
+                      [max]="maxPoints"></app-number-input>
   </div>
 
   <div>
-    <p>CHA</p>
-    <app-number-input [(value)]="special.charisma" (valueChange)="onSpecialChanged()"></app-number-input>
+    <p class="input-label">CHA</p>
+    <app-number-input [(value)]="special.charisma"
+                      (valueChange)="onSpecialChanged()"
+                      [min]="minPoints"
+                      [max]="maxPoints"></app-number-input>
   </div>
 
   <div>
-    <p>INT</p>
-    <app-number-input [(value)]="special.intelligence" (valueChange)="onSpecialChanged()"></app-number-input>
+    <p class="input-label">INT</p>
+    <app-number-input [(value)]="special.intelligence"
+                      (valueChange)="onSpecialChanged()"
+                      [min]="minPoints"
+                      [max]="maxPoints"></app-number-input>
   </div>
 
   <div>
-    <p>AGI</p>
-    <app-number-input [(value)]="special.agility" (valueChange)="onSpecialChanged()"></app-number-input>
+    <p class="input-label">AGI</p>
+    <app-number-input [(value)]="special.agility"
+                      (valueChange)="onSpecialChanged()"
+                      [min]="minPoints"
+                      [max]="maxPoints"></app-number-input>
   </div>
 
   <div>
-    <p>LCK</p>
-    <app-number-input [(value)]="special.luck" (valueChange)="onSpecialChanged()"></app-number-input>
+    <p class="input-label">LCK</p>
+    <app-number-input [(value)]="special.luck"
+                      (valueChange)="onSpecialChanged()"
+                      [min]="minPoints"
+                      [max]="maxPoints"></app-number-input>
   </div>
 </div>

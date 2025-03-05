@@ -19,8 +19,6 @@ export class Perk {
     }
 
     for (let req of this.requiredSpecial) {
-      if (this.name == "Armorer")
-        console.log(req, special)
       switch (req.specialName) {
         case SpecialAbbreviationEnum.STR:
           this.isAvailable = special.strength >= req.points;

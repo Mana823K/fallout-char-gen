@@ -11,17 +11,20 @@ import { Special } from '../../models/special';
 })
 export class PerksComponent implements OnInit {
   readonly STORAGE_NAME = "Perks";
+
   perks: Perk[] = [];
   @Input() special: Special = new Special();
   @Input() level: number = 0;
 
   @Output() perksChanged = new EventEmitter<Perk[]>();
 
+  get selectedCount(): number { return this.perks.filter(x => x.isSelected).length; }
+
   constructor(private dataService: DataService) {
     this.perks = this.dataService.perks;
 
     var storedData = localStorage.getItem(this.STORAGE_NAME);
-    var selectedNames: string[] = storedData ? JSON.parse(storedData).split(";") : [];
+    var selectedNames: string[] = storedData?.split(";") ?? [];
     this.perks.forEach(x => {
       x.isSelected = selectedNames.includes(x.name);
     });
@@ -47,7 +50,8 @@ export class PerksComponent implements OnInit {
   }
 
   perkSelected(perk: Perk) {
-    if (!perk.isAvailable) return;
+    if (!perk.isAvailable || (this.selectedCount > this.level && !perk.isSelected))
+      return;
 
     perk.isSelected = !perk.isSelected;
 
