@@ -8,29 +8,9 @@ export class Perk {
   requiredSpecial: PerkRequirement[] = [];
   description: string = "";
 
-  private _ranks: number = 0;
-  public get ranks(): number { return this._ranks; }
-  public set ranks(value: number) {
-    this._ranks = value;
-    this.onPerkChanged();
-  }
-
-  private _isSelected: boolean = false;
-  public get isSelected(): boolean { return this._isSelected; }
-  public set isSelected(value: boolean) {
-    this._isSelected = value;
-    this.onPerkChanged();
-  }
-
-  private _isAvailable: boolean = true;
-  public get isAvailable(): boolean { return this._isAvailable; }
-  public set isAvailable(value: boolean) {
-    this._isAvailable = value;
-    this.onPerkChanged();
-  }
-
-  onPerkChanged(): void;
-  onPerkChanged() { }
+  ranks: number = 0;
+  isSelected: boolean = false;
+  isAvailable: boolean = true;
 
   updateAvailability(special: Special, level: number) {
     if (level < this.requiredLevel) {
@@ -39,6 +19,8 @@ export class Perk {
     }
 
     for (let req of this.requiredSpecial) {
+      if (this.name == "Armorer")
+        console.log(req, special)
       switch (req.specialName) {
         case SpecialAbbreviationEnum.STR:
           this.isAvailable = special.strength >= req.points;
