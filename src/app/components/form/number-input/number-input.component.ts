@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-number-input',
@@ -13,13 +13,16 @@ export class NumberInputComponent {
   @Input() min?: number;
   @Input() max?: number;
 
-  onChange(value: number) {
-    if (this.min != undefined && this.value < this.min)
-      this.value = this.min;
-    if (this.max != undefined && this.value > this.max)
-      this.value = this.max;
-    this.valueChange.emit(value);
+  @ViewChild("input") input?: ElementRef;
 
-    // todo: fix
+  onChange(value: number) {
+    if (this.min != undefined && value < this.min)
+      value = this.min;
+    if (this.max != undefined && value > this.max)
+      value = this.max;
+
+    if (this.input?.nativeElement)
+      this.input.nativeElement.value = value
+    this.valueChange.emit(value);
   }
 }

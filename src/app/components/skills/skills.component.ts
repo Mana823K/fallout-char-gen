@@ -12,6 +12,7 @@ import { Special } from '../../models/special';
 export class SkillsComponent implements OnInit {
   readonly STORAGE_NAME = "Skills";
   readonly DEF_TAG_COUNT = 3;
+  readonly DEF_RANK_POINTS = 9;
 
   skills: Skill[] = [];
 
@@ -21,6 +22,14 @@ export class SkillsComponent implements OnInit {
 
   get availableTagCount(): number { return this.DEF_TAG_COUNT; }
   get tagCount(): number { return this.skills.filter(x => x.isTagged).length; }
+
+  get availableRankPoints(): number { return this.DEF_RANK_POINTS + this.special.intelligence + this.level + this.tagCount * 2; }
+  get totalRankPoints(): number {
+    var total = 0;
+    this.skills.forEach(x => total += x.ranks);
+    return total;
+  }
+  get maxRank(): number { return this.level >= 3 ? 6 : 3; }
 
   constructor(private dataService: DataService) {
     this.skills = this.dataService.skills;
@@ -40,13 +49,21 @@ export class SkillsComponent implements OnInit {
     this.skillChanged.emit(this.skills);
   }
 
+  onTagChanged(skill: Skill) {
+    if (skill.isTagged && skill.ranks < 2) {
+      skill.ranks = 2;
+    }
+
+    this.onSkillChange();
+  }
+
   onSkillChange() {
     localStorage.setItem(this.STORAGE_NAME, JSON.stringify(this.skills.map(x => new SkillSaveData(x))));
     this.skillChanged.emit(this.skills);
   }
 
   decreaseRank(skill: Skill) {
-    if (skill.ranks <= 0) {
+    if (skill.ranks <= skill.minRank) {
       return;
     }
     skill.ranks--;
@@ -54,7 +71,7 @@ export class SkillsComponent implements OnInit {
   }
 
   increaseRank(skill: Skill) {
-    if (skill.ranks >= 6) {
+    if (skill.ranks >= this.maxRank) {
       return;
     }
     skill.ranks++;

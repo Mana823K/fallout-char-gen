@@ -5,6 +5,8 @@ export class Skill {
 
   isTagged: boolean = false;
   ranks: number = 0;
+
+  get minRank(): number { return this.isTagged ? 2 : 0; }
 }
 
 export class SkillData {

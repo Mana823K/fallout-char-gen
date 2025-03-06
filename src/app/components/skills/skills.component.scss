@@ -1,6 +1,14 @@
 @import "./../../../style/colors.scss";
 @import "./../../../style/variables.scss";
 
+.points-left-error {
+  color: $errorDark;
+}
+
+.points-left-label {
+  text-decoration: underline;
+}
+
 .skill {
   display: flex;
   justify-content: space-between;
