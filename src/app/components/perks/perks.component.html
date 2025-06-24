@@ -3,7 +3,7 @@
   <div *ngFor="let perk of perks" class="card" [ngClass]="{'disabled-card': !perk.isAvailable, 'selected-card': perk.isSelected}" (click)="perkSelected(perk)">
     <p class="perk-name mb-05">{{perk.name}}</p>
     <p class="mb-05">Ranks: {{perk.maxRanks}}</p>
-    <p class="mb-05">Requirements: {{getRequirementsText(perk)}}</p>
+    <p class="mb-05">Requirements: {{getRequirementsText(perk.requirements)}}</p>
     <p>{{perk.description}}</p>
   </div>
 </div>

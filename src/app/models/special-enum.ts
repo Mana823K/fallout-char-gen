@@ -1,4 +1,4 @@
-export enum SpecialAbbreviationEnum {
+export enum SpecialEnum {
   STR = "STR",
   PER = "PER",
   END = "END",

@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Perk } from '../../models/perk';
+import { Perk, PerkRequirement } from '../../models/perk';
 import { DataService } from '../../services/data.service';
 import { Special } from '../../models/special';
+import { SpecialEnum } from '../../models/special-enum';
 
 @Component({
   selector: 'app-perks',
@@ -50,7 +51,7 @@ export class PerksComponent implements OnInit {
   }
 
   perkSelected(perk: Perk) {
-    if (!perk.isAvailable || (this.selectedCount > this.level && !perk.isSelected))
+    if (!perk.isAvailable || (this.selectedCount >= this.level && !perk.isSelected))
       return;
 
     perk.isSelected = !perk.isSelected;
@@ -75,15 +76,35 @@ export class PerksComponent implements OnInit {
     });
   }
 
-  getRequirementsText(perk: Perk): string {
+  getRequirementsText(requirements: PerkRequirement): string {
     var result = [];
 
-    if (perk.requiredSpecial.length > 0) {
-      result.push(perk.requiredSpecial.map(x => `${x.specialName} ${x.points}`));
+    if (requirements.str > 0) {
+      result.push(`${SpecialEnum.STR} ${requirements.str}`)
     }
-
-    if (perk.requiredLevel > 0) {
-      result.push(`Level ${perk.requiredLevel}+`);
+    if (requirements.per > 0) {
+      result.push(`${SpecialEnum.PER} ${requirements.per}`)
+    }
+    if (requirements.end > 0) {
+      result.push(`${SpecialEnum.END} ${requirements.end}`)
+    }
+    if (requirements.cha > 0) {
+      result.push(`${SpecialEnum.CHA} ${requirements.cha}`)
+    }
+    if (requirements.int > 0) {
+      result.push(`${SpecialEnum.INT} ${requirements.int}`)
+    }
+    if (requirements.agi > 0) {
+      result.push(`${SpecialEnum.AGI} ${requirements.agi}`)
+    }
+    if (requirements.lck > 0) {
+      result.push(`${SpecialEnum.LCK} ${requirements.lck}`)
+    }
+    if (requirements.other && requirements.other.length > 0) {
+      result.push(requirements.other)
+    }
+    if (requirements.level > 0) {
+      result.push(`Level ${requirements.level}+`)
     }
 
     return result.length > 0 ? result.join(", ") : "None";
