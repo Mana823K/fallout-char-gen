@@ -9,6 +9,7 @@ import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@
 export class NumberInputComponent {
   @Input() value: number = 0;
   @Output() valueChange = new EventEmitter<number>();
+  @Input() label?: string;
   @Input() inputName!: string;
   @Input() min?: number;
   @Input() max?: number;

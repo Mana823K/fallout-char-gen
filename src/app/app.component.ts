@@ -24,4 +24,9 @@ export class AppComponent {
     this.statsComponent?.updateStats();
     this.perksComponent?.updatePerks();
   }
+
+  onLevelChanged() {
+    this.statsComponent?.updateStats();
+    this.perksComponent?.updatePerks();
+  }
 }
