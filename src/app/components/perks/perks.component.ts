@@ -100,11 +100,11 @@ export class PerksComponent implements OnInit {
     if (requirements.lck > 0) {
       result.push(`${SpecialEnum.LCK} ${requirements.lck}`)
     }
-    if (requirements.other && requirements.other.length > 0) {
-      result.push(requirements.other)
-    }
     if (requirements.level > 0) {
       result.push(`Level ${requirements.level}+`)
+    }
+    if (requirements.other && requirements.other.length > 0) {
+      result.push(requirements.other)
     }
 
     return result.length > 0 ? result.join(", ") : "None";
