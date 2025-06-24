@@ -1,8 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Perk, PerkRequirement } from '../../models/perk';
+import { Perk } from '../../models/perk';
 import { DataService } from '../../services/data.service';
 import { Special } from '../../models/special';
-import { SpecialEnum } from '../../models/special-enum';
 
 @Component({
   selector: 'app-perks',

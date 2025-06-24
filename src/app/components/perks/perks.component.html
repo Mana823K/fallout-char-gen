@@ -6,7 +6,7 @@
 </div>
 
 <div class="cards-container">
-  <div *ngFor="let perk of showAll ? perks : availablePerks" class="card" [ngClass]="{'disabled-card': !perk.isAvailable, 'selected-card': perk.isSelected}" (click)="perkSelected(perk)">
+  <div *ngFor="let perk of showAll ? perks : availablePerks" class="card" [ngClass]="{'disabled-card': !perk.isAvailable || (selectedCount >= level && !perk.isSelected), 'selected-card': perk.isSelected}" (click)="perkSelected(perk)">
     <p class="perk-name mb-05" [matTooltip]="perk.description" [matTooltipShowDelay]="400">
       {{perk.name}}
       <mat-icon *ngIf="!showDetails" class="info-icon">info_outline</mat-icon>
