@@ -1,5 +1,5 @@
-@import "./../../../style/colors.scss";
-@import "./../../../style/variables.scss";
+@use "./../../../style/colors.scss";
+@use "./../../../style/variables.scss";
 
 .button-container {
   margin: 1rem 0;
@@ -9,22 +9,22 @@
 
 .toggle-button {
   border: none;
-  border-radius: $borderRadius;
+  border-radius: variables.$borderRadius;
   padding: 2pt 4pt;
-  color: $primaryDark;
+  color: colors.$primaryDark;
   font-size: 11pt;
 
   &:hover {
-    background-color: $primaryLight;
+    background-color: colors.$primaryLight;
   }
 }
 
 .selected-button {
-  background-color: $accentLight;
-  color: $accentDark;
+  background-color: colors.$accentLight;
+  color: colors.$accentDark;
 
   &:hover {
-    background-color: $accentLightAccent;
+    background-color: colors.$accentLightAccent;
   }
 }
 
@@ -36,39 +36,39 @@
 }
 
 .card {
-  background-color: $primaryLight;
-  color: $primaryDark;
+  background-color: colors.$primaryLight;
+  color: colors.$primaryDark;
   width: 200px;
-  border: 1pt solid $primary;
+  border: 1pt solid colors.$primary;
   border-radius: 1rem;
   padding: 1rem;
   cursor: pointer;
 }
 
 .card:hover {
-  background-color: $primaryLightAccent;
+  background-color: colors.$primaryLightAccent;
 }
 
 .disabled-card {
-  background-color: $grayLight;
-  color: $gray-text;
-  border-color: $grayLightAccent;
+  background-color: colors.$grayLight;
+  color: colors.$gray-text;
+  border-color: colors.$grayLightAccent;
   cursor: default;
 }
 
 .disabled-card:hover {
-  background-color: $grayLight;
+  background-color: colors.$grayLight;
 }
 
 .selected-card {
-  background-color: $accentLight;
-  color: $accentDark;
-  border-color: $accent;
-  outline: 1pt solid $accent;
+  background-color: colors.$accentLight;
+  color: colors.$accentDark;
+  border-color: colors.$accent;
+  outline: 1pt solid colors.$accent;
 }
 
 .selected-card:hover {
-  background-color: $accentLightAccent;
+  background-color: colors.$accentLightAccent;
 }
 
 p {
