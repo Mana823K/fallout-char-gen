@@ -15,7 +15,13 @@ export class PerksComponent implements OnInit {
 
   perks: Perk[] = [];
   @Input() special: Special = new Special();
-  @Input() level: number = 0;
+
+  private _level: number = 0;
+  get level(): number { return this._level; }
+  @Input() set level(value: number) {
+    this._level = value;
+    this.updatePerks();
+  }
 
   @Output() perksChanged = new EventEmitter<Perk[]>();
 

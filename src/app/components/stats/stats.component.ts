@@ -11,9 +11,13 @@ import { Special } from '../../models/special';
 export class StatsComponent {
   stats: Stats = new Stats();
   @Input() special: Special = new Special();
-  @Input() level: number = 0;
 
-  constructor() { }
+  private _level: number = 0;
+  get level(): number { return this._level; }
+  @Input() set level(value: number) {
+    this._level = value;
+    this.updateStats();
+  }
 
   updateStats() {
     this.stats.updateStats(this.special, this.level);
