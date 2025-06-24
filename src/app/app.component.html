@@ -1,6 +1,7 @@
 <div class="container">
   <app-origin></app-origin>
   <app-number-input [(value)]="level"
+                    (valueChange)="onLevelChanged()"
                     label="LEVEL"
                     [min]="0"></app-number-input>
   <app-stats #statsComponent [special]="special" [level]="level"></app-stats>

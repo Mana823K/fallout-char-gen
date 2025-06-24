@@ -10,6 +10,7 @@ import { PerksComponent } from './components/perks/perks.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  readonly LEVEL_STORAGE_NAME = "Level";
   @ViewChild('statsComponent') statsComponent?: StatsComponent;
   @ViewChild('perksComponent') perksComponent?: PerksComponent;
 
@@ -19,9 +20,18 @@ export class AppComponent {
   specialPoints: number = 0;
   skillTags: number = 0;
 
+  constructor() {
+    var storedLevel = Number.parseInt(localStorage.getItem(this.LEVEL_STORAGE_NAME) ?? "");
+    this.level = Number.isNaN(storedLevel) ? 0 : storedLevel;
+  }
+
   onSpecialChanged(special: Special) {
     this.special = special;
     this.statsComponent?.updateStats();
     this.perksComponent?.updatePerks();
+  }
+
+  onLevelChanged() {
+    localStorage.setItem(this.LEVEL_STORAGE_NAME, this.level.toString());
   }
 }
