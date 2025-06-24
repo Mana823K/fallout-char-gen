@@ -52,7 +52,10 @@ export class PerksComponent implements OnInit {
   }
 
   updatePerks() {
-    this.perks.forEach(x => x.updateAvailability(this.special, this.level));
+    this.perks.forEach(x => {
+      x.updateAvailability(this.special, this.level);
+      x.isSelected = x.isAvailable ? x.isSelected : false;
+    });
     this.orderPerks();
   }
 
