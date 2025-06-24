@@ -1,9 +1,11 @@
 import { Special } from "./special";
+import { SpecialEnum } from "./special-enum";
 
 export class Perk {
   name: string = "";
   maxRanks: number = 1;
   requirements: PerkRequirement = new PerkRequirement();
+  requirementText: string = "";
   description: string = "";
 
   ranks: number = 0;
@@ -19,6 +21,21 @@ export class Perk {
                     && special.intelligence >= this.requirements.int
                     && special.agility >= this.requirements.agi
                     && special.luck >= this.requirements.lck;
+  }
+
+  setRequirementText() {
+    var result = [];
+    if (this.requirements.str > 0) { result.push(`${SpecialEnum.STR} ${this.requirements.str}`) }
+    if (this.requirements.per > 0) { result.push(`${SpecialEnum.PER} ${this.requirements.per}`) }
+    if (this.requirements.end > 0) { result.push(`${SpecialEnum.END} ${this.requirements.end}`) }
+    if (this.requirements.cha > 0) { result.push(`${SpecialEnum.CHA} ${this.requirements.cha}`) }
+    if (this.requirements.int > 0) { result.push(`${SpecialEnum.INT} ${this.requirements.int}`) }
+    if (this.requirements.agi > 0) { result.push(`${SpecialEnum.AGI} ${this.requirements.agi}`) }
+    if (this.requirements.lck > 0) { result.push(`${SpecialEnum.LCK} ${this.requirements.lck}`) }
+    if (this.requirements.level > 0) { result.push(`Level ${this.requirements.level}+`) }
+    if (this.requirements.other && this.requirements.other.length > 0) { result.push(this.requirements.other) }
+
+    this.requirementText = result.length > 0 ? result.join(", ") : "None";
   }
 }
 
@@ -63,6 +80,8 @@ export class PerkData {
     result.requirements.lck = original.lck;
     result.requirements.other = original.other;
     result.description = original.desc;
+
+    result.setRequirementText();
 
     return result;
   }

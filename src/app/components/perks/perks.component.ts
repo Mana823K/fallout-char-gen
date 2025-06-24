@@ -14,6 +14,8 @@ export class PerksComponent implements OnInit {
   readonly STORAGE_NAME = "Perks";
 
   perks: Perk[] = [];
+  availablePerks: Perk[] = [];
+
   @Input() special: Special = new Special();
 
   private _level: number = 0;
@@ -26,6 +28,9 @@ export class PerksComponent implements OnInit {
   @Output() perksChanged = new EventEmitter<Perk[]>();
 
   get selectedCount(): number { return this.perks.filter(x => x.isSelected).length; }
+
+  showAll: boolean = false;
+  showDetails: boolean = false;
 
   constructor(private dataService: DataService) {
     this.perks = this.dataService.perks;
@@ -80,39 +85,7 @@ export class PerksComponent implements OnInit {
 
       return a.name.localeCompare(b.name);
     });
-  }
 
-  getRequirementsText(requirements: PerkRequirement): string {
-    var result = [];
-
-    if (requirements.str > 0) {
-      result.push(`${SpecialEnum.STR} ${requirements.str}`)
-    }
-    if (requirements.per > 0) {
-      result.push(`${SpecialEnum.PER} ${requirements.per}`)
-    }
-    if (requirements.end > 0) {
-      result.push(`${SpecialEnum.END} ${requirements.end}`)
-    }
-    if (requirements.cha > 0) {
-      result.push(`${SpecialEnum.CHA} ${requirements.cha}`)
-    }
-    if (requirements.int > 0) {
-      result.push(`${SpecialEnum.INT} ${requirements.int}`)
-    }
-    if (requirements.agi > 0) {
-      result.push(`${SpecialEnum.AGI} ${requirements.agi}`)
-    }
-    if (requirements.lck > 0) {
-      result.push(`${SpecialEnum.LCK} ${requirements.lck}`)
-    }
-    if (requirements.level > 0) {
-      result.push(`Level ${requirements.level}+`)
-    }
-    if (requirements.other && requirements.other.length > 0) {
-      result.push(requirements.other)
-    }
-
-    return result.length > 0 ? result.join(", ") : "None";
+  this.availablePerks = this.perks.filter(x => x.isAvailable);
   }
 }
