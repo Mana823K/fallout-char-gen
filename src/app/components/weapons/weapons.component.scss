@@ -1,0 +1,5 @@
+@import "./../../../style/colors.scss";
+
+tr:nth-child(even) {
+  background-color: $accentLight;
+}

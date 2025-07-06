@@ -1,3 +1,25 @@
-.container {
-  padding: 0 1.5rem 1.5rem 1.5rem;
+@import "./../style/colors.scss";
+@import "./../style/variables.scss";
+
+.header {
+  padding-left: 1rem;
+  margin: -0.5rem;
+  display: flex;
+  gap: 1rem;
+  background-color: $primaryLight;
+}
+
+.header-link {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: $primaryLightAccent;
+  border-radius: $borderRadius;
+
+  &:hover {
+    color: $accentDark;
+    background-color: $accentLight;
+  }
+  &:active {
+    background-color: $accentLightAccent;
+  }
 }

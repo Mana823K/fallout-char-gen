@@ -17,6 +17,7 @@ import { SelectComponent } from './components/form/select/select.component';
 import { InputComponent } from './components/form/input/input.component';
 import { NumberInputComponent } from './components/form/number-input/number-input.component';
 import { CharacterComponent } from './components/character/character.component';
+import { WeaponsComponent } from './components/weapons/weapons.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CharacterComponent } from './components/character/character.component';
     SelectComponent,
     InputComponent,
     NumberInputComponent,
-    CharacterComponent
+    CharacterComponent,
+    WeaponsComponent
   ],
   imports: [
     BrowserModule,
