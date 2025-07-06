@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Special, SpecialData } from '../../models/special';
+import { Special, SpecialData } from '../../../models/special';
 
 @Component({
   selector: 'app-special-attributes',

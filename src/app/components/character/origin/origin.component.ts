@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { DataService } from '../../services/data.service';
-import { Origin } from '../../models/origin';
+import { DataService } from '../../../services/data.service';
+import { Origin } from '../../../models/origin';
 
 @Component({
   selector: 'app-origin',

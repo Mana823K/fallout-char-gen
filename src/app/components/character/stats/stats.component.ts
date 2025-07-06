@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Stats } from '../../models/stats';
-import { Special } from '../../models/special';
+import { Stats } from '../../../models/stats';
+import { Special } from '../../../models/special';
 
 @Component({
   selector: 'app-stats',

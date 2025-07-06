@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Skill, SkillSaveData } from '../../models/skill';
-import { DataService } from '../../services/data.service';
-import { Special } from '../../models/special';
+import { Skill, SkillSaveData } from '../../../models/skill';
+import { DataService } from '../../../services/data.service';
+import { Special } from '../../../models/special';
 
 @Component({
   selector: 'app-skills',
