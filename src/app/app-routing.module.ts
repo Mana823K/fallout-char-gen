@@ -4,7 +4,8 @@ import { CharacterComponent } from './components/character/character.component';
 import { WeaponsComponent } from './components/weapons/weapons.component';
 
 const routes: Routes = [
-  { path: '', component: CharacterComponent, pathMatch: 'full' },
+  { path: '', redirectTo: 'character', pathMatch: 'full' },
+  { path: 'character', component: CharacterComponent },
   { path: 'weapons', component: WeaponsComponent },
   { path: '**', redirectTo: '' }
 ];
