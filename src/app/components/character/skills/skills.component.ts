@@ -12,6 +12,9 @@ import { Special } from '../../../models/special';
 export class SkillsComponent implements OnInit {
   readonly STORAGE_NAME = "Skills";
   readonly DEF_TAG_COUNT = 3;
+  readonly DEF_MAX_RANK = 6;
+  readonly DEF_STARTER_MAX_RANK = 3;
+  readonly DEF_TAG_MIN_RANK = 2;
   readonly DEF_RANK_POINTS = 9;
 
   skills: Skill[] = [];
@@ -29,7 +32,7 @@ export class SkillsComponent implements OnInit {
     this.skills.forEach(x => total += x.ranks);
     return total;
   }
-  get maxRank(): number { return this.level >= 3 ? 6 : 3; }
+  get maxRank(): number { return this.level >= 3 ? this.DEF_MAX_RANK : this.DEF_STARTER_MAX_RANK; }
 
   constructor(private dataService: DataService) {
     this.skills = this.dataService.skills;
@@ -50,8 +53,8 @@ export class SkillsComponent implements OnInit {
   }
 
   onTagChanged(skill: Skill) {
-    if (skill.isTagged && skill.ranks < 2) {
-      skill.ranks = 2;
+    if (skill.isTagged && skill.ranks < this.DEF_TAG_MIN_RANK) {
+      skill.ranks = this.DEF_TAG_MIN_RANK;
     }
 
     this.onSkillChange();

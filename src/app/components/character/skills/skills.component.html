@@ -2,14 +2,16 @@
 
 <p [ngClass]="{'points-left-error': availableRankPoints - totalRankPoints < 0}"><span class="points-left-label">Points left:</span> {{availableRankPoints - totalRankPoints}}</p>
 
-<div *ngFor="let skill of skills" class="skill">
-  <div class="skill-name">
-    <mat-checkbox color="primary" [disabled]="tagCount >= availableTagCount && !skill.isTagged" [(ngModel)]="skill.isTagged" (ngModelChange)="onTagChanged(skill)"></mat-checkbox>
-    <p>{{skill.name}}</p>
-  </div>
-  <div class="skill-input">
-    <mat-icon (click)="decreaseRank(skill)" class="arrow-icon" [ngClass]="skill.ranks <= skill.minRank ? 'arrow-icon-disabled' : 'arrow-icon-active'">keyboard_arrow_left</mat-icon>
-    <app-number-input [min]="skill.minRank" [max]="maxRank" [(value)]="skill.ranks" (valueChange)="onSkillChange()"></app-number-input>
-    <mat-icon (click)="increaseRank(skill)" class="arrow-icon" [ngClass]="skill.ranks >= maxRank ? 'arrow-icon-disabled' : 'arrow-icon-active'">keyboard_arrow_right</mat-icon>
+<div class="skills-container">
+  <div *ngFor="let skill of skills" class="skill">
+    <div class="skill-input">
+      <mat-icon (click)="decreaseRank(skill)" class="arrow-icon" [ngClass]="skill.ranks <= skill.minRank ? 'arrow-icon-disabled' : 'arrow-icon-active'">keyboard_arrow_left</mat-icon>
+      <app-number-input [min]="skill.minRank" [max]="maxRank" [(value)]="skill.ranks" (valueChange)="onSkillChange()"></app-number-input>
+      <mat-icon (click)="increaseRank(skill)" class="arrow-icon" [ngClass]="skill.ranks >= maxRank ? 'arrow-icon-disabled' : 'arrow-icon-active'">keyboard_arrow_right</mat-icon>
+    </div>
+    <div class="skill-name">
+      <mat-checkbox color="primary" [disabled]="tagCount >= availableTagCount && !skill.isTagged" [(ngModel)]="skill.isTagged" (ngModelChange)="onTagChanged(skill)"></mat-checkbox>
+      <p>{{skill.name}}</p>
+    </div>
   </div>
 </div>

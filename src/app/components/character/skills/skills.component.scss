@@ -9,28 +9,32 @@
   text-decoration: underline;
 }
 
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .skill {
   display: flex;
-  justify-content: space-between;
-  width: 300px;
 }
 
 .skill-name {
   display: flex;
-  align-items: anchor-center;
+  align-items: center;
   gap: 0.5rem;
-  width: 200px;
+  width: 160px;
 }
 
 .skill-input {
   display: flex;
-  align-items: anchor-center;
-  gap: 0.5rem;
+  align-items: center;
 }
 
 .arrow-icon {
   font-size: 20pt;
-  border-radius: $borderRadius;
+  border-radius: 50%;
   padding: 0.5rem 0;
 }
 
