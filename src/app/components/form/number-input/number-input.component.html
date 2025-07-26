@@ -2,8 +2,8 @@
 <input type="number"
       #input
       [name]="inputName"
-      [ngModel]="value"
-      (ngModelChange)="onChange($event)"
+      [value]="value"
+      (change)="onChange($event)"
       [min]="min == undefined ? null: min"
       [max]="max == undefined ? null : max"
       class="input">

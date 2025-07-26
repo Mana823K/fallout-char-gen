@@ -16,14 +16,18 @@ export class NumberInputComponent {
 
   @ViewChild("input") input?: ElementRef;
 
-  onChange(value: number) {
+  onChange(event: any) {
+    let value = event.target.value;
     if (this.min != undefined && value < this.min)
-      value = this.min;
-    if (this.max != undefined && value > this.max)
-      value = this.max;
+      this.value = this.min;
+    else if (this.max != undefined && value > this.max)
+      this.value = this.max;
+    else
+      this.value = value;
 
     if (this.input?.nativeElement)
-      this.input.nativeElement.value = value
-    this.valueChange.emit(value);
+      this.input.nativeElement.value = this.value;
+
+    this.valueChange.emit(this.value);
   }
 }
