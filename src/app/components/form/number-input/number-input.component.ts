@@ -17,7 +17,7 @@ export class NumberInputComponent {
   @ViewChild("input") input?: ElementRef;
 
   onChange(event: any) {
-    let value = event.target.value;
+    let value = Number(event.target.value);
     if (this.min != undefined && value < this.min)
       this.value = this.min;
     else if (this.max != undefined && value > this.max)
