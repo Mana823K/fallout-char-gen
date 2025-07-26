@@ -3,10 +3,12 @@ export class Weapon {
   skill: string = "";
   damage: number = 0;
   effects: string[] = [];
+  effectsText: string = "";
   type: string = "";
   rate: number = 0;
   range: string = "";
   qualities: string[] = [];
+  qualitiesText: string = "";
   ammo: string = "";
   weight: number = 0;
   cost: number = 0;
@@ -34,10 +36,12 @@ export class WeaponData {
     result.skill = original.skill;
     result.damage = original.damage;
     result.effects = original.effects;
+    result.effectsText = original.effects.join(", ");
     result.type = original.type;
     result.rate = original.rate;
     result.range = original.range;
     result.qualities = original.qualities;
+    result.qualitiesText = original.qualities.join(", ");
     result.ammo = original.ammo;
     result.weight = original.weight;
     result.cost = original.cost;
