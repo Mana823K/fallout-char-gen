@@ -9,7 +9,7 @@ export class Weapon {
   range: string = "";
   qualities: string[] = [];
   qualitiesText: string = "";
-  ammo: string = "";
+  ammo: string[] = [];
   weight: number = 0;
   cost: number = 0;
   rarity: number = 0;
@@ -24,7 +24,7 @@ export class WeaponData {
   rate: number = 0;
   range: string = "";
   qualities: string[] = [];
-  ammo: string = "";
+  ammo: string[] = [];
   weight: number = 0;
   cost: number = 0;
   rarity: number = 0;
