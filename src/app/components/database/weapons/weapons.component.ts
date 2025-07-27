@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { DataService } from '../../services/data.service';
-import { Weapon } from '../../models/weapon';
+import { DataService } from '../../../services/data.service';
+import { Weapon } from '../../../models/weapon';
 
 @Component({
   selector: 'app-weapons',

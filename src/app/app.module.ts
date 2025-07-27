@@ -17,7 +17,11 @@ import { SelectComponent } from './components/form/select/select.component';
 import { InputComponent } from './components/form/input/input.component';
 import { NumberInputComponent } from './components/form/number-input/number-input.component';
 import { CharacterComponent } from './components/character/character.component';
-import { WeaponsComponent } from './components/weapons/weapons.component';
+import { WeaponsComponent } from './components/database/weapons/weapons.component';
+import { DatabaseComponent } from './components/database/database.component';
+import { ModsComponent } from './components/database/mods/mods.component';
+import { ArmorComponent } from './components/database/armor/armor.component';
+import { ItemsComponent } from './components/database/items/items.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { WeaponsComponent } from './components/weapons/weapons.component';
     InputComponent,
     NumberInputComponent,
     CharacterComponent,
-    WeaponsComponent
+    WeaponsComponent,
+    DatabaseComponent,
+    ModsComponent,
+    ArmorComponent,
+    ItemsComponent
   ],
   imports: [
     BrowserModule,

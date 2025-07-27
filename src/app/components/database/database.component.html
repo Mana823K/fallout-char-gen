@@ -1,0 +1,7 @@
+<div class="header">
+  <p class="link-button" [ngClass]="{'active-link': selectedTable == 'weapons'}" (click)="navigateTo('weapons')">Weapons</p>
+  <!-- <p class="link-button" [ngClass]="{'active-link': selectedTable == 'mods'}" (click)="navigateTo('mods')">Weapon Mods</p>
+  <p class="link-button" [ngClass]="{'active-link': selectedTable == 'armor'}" (click)="navigateTo('armor')">Armor</p>
+  <p class="link-button" [ngClass]="{'active-link': selectedTable == 'items'}" (click)="navigateTo('items')">Items</p> -->
+</div>
+<router-outlet></router-outlet>
