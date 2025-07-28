@@ -1,0 +1,546 @@
+[
+  {
+    "name": ".38",
+    "quantityFound": 10,
+    "quantityRolled": 5,
+    "weight": 0,
+    "cost": 1,
+    "rarity": 0,
+    "notes": ""
+  },
+  {
+    "name": "10mm",
+    "quantityFound": 8,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 2,
+    "rarity": 0,
+    "notes": ""
+  },
+  {
+    "name": ".308",
+    "quantityFound": 6,
+    "quantityRolled": 3,
+    "weight": 0,
+    "cost": 3,
+    "rarity": 0,
+    "notes": ""
+  },
+  {
+    "name": "Flare",
+    "quantityFound": 2,
+    "quantityRolled": 1,
+    "weight": 0,
+    "cost": 1,
+    "rarity": 1,
+    "notes": ""
+  },
+  {
+    "name": "Shotgun Shell",
+    "quantityFound": 6,
+    "quantityRolled": 3,
+    "weight": 0,
+    "cost": 3,
+    "rarity": 1,
+    "notes": ""
+  },
+  {
+    "name": ".45",
+    "quantityFound": 8,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 3,
+    "rarity": 2,
+    "notes": ""
+  },
+  {
+    "name": "Flamer Fuel",
+    "quantityFound": 12,
+    "quantityRolled": 6,
+    "weight": 0,
+    "cost": 1,
+    "rarity": 2,
+    "notes": ""
+  },
+  {
+    "name": "Fusion Cell",
+    "quantityFound": 14,
+    "quantityRolled": 7,
+    "weight": 0,
+    "cost": 3,
+    "rarity": 2,
+    "notes": ""
+  },
+  {
+    "name": "Gamma Round",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 10,
+    "rarity": 2,
+    "notes": ""
+  },
+  {
+    "name": "Railway Spike",
+    "quantityFound": 6,
+    "quantityRolled": 3,
+    "weight": 0,
+    "cost": 1,
+    "rarity": 2,
+    "notes": ""
+  },
+  {
+    "name": "Syringer Ammo",
+    "subType": "Berserk",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 50,
+    "rarity": 2,
+    "notes": "If one or more Effects are rolled for the weapon’s damage, the target becomes frenzied and berserk, attacking the nearest living creature (friend or foe) for the remainder of the scene."
+  },
+  {
+    "name": "Syringer Ammo",
+    "subType": "Bleed-Out",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 17,
+    "rarity": 2,
+    "notes": "The weapon gains the Persistent damage effect."
+  },
+  {
+    "name": "Syringer Ammo",
+    "subType": "Bloatfly Larva",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 10,
+    "rarity": 2,
+    "notes": "If one or more Effects are rolled for the weapon’s damage, then upon the target’s death, a Bloatfly emerges from their remains."
+  },
+  {
+    "name": "Syringer Ammo",
+    "subType": "Endangerol",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 60,
+    "rarity": 2,
+    "notes": "If one or more Effects are rolled for the weapon’s damage, the target’s Physical damage resistance is reduced by 2 for the remainder of the scene."
+  },
+  {
+    "name": "Syringer Ammo",
+    "subType": "Lock Joint",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 40,
+    "rarity": 2,
+    "notes": "The weapon gains the Stun damage effect"
+  },
+  {
+    "name": "Syringer Ammo",
+    "subType": "Mind Cloud",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 73,
+    "rarity": 2,
+    "notes": "If one or more Effects are rolled for the weapon’s damage, the target becomes confused and adds +2 difficulty to all PER tests for a number of rounds equal to the number of Effects rolled."
+  },
+  {
+    "name": "Syringer Ammo",
+    "subType": "Pax",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 39,
+    "rarity": 2,
+    "notes": "If one or more Effects are rolled for the weapon’s damage, the target cannot take hostile or aggressive actions for a number of rounds equal to the number of Effects rolled."
+  },
+  {
+    "name": "Syringer Ammo",
+    "subType": "Radscorpion Venom",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 65,
+    "rarity": 2,
+    "notes": "The weapon adds +1CD damage and gains the Persistent (Poison) damage effect."
+  },
+  {
+    "name": "Syringer Ammo",
+    "subType": "Yellow Belly",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 55,
+    "rarity": 2,
+    "notes": "If one or more Effects are rolled for the weapon’s damage, the target must use at least one of their actions each turn to move away from all enemies by the most direct route. This lasts for a number of rounds equal to the number of Effects rolled."
+  },
+  {
+    "name": "Syringer Ammo",
+    "subType": "Cazadores Sting",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 75,
+    "rarity": 2,
+    "notes": "The weapon adds +2 CD damage and gains the Persistent (poison) damage effect"
+  },
+  {
+    "name": ".44 Magnum",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 3,
+    "rarity": 3,
+    "notes": ""
+  },
+  {
+    "name": ".50",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 4,
+    "rarity": 3,
+    "notes": ""
+  },
+  {
+    "name": "5.56mm",
+    "quantityFound": 8,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 2,
+    "rarity": 3,
+    "notes": ""
+  },
+  {
+    "name": "5mm",
+    "quantityFound": 12,
+    "quantityRolled": 6,
+    "weight": 0,
+    "cost": 1,
+    "rarity": 3,
+    "notes": ""
+  },
+  {
+    "name": "Fusion Core",
+    "quantityFound": 1,
+    "quantityRolled": 0,
+    "weight": 4,
+    "cost": 200,
+    "rarity": 3,
+    "notes": "When discovered, a fusion core contains charges equal to 10 + Science skill. When used as the ammunition for a Gatling laser, each charge a fusion core contains translates to 50 shots for a Gatling laser. The Scavenger perk cannot increase the number of fusion cores found"
+  },
+  {
+    "name": "Missile",
+    "quantityFound": 2,
+    "quantityRolled": 1,
+    "weight": 7,
+    "cost": 25,
+    "rarity": 3,
+    "notes": "When found by a character with the Scavenger perk, roll only +1CD  per Rank, rather than the normal bonus amount."
+  },
+  {
+    "name": "Plasma Cartridge",
+    "quantityFound": 10,
+    "quantityRolled": 5,
+    "weight": 0,
+    "cost": 5,
+    "rarity": 4,
+    "notes": ""
+  },
+  {
+    "name": "2mm EC",
+    "quantityFound": 6,
+    "quantityRolled": 3,
+    "weight": 0,
+    "cost": 10,
+    "rarity": 5,
+    "notes": ""
+  },
+  {
+    "name": "Mini-Nuke",
+    "quantityFound": 1,
+    "quantityRolled": 1,
+    "weight": 12,
+    "cost": 100,
+    "rarity": 6,
+    "notes": "The Scavenger perk cannot increase the number of Mini-Nukes found."
+  },
+  {
+    "name": "40mm grenade round",
+    "quantityFound": 2,
+    "quantityRolled": 1,
+    "weight": 0,
+    "cost": 20,
+    "rarity": 4,
+    "notes": "When found by a character with the Scavenger perk, roll only +1 CD per Rank, rather than the normal bonus amount."
+  },
+  {
+    "name": "Acid Concentrate",
+    "quantityFound": 2,
+    "quantityRolled": 3,
+    "weight": 0,
+    "cost": 2,
+    "rarity": 3,
+    "notes": ""
+  },
+  {
+    "name": "Alien Blaster Round",
+    "quantityFound": 3,
+    "quantityRolled": 1,
+    "weight": 0,
+    "cost": 1,
+    "rarity": 6,
+    "notes": ""
+  },
+  {
+    "name": "Cannonball",
+    "quantityFound": 1,
+    "quantityRolled": 2,
+    "weight": 4,
+    "cost": 8,
+    "rarity": 5,
+    "notes": ""
+  },
+  {
+    "name": "Cryo Cell",
+    "quantityFound": 4,
+    "quantityRolled": 3,
+    "weight": 0,
+    "cost": 10,
+    "rarity": 5,
+    "notes": ""
+  },
+  {
+    "name": "Gas Grenade",
+    "quantityFound": 2,
+    "quantityRolled": 1,
+    "weight": 0,
+    "cost": 2,
+    "rarity": 4,
+    "notes": ""
+  },
+  {
+    "name": "Harpoon",
+    "quantityFound": 2,
+    "quantityRolled": 1,
+    "weight": 0,
+    "cost": 3,
+    "rarity": 4,
+    "notes": ""
+  },
+  {
+    "name": ".357 Magnum",
+    "quantityFound": 6,
+    "quantityRolled": 3,
+    "weight": 0,
+    "cost": 2,
+    "rarity": 1,
+    "notes": ""
+  },
+  {
+    "name": "12.7mm",
+    "quantityFound": 6,
+    "quantityRolled": 3,
+    "weight": 0,
+    "cost": 2,
+    "rarity": 2,
+    "notes": ""
+  },
+  {
+    "name": "9mm",
+    "quantityFound": 10,
+    "quantityRolled": 5,
+    "weight": 0,
+    "cost": 1,
+    "rarity": 0,
+    "notes": ""
+  },
+  {
+    "name": ".50 Ball",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 1,
+    "rarity": 3,
+    "notes": ""
+  },
+  {
+    "name": "25mm Grenade",
+    "quantityFound": 2,
+    "quantityRolled": 1,
+    "weight": 0,
+    "cost": 8,
+    "rarity": 4,
+    "notes": ""
+  },
+  {
+    "name": "Alien Power Cells",
+    "quantityFound": 4,
+    "quantityRolled": 2,
+    "weight": 0,
+    "cost": 5,
+    "rarity": 5,
+    "notes": ""
+  },
+  {
+    "name": "Alien Power Module",
+    "quantityFound": 3,
+    "quantityRolled": 1,
+    "weight": 0,
+    "cost": 10,
+    "rarity": 6,
+    "notes": ""
+  },
+  {
+    "name": "Arrow",
+    "quantityFound": 6,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 2,
+    "rarity": 1,
+    "notes": ""
+  },
+  {
+    "name": "Arrow",
+    "subType": "Cryo",
+    "quantityFound": 6,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 10,
+    "rarity": 4,
+    "notes": "The weapon gains the Freeze damage effect."
+  },
+  {
+    "name": "Arrow",
+    "subType": "Explosive",
+    "quantityFound": 6,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 8,
+    "rarity": 3,
+    "notes": "The weapon loses the Suppressed weapon quality and gains the Blast weapon quality."
+  },
+  {
+    "name": "Arrow",
+    "subType": "Flaming",
+    "quantityFound": 6,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 4,
+    "rarity": 2,
+    "notes": "The weapon gains the Persistent (Energy) damage effect."
+  },
+  {
+    "name": "Arrow",
+    "subType": "Serrated",
+    "quantityFound": 6,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 6,
+    "rarity": 2,
+    "notes": "The weapon gains the Persistent (Physical) and Piercing 1 damage effects."
+  },
+  {
+    "name": "Arrow",
+    "subType": "Plasma",
+    "quantityFound": 6,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 11,
+    "rarity": 5,
+    "notes": "The weapon inflicts +2CD damage and inflicts both Physical and Energy damage; the damage is reduced by whichever of Physical or Energy damage resistance the target has less of."
+  },
+  {
+    "name": "Arrow",
+    "subType": "Poison",
+    "quantityFound": 6,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 5,
+    "rarity": 2,
+    "notes": "The weapon gains the Persistent (Poison) damage effect."
+  },
+  {
+    "name": "Crossbow Bolt",
+    "quantityFound": 4,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 3,
+    "rarity": 2,
+    "notes": ""
+  },
+  {
+    "name": "Crossbow Bolt",
+    "subType": "Cryo",
+    "quantityFound": 4,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 11,
+    "rarity": 5,
+    "notes": "The weapon gains the Freeze damage effect."
+  },
+  {
+    "name": "Crossbow Bolt",
+    "subType": "Explosive",
+    "quantityFound": 4,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 9,
+    "rarity": 4,
+    "notes": "The weapon loses the Suppressed weapon quality and gains the Blast weapon quality."
+  },
+  {
+    "name": "Crossbow Bolt",
+    "subType": "Flaming",
+    "quantityFound": 4,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 5,
+    "rarity": 3,
+    "notes": "The weapon gains the Persistent (Energy) damage effect."
+  },
+  {
+    "name": "Crossbow Bolt",
+    "subType": "Serrated",
+    "quantityFound": 4,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 7,
+    "rarity": 3,
+    "notes": "The weapon gains the Persistent (Physical) and Piercing 1 damage effects."
+  },
+  {
+    "name": "Crossbow Bolt",
+    "subType": "Plasma",
+    "quantityFound": 4,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 12,
+    "rarity": 6,
+    "notes": "The weapon inflicts +2CD damage and inflicts both Physical and Energy damage; the damage is reduced by whichever of Physical or Energy damage resistance the target has less of."
+  },
+  {
+    "name": "Crossbow Bolt",
+    "subType": "Poison",
+    "quantityFound": 4,
+    "quantityRolled": 4,
+    "weight": 0,
+    "cost": 6,
+    "rarity": 3,
+    "notes": "The weapon gains the Persistent (Poison) damage effect."
+  },
+  {
+    "name": "Plasma Core",
+    "quantityFound": 1,
+    "quantityRolled": 0,
+    "weight": 4,
+    "cost": 200,
+    "rarity": 5,
+    "notes": "The Scrounger perk cannot increase the number of Plasma Cores found."
+  }
+]
