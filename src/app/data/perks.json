@@ -1512,20 +1512,6 @@
     "desc": "You are the person that people turn to, and with that have a certain amount of influence on the development of settlements and communities. At rank 1, you can establish a supply line between two settlements you have a reputation rank of at least Friendly (3) with (Settlers, p.52). To establish a supply line, you must have at least one available settler in either settlement to make the shipments. Once established, any available supplies or resources in one settlement can be made available in another settlement so long as that settlement’s Happiness is greater than the number of people in the settlement. At rank 2, you can request the construction of various stores and crafting tables in a settlement. This rank is required for a settlement to add Trading Stores, Clothing Stores, Armor Stores, Weapon Stores, Drinking Establishments, and Medical Establishments, as well as an Armor Workbench, Chemistry Station, Cooking Station, Power Armor Station, Weapons Workbench, and a Robot Workbench. Each time you take this perk, the level requirement increases by 5."
   },
   {
-    "name": "LOCK AND LOAD",
-    "ranks": 3,
-    "level": 2,
-    "str": 7,
-    "per": 0,
-    "end": 0,
-    "cha": 0,
-    "int": 0,
-    "agi": 0,
-    "lck": 0,
-    "other": "",
-    "desc": "When you make attacks with a big gun with a fire rate greater than 0, its fire rate increases by 1 per rank in this perk.  Each time you take this perk, the level requirement increases by 4."
-  },
-  {
     "name": "MECHANICAL MENACE/CLASS FREAK",
     "ranks": 1,
     "level": 0,
