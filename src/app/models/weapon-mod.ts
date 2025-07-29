@@ -16,7 +16,7 @@ export class WeaponMod {
   effectText: string = "";
   weightChange: number = 0;
   costChange: number = 0;
-  perk: string = "";
+  perks: string[] = [];
 }
 
 export class WeaponModData {
@@ -36,7 +36,7 @@ export class WeaponModData {
   effects?: string;
   weightChange: number = 0;
   costChange: number = 0;
-  perk: string = "";
+  perks: string[] = [];
 
   static map(original: WeaponModData): WeaponMod {
     let result = new WeaponMod();
@@ -58,7 +58,7 @@ export class WeaponModData {
     result.effectText = WeaponModData.getEffectsText(original);
     result.weightChange = original.weightChange;
     result.costChange = original.costChange;
-    result.perk = original.perk;
+    result.perks = original.perks;
 
     return result;
   }

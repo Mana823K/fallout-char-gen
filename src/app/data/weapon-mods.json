@@ -7,7 +7,7 @@
     "damageChange": 1,
     "weightChange": 0,
     "costChange": 20,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Powerful",
@@ -17,7 +17,7 @@
     "damageChange": 2,
     "weightChange": 1,
     "costChange": 25,
-    "perk": "Gun Nut 1"
+    "perks": ["Gun Nut 1"]
   },
   {
     "name": "Advanced",
@@ -28,7 +28,7 @@
     "fireRateChange": 1,
     "weightChange": 2,
     "costChange": 35,
-    "perk": "Gun Nut 2"
+    "perks": ["Gun Nut 2"]
   },
   {
     "name": "Calibrated",
@@ -38,7 +38,7 @@
     "weightChange": 0,
     "gainedEffects": ["Vicious"],
     "costChange": 25,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Automatic",
@@ -51,7 +51,7 @@
     "gainedEffects": ["Burst"],
     "weightChange": 1,
     "costChange": 30,
-    "perk": "Gun Nut 1"
+    "perks": ["Gun Nut 1"]
   },
   {
     "name": "Hair Trigger",
@@ -61,7 +61,7 @@
     "fireRateChange": 1,
     "weightChange": 0,
     "costChange": 20,
-    "perk": "Gun Nut 2"
+    "perks": ["Gun Nut 2"]
   },
   {
     "name": ".38 Receiver",
@@ -72,7 +72,7 @@
     "ammo": ".38",
     "weightChange": 3,
     "costChange": 20,
-    "perk": "Gun Nut 4"
+    "perks": ["Gun Nut 4"]
   },
   {
     "name": ".308 Receiver",
@@ -83,7 +83,7 @@
     "ammo": ".308",
     "weightChange": 4,
     "costChange": 40,
-    "perk": "Gun Nut 4"
+    "perks": ["Gun Nut 4"]
   },
   {
     "name": ".45 Receiver",
@@ -95,7 +95,7 @@
     "ammo": ".45",
     "weightChange": 2,
     "costChange": 19,
-    "perk": "Gun Nut 2"
+    "perks": ["Gun Nut 2"]
   },
   {
     "name": ".50 Receiver",
@@ -107,7 +107,7 @@
     "ammo": ".50",
     "weightChange": 4,
     "costChange": 30,
-    "perk": "Gun Nut 4"
+    "perks": ["Gun Nut 4"]
   },
   {
     "name": "Automatic Piston",
@@ -118,7 +118,7 @@
     "rangeChange": -1,
     "weightChange": 2,
     "costChange": 75,
-    "perk": "Gun Nut 2"
+    "perks": ["Gun Nut 2"]
   },
   {
     "name": "Snubnose Barrel",
@@ -128,7 +128,7 @@
     "gainedQualities": ["Inaccurate"],
     "weightChange": -1,
     "costChange": 0,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Bull Barrel",
@@ -138,7 +138,7 @@
     "gainedQualities": ["Reliable"],
     "weightChange": 0,
     "costChange": 10,
-    "perk": "Gun Nut 3"
+    "perks": ["Gun Nut 3"]
   },
   {
     "name": "Long Barrel",
@@ -148,7 +148,7 @@
     "rangeChange": 1,
     "weightChange": 1,
     "costChange": 20,
-    "perk": "Gun Nut 1"
+    "perks": ["Gun Nut 1"]
   },
   {
     "name": "Ported Barrel",
@@ -159,7 +159,7 @@
     "fireRateChange": 1,
     "weightChange": 1,
     "costChange": 35,
-    "perk": "Gun Nut 4"
+    "perks": ["Gun Nut 4"]
   },
   {
     "name": "Vented Barrel",
@@ -171,7 +171,7 @@
     "gainedQualities": ["Reliable"],
     "weightChange": 1,
     "costChange": 36,
-    "perk": "Gun Nut 4"
+    "perks": ["Gun Nut 4"]
   },
   {
     "name": "Sawed-Off Barrel",
@@ -182,7 +182,7 @@
     "gainedQualities": ["Close Quarters"],
     "weightChange": -2,
     "costChange": 3,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Finned Barrel",
@@ -193,7 +193,7 @@
     "rangeChange": 1,
     "weightChange": 2,
     "costChange": 15,
-    "perk": "Gun Nut 2"
+    "perks": ["Gun Nut 2"]
   },
   {
     "name": "Comfort Grip",
@@ -203,7 +203,7 @@
     "removedQualities": ["Inaccurate"],
     "weightChange": 0,
     "costChange": 6,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Sharpshooter’s Grip",
@@ -214,7 +214,7 @@
     "gainedEffects": ["Piercing 1"],
     "weightChange": 0,
     "costChange": 10,
-    "perk": "Gun Nut 1"
+    "perks": ["Gun Nut 1"]
   },
   {
     "name": "Full Stock",
@@ -225,7 +225,7 @@
     "removedQualities": ["Inaccurate"],
     "weightChange": 1,
     "costChange": 10,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Marksman’s Stock",
@@ -236,7 +236,7 @@
     "removedQualities": ["Inaccurate"],
     "weightChange": 2,
     "costChange": 20,
-    "perk": "Gun Nut 2"
+    "perks": ["Gun Nut 2"]
   },
   {
     "name": "Recoil Compensating Stock",
@@ -248,7 +248,7 @@
     "removedQualities": ["Inaccurate"],
     "weightChange": 2,
     "costChange": 3,
-    "perk": "Gun Nut 3"
+    "perks": ["Gun Nut 3"]
   },
   {
     "name": "Reflex Sight",
@@ -258,7 +258,7 @@
     "effects": "May re-roll hit location die",
     "weightChange": 0,
     "costChange": 14,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Short Scope",
@@ -268,7 +268,7 @@
     "gainedQualities": ["Accurate"],
     "weightChange": 1,
     "costChange": 11,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Long Scope",
@@ -279,7 +279,7 @@
     "gainedQualities": ["Accurate"],
     "weightChange": 1,
     "costChange": 29,
-    "perk": "Science! 2"
+    "perks": ["Science! 2"]
   },
   {
     "name": "Short Night Vision Scope",
@@ -289,7 +289,7 @@
     "gainedQualities": ["Accurate", "Night Vision"],
     "weightChange": 1,
     "costChange": 38,
-    "perk": "Science! 2"
+    "perks": ["Science! 2"]
   },
   {
     "name": "Long Night Vision Scope",
@@ -300,7 +300,7 @@
     "gainedQualities": ["Accurate", "Night Vision"],
     "weightChange": 1,
     "costChange": 50,
-    "perk": "Science! 3"
+    "perks": ["Science! 3"]
   },
   {
     "name": "Recon Scope",
@@ -310,7 +310,7 @@
     "gainedQualities": ["Accurate", "Recon"],
     "weightChange": 1,
     "costChange": 59,
-    "perk": "Science! 3"
+    "perks": ["Science! 3"]
   },
   {
     "name": "Bayonet",
@@ -321,7 +321,7 @@
     "effects": "As a Melee weapon, deals 4CD Piercing 1 Physical damage",
     "weightChange": 2,
     "costChange": 10,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Compensator",
@@ -331,7 +331,7 @@
     "removedQualities": ["Inaccurate"],
     "weightChange": 1,
     "costChange": 15,
-    "perk": "Gun Nut 1"
+    "perks": ["Gun Nut 1"]
   },
   {
     "name": "Muzzle Break",
@@ -342,7 +342,7 @@
     "removedQualities": ["Inaccurate"],
     "weightChange": 1,
     "costChange": 30,
-    "perk": "Gun Nut 1"
+    "perks": ["Gun Nut 1"]
   },
   {
     "name": "Suppressor",
@@ -352,7 +352,7 @@
     "gainedQualities": ["Suppressed"],
     "weightChange": 2,
     "costChange": 45,
-    "perk": "Gun Nut 2"
+    "perks": ["Gun Nut 2"]
   },
   {
     "name": "Beta Wave Tuner",
@@ -362,7 +362,7 @@
     "gainedEffects": ["Persistent"],
     "weightChange": 0,
     "costChange": 30,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Boosted Capacitor",
@@ -373,7 +373,7 @@
     "fireRateChange": -1,
     "weightChange": 0,
     "costChange": 35,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Photon Exciter",
@@ -383,7 +383,7 @@
     "gainedEffects": ["Vicious"],
     "weightChange": 0,
     "costChange": 30,
-    "perk": "Science! 1"
+    "perks": ["Science! 1"]
   },
   {
     "name": "Photon Agitator",
@@ -394,10 +394,10 @@
     "gainedEffects": ["Vicious"],
     "weightChange": 1,
     "costChange": 35,
-    "perk": "Science! 2"
+    "perks": ["Science! 2"]
   },
   {
-    "name": "Three-crank capacitor",
+    "name": "Three-crank capacitor (Laser Musket)",
     "prefix": "Three-crank",
     "weaponType": "Energy Weapon",
     "type": "Capacitor",
@@ -405,10 +405,10 @@
     "effects": "consumes 3 shots per attack",
     "weightChange": 0,
     "costChange": 4,
-    "perk": ""
+    "perks": []
   },
   {
-    "name": "Four-crank capacitor",
+    "name": "Four-crank capacitor (Laser Musket)",
     "prefix": "Four-crank",
     "weaponType": "Energy Weapon",
     "type": "Capacitor",
@@ -416,10 +416,10 @@
     "effects": "consumes 4 shots per attack",
     "weightChange": 1,
     "costChange": 8,
-    "perk": "Science! 1"
+    "perks": ["Science! 1"]
   },
   {
-    "name": "Five-crank capacitor",
+    "name": "Five-crank capacitor (Laser Musket)",
     "prefix": "Five-crank",
     "weaponType": "Energy Weapon",
     "type": "Capacitor",
@@ -427,10 +427,10 @@
     "effects": "consumes 5 shots per attack",
     "weightChange": 1,
     "costChange": 12,
-    "perk": "Science! 2"
+    "perks": ["Science! 2"]
   },
   {
-    "name": "Six-crank capacitor",
+    "name": "Six-crank capacitor (Laser Musket)",
     "prefix": "Six-crank",
     "weaponType": "Energy Weapon",
     "type": "Capacitor",
@@ -438,7 +438,7 @@
     "effects": "consumes 6 shots per attack",
     "weightChange": 2,
     "costChange": 16,
-    "perk": "Science! 3"
+    "perks": ["Science! 3"]
   },
   {
     "name": "Bracketed Short Barrel",
@@ -448,7 +448,7 @@
     "effects": "Allows the weapon to take a Muzzle mod",
     "weightChange": 0,
     "costChange": 6,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Long Barrel",
@@ -459,7 +459,7 @@
     "removedQualities": ["Close Quarters"],
     "weightChange": 2,
     "costChange": 20,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Splitter",
@@ -471,7 +471,7 @@
     "gainedQualities": ["Inaccurate"],
     "weightChange": 1,
     "costChange": 31,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Automatic Barrel",
@@ -484,7 +484,7 @@
     "removedQualities": ["Close Quarters"],
     "weightChange": 1,
     "costChange": 24,
-    "perk": "Science! 1"
+    "perks": ["Science! 1"]
   },
   {
     "name": "Bracketed Long Barrel",
@@ -496,7 +496,7 @@
     "effects":"Allows the weapon to take a Muzzle mod",
     "weightChange": 2,
     "costChange": 25,
-    "perk": "Science! 1"
+    "perks": ["Science! 1"]
   },
   {
     "name": "Improved Barrel",
@@ -506,7 +506,7 @@
     "damageChange": 1,
     "weightChange": 1,
     "costChange": 26,
-    "perk": "Science! 1"
+    "perks": ["Science! 1"]
   },
   {
     "name": "Sniper Barrel",
@@ -519,7 +519,7 @@
     "removedQualities": ["Close Quarters"],
     "weightChange": 2,
     "costChange": 30,
-    "perk": "Science! 1"
+    "perks": ["Science! 1"]
   },
   {
     "name": "Flamer Barrel",
@@ -533,7 +533,7 @@
     "gainedQualities": ["Inaccurate"],
     "weightChange": 1,
     "costChange": 35,
-    "perk": "Science! 2"
+    "perks": ["Science! 2"]
   },
   {
     "name": "Sharpshooter’s Grip",
@@ -544,7 +544,7 @@
     "removedQualities": ["Inaccurate"],
     "weightChange": 0,
     "costChange": 10,
-    "perk": "Gun Nut 1"
+    "perks": ["Gun Nut 1"]
   },
   {
     "name": "Standard Stock",
@@ -555,7 +555,7 @@
     "removedQualities": ["Inaccurate", "Close Quarters"],
     "weightChange": 1,
     "costChange": 10,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Full Stock",
@@ -566,7 +566,7 @@
     "removedQualities": ["Close Quarters"],
     "weightChange": 1,
     "costChange": 15,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Marksman’s Stock",
@@ -577,7 +577,7 @@
     "removedQualities": ["Inaccurate", "Close Quarters"],
     "weightChange": 2,
     "costChange": 20,
-    "perk": "Gun Nut 2"
+    "perks": ["Gun Nut 2"]
   },
   {
     "name": "Recoil Compensating Stock",
@@ -589,7 +589,7 @@
     "removedQualities": ["Inaccurate", "Close Quarters"],
     "weightChange": 2,
     "costChange": 3,
-    "perk": "Gun Nut 3"
+    "perks": ["Gun Nut 3"]
   },
   {
     "name": "Long Night Vision Scope",
@@ -600,7 +600,7 @@
     "gainedQualities": ["Accurate", "Night Vision"],
     "weightChange": 1,
     "costChange": 50,
-    "perk": "Science! 3"
+    "perks": ["Science! 3"]
   },
   {
     "name": "Recon Scope",
@@ -610,7 +610,7 @@
     "gainedQualities": ["Accurate", "Recon"],
     "weightChange": 1,
     "costChange": 59,
-    "perk": "Science! 3"
+    "perks": ["Science! 3"]
   },
   {
     "name": "Reflex Sight",
@@ -620,7 +620,7 @@
     "effects": "May re-roll hit location die",
     "weightChange": 0,
     "costChange": 14,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Short Scope",
@@ -630,7 +630,7 @@
     "gainedQualities": ["Accurate"],
     "weightChange": 1,
     "costChange": 11,
-    "perk": ""
+    "perks": []
   },
   {
     "name": "Long Scope",
@@ -641,7 +641,7 @@
     "gainedQualities": ["Accurate"],
     "weightChange": 1,
     "costChange": 29,
-    "perk": "Science! 2"
+    "perks": ["Science! 2"]
   },
   {
     "name": "Short Night Vision Scope",
@@ -651,7 +651,7 @@
     "gainedQualities": ["Accurate", "Night Vision"],
     "weightChange": 1,
     "costChange": 38,
-    "perk": "Science! 2"
+    "perks": ["Science! 2"]
   },
   {
     "name": "Long Night Vision Scope",
@@ -662,7 +662,7 @@
     "gainedQualities": ["Accurate", "Night Vision"],
     "weightChange": 1,
     "costChange": 50,
-    "perk": "Science! 3"
+    "perks": ["Science! 3"]
   },
   {
     "name": "Recon Scope",
@@ -672,10 +672,10 @@
     "gainedQualities": ["Accurate", "Recon"],
     "weightChange": 1,
     "costChange": 59,
-    "perk": "Science! 3"
+    "perks": ["Science! 3"]
   },
   {
-    "name": "Deep Dish",
+    "name": "Deep Dish (Gamma Gun)",
     "prefix": "Long",
     "weaponType": "Energy Weapon",
     "type": "Dish",
@@ -683,10 +683,10 @@
     "rangeChange": 1,
     "weightChange": 2,
     "costChange": 72,
-    "perk": "Science! 4"
+    "perks": ["Science! 4"]
   },
   {
-    "name": "Electric Signal Carrier Antennae",
+    "name": "Electric Signal Carrier Antennae (Gamma Gun)",
     "prefix": "Electrified",
     "weaponType": "Energy Weapon",
     "type": "Muzzle",
@@ -695,10 +695,10 @@
     "gainedEffects": ["Radioactive"],
     "weightChange": 0,
     "costChange": 30,
-    "perk": "Science! 3"
+    "perks": ["Science! 3"]
   },
   {
-    "name": "Signal Repeater",
+    "name": "Signal Repeater (Gamma Gun)",
     "prefix": "Automatic",
     "weaponType": "Energy Weapon",
     "type": "Muzzle",
@@ -707,7 +707,7 @@
     "removedQualities": ["Blast"],
     "weightChange": 0,
     "costChange": 60,
-    "perk": "Science! 4"
+    "perks": ["Science! 4"]
   },
   {
     "name": "Beam Splitter",
@@ -721,7 +721,7 @@
     "gainedQualities": ["Inaccurate"],
     "weightChange": 1,
     "costChange": 15,
-    "perk": "Science! 1"
+    "perks": ["Science! 1"]
   },
   {
     "name": "Beam Focuser",
@@ -731,7 +731,7 @@
     "rangeChange": 1,
     "weightChange": 1,
     "costChange": 20,
-    "perk": "Science! 1"
+    "perks": ["Science! 1"]
   },
   {
     "name": "Gyro Compensating Lens",
@@ -742,6 +742,305 @@
     "removedQualities": ["Inaccurate"],
     "weightChange": 1,
     "costChange": 25,
-    "perk": "Science! 1"
+    "perks": ["Science! 1"]
+  },
+  {
+    "name": "Napalm (Flamer)",
+    "prefix": "Napalmer",
+    "weaponType": "Big Guns",
+    "type": "Fuel",
+    "damageChange": 1,
+    "weightChange": 7,
+    "costChange": 59,
+    "perks": []
+  },
+  {
+    "name": "Long Barrel (Flamer)",
+    "prefix": "Long",
+    "weaponType": "Big Guns",
+    "type": "Barrel",
+    "removedQualities": ["Inaccurate"],
+    "weightChange": 2,
+    "costChange": 28,
+    "perks": []
+  },
+  {
+    "name": "Large Tank (Flamer)",
+    "prefix": "High Capacity",
+    "weaponType": "Big Guns",
+    "type": "Propellant Tank",
+    "fireRateChange": 1,
+    "weightChange": 3,
+    "costChange": 28,
+    "perks": []
+  },
+  {
+    "name": "Huge Tank (Flamer)",
+    "prefix": "Max. Capacity",
+    "weaponType": "Big Guns",
+    "type": "Propellant Tank",
+    "fireRateChange": 2,
+    "weightChange": 6,
+    "costChange": 34,
+    "perks": []
+  },
+  {
+    "name": "Compression Nozzle (Flamer)",
+    "prefix": "Compressed",
+    "weaponType": "Big Guns",
+    "type": "Nozzle",
+    "damageChange": 1,
+    "weightChange": 0,
+    "costChange": 22,
+    "perks": []
+  },
+  {
+    "name": "Vaporization Nozzle (Flamer)",
+    "prefix": "Vaporizing",
+    "weaponType": "Big Guns",
+    "type": "Nozzle",
+    "damageChange": 1,
+    "gainedEffects": ["Vicious"],
+    "weightChange": 0,
+    "costChange": 47,
+    "perks": []
+  },
+  {
+    "name": "Photon Exciter (Gatling Laser)",
+    "prefix": "Excited",
+    "weaponType": "Big Guns",
+    "type": "Capacitor",
+    "gainedEffects": ["Vicious"],
+    "weightChange": 1,
+    "costChange": 19,
+    "perks": ["Science! 3"]
+  },
+  {
+    "name": "Beta Wave Tuner (Gatling Laser)",
+    "prefix": "Incendiary",
+    "weaponType": "Big Guns",
+    "type": "Capacitor",
+    "gainedEffects": ["Persistent"],
+    "weightChange": 1,
+    "costChange": 57,
+    "perks": []
+  },
+  {
+    "name": "Boosted Capacitor (Gatling Laser)",
+    "prefix": "Boosted",
+    "weaponType": "Big Guns",
+    "type": "Capacitor",
+    "damageChange": 1,
+    "weightChange": 1,
+    "costChange": 94,
+    "perks": []
+  },
+  {
+    "name": "Photon Agitator (Gatling Laser)",
+    "prefix": "Agitated",
+    "weaponType": "Big Guns",
+    "type": "Capacitor",
+    "damageChange": 1,
+    "gainedEffects": ["Vicious"],
+    "weightChange": 3,
+    "costChange": 132,
+    "perks": ["Science! 3"]
+  },
+  {
+    "name": "Charging barrels (Gatling Laser)",
+    "prefix": "Charging",
+    "weaponType": "Big Guns",
+    "type": "Barrel",
+    "damageChange": 4,
+    "fireRateChange": -3,
+    "rangeChange": 1,
+    "weightChange": 10,
+    "costChange": 357,
+    "perks": ["Science! 4"]
+  },
+  {
+    "name": "Reflex Sight (Gatling Laser)",
+    "prefix": "Tactical",
+    "weaponType": "Big Guns",
+    "type": "Sight",
+    "removedQualities": ["Inaccurate"],
+    "weightChange": 1,
+    "costChange": 169,
+    "perks": ["Science! 4"]
+  },
+  {
+    "name": "Beam Focuser (Gatling Laser)",
+    "prefix": "Focused",
+    "weaponType": "Big Guns",
+    "type": "Nozzle",
+    "rangeChange": 1,
+    "gainedEffects": ["Piercing 1"],
+    "weightChange": 0,
+    "costChange": 22,
+    "perks": []
+  },
+  {
+    "name": "Long Barrel (Junk Jet)",
+    "prefix": "Long",
+    "weaponType": "Big Guns",
+    "type": "Barrel",
+    "rangeChange": 1,
+    "weightChange": 2,
+    "costChange": 20,
+    "perks": ["Gun Nut 1"]
+  },
+  {
+    "name": "Recoil Compensating Stock (Junk Jet)",
+    "prefix": "Recoil Compensated",
+    "weaponType": "Big Guns",
+    "type": "Stock",
+    "fireRateChange": 1,
+    "weightChange": 2,
+    "costChange": 40,
+    "perks": []
+  },
+  {
+    "name": "Gunner Sight (Junk Jet)",
+    "prefix": "Tactical",
+    "weaponType": "Big Guns",
+    "type": "Sight",
+    "effects":"May re-roll hit location die",
+    "weightChange": 1,
+    "costChange": 5,
+    "perks": []
+  },
+  {
+    "name": "Electrification Module (Junk Jet)",
+    "prefix": "Electrified",
+    "weaponType": "Big Guns",
+    "type": "Muzzle",
+    "newDamageType": "Energy",
+    "gainedEffects": ["Vicious"],
+    "weightChange": 1,
+    "costChange": 70,
+    "perks": ["Gun Nut 2", "Science! 1"]
+  },
+  {
+    "name": "Ignition Module (Junk Jet)",
+    "prefix": "Flaming",
+    "weaponType": "Big Guns",
+    "type": "Muzzle",
+    "gainedEffects": ["Persistent (Energy)"],
+    "weightChange": 1,
+    "costChange": 130,
+    "perks": ["Gun Nut 3", "Science! 1"]
+  },
+  {
+    "name": "Accelerated Barrel (Minigun)",
+    "prefix": "High-Speed",
+    "weaponType": "Big Guns",
+    "type": "Barrel",
+    "damageChange": 1,
+    "fireRateChange": 1,
+    "rangeChange": -1,
+    "weightChange": 5,
+    "costChange": 45,
+    "perks": ["Gun Nut 3"]
+  },
+  {
+    "name": "Tri-Barrel (Minigun)",
+    "prefix": "High-Powered",
+    "weaponType": "Big Guns",
+    "type": "Barrel",
+    "damageChange": 2,
+    "fireRateChange": -2,
+    "weightChange": 3,
+    "costChange": 75,
+    "perks": ["Gun Nut 4"]
+  },
+  {
+    "name": "Gunner Sight (Minigun)",
+    "prefix": "Tactical",
+    "weaponType": "Big Guns",
+    "type": "Sight",
+    "removedQualities": ["Inaccurate"],
+    "weightChange": 1,
+    "costChange": 68,
+    "perks": []
+  },
+  {
+    "name": "Shredder (Minigun)",
+    "prefix": "Bayoneted Shredding",
+    "weaponType": "Big Guns",
+    "type": "Muzzle",
+    "effects":"As a Melee weapon, deals Physical damage equal to Fire Rate (CD)",
+    "weightChange": 5,
+    "costChange": 5,
+    "perks": ["Gun Nut 2"]
+  },
+  {
+    "name": "Triple Barrel (Missile Launcher)",
+    "prefix": "Triple Barrel",
+    "weaponType": "Big Guns",
+    "type": "Barrel",
+    "fireRateChange": 1,
+    "weightChange": 16,
+    "costChange": 143,
+    "perks": ["Gun Nut 2"]
+  },
+  {
+    "name": "Quad Barrel (Missile Launcher)",
+    "prefix": "Quad Barrel",
+    "weaponType": "Big Guns",
+    "type": "Barrel",
+    "fireRateChange": 2,
+    "weightChange": 20,
+    "costChange": 218,
+    "perks": ["Gun Nut 3"]
+  },
+  {
+    "name": "Scope (Missile Launcher)",
+    "prefix": "Scoped",
+    "weaponType": "Big Guns",
+    "type": "Sight",
+    "gainedQualities": ["Accurate"],
+    "weightChange": 6,
+    "costChange": 143,
+    "perks": ["Gun Nut 2"]
+  },
+  {
+    "name": "Night Vision Scope (Missile Launcher)",
+    "prefix": "Night-Vision",
+    "weaponType": "Big Guns",
+    "type": "Sight",
+    "gainedQualities": ["Accurate", "Night Vision"],
+    "weightChange": 6,
+    "costChange": 248,
+    "perks": ["Gun Nut 4", "Science! 1"]
+  },
+  {
+    "name": "Targeting Computer (Missile Launcher)",
+    "prefix": "Targeting",
+    "weaponType": "Big Guns",
+    "type": "Sight",
+    "effects": "When you Aim at a target, the target does not benefit from being in cover, and the bonus for aiming applies to the next attack on any subsequent turn during the scene",
+    "weightChange": 7,
+    "costChange": 293,
+    "perks": ["Gun Nut 2", "Science! 2"]
+  },
+  {
+    "name": "Bayonet (Missile Launcher)",
+    "prefix": "Bayoneted Shredding",
+    "weaponType": "Big Guns",
+    "type": "Muzzle",
+    "effects":"As a Melee weapon, deals 4CD Piercing 1 Physical damage",
+    "weightChange": 1,
+    "costChange": 30,
+    "perks": []
+  },
+  {
+    "name": "Stabilizer (Missile Launcher)",
+    "prefix": "Muzzled",
+    "weaponType": "Big Guns",
+    "type": "Muzzle",
+    "gainedEffects": ["Piercing 1"],
+    "weightChange": 2,
+    "costChange": 60,
+    "perks": ["Gun Nut 2"]
   }
 ]
