@@ -1,0 +1,22 @@
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Prefix</th>
+    <th>Weapon Type</th>
+    <th>Type</th>
+    <th>Effects</th>
+    <th>Weight</th>
+    <th>Cost</th>
+    <th>Perk</th>
+  </tr>
+  <tr *ngFor="let mod of weaponMods">
+    <td>{{mod.name}}</td>
+    <td>{{mod.prefix}}</td>
+    <td>{{mod.weaponType}}</td>
+    <td>{{mod.type}}</td>
+    <td>{{mod.effectText}}</td>
+    <td>{{mod.weightChange}}</td>
+    <td>{{mod.costChange}}</td>
+    <td>{{mod.perk}}</td>
+  </tr>
+</table>

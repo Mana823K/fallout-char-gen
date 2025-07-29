@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CharacterComponent } from './components/character/character.component';
 import { WeaponsComponent } from './components/database/weapons/weapons.component';
 import { DatabaseComponent } from './components/database/database.component';
-import { ModsComponent } from './components/database/mods/mods.component';
+import { WeaponModsComponent } from './components/database/weapon-mods/weapon-mods.component';
 import { ArmorComponent } from './components/database/armor/armor.component';
 import { ItemsComponent } from './components/database/items/items.component';
 import { AmmoComponent } from './components/database/ammo/ammo.component';
@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'database', component: DatabaseComponent, children: [
     { path: 'weapons', component: WeaponsComponent },
     { path: 'ammo', component: AmmoComponent },
-    { path: 'mods', component: ModsComponent },
+    { path: 'weapon-mods', component: WeaponModsComponent },
     { path: 'armor', component: ArmorComponent },
     { path: 'items', component: ItemsComponent }
   ] },
