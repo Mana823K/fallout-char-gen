@@ -11,7 +11,8 @@
     "ammo": [".44 Magnum"],
     "weight": 4,
     "cost": 99,
-    "rarity": 2
+    "rarity": 2,
+    "mods": ["Hardened", "Powerful", "Advanced", "Snubnose Barrel", "Bull Barrel", "Comfort Grip", "Short Scope", "Reflex Sight", "Recon Scope"]
   },
   {
     "name": "10mm Pistol",
@@ -25,7 +26,8 @@
     "ammo": ["10mm"],
     "weight": 4,
     "cost": 50,
-    "rarity": 1
+    "rarity": 1,
+    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", "Advanced", "Long Barrel", "Ported Barrel", "Comfort Grip", "Sharpshooter’s Grip", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Recon Scope", "Compensator", "Suppressor"]
   },
   {
     "name": "Flare Gun",
@@ -39,7 +41,8 @@
     "ammo": ["Flare"],
     "weight": 2,
     "cost": 50,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Assault Rifle",
@@ -50,10 +53,11 @@
     "rate": 2,
     "range": "M",
     "qualities": ["Two-Handed"],
-    "ammo": ["5.56mm Rifle"],
+    "ammo": ["5.56mm"],
     "weight": 13,
     "cost": 144,
-    "rarity": 2
+    "rarity": 2,
+    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", "Advanced", "Long Barrel", "Ported Barrel", "Vented Barrel", "Full Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Compensator", "Suppressor"]
   },
   {
     "name": "Combat Rifle",
@@ -67,7 +71,8 @@
     "ammo": [".45"],
     "weight": 11,
     "cost": 117,
-    "rarity": 2
+    "rarity": 2,
+    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", "Advanced", ".38 Receiver", ".308 Receiver", "Long Barrel", "Ported Barrel", "Vented Barrel", "Full Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Compensator", "Suppressor"]
   },
   {
     "name": "Gauss Rifle",
@@ -81,7 +86,8 @@
     "ammo": ["2mm EC"],
     "weight": 16,
     "cost": 228,
-    "rarity": 4
+    "rarity": 4,
+    "mods": ["Shielded Barrel", "Recoil Compensating Stock", "Full Capacitors", "Capacitor Boosting Coil", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Suppressor"]
   },
   {
     "name": "Hunting Rifle",
@@ -95,7 +101,8 @@
     "ammo": [".308"],
     "weight": 10,
     "cost": 55,
-    "rarity": 2
+    "rarity": 2,
+    "mods": ["Tuned", "Calibrated", "Hardened", "Powerful", ".38 Receiver", ".50 Receiver", "Long Barrel", "Ported Barrel", "Vented Barrel", "Full Stock", "Marksman’s Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Suppressor"]
   },
   {
     "name": "Submachine Gun",
@@ -109,7 +116,8 @@
     "ammo": [".45"],
     "weight": 12,
     "cost": 109,
-    "rarity": 1
+    "rarity": 1,
+    "mods": ["Armor Piercing", "Hardened", "Rapid", "Powerful", "Short Barrel", "Full Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Compensator", "Muzzle Break", "Suppressor"]
   },
   {
     "name": "Combat Shotgun",
@@ -120,10 +128,11 @@
     "rate": 2,
     "range": "C",
     "qualities": ["Inaccurate", "Two-Handed"],
-    "ammo": ["Shotgun Shells"],
+    "ammo": ["Shotgun Shell"],
     "weight": 11,
     "cost": 87,
-    "rarity": 2
+    "rarity": 2,
+    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", "Advanced", "Long Barrel", "Ported Barrel", "Full Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recoil Compensating Stock", "Bayonet", "Compensator", "Muzzle Break", "Suppressor"]
   },
   {
     "name": "Double-Barrel Shotgun",
@@ -134,10 +143,11 @@
     "rate": 0,
     "range": "C",
     "qualities": ["Inaccurate", "Two-Handed"],
-    "ammo": ["Shotgun Shells"],
+    "ammo": ["Shotgun Shell"],
     "weight": 9,
     "cost": 39,
-    "rarity": 1
+    "rarity": 1,
+    "mods": ["Hardened", "Hair Trigger", "Powerful", "Advanced", "Long Barrel", "Sawed-Off Barrel", "Full Stock", "Reflex Sight", "Muzzle Break"]
   },
   {
     "name": "Pipe Bolt-Action",
@@ -151,7 +161,9 @@
     "ammo": [".308"],
     "weight": 3,
     "cost": 30,
-    "rarity": 0
+    "rarity": 0,
+    "mods": ["Calibrated", "Hardened", "Powerful", ".38 Receiver", ".50 Receiver", "Stub Barrel", "Long Barrel", "Ported Barrel", "Finned Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Compensator", "Muzzle Break", "Suppressor"],
+    "modNotes": "You may not take both a Grip and a Stock Mod. Any Stock mods add the word “Rifle” to the end of the weapon’s name."
   },
   {
     "name": "Pipe Gun",
@@ -165,7 +177,9 @@
     "ammo": [".38"],
     "weight": 2,
     "cost": 30,
-    "rarity": 0
+    "rarity": 0,
+    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", ".45 Receiver", "Long Barrel", "Ported Barrel", "Finned Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Compensator", "Muzzle Break", "Suppressor"],
+    "modNotes": "Any Stock mods replace “Gun” with “Rifle” in the weapon’s name."
   },
   {
     "name": "Pipe Revolver",
@@ -179,7 +193,9 @@
     "ammo": [".45"],
     "weight": 4,
     "cost": 25,
-    "rarity": 0
+    "rarity": 0,
+    "mods": ["Calibrated", "Hardened", "Powerful", ".38 Receiver", ".308 Receiver", "Long Barrel", "Ported Barrel", "Finned Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Compensator", "Muzzle Break", "Suppressor"],
+    "modNotes": "Any Stock mods add “Rifle” to the end of the weapon’s name."
   },
   {
     "name": "Railway Rifle",
@@ -193,7 +209,8 @@
     "ammo": ["Railway Spike"],
     "weight": 14,
     "cost": 290,
-    "rarity": 4
+    "rarity": 4,
+    "mods": ["Automatic Piston", "Long Barrel", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet"]
   },
   {
     "name": "Syringer",
@@ -204,10 +221,11 @@
     "rate": 0,
     "range": "M",
     "qualities": ["Two-Handed"],
-    "ammo": ["Syringer ammo"],
+    "ammo": ["Syringer Ammo"],
     "weight": 6,
     "cost": 132,
-    "rarity": 2
+    "rarity": 2,
+    "mods": ["Stub Barrel", "Long Barrel", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope"]
   },
   {
     "name": "Institute Laser",
@@ -221,7 +239,8 @@
     "ammo": ["Fusion Cells"],
     "weight": 4,
     "cost": 50,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Laser Musket",
@@ -235,7 +254,8 @@
     "ammo": ["Fusion Cells"],
     "weight": 13,
     "cost": 57,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Laser Gun",
@@ -249,7 +269,8 @@
     "ammo": ["Fusion Cells"],
     "weight": 4,
     "cost": 69,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Plasma Gun",
@@ -263,7 +284,8 @@
     "ammo": ["Plasma cartridge"],
     "weight": 4,
     "cost": 123,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Gamma Gun",
@@ -277,7 +299,8 @@
     "ammo": ["Gamma Rounds"],
     "weight": 3,
     "cost": 156,
-    "rarity": 5
+    "rarity": 5,
+    "mods": []
   },
   {
     "name": "Fat Man",
@@ -291,7 +314,8 @@
     "ammo": ["Mini-Nuke"],
     "weight": 31,
     "cost": 512,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Flamer",
@@ -305,7 +329,8 @@
     "ammo": ["Flamer Fuel"],
     "weight": 16,
     "cost": 137,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Gatling Laser",
@@ -319,7 +344,8 @@
     "ammo": ["Fusion Cells", "Fusion Core"],
     "weight": 19,
     "cost": 804,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Heavy Incinerator",
@@ -333,7 +359,8 @@
     "ammo": ["Flamer Fuel"],
     "weight": 20,
     "cost": 350,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Junk Jet",
@@ -347,7 +374,8 @@
     "ammo": ["Anything"],
     "weight": 30,
     "cost": 285,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Minigun",
@@ -361,7 +389,8 @@
     "ammo": ["5mm"],
     "weight": 27,
     "cost": 382,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Missile Launcher",
@@ -375,7 +404,8 @@
     "ammo": ["Missile"],
     "weight": 21,
     "cost": 314,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Unarmed Strike",
@@ -389,7 +419,8 @@
     "ammo": [],
     "weight": 0,
     "cost": 0,
-    "rarity": 0
+    "rarity": 0,
+    "mods": []
   },
   {
     "name": "Handy Rock",
@@ -403,7 +434,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 0,
-    "rarity": 0
+    "rarity": 0,
+    "mods": []
   },
   {
     "name": "Gun Bash (1H)",
@@ -417,7 +449,8 @@
     "ammo": [],
     "weight": 0,
     "cost": 0,
-    "rarity": 0
+    "rarity": 0,
+    "mods": []
   },
   {
     "name": "Gun Bash",
@@ -431,7 +464,8 @@
     "ammo": [],
     "weight": 0,
     "cost": 0,
-    "rarity": 0
+    "rarity": 0,
+    "mods": []
   },
   {
     "name": "Sword",
@@ -445,7 +479,8 @@
     "ammo": [],
     "weight": 3,
     "cost": 50,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Combat Knife",
@@ -459,7 +494,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 25,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Machete",
@@ -473,7 +509,8 @@
     "ammo": [],
     "weight": 2,
     "cost": 25,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Ripper",
@@ -487,7 +524,8 @@
     "ammo": [],
     "weight": 6,
     "cost": 50,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Shishkebab",
@@ -501,7 +539,8 @@
     "ammo": [],
     "weight": 3,
     "cost": 200,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Switchblade",
@@ -515,7 +554,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 20,
-    "rarity": 0
+    "rarity": 0,
+    "mods": []
   },
   {
     "name": "Baseball Bat",
@@ -529,7 +569,8 @@
     "ammo": [],
     "weight": 3,
     "cost": 25,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Aluminum Baseball Bat",
@@ -543,7 +584,8 @@
     "ammo": [],
     "weight": 2,
     "cost": 32,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Board",
@@ -557,7 +599,8 @@
     "ammo": [],
     "weight": 3,
     "cost": 20,
-    "rarity": 0
+    "rarity": 0,
+    "mods": []
   },
   {
     "name": "Lead Pipe",
@@ -571,7 +614,8 @@
     "ammo": [],
     "weight": 3,
     "cost": 15,
-    "rarity": 0
+    "rarity": 0,
+    "mods": []
   },
   {
     "name": "Pipe Wrench",
@@ -585,7 +629,8 @@
     "ammo": [],
     "weight": 2,
     "cost": 30,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Pool cue",
@@ -599,7 +644,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 10,
-    "rarity": 0
+    "rarity": 0,
+    "mods": []
   },
   {
     "name": "Rolling Pin",
@@ -613,7 +659,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 10,
-    "rarity": 0
+    "rarity": 0,
+    "mods": []
   },
   {
     "name": "Baton",
@@ -627,7 +674,8 @@
     "ammo": [],
     "weight": 2,
     "cost": 15,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Sledgehammer",
@@ -641,7 +689,8 @@
     "ammo": [],
     "weight": 12,
     "cost": 40,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Super Sledge",
@@ -655,7 +704,8 @@
     "ammo": [],
     "weight": 20,
     "cost": 180,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Tire Iron",
@@ -669,7 +719,8 @@
     "ammo": [],
     "weight": 2,
     "cost": 25,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Walking Cane",
@@ -683,7 +734,8 @@
     "ammo": [],
     "weight": 2,
     "cost": 10,
-    "rarity": 0
+    "rarity": 0,
+    "mods": []
   },
   {
     "name": "Boxing Glove",
@@ -697,7 +749,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 10,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Deathclaw Gauntlet",
@@ -711,7 +764,8 @@
     "ammo": [],
     "weight": 10,
     "cost": 75,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Knuckles",
@@ -725,7 +779,8 @@
     "ammo": [],
     "weight": 0,
     "cost": 10,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Power Fist",
@@ -739,7 +794,8 @@
     "ammo": [],
     "weight": 4,
     "cost": 100,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Throwing Knives",
@@ -753,7 +809,8 @@
     "ammo": [],
     "weight": 0,
     "cost": 10,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Tomahawk",
@@ -767,7 +824,8 @@
     "ammo": [],
     "weight": 0,
     "cost": 15,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Javelin",
@@ -781,7 +839,8 @@
     "ammo": [],
     "weight": 4,
     "cost": 10,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Baseball Grenade",
@@ -795,7 +854,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 40,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Frag Grenade",
@@ -809,7 +869,8 @@
     "ammo": [],
     "weight": 0,
     "cost": 50,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Molotov Cocktail",
@@ -823,7 +884,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 20,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Nuka Grenade",
@@ -837,7 +899,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 100,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Plasma Grenade",
@@ -851,7 +914,8 @@
     "ammo": [],
     "weight": 0,
     "cost": 135,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Pulse Grenade",
@@ -865,7 +929,8 @@
     "ammo": [],
     "weight": 0,
     "cost": 100,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Bottlecap Mine",
@@ -879,7 +944,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 75,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Frag Mine",
@@ -893,7 +959,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 50,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Nuke Mine",
@@ -907,7 +974,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 100,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Plasma Mine",
@@ -921,7 +989,8 @@
     "ammo": [],
     "weight": 0,
     "cost": 135,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Pulse Mine",
@@ -935,7 +1004,8 @@
     "ammo": [],
     "weight": 0,
     "cost": 100,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "M79 Grenade Launcher",
@@ -949,7 +1019,8 @@
     "ammo": ["40mm grenade round"],
     "weight": 6,
     "cost": 300,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Smoke Claws",
@@ -963,7 +1034,8 @@
     "ammo": ["Gas Grenade"],
     "weight": 0,
     "cost": 0,
-    "rarity": 0
+    "rarity": 0,
+    "mods": []
   },
   {
     "name": "Acid Soaker",
@@ -977,7 +1049,8 @@
     "ammo": ["Acid Concentrate"],
     "weight": 3,
     "cost": 125,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Alien Blaster",
@@ -991,7 +1064,8 @@
     "ammo": ["Alien Blaster Round"],
     "weight": 2,
     "cost": 90,
-    "rarity": 5
+    "rarity": 5,
+    "mods": []
   },
   {
     "name": "Assaultron Head Laser",
@@ -1005,7 +1079,8 @@
     "ammo": ["Fusion Cells"],
     "weight": 8,
     "cost": 115,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Cryojet",
@@ -1019,7 +1094,8 @@
     "ammo": ["Cryo Cell"],
     "weight": 8,
     "cost": 261,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Mesmetron",
@@ -1033,7 +1109,8 @@
     "ammo": ["Gamma Rounds"],
     "weight": 2,
     "cost": 120,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Tesla Rifle",
@@ -1047,7 +1124,8 @@
     "ammo": ["Fusion Cells"],
     "weight": 8,
     "cost": 180,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Broadsider",
@@ -1061,7 +1139,8 @@
     "ammo": ["Cannonball"],
     "weight": 16,
     "cost": 140,
-    "rarity": 5
+    "rarity": 5,
+    "mods": []
   },
   {
     "name": "Cryolator",
@@ -1075,7 +1154,8 @@
     "ammo": ["Cryo Cell"],
     "weight": 14,
     "cost": 300,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Harpoon Gun",
@@ -1089,7 +1169,8 @@
     "ammo": ["Harpoon"],
     "weight": 16,
     "cost": 120,
-    "rarity": 5
+    "rarity": 5,
+    "mods": []
   },
   {
     "name": "Buzz Saw",
@@ -1103,7 +1184,8 @@
     "ammo": [],
     "weight": 3,
     "cost": 25,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Claw",
@@ -1117,7 +1199,8 @@
     "ammo": [],
     "weight": 2,
     "cost": 25,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Construction Claw",
@@ -1131,7 +1214,8 @@
     "ammo": [],
     "weight": 3,
     "cost": 25,
-    "rarity": 0
+    "rarity": 0,
+    "mods": []
   },
   {
     "name": "Drill",
@@ -1145,7 +1229,8 @@
     "ammo": [],
     "weight": 20,
     "cost": 50,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Vice Grip",
@@ -1159,7 +1244,8 @@
     "ammo": [],
     "weight": 15,
     "cost": 30,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": ".357 Magnum Revolver",
@@ -1173,7 +1259,8 @@
     "ammo": [".357 Magnum"],
     "weight": 2,
     "cost": 110,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "12.7mm Pistol",
@@ -1187,7 +1274,8 @@
     "ammo": ["12.7mm"],
     "weight": 4,
     "cost": 400,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "12.7mm SMG",
@@ -1201,7 +1289,8 @@
     "ammo": ["12.7mm"],
     "weight": 5,
     "cost": 510,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "25mm Grenade APW",
@@ -1215,7 +1304,8 @@
     "ammo": ["25mm Grenade"],
     "weight": 8,
     "cost": 420,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "9mm Pisto",
@@ -1229,7 +1319,8 @@
     "ammo": ["9mm"],
     "weight": 2,
     "cost": 50,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Anti-Materiel Rifle",
@@ -1243,7 +1334,8 @@
     "ammo": [".50"],
     "weight": 20,
     "cost": 560,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Battle Rifle",
@@ -1257,7 +1349,8 @@
     "ammo": [".308"],
     "weight": 10,
     "cost": 150,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Black Powder Blunderbuss",
@@ -1271,7 +1364,8 @@
     "ammo": [".50 Ball"],
     "weight": 3,
     "cost": 90,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Black Powder Pistol",
@@ -1285,7 +1379,8 @@
     "ammo": [".50 Ball"],
     "weight": 3,
     "cost": 60,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Black Powder Rifle",
@@ -1299,7 +1394,8 @@
     "ammo": [".50 Ball"],
     "weight": 6,
     "cost": 60,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Gauss Pistol",
@@ -1313,7 +1409,8 @@
     "ammo": ["2mm EC"],
     "weight": 6,
     "cost": 334,
-    "rarity": 5
+    "rarity": 5,
+    "mods": []
   },
   {
     "name": "Gauss Shotgun",
@@ -1327,7 +1424,8 @@
     "ammo": ["2mm EC"],
     "weight": 14,
     "cost": 400,
-    "rarity": 5
+    "rarity": 5,
+    "mods": []
   },
   {
     "name": "Lever-Action Rifle",
@@ -1341,7 +1439,8 @@
     "ammo": [".308"],
     "weight": 9,
     "cost": 201,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Light Machine Gun",
@@ -1355,7 +1454,8 @@
     "ammo": ["5.56mm"],
     "weight": 15,
     "cost": 150,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Pump-Action Shotgun",
@@ -1366,10 +1466,11 @@
     "rate": 1,
     "range": "C",
     "qualities": ["Inaccurate", "Two-Handed"],
-    "ammo": ["Shotgun Shells"],
+    "ammo": ["Shotgun Shell"],
     "weight": 11,
     "cost": 70,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Radium Rifle",
@@ -1383,7 +1484,8 @@
     "ammo": [".45"],
     "weight": 11,
     "cost": 110,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Sniper Rifle",
@@ -1397,7 +1499,8 @@
     "ammo": [".308"],
     "weight": 10,
     "cost": 300,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Alien Atomizer",
@@ -1411,7 +1514,8 @@
     "ammo": ["Alien Power Cells"],
     "weight": 3,
     "cost": 1536,
-    "rarity": 5
+    "rarity": 5,
+    "mods": []
   },
   {
     "name": "Alien Disintegrator",
@@ -1425,7 +1529,8 @@
     "ammo": ["Alien Power Cells"],
     "weight": 7,
     "cost": 921,
-    "rarity": 5
+    "rarity": 5,
+    "mods": []
   },
   {
     "name": "Arc Welder",
@@ -1439,7 +1544,8 @@
     "ammo": ["Electron Charge Packs"],
     "weight": 15,
     "cost": 370,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Assaultron Head",
@@ -1453,7 +1559,8 @@
     "ammo": ["Fusion Cells"],
     "weight": 8,
     "cost": 500,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Microwave Emitter",
@@ -1467,7 +1574,8 @@
     "ammo": ["Fusion Cells"],
     "weight": 8,
     "cost": 500,
-    "rarity": 5
+    "rarity": 5,
+    "mods": []
   },
   {
     "name": "Tesla Rifle",
@@ -1481,7 +1589,8 @@
     "ammo": ["Fusion Cells"],
     "weight": 8,
     "cost": 180,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": ".50 Cal Machine Gun",
@@ -1495,7 +1604,8 @@
     "ammo": [".50"],
     "weight": 31,
     "cost": 350,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Auto Grenade Launcher",
@@ -1509,7 +1619,8 @@
     "ammo": ["40mm Grenade"],
     "weight": 30,
     "cost": 450,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Drone Cannon",
@@ -1523,7 +1634,8 @@
     "ammo": ["Alien Power Module"],
     "weight": 18,
     "cost": 600,
-    "rarity": 5
+    "rarity": 5,
+    "mods": []
   },
   {
     "name": "Gatling Gun",
@@ -1537,7 +1649,8 @@
     "ammo": ["5mm"],
     "weight": 20,
     "cost": 350,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Gatling Plasma",
@@ -1551,7 +1664,8 @@
     "ammo": ["Plasma cartridge", "Plasma Core"],
     "weight": 24,
     "cost": 1000,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Gauss Minigun",
@@ -1565,7 +1679,8 @@
     "ammo": ["2mm EC"],
     "weight": 38,
     "cost": 912,
-    "rarity": 6
+    "rarity": 6,
+    "mods": []
   },
   {
     "name": "Plasma Caster",
@@ -1579,7 +1694,8 @@
     "ammo": ["Plasma cartridge"],
     "weight": 30,
     "cost": 700,
-    "rarity": 5
+    "rarity": 5,
+    "mods": []
   },
   {
     "name": "Tesla Cannon",
@@ -1593,7 +1709,8 @@
     "ammo": ["Fusion Cells"],
     "weight": 24,
     "cost": 870,
-    "rarity": 5
+    "rarity": 5,
+    "mods": []
   },
   {
     "name": "Bow",
@@ -1607,7 +1724,8 @@
     "ammo": ["Arrow"],
     "weight": 3,
     "cost": 44,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Crossbow",
@@ -1621,7 +1739,8 @@
     "ammo": ["Bolt"],
     "weight": 3,
     "cost": 44,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Assaultron Blade",
@@ -1635,7 +1754,8 @@
     "ammo": [],
     "weight": 3,
     "cost": 50,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Auto-Axe",
@@ -1649,7 +1769,8 @@
     "ammo": [],
     "weight": 20,
     "cost": 100,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Ballistic Fist",
@@ -1660,10 +1781,11 @@
     "rate": 0,
     "range": "",
     "qualities": ["Slow Load"],
-    "ammo": ["Shotgun Shells"],
+    "ammo": ["Shotgun Shell"],
     "weight": 6,
     "cost": 150,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Bumper Sword",
@@ -1677,7 +1799,8 @@
     "ammo": [],
     "weight": 12,
     "cost": 125,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Cattle Prod",
@@ -1691,7 +1814,8 @@
     "ammo": [],
     "weight": 3,
     "cost": 90,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Chainsaw",
@@ -1705,7 +1829,8 @@
     "ammo": [],
     "weight": 12,
     "cost": 140,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Death Tambo",
@@ -1719,7 +1844,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 40,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Displacer Glove",
@@ -1733,7 +1859,8 @@
     "ammo": [],
     "weight": 6,
     "cost": 175,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Guitar Sword",
@@ -1747,7 +1874,8 @@
     "ammo": [],
     "weight": 3,
     "cost": 45,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Mr Handy Buzz Blade",
@@ -1761,7 +1889,8 @@
     "ammo": [],
     "weight": 10,
     "cost": 50,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Multi-Purpose Axe",
@@ -1775,7 +1904,8 @@
     "ammo": [],
     "weight": 4,
     "cost": 40,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Proton Axe",
@@ -1789,7 +1919,8 @@
     "ammo": [],
     "weight": 8,
     "cost": 175,
-    "rarity": 5
+    "rarity": 5,
+    "mods": []
   },
   {
     "name": "War Drum",
@@ -1803,7 +1934,8 @@
     "ammo": [],
     "weight": 20,
     "cost": 115,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Cryogenic Grenade",
@@ -1817,7 +1949,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 50,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Cryo Mine",
@@ -1831,7 +1964,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 50,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Detonator",
@@ -1845,7 +1979,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 75,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Dynamite",
@@ -1859,7 +1994,8 @@
     "ammo": [],
     "weight": 0,
     "cost": 25,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Dynamite Bundle",
@@ -1873,7 +2009,8 @@
     "ammo": [],
     "weight": 2,
     "cost": 150,
-    "rarity": 3
+    "rarity": 3,
+    "mods": []
   },
   {
     "name": "Flash Bang",
@@ -1887,7 +2024,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 40,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   },
   {
     "name": "Frag Grenade MIRV",
@@ -1901,7 +2039,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 75,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Plastic Explosives",
@@ -1915,7 +2054,8 @@
     "ammo": [],
     "weight": 2,
     "cost": 200,
-    "rarity": 4
+    "rarity": 4,
+    "mods": []
   },
   {
     "name": "Powder Charge",
@@ -1929,7 +2069,8 @@
     "ammo": [],
     "weight": 1,
     "cost": 25,
-    "rarity": 1
+    "rarity": 1,
+    "mods": []
   },
   {
     "name": "Smoke Grenade",
@@ -1943,6 +2084,7 @@
     "ammo": [],
     "weight": 1,
     "cost": 40,
-    "rarity": 2
+    "rarity": 2,
+    "mods": []
   }
 ]
