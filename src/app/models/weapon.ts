@@ -13,6 +13,7 @@ export class Weapon {
   weight: number = 0;
   cost: number = 0;
   rarity: number = 0;
+  special?: string;
   mods: string[] = [];
   modNotes?: string
 }
@@ -30,6 +31,7 @@ export class WeaponData {
   weight: number = 0;
   cost: number = 0;
   rarity: number = 0;
+  special?: string;
   mods: string[] = [];
   modNotes?: string
 
@@ -50,6 +52,7 @@ export class WeaponData {
     result.weight = original.weight;
     result.cost = original.cost;
     result.rarity = original.rarity;
+    result.special = original.special;
     result.mods = original.mods;
     result.modNotes = original.modNotes;
 

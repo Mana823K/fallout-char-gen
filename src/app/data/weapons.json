@@ -236,11 +236,12 @@
     "rate": 3,
     "range": "C",
     "qualities": ["Close Quarters", "Inaccurate"],
-    "ammo": ["Fusion Cells"],
+    "ammo": ["Fusion Cell"],
     "weight": 4,
     "cost": 50,
     "rarity": 2,
-    "mods": []
+    "mods": ["Photon Exciter", "Beta Wave Tuner", "Boosted Capacitor", "Photon Agitator", "Long Barrel", "Automatic Barrel", "Improved Barrel", "Standard Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Beam Splitter", "Beam Focuser", "Gyro Compensating Lens"],
+    "modNotes": "Any Stock mods change the weapon to an Institute laser rifle."
   },
   {
     "name": "Laser Musket",
@@ -251,11 +252,12 @@
     "rate": 0,
     "range": "M",
     "qualities": ["Two-Handed"],
-    "ammo": ["Fusion Cells"],
+    "ammo": ["Fusion Cell"],
     "weight": 13,
     "cost": 57,
     "rarity": 1,
-    "mods": []
+    "special": "Firing a laser musket consumes two shots of ammunition each time it is fired. You may reduce the number of shots consumed, reducing the damage by -1CD  for each shot consumed fewer than normal (to a minimum of 4CD  damage and 1 shot consumed).",
+    "mods": ["Three-Crank Capacitor", "Four-Crank Capacitor", "Five-Crank Capacitor", "Six-Crank Capacitor", "Long Barrel", "Bracketed Short Barrel", "Bracketed Long Barrel", "Full Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Beam Splitter", "Beam Focuser", "Gyro Compensating Lens"]
   },
   {
     "name": "Laser Gun",
@@ -266,11 +268,12 @@
     "rate": 2,
     "range": "C",
     "qualities": ["Close Quarters"],
-    "ammo": ["Fusion Cells"],
+    "ammo": ["Fusion Cell"],
     "weight": 4,
     "cost": 69,
     "rarity": 2,
-    "mods": []
+    "mods": ["Photon Exciter", "Beta Wave Tuner", "Boosted Capacitor", "Photon Agitator", "Long Barrel", "Automatic Barrel", "Sniper Barrel", "Improved Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Beam Splitter", "Beam Focuser", "Gyro Compensating Lens"],
+    "modNotes": " Any Stock mods change the weapon to a laser rifle."
   },
   {
     "name": "Plasma Gun",
@@ -285,7 +288,9 @@
     "weight": 4,
     "cost": 123,
     "rarity": 3,
-    "mods": []
+    "special": "Plasma guns inflict both Physical and Energy damage. Roll damage as normal, and then reduce the total by whichever of the target’s damage resistances is lower out of Physical or Energy. Any Persistent damage effects (applied by weapon mods) inflict Energy damage.",
+    "mods": ["Photon Exciter", "Beta Wave Tuner", "Boosted Capacitor", "Photon Agitator", "Splitter", "Automatic Barrel", "Sniper Barrel", "Flamer Barrel", "Improved Barrel", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope"],
+    "modNotes": "Any Stock mods change the weapon to a plasma rifle"
   },
   {
     "name": "Gamma Gun",
@@ -296,11 +301,11 @@
     "rate": 1,
     "range": "M",
     "qualities": ["Blast", "Inaccurate"],
-    "ammo": ["Gamma Rounds"],
+    "ammo": ["Gamma Round"],
     "weight": 3,
     "cost": 156,
     "rarity": 5,
-    "mods": []
+    "mods": ["Deep Dish", "Electric Signal Carrier Antennae", "Signal Repeater"]
   },
   {
     "name": "Fat Man",
@@ -341,7 +346,7 @@
     "rate": 6,
     "range": "M",
     "qualities": ["Gatling", "Inaccurate", "Two-Handed"],
-    "ammo": ["Fusion Cells", "Fusion Core"],
+    "ammo": ["Fusion Cell", "Fusion Core"],
     "weight": 19,
     "cost": 804,
     "rarity": 3,
@@ -1076,7 +1081,7 @@
     "rate": 0,
     "range": "C",
     "qualities": [],
-    "ammo": ["Fusion Cells"],
+    "ammo": ["Fusion Cell"],
     "weight": 8,
     "cost": 115,
     "rarity": 4,
@@ -1106,7 +1111,7 @@
     "rate": 1,
     "range": "M",
     "qualities": [],
-    "ammo": ["Gamma Rounds"],
+    "ammo": ["Gamma Round"],
     "weight": 2,
     "cost": 120,
     "rarity": 4,
@@ -1121,7 +1126,7 @@
     "rate": 2,
     "range": "M",
     "qualities": ["Two-Handed"],
-    "ammo": ["Fusion Cells"],
+    "ammo": ["Fusion Cell"],
     "weight": 8,
     "cost": 180,
     "rarity": 4,
@@ -1556,7 +1561,7 @@
     "rate": 0,
     "range": "C",
     "qualities": [],
-    "ammo": ["Fusion Cells"],
+    "ammo": ["Fusion Cell"],
     "weight": 8,
     "cost": 500,
     "rarity": 3,
@@ -1571,7 +1576,7 @@
     "rate": 1,
     "range": "M",
     "qualities": ["Two-Handed"],
-    "ammo": ["Fusion Cells"],
+    "ammo": ["Fusion Cell"],
     "weight": 8,
     "cost": 500,
     "rarity": 5,
@@ -1586,7 +1591,7 @@
     "rate": 2,
     "range": "M",
     "qualities": ["Two-Handed"],
-    "ammo": ["Fusion Cells"],
+    "ammo": ["Fusion Cell"],
     "weight": 8,
     "cost": 180,
     "rarity": 4,
@@ -1706,7 +1711,7 @@
     "rate": 0,
     "range": "L",
     "qualities": ["Accurate", "Ammo-Hungry (5)", "Surge", "Two-Handed"],
-    "ammo": ["Fusion Cells"],
+    "ammo": ["Fusion Cell"],
     "weight": 24,
     "cost": 870,
     "rarity": 5,

@@ -5,6 +5,7 @@ export class WeaponMod {
   type: string = "";
   damageChange?: number;
   fixDamage?: number;
+  newDamageType?: string;
   fireRateChange?: number;
   rangeChange?: number;
   gainedEffects?: string[];
@@ -25,6 +26,7 @@ export class WeaponModData {
   type: string = "";
   damageChange?: number;
   fixDamage?: number;
+  newDamageType?: string;
   fireRateChange?: number;
   rangeChange?: number;
   gainedEffects?: string[];
@@ -45,6 +47,7 @@ export class WeaponModData {
     result.type = original.type;
     result.damageChange = original.damageChange;
     result.fixDamage = original.fixDamage;
+    result.newDamageType = original.newDamageType;
     result.fireRateChange = original.fireRateChange;
     result.rangeChange = original.rangeChange;
     result.gainedEffects = original.gainedEffects;
@@ -65,6 +68,7 @@ export class WeaponModData {
 
     if (mod.damageChange) result.push(`${mod.damageChange > 0 ? '+' : ''}${mod.damageChange} damage`);
     if (mod.fixDamage) result.push(`Change damage to ${mod.fixDamage}`);
+    if (mod.newDamageType) result.push(`Change damage type to ${mod.newDamageType}`);
     if (mod.fireRateChange) result.push(`${mod.fireRateChange > 0 ? '+' : ''}${mod.fireRateChange} Fire Rate`);
     if (mod.rangeChange) result.push(`${mod.rangeChange > 0 ? 'Increase' : 'Reduce'} Range by ${Math.abs(mod.rangeChange)} step`);
     if (mod.gainedEffects) result.push(`Gain ${mod.gainedEffects.join(', ')}`);
