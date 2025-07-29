@@ -6,6 +6,7 @@ import { DatabaseComponent } from './components/database/database.component';
 import { ModsComponent } from './components/database/mods/mods.component';
 import { ArmorComponent } from './components/database/armor/armor.component';
 import { ItemsComponent } from './components/database/items/items.component';
+import { AmmoComponent } from './components/database/ammo/ammo.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'character', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'database', redirectTo: 'database/weapons' },
   { path: 'database', component: DatabaseComponent, children: [
     { path: 'weapons', component: WeaponsComponent },
+    { path: 'ammo', component: AmmoComponent },
     { path: 'mods', component: ModsComponent },
     { path: 'armor', component: ArmorComponent },
     { path: 'items', component: ItemsComponent }
