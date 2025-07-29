@@ -11,10 +11,10 @@
   <tr *ngFor="let ammo of ammos">
     <td>{{ammo.name}}</td>
     <td>{{ammo.subType}}</td>
-    <td>{{ammo.quantityFound}}</td>
-    <td>{{ammo.weight}}</td>
-    <td>{{ammo.cost}}</td>
-    <td>{{ammo.rarity}}</td>
+    <td class="right">{{ammo.quantityText}}</td>
+    <td class="right">{{ammo.weight}}</td>
+    <td class="right">{{ammo.cost}}</td>
+    <td class="right">{{ammo.rarity}}</td>
     <td>{{ammo.notes}}</td>
   </tr>
 </table>

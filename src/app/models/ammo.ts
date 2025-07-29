@@ -3,7 +3,7 @@ export class Ammo {
   subType?: string;
   quantityFound: number = 0;
   quantityRolled: number = 0;
-  quantityFoundText: string = "";
+  quantityText: string = "";
   weight: number = 0;
   cost:  number = 0;
   rarity: number = 0;
@@ -27,12 +27,21 @@ export class AmmoData {
     result.subType = original.subType;
     result.quantityFound = original.quantityFound;
     result.quantityRolled = original.quantityRolled;
-    result.quantityFoundText = original.quantityFound + original.quantityRolled > 0 ? ` + ${original.quantityRolled}CD` : "";
+    result.quantityText = AmmoData.getQuantityText(original);
     result.weight = original.weight;
     result.cost = original.cost;
     result.rarity = original.rarity;
     result.notes = original.notes;
 
     return result;
+  }
+
+  static getQuantityText(ammo: AmmoData): string {
+    let result: string[] = [];
+
+    if (ammo.quantityFound > 0) result.push(ammo.quantityFound.toString());
+    if (ammo.quantityRolled > 0) result.push(ammo.quantityRolled + " CD");
+
+    return result.join(" + ");
   }
 }

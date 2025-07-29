@@ -16,15 +16,15 @@
   <tr *ngFor="let weapon of weapons">
     <td>{{weapon.name}}</td>
     <td>{{weapon.skill}}</td>
-    <td>{{weapon.damage}}</td>
+    <td class="right">{{weapon.damage}}&nbsp;CD</td>
     <td>{{weapon.effectsText}}</td>
     <td>{{weapon.type}}</td>
-    <td>{{weapon.rate}}</td>
-    <td>{{weapon.range}}</td>
+    <td class="right">{{weapon.rate}}</td>
+    <td class="center">{{weapon.range}}</td>
     <td>{{weapon.qualitiesText}}</td>
-    <td>{{weapon.ammo}}</td>
-    <td>{{weapon.weight}}</td>
-    <td>{{weapon.cost}}</td>
-    <td>{{weapon.rarity}}</td>
+    <td class="right">{{weapon.ammo}}</td>
+    <td class="right">{{weapon.weight}}</td>
+    <td class="right">{{weapon.cost}}</td>
+    <td class="right">{{weapon.rarity}}</td>
   </tr>
 </table>

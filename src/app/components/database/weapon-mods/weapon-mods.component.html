@@ -15,8 +15,8 @@
     <td>{{mod.weaponType}}</td>
     <td>{{mod.type}}</td>
     <td>{{mod.effectText}}</td>
-    <td>{{mod.weightChange}}</td>
-    <td>{{mod.costChange}}</td>
+    <td class="right">{{mod.weightChange > 0 ? '+': ''}}{{mod.weightChange == 0 ? '-' : mod.weightChange}}</td>
+    <td class="right">{{mod.costChange > 0 ? '+': ''}}{{mod.costChange == 0 ? '-' : mod.costChange}}</td>
     <td>{{mod.perk}}</td>
   </tr>
 </table>
