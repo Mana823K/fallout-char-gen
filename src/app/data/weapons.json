@@ -1037,7 +1037,7 @@
     "weight": 6,
     "cost": 300,
     "rarity": 3,
-    "mods": []
+    "mods": ["Long Barrel (M79 Grenade Launcher)", "Full Stock (M79 Grenade Launcher)"]
   },
   {
     "name": "Smoke Claws",
@@ -1067,7 +1067,7 @@
     "weight": 3,
     "cost": 125,
     "rarity": 3,
-    "mods": []
+    "mods": ["Caustic (Acid Soaker)", "Large Ampoule (Acid Soaker)", "Large Vial (Acid Soaker)"]
   },
   {
     "name": "Alien Blaster",
@@ -1082,7 +1082,9 @@
     "weight": 2,
     "cost": 90,
     "rarity": 5,
-    "mods": []
+    "special": "Alien blasters inflict both Energy and Radiation damage. Roll damage as normal, and then reduce the total by which ever of the target’s damage resistances is lower out of Energy or Radiation. A creature that is killed by an alien blaster is instead vaporized and reduced to ash.",
+    "mods": ["Bracketed Short Barrel", "Long Barrel", "Automatic Barrel", "Bracketed Long Barrel", "Improved Barrel", "Sniper Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Reflex Sight", "Short Scope", "Fusion Mag (Alien Blaster)"],
+    "modNotes": "Any Stock mods change the weapon to an Alien Rifle"
   },
   {
     "name": "Assaultron Head Laser",
@@ -1097,7 +1099,8 @@
     "weight": 8,
     "cost": 115,
     "rarity": 4,
-    "mods": []
+    "special": "Firing an Assaultron Head consumes two shots of ammunition each time it fires. Each capacitor mod for the Assaultron head increases both damage and number of shots consumed. You may reduce the number of shots consumed, reducing the damage by -1 CD for each shot consumed fewer than normal (for a minimum of 4 damage and 1 shot consumed).",
+    "mods": ["Capacitor Mk III (Assaultron Head)", "Capacitor Mk IV (Assaultron Head)", "Capacitor Mk V (Assaultron Head)", "Capacitor Mk VI (Assaultron Head)"]
   },
   {
     "name": "Cryojet",
@@ -1112,6 +1115,7 @@
     "weight": 8,
     "cost": 261,
     "rarity": 4,
+    "special": ": Cryojets are integrated into the arms of robots and therefore can’t be used as a handheld weapon.",
     "mods": []
   },
   {
@@ -1127,7 +1131,7 @@
     "weight": 2,
     "cost": 120,
     "rarity": 4,
-    "mods": []
+    "mods": ["Beta Wave Tuner", "Sharpshooter’s Grip", "Reflex Sight"]
   },
   {
     "name": "Tesla Rifle",
@@ -1142,7 +1146,7 @@
     "weight": 8,
     "cost": 180,
     "rarity": 4,
-    "mods": []
+    "mods": ["Automatic Barrel", "Splitter", "Improved Barrel", "Reflex Sight"]
   },
   {
     "name": "Broadsider",
@@ -1157,7 +1161,8 @@
     "weight": 16,
     "cost": 140,
     "rarity": 5,
-    "mods": []
+    "mods": ["Long Barrel (Broadsider)", "Light Barrel (Broadsider)", "Multi Shot Canister (Broadsider)", "M79 Launcher (Broadsider)"],
+    "modNotes": "Mods installed with the Repair skill"
   },
   {
     "name": "Cryolator",
@@ -1172,7 +1177,8 @@
     "weight": 14,
     "cost": 300,
     "rarity": 4,
-    "mods": []
+    "mods": ["Crystallizing Barrel (Cryolator)", "Fusion Mag (Cryolator)", "Recoil Compensating Stock (Cryolator)", "Reflex (Cryolator)"],
+    "modNotes":"Mods installed with the Repair skill"
   },
   {
     "name": "Harpoon Gun",
@@ -1187,7 +1193,8 @@
     "weight": 16,
     "cost": 120,
     "rarity": 5,
-    "mods": []
+    "mods": ["Barbed Harpoon (Harpoon Gun)", "Flechette Darts (Harpoon Gun)", "Recoil Compensating Stock (Harpoon Gun)", "Gunner Sight (Harpoon Gun)", "Short Scope (Harpoon Gun)"],
+    "modNotes":"Mods installed with the Repair skill"
   },
   {
     "name": "Buzz Saw",
@@ -1217,7 +1224,7 @@
     "weight": 2,
     "cost": 25,
     "rarity": 1,
-    "mods": []
+    "mods": ["Shock Mod (Claw)", "Stun Mod (Claw)"]
   },
   {
     "name": "Construction Claw",
