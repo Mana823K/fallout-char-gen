@@ -27,7 +27,7 @@
     "weight": 4,
     "cost": 50,
     "rarity": 1,
-    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", "Advanced", "Long Barrel", "Ported Barrel", "Comfort Grip", "Sharpshooter’s Grip", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Recon Scope", "Compensator", "Suppressor"]
+    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", "Advanced", "Long Barrel", "Ported Barrel", "Comfort Grip", "Sharpshooter’s Grip", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Recon Scope", "Compensator", "Suppressor", "Armor Piercing Receiver", "Armor Piercing Automatic Receiver", "Hardened Automatic Receiver", "Rapid Automatic Receiver", "Calibrated Powerful Receiver", "Powerful Automatic Receiver", "Hardened Piercing Auto Receiver"]
   },
   {
     "name": "Flare Gun",
@@ -57,7 +57,7 @@
     "weight": 13,
     "cost": 144,
     "rarity": 2,
-    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", "Advanced", "Long Barrel", "Ported Barrel", "Vented Barrel", "Full Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Compensator", "Suppressor"]
+    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", "Advanced", "Long Barrel", "Ported Barrel", "Vented Barrel", "Full Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Compensator", "Suppressor", "Armor Piercing Receiver", "Armor Piercing Automatic Receiver", "Hardened Automatic Receiver", "Rapid Automatic Receiver", "Calibrated Powerful Receiver", "Powerful Automatic Receiver", "Hardened Piercing Auto Receiver"]
   },
   {
     "name": "Combat Rifle",
@@ -72,7 +72,7 @@
     "weight": 11,
     "cost": 117,
     "rarity": 2,
-    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", "Advanced", ".38 Receiver", ".308 Receiver", "Long Barrel", "Ported Barrel", "Vented Barrel", "Full Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Compensator", "Suppressor"]
+    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", "Advanced", ".38 Receiver", ".308 Receiver", "Long Barrel", "Ported Barrel", "Vented Barrel", "Full Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Compensator", "Suppressor", "Armor Piercing Receiver", "Armor Piercing Automatic Receiver", "Hardened Automatic Receiver", "Rapid Automatic Receiver", "Calibrated Powerful Receiver", "Powerful Automatic Receiver", "Hardened Piercing Auto Receiver"]
   },
   {
     "name": "Gauss Rifle",
@@ -102,7 +102,7 @@
     "weight": 10,
     "cost": 55,
     "rarity": 2,
-    "mods": ["Tuned", "Calibrated", "Hardened", "Powerful", ".38 Receiver", ".50 Receiver", "Long Barrel", "Ported Barrel", "Vented Barrel", "Full Stock", "Marksman’s Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Suppressor"]
+    "mods": ["Tuned", "Calibrated", "Hardened", "Powerful", ".38 Receiver", ".50 Receiver", "Long Barrel", "Ported Barrel", "Vented Barrel", "Full Stock", "Marksman’s Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Suppressor", "Armor Piercing Receiver", "Calibrated Powerful Receiver"]
   },
   {
     "name": "Submachine Gun",
@@ -117,7 +117,7 @@
     "weight": 12,
     "cost": 109,
     "rarity": 1,
-    "mods": ["Armor Piercing", "Hardened", "Rapid", "Powerful", "Short Barrel", "Full Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Compensator", "Muzzle Break", "Suppressor"]
+    "mods": ["Hardened", "Rapid", "Powerful", "Short Barrel", "Full Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Compensator", "Muzzle Break", "Suppressor", "Armor Piercing Receiver", "9mm Receiver"]
   },
   {
     "name": "Combat Shotgun",
@@ -132,7 +132,7 @@
     "weight": 11,
     "cost": 87,
     "rarity": 2,
-    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", "Advanced", "Long Barrel", "Ported Barrel", "Full Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recoil Compensating Stock", "Bayonet", "Compensator", "Muzzle Break", "Suppressor"]
+    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", "Advanced", "Long Barrel", "Ported Barrel", "Full Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recoil Compensating Stock", "Bayonet", "Compensator", "Muzzle Break", "Suppressor", "Calibrated Powerful Receiver", "Powerful Automatic Receiver"]
   },
   {
     "name": "Double-Barrel Shotgun",
@@ -162,7 +162,7 @@
     "weight": 3,
     "cost": 30,
     "rarity": 0,
-    "mods": ["Calibrated", "Hardened", "Powerful", ".38 Receiver", ".50 Receiver", "Stub Barrel", "Long Barrel", "Ported Barrel", "Finned Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Compensator", "Muzzle Break", "Suppressor"],
+    "mods": ["Calibrated", "Hardened", "Powerful", ".38 Receiver", ".50 Receiver", "Stub Barrel", "Long Barrel", "Ported Barrel", "Finned Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Compensator", "Muzzle Break", "Suppressor", "Calibrated Powerful Receiver"],
     "modNotes": "You may not take both a Grip and a Stock Mod. Any Stock mods add the word “Rifle” to the end of the weapon’s name."
   },
   {
@@ -178,7 +178,7 @@
     "weight": 2,
     "cost": 30,
     "rarity": 0,
-    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", ".45 Receiver", "Long Barrel", "Ported Barrel", "Finned Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Compensator", "Muzzle Break", "Suppressor"],
+    "mods": ["Calibrated", "Hardened", "Automatic Piston", "Hair Trigger", "Powerful", ".45 Receiver", "Long Barrel", "Ported Barrel", "Finned Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Compensator", "Muzzle Break", "Suppressor", "Armor Piercing Receiver", "Armor Piercing Automatic Receiver", "Hardened Automatic Receiver", "Rapid Automatic Receiver", "Calibrated Powerful Receiver", "Powerful Automatic Receiver", "Hardened Piercing Auto Receiver", "9mm Receiver"],
     "modNotes": "Any Stock mods replace “Gun” with “Rifle” in the weapon’s name."
   },
   {
@@ -194,7 +194,7 @@
     "weight": 4,
     "cost": 25,
     "rarity": 0,
-    "mods": ["Calibrated", "Hardened", "Powerful", ".38 Receiver", ".308 Receiver", "Long Barrel", "Ported Barrel", "Finned Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Compensator", "Muzzle Break", "Suppressor"],
+    "mods": ["Calibrated", "Hardened", "Powerful", ".38 Receiver", ".308 Receiver", "Long Barrel", "Ported Barrel", "Finned Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Bayonet", "Compensator", "Muzzle Break", "Suppressor", "Calibrated Powerful Receiver", ".357 Receiver"],
     "modNotes": "Any Stock mods add “Rifle” to the end of the weapon’s name."
   },
   {
@@ -240,7 +240,7 @@
     "weight": 4,
     "cost": 50,
     "rarity": 2,
-    "mods": ["Photon Exciter", "Beta Wave Tuner", "Boosted Capacitor", "Photon Agitator", "Long Barrel", "Automatic Barrel", "Improved Barrel", "Standard Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Beam Splitter", "Beam Focuser", "Gyro Compensating Lens"],
+    "mods": ["Photon Exciter", "Beta Wave Tuner", "Boosted Capacitor", "Photon Agitator", "Long Barrel", "Automatic Barrel", "Improved Barrel", "Standard Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Beam Splitter", "Beam Focuser", "Gyro Compensating Lens", "Gamma Wave Emitter", "Maximized Capacitor", "Boosted Photon Agitator", "Boosted Gamma Wave Emitter", "Overcharged Capacitor", "Improved Long Barrel", "Improved Automatic Barrel", "Amplified Beam Splitter", "Fine-Tuned Beam Focuser", "Quantum Gyro-Compensating Lens"],
     "modNotes": "Any Stock mods change the weapon to an Institute laser rifle."
   },
   {
@@ -272,7 +272,7 @@
     "weight": 4,
     "cost": 69,
     "rarity": 2,
-    "mods": ["Photon Exciter", "Beta Wave Tuner", "Boosted Capacitor", "Photon Agitator", "Long Barrel", "Automatic Barrel", "Sniper Barrel", "Improved Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Beam Splitter", "Beam Focuser", "Gyro Compensating Lens"],
+    "mods": ["Photon Exciter", "Beta Wave Tuner", "Boosted Capacitor", "Photon Agitator", "Long Barrel", "Automatic Barrel", "Sniper Barrel", "Improved Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Beam Splitter", "Beam Focuser", "Gyro Compensating Lens", "Gamma Wave Emitter", "Maximized Capacitor", "Boosted Photon Agitator", "Boosted Gamma Wave Emitter", "Overcharged Capacitor", "Improved Long Barrel", "Improved Automatic Barrel", "Improved Sniper Barrel", "Amplified Beam Splitter", "Fine-Tuned Beam Focuser", "Quantum Gyro-Compensating Lens"],
     "modNotes": " Any Stock mods change the weapon to a laser rifle."
   },
   {
@@ -289,7 +289,7 @@
     "cost": 123,
     "rarity": 3,
     "special": "Plasma guns inflict both Physical and Energy damage. Roll damage as normal, and then reduce the total by whichever of the target’s damage resistances is lower out of Physical or Energy. Any Persistent damage effects (applied by weapon mods) inflict Energy damage.",
-    "mods": ["Photon Exciter", "Beta Wave Tuner", "Boosted Capacitor", "Photon Agitator", "Splitter", "Automatic Barrel", "Sniper Barrel", "Flamer Barrel", "Improved Barrel", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope"],
+    "mods": ["Photon Exciter", "Beta Wave Tuner", "Boosted Capacitor", "Photon Agitator", "Splitter", "Automatic Barrel", "Sniper Barrel", "Flamer Barrel", "Improved Barrel", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Gamma Wave Emitter", "Maximized Capacitor", "Boosted Photon Agitator", "Boosted Gamma Wave Emitter", "Overcharged Capacitor", "Improved Long Barrel", "Improved Automatic Barrel", "Improved Splitter"],
     "modNotes": "Any Stock mods change the weapon to a plasma rifle"
   },
   {
@@ -351,7 +351,7 @@
     "weight": 19,
     "cost": 804,
     "rarity": 3,
-    "mods": ["Photon Exciter (Gatling Laser)", "Beta Wave Tuner (Gatling Laser)", "Boosted Capacitor (Gatling Laser)", "Photon Agitator (Gatling Laser)", "Charging barrels (Gatling Laser)", "Reflex Sight (Gatling Laser)", "Beam Focuser (Gatling Laser)"],
+    "mods": ["Photon Exciter (Gatling Laser)", "Beta Wave Tuner (Gatling Laser)", "Boosted Capacitor (Gatling Laser)", "Photon Agitator (Gatling Laser)", "Charging barrels (Gatling Laser)", "Reflex Sight (Gatling Laser)", "Beam Focuser (Gatling Laser)", "Gamma Wave Emitter (Gatling Laser)", "Maximized Capacitor (Gatling Laser)", "Boosted Photon Agitator (Gatling Laser)", "Boosted Gamma Wave Emitter (Gatling Laser)", "Overcharged Capacitor (Gatling Laser)"],
     "modNotes": "Mods installed with the Science skill"
   },
   {
@@ -1284,7 +1284,7 @@
     "weight": 2,
     "cost": 110,
     "rarity": 2,
-    "mods": []
+    "mods": ["Hair Trigger", "Long Barrel", "Large Magazine"]
   },
   {
     "name": "12.7mm Pistol",
@@ -1299,7 +1299,7 @@
     "weight": 4,
     "cost": 400,
     "rarity": 4,
-    "mods": []
+    "mods": ["Calibrated", "Hardened", "Hair Trigger", "Powerful", "Advanced", "Armor Piercing Receiver", "Calibrated Powerful Receiver"]
   },
   {
     "name": "12.7mm SMG",
@@ -1314,7 +1314,7 @@
     "weight": 5,
     "cost": 510,
     "rarity": 4,
-    "mods": []
+    "mods": ["Hardened", "Powerful", "Armor Piercing Receiver", "Full Stock", "Recoil Compensating Stock", "Large Magazine", "Reflex Sight", "Suppressor"]
   },
   {
     "name": "25mm Grenade APW",
@@ -1329,10 +1329,10 @@
     "weight": 8,
     "cost": 420,
     "rarity": 4,
-    "mods": []
+    "mods": ["Hair Trigger", "Long Barrel", "Large Magazine"]
   },
   {
-    "name": "9mm Pisto",
+    "name": "9mm Pistol",
     "skill": "Small Guns",
     "damage": 3,
     "effects": [],
@@ -1344,7 +1344,7 @@
     "weight": 2,
     "cost": 50,
     "rarity": 2,
-    "mods": []
+    "mods": ["Automatic", "Calibrated", "Hardened", "Hair Trigger", "Hardened Automatic Receiver", "Comfort Grip", "Large Magazine", "Reflex Sight", "Short Scope", "Suppressor"]
   },
   {
     "name": "Anti-Materiel Rifle",
@@ -1359,7 +1359,7 @@
     "weight": 20,
     "cost": 560,
     "rarity": 4,
-    "mods": []
+    "mods": ["Hardened", "Powerful", "Hair Trigger", "Large Magazine", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Suppressor"]
   },
   {
     "name": "Battle Rifle",
@@ -1374,7 +1374,7 @@
     "weight": 10,
     "cost": 150,
     "rarity": 3,
-    "mods": []
+    "mods": ["Hardened", "Powerful", "Hair Trigger", "Long Barrel", "Reflex Sight", "Short Scope", "Bayonet"]
   },
   {
     "name": "Black Powder Blunderbuss",
@@ -1419,7 +1419,7 @@
     "weight": 6,
     "cost": 60,
     "rarity": 3,
-    "mods": []
+    "mods": ["Bayonet"]
   },
   {
     "name": "Gauss Pistol",
@@ -1434,7 +1434,7 @@
     "weight": 6,
     "cost": 334,
     "rarity": 5,
-    "mods": []
+    "mods": ["Shielded Barrel", "Full Capacitors", "Capacitor Boosting Coil", "Reflex Sight"]
   },
   {
     "name": "Gauss Shotgun",
@@ -1449,7 +1449,7 @@
     "weight": 14,
     "cost": 400,
     "rarity": 5,
-    "mods": []
+    "mods": ["Shielded Barrel", "Full Capacitors", "Capacitor Boosting Coil"]
   },
   {
     "name": "Lever-Action Rifle",
@@ -1464,7 +1464,7 @@
     "weight": 9,
     "cost": 201,
     "rarity": 3,
-    "mods": []
+    "mods": ["Calibrated", "Hardened", "Powerful", "Advanced", "Calibrated Powerful Receiver", ".357 Receiver", "Long Barrel", "Ported Barrel", "Full Stock", "Marksman’s Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Suppressor"]
   },
   {
     "name": "Light Machine Gun",
@@ -1479,7 +1479,7 @@
     "weight": 15,
     "cost": 150,
     "rarity": 3,
-    "mods": []
+    "mods": ["Calibrated", "Hardened", "Powerful", ".308 Receiver", "Calibrated Powerful Receiver", "Long Barrel", "Ported Barrel", "Vented Barrel", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Full Stock", "Recoil Compensating Stock", "Reflex Sight", "Compensator", "Muzzle Break"]
   },
   {
     "name": "Pump-Action Shotgun",
@@ -1494,7 +1494,7 @@
     "weight": 11,
     "cost": 70,
     "rarity": 1,
-    "mods": []
+    "mods": ["Calibrated", "Hair Trigger", "Hardened", "Powerful", "Advanced", "Calibrated Powerful Receiver", "Long Barrel", "Ported Barrel", "Full Stock", "Recoil Compensating Stock", "Reflex Sight", "Bayonet", "Compensator", "Muzzle Break", "Suppressor"]
   },
   {
     "name": "Radium Rifle",
@@ -1509,7 +1509,7 @@
     "weight": 11,
     "cost": 110,
     "rarity": 3,
-    "mods": []
+    "mods": ["Calibrated", "Hardened", "Automatic", "Hair Trigger", "Powerful", "Hardened Automatic Receiver", "Rapid Automatic Receiver", "Calibrated Powerful Receiver", "Long Barrel", "Ported Barrel", "Full Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Compensator", "Muzzle Break", "Suppressor"]
   },
   {
     "name": "Sniper Rifle",
@@ -1524,7 +1524,7 @@
     "weight": 10,
     "cost": 300,
     "rarity": 4,
-    "mods": []
+    "mods": ["Calibrated", "Hardened", "Powerful", "Calibrated Powerful Receiver", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Suppressor"]
   },
   {
     "name": "Alien Atomizer",
