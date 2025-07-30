@@ -491,7 +491,7 @@
     "weight": 3,
     "cost": 50,
     "rarity": 2,
-    "mods": []
+    "mods": ["Serrated Blade (Sword)", "Electrified Blade (Sword)", "Electrified Serrated Blade (Sword)", "Stun Pack (Sword)"]
   },
   {
     "name": "Combat Knife",
@@ -506,7 +506,7 @@
     "weight": 1,
     "cost": 25,
     "rarity": 1,
-    "mods": []
+    "mods": ["Serrated Blade (Combat Knife)", "Stealth Blade (Combat Knife)"]
   },
   {
     "name": "Machete",
@@ -521,7 +521,7 @@
     "weight": 2,
     "cost": 25,
     "rarity": 1,
-    "mods": []
+    "mods": ["Serrated Blade (Machete)"]
   },
   {
     "name": "Ripper",
@@ -536,7 +536,7 @@
     "weight": 6,
     "cost": 50,
     "rarity": 2,
-    "mods": []
+    "mods": ["Curved Blade (Ripper)", "Extended Blade (Ripper)"]
   },
   {
     "name": "Shishkebab",
@@ -551,7 +551,7 @@
     "weight": 3,
     "cost": 200,
     "rarity": 3,
-    "mods": []
+    "mods": ["Extra Flame Jets (Shishkebab)"]
   },
   {
     "name": "Switchblade",
@@ -566,7 +566,7 @@
     "weight": 1,
     "cost": 20,
     "rarity": 0,
-    "mods": []
+    "mods": ["Serrated Blade (Switchblade)"]
   },
   {
     "name": "Baseball Bat",
@@ -581,7 +581,7 @@
     "weight": 3,
     "cost": 25,
     "rarity": 1,
-    "mods": []
+    "mods": ["Barbed (Baseball Bat)", "Spiked (Baseball Bat)", "Sharp (Baseball Bat)", "Chain-Wrapped (Baseball Bat)", "Bladed (Baseball Bat)"]
   },
   {
     "name": "Aluminum Baseball Bat",
@@ -596,7 +596,8 @@
     "weight": 2,
     "cost": 32,
     "rarity": 2,
-    "mods": []
+    "mods": ["Barbed (Baseball Bat)", "Spiked (Baseball Bat)", "Sharp (Baseball Bat)", "Chain-Wrapped (Baseball Bat)", "Bladed (Baseball Bat)"],
+    "modNotes": " You may only apply mods to an aluminum baseball bat if you have the Blacksmith 1 perk."
   },
   {
     "name": "Board",
@@ -611,7 +612,7 @@
     "weight": 3,
     "cost": 20,
     "rarity": 0,
-    "mods": []
+    "mods": ["Spiked (Board)", "Puncturing (Board)", "Bladed (Board)"]
   },
   {
     "name": "Lead Pipe",
@@ -626,7 +627,7 @@
     "weight": 3,
     "cost": 15,
     "rarity": 0,
-    "mods": []
+    "mods": ["Spiked (Lead Pipe)", "Heavy (Lead Pipe)"]
   },
   {
     "name": "Pipe Wrench",
@@ -641,7 +642,8 @@
     "weight": 2,
     "cost": 30,
     "rarity": 1,
-    "mods": []
+    "mods": ["Hooked (Pipe Wrench)", "Heavy (Pipe Wrench)", "Puncturing (Pipe Wrench)", "Extra Heavy (Pipe Wrench)"],
+    "modNotes": "Reduce the difficulty of any test to install a mod onto a pipe wrench by 1."
   },
   {
     "name": "Pool cue",
@@ -656,7 +658,7 @@
     "weight": 1,
     "cost": 10,
     "rarity": 0,
-    "mods": []
+    "mods": ["Barbed (Pool Cue)", "Sharp (Pool Cue)"]
   },
   {
     "name": "Rolling Pin",
@@ -671,7 +673,7 @@
     "weight": 1,
     "cost": 10,
     "rarity": 0,
-    "mods": []
+    "mods": ["Spiked (Rolling Pin)", "Sharp (Rolling Pin)"]
   },
   {
     "name": "Baton",
@@ -686,7 +688,7 @@
     "weight": 2,
     "cost": 15,
     "rarity": 1,
-    "mods": []
+    "mods": ["Electrified (Baton)", "Stun Pack (Baton)"]
   },
   {
     "name": "Sledgehammer",
@@ -701,7 +703,7 @@
     "weight": 12,
     "cost": 40,
     "rarity": 2,
-    "mods": []
+    "mods": ["Puncturing (Sledgehammer)", "Heavy (Sledgehammer)"]
   },
   {
     "name": "Super Sledge",
@@ -716,7 +718,7 @@
     "weight": 20,
     "cost": 180,
     "rarity": 3,
-    "mods": []
+    "mods": ["Heating Coil (Super Sledge)", "Stun Pack (Super Sledge)"]
   },
   {
     "name": "Tire Iron",
@@ -731,7 +733,7 @@
     "weight": 2,
     "cost": 25,
     "rarity": 1,
-    "mods": []
+    "mods": ["Bladed (Tire Iron)"]
   },
   {
     "name": "Walking Cane",
@@ -746,7 +748,7 @@
     "weight": 2,
     "cost": 10,
     "rarity": 0,
-    "mods": []
+    "mods": ["Barbed (Walking Cane)", "Spiked (Walking Cane)"]
   },
   {
     "name": "Boxing Glove",
@@ -761,7 +763,7 @@
     "weight": 1,
     "cost": 10,
     "rarity": 1,
-    "mods": []
+    "mods": ["Spiked (Boxing Glove)", "Puncturing (Boxing Glove)", "Lead lining (Boxing Glove)"]
   },
   {
     "name": "Deathclaw Gauntlet",
@@ -776,7 +778,7 @@
     "weight": 10,
     "cost": 75,
     "rarity": 3,
-    "mods": []
+    "mods": ["Extra Claw (Deathclaw Gauntlet)"]
   },
   {
     "name": "Knuckles",
@@ -791,7 +793,7 @@
     "weight": 0,
     "cost": 10,
     "rarity": 1,
-    "mods": []
+    "mods": ["Sharp (Knuckles)", "Spiked (Knuckles)", "Puncturing (Knuckles)", "Bladed (Knuckles)"]
   },
   {
     "name": "Power Fist",
@@ -806,7 +808,7 @@
     "weight": 4,
     "cost": 100,
     "rarity": 2,
-    "mods": []
+    "mods": ["Puncturing (Power Fist)", "Heating Coil (Power Fist)"]
   },
   {
     "name": "Throwing Knives",
