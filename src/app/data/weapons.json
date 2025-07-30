@@ -928,6 +928,7 @@
     "weight": 0,
     "cost": 135,
     "rarity": 3,
+    "special": "Plasma grenades inflict both physical and energy damage. Roll damage as normal, and then reduce the total by whichever of the target’s damage resistances is lower out of Physical or Energy.",
     "mods": []
   },
   {
@@ -943,6 +944,7 @@
     "weight": 0,
     "cost": 100,
     "rarity": 3,
+    "special": "Pulse grenades only inflict damage to robots, synths, Power Armor (though not the wearer within) and other mechanical or technological targets. Any computers in the blast are also damaged by the grenade. Against any other target, Pulse grenades inflict 0 damage. ",
     "mods": []
   },
   {
@@ -958,6 +960,7 @@
     "weight": 1,
     "cost": 75,
     "rarity": 2,
+    "special": "When constructing a Bottlecap mine, you may add extra bottlecaps; every 10 caps added increases the damage by +1CD  . When the mine detonates, roll the damage rating a second time: the total rolled is the number of intact caps found in the zone where the mine detonated.",
     "mods": []
   },
   {
@@ -1018,6 +1021,7 @@
     "weight": 0,
     "cost": 100,
     "rarity": 3,
+    "special": "Pulse mines only inflict damage to robots, synths, Power Armor (though not the wearer within) and other mechanical or technological targets. Any computers in the blast are also damaged by the grenade. Against any other target, pulse mines inflict 0 damage.",
     "mods": []
   },
   {
