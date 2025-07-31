@@ -284,7 +284,7 @@
     "rate": 1,
     "range": "C",
     "qualities": ["Close Quarters"],
-    "ammo": ["Plasma cartridge"],
+    "ammo": ["Plasma Cartridge"],
     "weight": 4,
     "cost": 123,
     "rarity": 3,
@@ -1033,7 +1033,7 @@
     "rate": 0,
     "range": "L",
     "qualities": ["Blast", "Inaccurate", "Slow Load", "Two-Handed"],
-    "ammo": ["40mm grenade round"],
+    "ammo": ["40mm Grenade"],
     "weight": 6,
     "cost": 300,
     "rarity": 3,
@@ -1584,7 +1584,8 @@
     "weight": 8,
     "cost": 500,
     "rarity": 3,
-    "mods": []
+    "special": "Firing an Assaultron Head consumes two shots of ammunition each time it fires. You may reduce the number of shots consumed, reducing the damage by -1 CD for each shot consumed fewer than normal (for a minimum of 4 damage and 1 shot consumed).",
+    "mods": ["Capacitor Mk III (Assaultron Head)", "Capacitor Mk IV (Assaultron Head)", "Capacitor Mk V (Assaultron Head)", "Capacitor Mk VI (Assaultron Head)"]
   },
   {
     "name": "Microwave Emitter",
@@ -1614,7 +1615,7 @@
     "weight": 8,
     "cost": 180,
     "rarity": 4,
-    "mods": []
+    "mods": ["Automatic Barrel", "Splitter", "Improved Barrel", "Amplified Beam Splitter", "Fine-Tuned Beam Focuser", "Quantum Gyro-Compensating Lens", "Reflex Sight"]
   },
   {
     "name": ".50 Cal Machine Gun",
@@ -1629,7 +1630,8 @@
     "weight": 31,
     "cost": 350,
     "rarity": 3,
-    "mods": []
+    "mods": ["Heavy Barrel (.50 Cal Machine Gun)"],
+    "modNotes":"Mods installed with the Repair skill"
   },
   {
     "name": "Auto Grenade Launcher",
@@ -1644,7 +1646,8 @@
     "weight": 30,
     "cost": 450,
     "rarity": 4,
-    "mods": []
+    "mods": ["Heavy Barrel (Auto Grenade Launcher)", "Long Barrel (Auto Grenade Launcher)", "25mm Grenade Receiver (Auto Grenade Launcher)"],
+    "modNotes":"Mods installed with the Repair skill"
   },
   {
     "name": "Drone Cannon",
@@ -1674,7 +1677,8 @@
     "weight": 20,
     "cost": 350,
     "rarity": 1,
-    "mods": []
+    "mods": ["Speedy Receiver (Gatling Gun)", "Long Barrel (Gatling Gun)", "Comfort Grip (Gatling Gun)", "Extra-Large Magazine (Gatling Gun)", "Front Sight Ring (Gatling Gun)", "Large Bayonet (Gatling Gun)"],
+    "modNotes":"Mods installed with the Repair skill"
   },
   {
     "name": "Gatling Plasma",
@@ -1685,11 +1689,13 @@
     "rate": 4,
     "range": "M",
     "qualities": ["Gatling", "Inaccurate", "Two-Handed"],
-    "ammo": ["Plasma cartridge", "Plasma Core"],
+    "ammo": ["Plasma Cartridge", "Plasma Core"],
     "weight": 24,
     "cost": 1000,
     "rarity": 4,
-    "mods": []
+    "special": "Plasma weapons inflict both Physical and Energy damage. Roll damage as normal, and then reduce the total by whichever of the target’s damage resistances is lower out of Physical or Energy.",
+    "mods": ["Ported Barrel (Gatling Plasma)", "Comfort Grip (Gatling Plasma)", "Reflex Sight (Gatling Plasma)", "Beam Splitter (Gatling Plasma)", "Beam Focuser (Gatling Plasma)"],
+    "modNotes":"Mods installed with the Repair skill"
   },
   {
     "name": "Gauss Minigun",
@@ -1704,7 +1710,8 @@
     "weight": 38,
     "cost": 912,
     "rarity": 6,
-    "mods": []
+    "mods": ["Tri-Barrel (Gauss Minigun)", "Penta-Barrel (Gauss Minigun)", "Tesla Coil Capacitor (Gauss Minigun)", "Tesla Coil Dynamo (Gauss Minigun)", "Gunner Sight (Gauss Minigun)"],
+    "modNotes":"Mods installed with the Science skill"
   },
   {
     "name": "Plasma Caster",
@@ -1715,11 +1722,13 @@
     "rate": 3,
     "range": "M",
     "qualities": ["Inaccurate", "Recoil (8)", "Two-Handed"],
-    "ammo": ["Plasma cartridge"],
+    "ammo": ["Plasma Cartridge"],
     "weight": 30,
     "cost": 700,
     "rarity": 5,
-    "mods": []
+    "special": "Plasma weapons inflict both Physical and Energy damage. Roll damage as normal, and then reduce the total by whichever of the target’s damage resistances is lower out of Physical or Energy",
+    "mods": ["Calibrated Capacitor (Plasma Caster)", "Pulse Capacitor (Plasma Caster)", "High Speed Electrode (Plasma Caster)", "Long Barrel (Plasma Caster)"],
+    "modNotes":"Mods installed with the Science skill"
   },
   {
     "name": "Tesla Cannon",
@@ -1749,7 +1758,8 @@
     "weight": 3,
     "cost": 44,
     "rarity": 1,
-    "mods": []
+    "mods": ["Compound Frame (Bow)", "Iron Sights (Bow)", "Glow Sights (Bow)"],
+    "modNotes":"Mods installed with the Survival skill"
   },
   {
     "name": "Crossbow",
@@ -1764,7 +1774,8 @@
     "weight": 3,
     "cost": 44,
     "rarity": 2,
-    "mods": []
+    "mods": ["Iron Sights (Crossbow)", "Glow Sights (Crossbow)", "Heavy Frame (Crossbow)", "Repeating Frame (Crossbow)", "Multiple Launch Frame (Crossbow)"],
+    "modNotes":"Mods installed with the Repair skill"
   },
   {
     "name": "Assaultron Blade",
@@ -1779,7 +1790,7 @@
     "weight": 3,
     "cost": 50,
     "rarity": 3,
-    "mods": []
+    "mods": ["Electrified Blade (Assaultron Blade)"]
   },
   {
     "name": "Auto-Axe",
@@ -1794,7 +1805,7 @@
     "weight": 20,
     "cost": 100,
     "rarity": 3,
-    "mods": []
+    "mods": ["Electrified (Auto-Axe)", "Burning (Auto-Axe)", "Poisoned (Auto-Axe)", "Turbo (Auto-Axe)"]
   },
   {
     "name": "Ballistic Fist",
@@ -1809,6 +1820,7 @@
     "weight": 6,
     "cost": 150,
     "rarity": 4,
+    "special": "This melee weapon requires ammunition, expending one shotgun shell with each attack. Without a shotgun shell, a ballistic fist simply makes a normal unarmed attack",
     "mods": []
   },
   {
@@ -1854,7 +1866,9 @@
     "weight": 12,
     "cost": 140,
     "rarity": 3,
-    "mods": []
+    "special": "A Chainsaw does not benefit from the wielder’s normal melee damage bonus",
+    "mods": ["Dual Bar (Chainsaw)", "Bow Bar (Chainsaw)", "Long Bow Bar (Chainsaw)", "Flamer (Chainsaw)"],
+    "modNotes": "The Flamer mod can be installed in addition, to any of the other mods"
   },
   {
     "name": "Death Tambo",
@@ -1869,6 +1883,7 @@
     "weight": 1,
     "cost": 40,
     "rarity": 2,
+    "special": "When used to make a sneak attack, a Death Tambo increases the complication range by 1, due to the jingling sound it makes.",
     "mods": []
   },
   {
@@ -1899,6 +1914,7 @@
     "weight": 3,
     "cost": 45,
     "rarity": 3,
+    "special": "When used to make a sneak attack, a Guitar Sword increases the complication range by 1, due to the sound it makes.",
     "mods": []
   },
   {
@@ -1959,6 +1975,7 @@
     "weight": 20,
     "cost": 115,
     "rarity": 3,
+    "special": "When used to make a sneak attack, a War Drum increases the complication range by 1, due to the sound it makes.",
     "mods": []
   },
   {
@@ -2004,6 +2021,7 @@
     "weight": 1,
     "cost": 75,
     "rarity": 3,
+    "special": "When a Placed explosive is being placed, if you have a Detonator, you may choose to have the explosive triggered remotely. This removes the Delay (X) Trait and means that you may detonate that explosive device as a minor action at any point during the scene, so long as you are within Long range of the explosive. You may attempt to have multiple explosives set to detonate using the same detonator, but the difficulty of the PER + Explosives test to set the explosives increases by +1 for each subsequent bomb linked to the detonator. When the detonator is used, all linked explosives detonate at the same time.",
     "mods": []
   },
   {
@@ -2019,6 +2037,7 @@
     "weight": 0,
     "cost": 25,
     "rarity": 2,
+    "special": "Single sticks of dynamite are assumed to have a short fuse, which will detonate the same turn they’re lit (and thrown), functioning like a normal grenade. A character may prepare longer fuses for dynamite, requiring a PER + Explosives test with a difficulty of 1: success means you prepare one stick of dynamite with a longer fuse, plus one additional stick per AP spent. Long-fuse dynamite has the Delay (X) quality, with a rating set at the time the longer fuses are prepared. Dynamite bundles have the Delay (X) quality, with the rating set when the bomb is placed",
     "mods": []
   },
   {
@@ -2049,6 +2068,7 @@
     "weight": 1,
     "cost": 40,
     "rarity": 2,
+    "special": "If a flash bang hits, any character caught within the blast of a Flash Bang is stunned, as per the Stun damage effect. If the grenade misses, there is no effect.",
     "mods": []
   },
   {
@@ -2079,6 +2099,7 @@
     "weight": 2,
     "cost": 200,
     "rarity": 4,
+    "special": "The rating of the Delay quality is chosen when the bomb is placed.",
     "mods": []
   },
   {
@@ -2094,6 +2115,7 @@
     "weight": 1,
     "cost": 25,
     "rarity": 1,
+    "special": "A Powder Charge may replace its Mine quality with the Delay (X) and Placed qualities, requiring only a few minutes of work and a PER + Explosives test with a difficulty of 1. The rating of the Delay quality is chosen when the bomb is placed.",
     "mods": []
   },
   {
@@ -2109,6 +2131,7 @@
     "weight": 1,
     "cost": 40,
     "rarity": 2,
+    "special": "When a smoke grenade detonates, it generates a cloud of smoke which fills the affected zone. Characters cannot see while within the cloud, nor can they see into or through the cloud from outside it, adding +2 difficulty to all attacks and PER-based tests made by or against anyone within the cloud. The cloud dissipates over time; at the end of each round, roll 1 CD, plus +1 CD for each round the cloud has persisted: if one or more Effects are rolled, the cloud has dispersed enough to no longer have an effect",
     "mods": []
   }
 ]
