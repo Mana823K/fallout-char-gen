@@ -1,0 +1,487 @@
+[
+  {
+    "name": "Ballistic Weave",
+    "type": "Ballistic Weave",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 0,
+    "weight": 0,
+    "cost": 20,
+    "perks": []
+  },
+  {
+    "name": "Ballistic Weave Mk II",
+    "type": "Ballistic Weave",
+    "physicalRes": 3,
+    "energyRes": 3,
+    "radiationRes": 0,
+    "weight": 0,
+    "cost": 30,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Ballistic Weave Mk III",
+    "type": "Ballistic Weave",
+    "physicalRes": 4,
+    "energyRes": 4,
+    "radiationRes": 0,
+    "weight": 0,
+    "cost": 40,
+    "perks": ["Armorer 2"]
+  },
+  {
+    "name": "Ballistic Weave Mk IV",
+    "type": "Ballistic Weave",
+    "physicalRes": 5,
+    "energyRes": 5,
+    "radiationRes": 0,
+    "weight": 0,
+    "cost": 50,
+    "perks": ["Armorer 3"]
+  },
+  {
+    "name": "Ballistic Weave Mk V",
+    "type": "Ballistic Weave",
+    "physicalRes": 6,
+    "energyRes": 6,
+    "radiationRes": 0,
+    "weight": 0,
+    "cost": 60,
+    "perks": ["Armorer 4"]
+  },
+  {
+    "name": "Insulated Lining",
+    "type": "Vault Jumpsuit",
+    "physicalRes": 0,
+    "energyRes": 1,
+    "radiationRes": 0,
+    "weight": 0,
+    "cost": 10,
+    "perks": []
+  },
+  {
+    "name": "Treated Lining",
+    "type": "Vault Jumpsuit",
+    "physicalRes": 0,
+    "energyRes": 1,
+    "radiationRes": 1,
+    "weight": 1,
+    "cost": 20,
+    "perks": ["Armorer 2"]
+  },
+  {
+    "name": "Resistant Lining",
+    "type": "Vault Jumpsuit",
+    "physicalRes": 0,
+    "energyRes": 2,
+    "radiationRes": 1,
+    "weight": 1,
+    "cost": 30,
+    "perks": ["Armorer 3"]
+  },
+  {
+    "name": "Protective Lining",
+    "type": "Vault Jumpsuit",
+    "physicalRes": 0,
+    "energyRes": 2,
+    "radiationRes": 2,
+    "weight": 1,
+    "cost": 40,
+    "perks": ["Armorer 4", "Science! 2"]
+  },
+  {
+    "name": "Shielded Lining",
+    "type": "Vault Jumpsuit",
+    "physicalRes": 0,
+    "energyRes": 3,
+    "radiationRes": 3,
+    "weight": 1,
+    "cost": 50,
+    "perks": ["Armorer 4", "Science! 4"]
+  },
+  {
+    "name": "Welded",
+    "type": "Raider Armor",
+    "physicalRes": 1,
+    "energyRes": 1,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 3,
+    "perks": []
+  },
+  {
+    "name": "Tempered",
+    "type": "Raider Armor",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 6,
+    "perks": []
+  },
+  {
+    "name": "Hardened",
+    "type": "Raider Armor",
+    "physicalRes": 3,
+    "energyRes": 3,
+    "radiationRes": 0,
+    "weight": 2,
+    "cost": 9,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Buttressed",
+    "type": "Raider Armor",
+    "physicalRes": 4,
+    "energyRes": 4,
+    "radiationRes": 0,
+    "weight": 3,
+    "cost": 12,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Boiled Leather",
+    "type": "Leather Armor",
+    "physicalRes": 1,
+    "energyRes": 1,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 5,
+    "perks": []
+  },
+  {
+    "name": "Girded Leather",
+    "type": "Leather Armor",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 15,
+    "perks": []
+  },
+  {
+    "name": "Treated Leather",
+    "type": "Leather Armor",
+    "physicalRes": 3,
+    "energyRes": 3,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 15,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Shadowed Leather",
+    "type": "Leather Armor",
+    "physicalRes": 3,
+    "energyRes": 3,
+    "radiationRes": 0,
+    "effects": "Shadowed: One or two pieces of Shadowed armor: you may ignore the first complication rolled on a Sneak test you attempt while in dim light or darkness. Three or more pieces of Shadowed armor: you may re-roll a single d20 on one Sneak test you attempt each scene while in dim light or darkness. Five or more pieces of Shadowed armor: you may re-roll a single d20 on any Sneak test you attempt while in dim light or darkness. (Torso counts as two)",
+    "weight": 1,
+    "cost": 20,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Studded Leather",
+    "type": "Leather Armor",
+    "physicalRes": 4,
+    "energyRes": 4,
+    "radiationRes": 0,
+    "weight": 2,
+    "cost": 25,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Painted Metal",
+    "type": "Metal Armor",
+    "physicalRes": 1,
+    "energyRes": 1,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 10,
+    "perks": []
+  },
+  {
+    "name": "Enameled Metal",
+    "type": "Metal Armor",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 0,
+    "weight": 2,
+    "cost": 20,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Shadowed Metal",
+    "type": "Metal Armor",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 0,
+    "effects":"Shadowed: One or two pieces of Shadowed armor: you may ignore the first complication rolled on a Sneak test you attempt while in dim light or darkness. Three or more pieces of Shadowed armor: you may re-roll a single d20 on one Sneak test you attempt each scene while in dim light or darkness. Five or more pieces of Shadowed armor: you may re-roll a single d20 on any Sneak test you attempt while in dim light or darkness. (Torso counts as two)",
+    "weight": 2,
+    "cost": 25,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Alloyed Metal",
+    "type": "Metal Armor",
+    "physicalRes": 3,
+    "energyRes": 3,
+    "radiationRes": 0,
+    "weight": 3,
+    "cost": 30,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Polished Metal",
+    "type": "Metal Armor",
+    "physicalRes": 4,
+    "energyRes": 4,
+    "radiationRes": 0,
+    "weight": 4,
+    "cost": 40,
+    "perks": ["Armorer 2"]
+  },
+  {
+    "name": "Reinforced",
+    "type": "Combat Armor",
+    "physicalRes": 1,
+    "energyRes": 1,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 15,
+    "perks": []
+  },
+  {
+    "name": "Shadowed",
+    "type": "Combat Armor",
+    "physicalRes": 1,
+    "energyRes": 1,
+    "radiationRes": 0,
+    "effects":"Shadowed: One or two pieces of Shadowed armor: you may ignore the first complication rolled on a Sneak test you attempt while in dim light or darkness. Three or more pieces of Shadowed armor: you may re-roll a single d20 on one Sneak test you attempt each scene while in dim light or darkness. Five or more pieces of Shadowed armor: you may re-roll a single d20 on any Sneak test you attempt while in dim light or darkness. (Torso counts as two)",
+    "weight": 1,
+    "cost": 15,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Fiberglass",
+    "type": "Combat Armor",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 30,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Polymer",
+    "type": "Combat Armor",
+    "physicalRes": 3,
+    "energyRes": 3,
+    "radiationRes": 0,
+    "weight": 2,
+    "cost": 45,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Laminated",
+    "type": "Synth Armor",
+    "physicalRes": 1,
+    "energyRes": 1,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 5,
+    "perks": []
+  },
+  {
+    "name": "Resin",
+    "type": "Synth Armor",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 10,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Microcarbon",
+    "type": "Synth Armor",
+    "physicalRes": 3,
+    "energyRes": 3,
+    "radiationRes": 0,
+    "weight": 2,
+    "cost": 15,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Nanofilament",
+    "type": "Synth Armor",
+    "physicalRes": 4,
+    "energyRes": 4,
+    "radiationRes": 0,
+    "weight": 3,
+    "cost": 20,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Laminated",
+    "type": "Armor Upgrades",
+    "physicalRes": 1,
+    "energyRes": 1,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 5,
+    "perks": []
+  },
+  {
+    "name": "Resin",
+    "type": "Armor Upgrades",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 10,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Microcarbon",
+    "type": "Armor Upgrades",
+    "physicalRes": 3,
+    "energyRes": 3,
+    "radiationRes": 0,
+    "weight": 2,
+    "cost": 15,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Padded",
+    "type": "Torso Armor Upgrades",
+    "physicalRes": 0,
+    "energyRes": 0,
+    "radiationRes": 0,
+    "effects": "+2 to all damage resistances vs Blast weapons",
+    "weight": 4,
+    "cost": 1,
+    "perks": []
+  },
+  {
+    "name": "Asbestos Lining",
+    "type": "Torso Armor Upgrades",
+    "physicalRes": 0,
+    "energyRes": 3,
+    "radiationRes": 0,
+    "effects": "gnore Energy damage from the Persistent damage effect",
+    "weight": 4,
+    "cost": 3,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Dense",
+    "type": "Torso Armor Upgrades",
+    "physicalRes": 0,
+    "energyRes": 0,
+    "radiationRes": 0,
+    "effects": "+4 to all Damage Resistances vs Blast weapons",
+    "weight": 4,
+    "cost": 7,
+    "perks": ["Armorer 3"]
+  },
+  {
+    "name": "BioCommMesh",
+    "type": "Torso Armor Upgrades",
+    "physicalRes": 0,
+    "energyRes": 0,
+    "radiationRes": 0,
+    "effects": "Chems last twice as long",
+    "weight": 2,
+    "cost": 9,
+    "perks": ["Armorer 4", "Science! 2"]
+  },
+  {
+    "name": "Pneumatic",
+    "type": "Torso Armor Upgrades",
+    "physicalRes": 0,
+    "energyRes": 0,
+    "radiationRes": 0,
+    "effects": "Stun damage effect requires 2+ Effects to be rolled to affect you",
+    "weight": 2,
+    "cost": 9,
+    "perks": ["Armorer 4"]
+  },
+  {
+    "name": "Brawling",
+    "type": "Arm Armor Upgrades",
+    "physicalRes": 0,
+    "energyRes": 0,
+    "radiationRes": 0,
+    "effects": "Unarmed attacks inflict +1CD damage",
+    "weight": 1,
+    "cost": 1,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Braced",
+    "type": "Arm Armor Upgrades",
+    "physicalRes": 0,
+    "energyRes": 0,
+    "radiationRes": 0,
+    "effects": "+2 to all damage resistances vs melee attacks",
+    "weight": 1,
+    "cost": 1,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Stabilized",
+    "type": "Arm Armor Upgrades",
+    "physicalRes": 0,
+    "energyRes": 0,
+    "radiationRes": 0,
+    "effects": "When you aim and make a ranged attack, +1CD to the attack’s damage",
+    "weight": 1,
+    "cost": 1,
+    "perks": ["Armorer 2"]
+  },
+  {
+    "name": "Aerodynamic",
+    "type": "Arm Armor Upgrades",
+    "physicalRes": 0,
+    "energyRes": 0,
+    "radiationRes": 0,
+    "effects": "May spend up to 4 AP on bonus damage for melee attacks",
+    "weight": 0,
+    "cost": 1,
+    "perks": ["Armorer 3"]
+  },
+  {
+    "name": "Weighted",
+    "type": "Arm Armor Upgrades",
+    "physicalRes": 0,
+    "energyRes": 0,
+    "radiationRes": 0,
+    "effects": "Melee and Unarmed attacks gain Piercing 1",
+    "weight": 1,
+    "cost": 3,
+    "perks": ["Armorer 4"]
+  },
+  {
+    "name": "Cushioned",
+    "type": "Leg Armor Upgrades",
+    "physicalRes": 0,
+    "energyRes": 0,
+    "radiationRes": 0,
+    "effects": "+2 to Physical damage resistance vs falling damage",
+    "weight": 0,
+    "cost": 1,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Muffled",
+    "type": "Leg Armor Upgrades",
+    "physicalRes": 0,
+    "energyRes": 0,
+    "radiationRes": 0,
+    "effects": "Re-roll 1d20 on Stealth tests",
+    "weight": 0,
+    "cost": 2,
+    "perks": ["Armorer 2"]
+  }
+]

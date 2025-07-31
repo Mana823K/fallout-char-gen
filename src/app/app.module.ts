@@ -23,6 +23,7 @@ import { WeaponModsComponent } from './components/database/weapon-mods/weapon-mo
 import { ArmorComponent } from './components/database/armor/armor.component';
 import { ItemsComponent } from './components/database/items/items.component';
 import { AmmoComponent } from './components/database/ammo/ammo.component';
+import { ArmorModsComponent } from './components/database/armor-mods/armor-mods.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AmmoComponent } from './components/database/ammo/ammo.component';
     WeaponModsComponent,
     ArmorComponent,
     ItemsComponent,
-    AmmoComponent
+    AmmoComponent,
+    ArmorModsComponent
   ],
   imports: [
     BrowserModule,

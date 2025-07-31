@@ -7,6 +7,7 @@ import { WeaponModsComponent } from './components/database/weapon-mods/weapon-mo
 import { ArmorComponent } from './components/database/armor/armor.component';
 import { ItemsComponent } from './components/database/items/items.component';
 import { AmmoComponent } from './components/database/ammo/ammo.component';
+import { ArmorModsComponent } from './components/database/armor-mods/armor-mods.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'character', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
     { path: 'ammo', component: AmmoComponent },
     { path: 'weapon-mods', component: WeaponModsComponent },
     { path: 'armor', component: ArmorComponent },
+    { path: 'armor-mods', component: ArmorModsComponent },
     { path: 'items', component: ItemsComponent }
   ] },
   { path: '**', redirectTo: '' }

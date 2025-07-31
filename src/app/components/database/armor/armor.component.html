@@ -1,1 +1,24 @@
-<p>armor works!</p>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Physical Resistance</th>
+    <th>Energy Resistance</th>
+    <th>Radiation Resistance</th>
+    <th>Locations Covered</th>
+    <th>Weight</th>
+    <th>Cost</th>
+    <th>Rarity</th>
+  </tr>
+  <tr *ngFor="let piece of armor">
+    <td>{{piece.name}}</td>
+    <td>{{piece.type}}</td>
+    <td class="right">{{piece.physicalRes > 0 ? piece.physicalRes == 999 ? 'Immune' : piece.physicalRes : '-'}}</td>
+    <td class="right">{{piece.energyRes > 0 ? piece.energyRes == 999 ? 'Immune' : piece.energyRes : '-'}}</td>
+    <td class="right">{{piece.radiationRes > 0 ? piece.radiationRes == 999 ? 'Immune' : piece.radiationRes : '-'}}</td>
+    <td>{{piece.locationCoveredText}}</td>
+    <td class="right">{{piece.weight}}</td>
+    <td class="right">{{piece.cost}}</td>
+    <td class="right">{{piece.rarity}}</td>
+  </tr>
+</table>

@@ -1,0 +1,24 @@
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Physical Resistance</th>
+    <th>Energy Resistance</th>
+    <th>Radiation Resistance</th>
+    <th>Effects</th>
+    <th>Weight</th>
+    <th>Cost</th>
+    <th>Perks</th>
+  </tr>
+  <tr *ngFor="let mod of armorMods">
+    <td>{{mod.name}}</td>
+    <td>{{mod.type}}</td>
+    <td class="right">{{mod.physicalRes > 0 ? '+': ''}}{{mod.physicalRes == 0 ? '-' : mod.physicalRes}}</td>
+    <td class="right">{{mod.energyRes > 0 ? '+': ''}}{{mod.energyRes == 0 ? '-' : mod.energyRes}}</td>
+    <td class="right">{{mod.radiationRes > 0 ? '+': ''}}{{mod.radiationRes == 0 ? '-' : mod.radiationRes}}</td>
+    <td>{{mod.effects}}</td>
+    <td class="right">{{mod.weight > 0 ? '+': ''}}{{mod.weight == 0 ? '-' : mod.weight}}</td>
+    <td class="right">{{mod.cost > 0 ? '+': ''}}{{mod.cost == 0 ? '-' : mod.cost}}</td>
+    <td>{{mod.perks}}</td>
+  </tr>
+</table>

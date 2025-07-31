@@ -2,7 +2,8 @@
   <p class="link-button" [ngClass]="{'active-link': selectedTable == 'weapons'}" (click)="navigateTo('weapons')">Weapons</p>
   <p class="link-button" [ngClass]="{'active-link': selectedTable == 'ammo'}" (click)="navigateTo('ammo')">Ammo</p>
   <p class="link-button" [ngClass]="{'active-link': selectedTable == 'weapon-mods'}" (click)="navigateTo('weapon-mods')">Weapon Mods</p>
-  <!-- <p class="link-button" [ngClass]="{'active-link': selectedTable == 'armor'}" (click)="navigateTo('armor')">Armor</p>
-  <p class="link-button" [ngClass]="{'active-link': selectedTable == 'items'}" (click)="navigateTo('items')">Items</p> -->
+  <p class="link-button" [ngClass]="{'active-link': selectedTable == 'armor'}" (click)="navigateTo('armor')">Armor</p>
+  <p class="link-button" [ngClass]="{'active-link': selectedTable == 'armor-mods'}" (click)="navigateTo('armor-mods')">Armor Mods</p>
+  <!-- <p class="link-button" [ngClass]="{'active-link': selectedTable == 'items'}" (click)="navigateTo('items')">Items</p> -->
 </div>
 <router-outlet></router-outlet>
