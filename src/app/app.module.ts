@@ -21,9 +21,11 @@ import { WeaponsComponent } from './components/database/weapons/weapons.componen
 import { DatabaseComponent } from './components/database/database.component';
 import { WeaponModsComponent } from './components/database/weapon-mods/weapon-mods.component';
 import { ArmorComponent } from './components/database/armor/armor.component';
-import { ItemsComponent } from './components/database/items/items.component';
 import { AmmoComponent } from './components/database/ammo/ammo.component';
 import { ArmorModsComponent } from './components/database/armor-mods/armor-mods.component';
+import { ConsumablesComponent } from './components/database/consumables/consumables.component';
+import { MagazinesComponent } from './components/database/magazines/magazines.component';
+import { MiscellanyComponent } from './components/database/miscellany/miscellany.component';
 
 @NgModule({
   declarations: [
@@ -41,9 +43,11 @@ import { ArmorModsComponent } from './components/database/armor-mods/armor-mods.
     DatabaseComponent,
     WeaponModsComponent,
     ArmorComponent,
-    ItemsComponent,
     AmmoComponent,
-    ArmorModsComponent
+    ArmorModsComponent,
+    ConsumablesComponent,
+    MagazinesComponent,
+    MiscellanyComponent
   ],
   imports: [
     BrowserModule,

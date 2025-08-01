@@ -5,9 +5,11 @@ import { WeaponsComponent } from './components/database/weapons/weapons.componen
 import { DatabaseComponent } from './components/database/database.component';
 import { WeaponModsComponent } from './components/database/weapon-mods/weapon-mods.component';
 import { ArmorComponent } from './components/database/armor/armor.component';
-import { ItemsComponent } from './components/database/items/items.component';
 import { AmmoComponent } from './components/database/ammo/ammo.component';
 import { ArmorModsComponent } from './components/database/armor-mods/armor-mods.component';
+import { ConsumablesComponent } from './components/database/consumables/consumables.component';
+import { MagazinesComponent } from './components/database/magazines/magazines.component';
+import { MiscellanyComponent } from './components/database/miscellany/miscellany.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'character', pathMatch: 'full' },
@@ -19,7 +21,9 @@ const routes: Routes = [
     { path: 'weapon-mods', component: WeaponModsComponent },
     { path: 'armor', component: ArmorComponent },
     { path: 'armor-mods', component: ArmorModsComponent },
-    { path: 'items', component: ItemsComponent }
+    // { path: 'consumables', component: ConsumablesComponent },
+    // { path: 'magazines', component: MagazinesComponent },
+    // { path: 'miscellany', component: MiscellanyComponent },
   ] },
   { path: '**', redirectTo: '' }
 ];
