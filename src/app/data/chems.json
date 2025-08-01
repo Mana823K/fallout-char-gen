@@ -1,0 +1,279 @@
+[
+  {
+    "name": "Addictol",
+    "effects": "Removes all addictions",
+    "duration": "Instant",
+    "addictive": 0,
+    "cost": 125,
+    "rarity": 3
+  },
+  {
+    "name": "Antibiotics",
+    "effects": "Cures all illnesses",
+    "duration": "Instant",
+    "addictive": 0,
+    "cost": 75,
+    "rarity": 3
+  },
+  {
+    "name": "Berry Mentats",
+    "effects": "Reduce the difficulty of INT tests by 2 (minimum 0)",
+    "duration": "Lasting",
+    "addictive": 2,
+    "addiction": "Mentat Addiction: A failed addiction roll renders you addicted to Mentats. You increase the difficulty of all CHA tests by +1 whenever you are not under the effects of a type of Mentat (ordinary Mentats, or the Berry, Grape, or Orange versions).",
+    "cost": 60,
+    "rarity": 3
+  },
+  {
+    "name": "Buffjet",
+    "effects": "Reduce the difficulty of all STR and END tests by 1 (minimum 0). +4 Max HP, Gain 3 AP immediately (lost if not spent), Extra actions cost 1 less AP",
+    "duration": "Brief",
+    "addictive": 1,
+    "addiction": "Buffout Addiction: A failed addiction roll renders you addicted to Buffout. You increase the difficulty of all STR and END tests by +1 whenever you are not under the effects of a type of Buffout (Buffout, Buffjet, or Bufftats).",
+    "cost": 75,
+    "rarity": 4
+  },
+  {
+    "name": "Buffout",
+    "effects": "Re-roll 1d20 on all STR and END tests, +3 Max HP",
+    "duration": "Lasting",
+    "addiction": "Buffout Addiction: A failed addiction roll renders you addicted to Buffout. You increase the difficulty of all STR and END tests by +1 whenever you are not under the effects of a type of Buffout (Buffout, Buffjet, or Bufftats).",
+    "addictive": 2,
+    "cost": 45,
+    "rarity": 2
+  },
+  {
+    "name": "Bufftats",
+    "effects": "Bufftats",
+    "duration": "Lasting",
+    "addictive": 1,
+    "addiction":"Buffout Addiction: A failed addiction roll renders you addicted to Buffout. You increase the difficulty of all STR and END tests by +1 whenever you are not under the effects of a type of Buffout (Buffout, Buffjet, or Bufftats).",
+    "cost": 75,
+    "rarity": 4
+  },
+  {
+    "name": "Calmex",
+    "effects": "Re-roll 1d20 on all PER and AGI tests, +2CD to sneak attack damage",
+    "duration": "Lasting",
+    "addictive": 1,
+    "addiction": "Calmex Addiction: A failed addiction roll renders you addicted to Calmex. You suffer complications on AGI tests on all rolls of 18 or higher whenever you are not under the effects of Calmex.",
+    "cost": 100,
+    "rarity": 4
+  },
+  {
+    "name": "Daddy-O",
+    "effects": "Reduce the difficulty of all PER and INT tests by 1 (minimum 0), +1 difficulty to CHA tests",
+    "duration": "Lasting",
+    "addictive": 1,
+    "addiction": "Daddy-O Addiction: A failed addiction roll renders you addicted to Daddy-O. You increase the difficulty of all PER and INT tests by +1 whenever you are not under the effects of Daddy-O",
+    "cost": 50,
+    "rarity": 2
+  },
+  {
+    "name": "Day Tripper",
+    "effects": "Reduce the difficulty of CHA and LCK tests by 1 (minimum 0), +1 difficulty to STR tests",
+    "duration": "Lasting",
+    "addictive": 1,
+    "addiction": "Day Tripper Addiction: A failed addiction roll renders you addicted to Day Tripper. You increase the difficulty of all CHA and LCK tests by +1 whenever you are not under the effects of Day Tripper.",
+    "cost": 40,
+    "rarity": 3
+  },
+  {
+    "name": "Fury",
+    "effects": "+3 Physical damage resistance. +3CD to melee damage, +2 difficulty to all PER tests",
+    "duration": "Lasting",
+    "addictive": 1,
+    "addiction": "Fury Addiction: A failed addiction roll renders you addicted to Fury. You increase the difficulty of all STR and PER tests by +1 whenever you are not under the effects of Fury.",
+    "cost": 30,
+    "rarity": 4
+  },
+  {
+    "name": "Grape Mentats",
+    "effects": "Reduce the difficulty of CHA tests by 2, to a minimum of 0, Re-roll 1d20 on Barter tests.",
+    "duration": "Lasting",
+    "addictive": 2,
+    "addiction": "Mentat Addiction: A failed addiction roll renders you addicted to Mentats. You increase the difficulty of all CHA tests by +1 whenever you are not under the effects of a type of Mentat (ordinary Mentats, or the Berry, Grape, or Orange versions).",
+    "cost": 60,
+    "rarity": 3
+  },
+  {
+    "name": "Healing Salve",
+    "effects": "Heals 2 HP",
+    "duration": "Instant",
+    "addictive": 0,
+    "cost": 20,
+    "rarity": 1,
+    "notes": "Healing salve can be used in one of two ways: it can be applied using the Take Chem minor action, healing 2 HP immediately, or it can be applied as part of a First Aid action, adding +2 to the number of HP healed overall."
+  },
+  {
+    "name": "Jet",
+    "effects": "Extra actions cost 1 less AP",
+    "duration": "Brief",
+    "addictive": 2,
+    "addiction": "Jet Addiction: A failed addiction roll renders you addicted to Jet. You increase the difficulty of all AGI tests by +1 whenever you are not under the effects of a type of Jet (Jet, or Jet Fuel; Ultra Jet has a different addiction effect).",
+    "cost": 50,
+    "rarity": 2
+  },
+  {
+    "name": "Jet Fuel",
+    "effects": "Gain 1 free AP at the start of each turn",
+    "duration": "Lasting",
+    "addictive": 1,
+    "addiction":"Jet Addiction: A failed addiction roll renders you addicted to Jet. You increase the difficulty of all AGI tests by +1 whenever you are not under the effects of a type of Jet (Jet, or Jet Fuel; Ultra Jet has a different addiction effect).",
+    "cost": 60,
+    "rarity": 3
+  },
+  {
+    "name": "Med-X",
+    "effects": "+3 Physical damage resistance",
+    "duration": "Lasting",
+    "addictive": 2,
+    "addiction": "Med-X Addiction: A failed addiction roll renders you addicted to Med-X. You increase the difficulty of all AGI tests by +1, and suffer +1CD  additional damage from all physical attacks whenever you are not under the effects of Med-X.",
+    "cost": 50,
+    "rarity": 2
+  },
+  {
+    "name": "Mentats",
+    "effects": "Re-roll 1d20 on PER and INT tests",
+    "duration": "Lasting",
+    "addictive": 3,
+    "cost": 50,
+    "rarity": 2
+  },
+  {
+    "name": "Orange Mentats",
+    "effects": "Reduce the difficulty of PER tests by 2 (min. 0), Aim minor action lets you re-roll one additional d20.",
+    "duration": "Lasting",
+    "addictive": 2,
+    "cost": 60,
+    "rarity": 3
+  },
+  {
+    "name": "Overdrive",
+    "effects": "+3CD damage to all attacks, May re-roll up to 3CD per damage roll",
+    "duration": "Lasting",
+    "addictive": 1,
+    "cost": 55,
+    "rarity": 3
+  },
+  {
+    "name": "Psycho",
+    "effects": "+2CD damage to all attacks, +3 Physical damage resistance",
+    "duration": "Lasting",
+    "addictive": 2,
+    "cost": 50,
+    "rarity": 2
+  },
+  {
+    "name": "Psycho Jet",
+    "effects": "+2CD damage to all attacks, +4 Physical damage resistance. Gain 4 AP immediately (lost if not spent)",
+    "duration": "Brief",
+    "addictive": 1,
+    "cost": 70,
+    "rarity": 4
+  },
+  {
+    "name": "Psychobuff",
+    "effects": "+2CD damage to all attacks, +4 Max HP.Reduce difficulty of all STR and END tests by 1 (minimum 0).",
+    "duration": "Lasting",
+    "addictive": 1,
+    "cost": 70,
+    "rarity": 4
+  },
+  {
+    "name": "Psychotats",
+    "effects": "+2CD damage to all attacks, +2 Physical damage resistance, Reduce difficulty of PER tests by 1 (min. 0)",
+    "duration": "Lasting",
+    "addictive": 1,
+    "cost": 70,
+    "rarity": 4
+  },
+  {
+    "name": "Rad-X",
+    "effects": "+6 Radiation damage resistance",
+    "duration": "Lasting",
+    "addictive": 0,
+    "cost": 40,
+    "rarity": 2
+  },
+  {
+    "name": "Rad-X (Diluted)",
+    "effects": "+3 Radiation damage resistance",
+    "duration": "Lasting",
+    "addictive": 0,
+    "cost": 25,
+    "rarity": 2
+  },
+  {
+    "name": "RadAway",
+    "effects": "Heals 4 Radiation damage",
+    "duration": "Instant",
+    "addictive": 0,
+    "cost": 80,
+    "rarity": 2
+  },
+  {
+    "name": "RadAway (Diluted)",
+    "effects": "Heals 2 Radiation damage",
+    "duration": "Instant",
+    "addictive": 0,
+    "cost": 50,
+    "rarity": 1
+  },
+  {
+    "name": "Skeeto Spit",
+    "effects": "+2 Max HP",
+    "duration": "Lasting",
+    "addictive": 0,
+    "cost": 40,
+    "rarity": 2
+  },
+  {
+    "name": "Stimpak",
+    "effects": "Heals 4 HP",
+    "duration": "Instant",
+    "addictive": 0,
+    "cost": 50,
+    "rarity": 2
+  },
+  {
+    "name": "Stimpak (Diluted)",
+    "effects": "Heals 2 HP",
+    "duration": "Instant",
+    "addictive": 0,
+    "cost": 30,
+    "rarity": 1
+  },
+  {
+    "name": "Super Stimpak",
+    "effects": "Heals 8 HP",
+    "duration": "Instant",
+    "addictive": 0,
+    "cost": 90,
+    "rarity": 4
+  },
+  {
+    "name": "Stimpak Diffuser",
+    "effects": "Heals 4 HP to all within Close range",
+    "duration": "Instant",
+    "addictive": 0,
+    "cost": 200,
+    "rarity": 5
+  },
+  {
+    "name": "Ultra jet",
+    "effects": "Gain 6 AP immediately (lost if not spent), Extra actions cost 1 less AP",
+    "duration": "Brief",
+    "addictive": 3,
+    "cost": 67,
+    "rarity": 2
+  },
+  {
+    "name": "X-Cell",
+    "effects": "First d20 bought on all tests is free",
+    "duration": "Lasting",
+    "addictive": 1,
+    "cost": 60,
+    "rarity": 4
+  }
+]
