@@ -10,6 +10,7 @@ import { ArmorModsComponent } from './components/database/armor-mods/armor-mods.
 import { ConsumablesComponent } from './components/database/consumables/consumables.component';
 import { MagazinesComponent } from './components/database/magazines/magazines.component';
 import { MiscellanyComponent } from './components/database/miscellany/miscellany.component';
+import { ChemsComponent } from './components/database/chems/chems.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'character', pathMatch: 'full' },
@@ -21,7 +22,8 @@ const routes: Routes = [
     { path: 'weapon-mods', component: WeaponModsComponent },
     { path: 'armor', component: ArmorComponent },
     { path: 'armor-mods', component: ArmorModsComponent },
-    // { path: 'consumables', component: ConsumablesComponent },
+    { path: 'consumables', component: ConsumablesComponent },
+    // { path: 'chems', component: ChemsComponent },
     // { path: 'magazines', component: MagazinesComponent },
     // { path: 'miscellany', component: MiscellanyComponent },
   ] },

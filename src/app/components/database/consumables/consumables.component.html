@@ -1,1 +1,22 @@
-<p>consumables works!</p>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>HP Heales</th>
+    <th>Effects</th>
+    <th>Irradiated</th>
+    <th>Weight</th>
+    <th>Cost</th>
+    <th>Rarity</th>
+  </tr>
+  <tr *ngFor="let item of consumables">
+    <td>{{item.name}}</td>
+    <td>{{item.type}}</td>
+    <td class="right">{{item.heal}}</td>
+    <td>{{item.effects}}</td>
+    <td class="center">{{item.irradiated ? 'O': ''}}</td>
+    <td class="right">{{item.weight}}</td>
+    <td class="right">{{item.cost}}</td>
+    <td class="right">{{item.rarity}}</td>
+  </tr>
+</table>

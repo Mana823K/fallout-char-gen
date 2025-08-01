@@ -1140,7 +1140,7 @@
     "weight": 15,
     "cost": 50,
     "rarity": 2,
-    "special": "Shadowed (This outfit counts as wearing 4 pieces of shadowed armor): One or two pieces of Shadowed armor: you may ignore the first complication rolled on a Sneak test you attempt while in dim light or darkness. Three or more pieces of Shadowed armor: you may re-roll a single d20 on one Sneak test you attempt each scene while in dim light or darkness. Five or more pieces of Shadowed armor: you may re-roll a single d20 on any Sneak test you attempt while in dim light or darkness.",
+    "special": "Shadowed",
     "mods": []
   },
   {
@@ -1153,7 +1153,7 @@
     "weight": 2,
     "cost": 15,
     "rarity": 2,
-    "special":"Shadowed: One or two pieces of Shadowed armor: you may ignore the first complication rolled on a Sneak test you attempt while in dim light or darkness. Three or more pieces of Shadowed armor: you may re-roll a single d20 on one Sneak test you attempt each scene while in dim light or darkness. Five or more pieces of Shadowed armor: you may re-roll a single d20 on any Sneak test you attempt while in dim light or darkness. (Torso counts as two)",
+    "special":"Shadowed",
     "mods": []
   },
   {

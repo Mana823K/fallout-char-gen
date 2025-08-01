@@ -1,167 +1,177 @@
 [
   {
     "name": "Burst",
-    "type": "Effect",
+    "type": "Weapon Effect",
     "description": "The attack may hit one additional target within Close range of the primary target for each Effect rolled. Each additional target costs 1 additional shot from the weapon."
   },
   {
     "name": "Breaking",
-    "type": "Effect",
+    "type": "Weapon Effect",
     "description": "For each Effect rolled, reduce the number of Cover Dice a piece of cover provides by 1, permanently. If the target is not in cover, instead reduce the damage resistance on the location struck by 1, according to the damage type of the weapon (i.e., physical damage reduces Physical damage resistance, energy damage reduces Energy damage resistance)."
   },
   {
     "name": "Persistent",
-    "type": "Effect",
+    "type": "Weapon Effect",
     "description": "If one or more Effects are rolled, the target suffers the weapon’s damage again at the end of their next and subsequent turns, for a number of rounds equal to the number of Effects rolled. A character may spend a major action to make a test to stop Persistent damage early; the difficulty is equal to the number of Effects rolled, and the attribute + skill used are chosen by the GM. Some Persistent weapons may inflict a different type of damage to the weapon, and where this is the case, it is noted in brackets; for example, Persistent (Poison)."
   },
   {
     "name": "Piercing X",
-    "type": "Effect",
+    "type": "Weapon Effect",
     "description": "Ignore X points of the target’s damage reduction for each Effect rolled, where X is the rating of this damage effect"
   },
   {
     "name": "Radioactive",
-    "type": "Effect",
+    "type": "Weapon Effect",
     "description": "For every Effect rolled, the target also suffers 1 point of Radiation damage. This Radiation damage is totaled and applied separately, after a character has suffered the normal damage from the attack."
   },
   {
     "name": "Spread",
-    "type": "Effect",
+    "type": "Weapon Effect",
     "description": "For each Effect rolled, your attack inflicts one additional hit on the target. Each additional hit inflicts half the rolled damage (round down) and hits a random location even if a specific location was targeted for the initial attack"
   },
   {
     "name": "Stun",
-    "type": "Effect",
+    "type": "Weapon Effect",
     "description": "If one or more Effects are rolled, the target loses their normal actions in their next turn. A stunned character or creature may still spend AP to take additional actions as normal."
   },
   {
     "name": "Vicious",
-    "type": "Effect",
+    "type": "Weapon Effect",
     "description": "The attack inflicts +1 damage for each Effect rolled."
   },
   {
     "name": "Arc",
-    "type": "Effect",
+    "type": "Weapon Effect",
     "description": "Each Effect rolled automatically hits one additional target within Close range of the primary target. Each additional target suffers half the rolled damage (rounded up). Unlike Burst, this does not cost additional ammunition."
   },
   {
     "name": "Freeze",
-    "type": "Effect",
+    "type": "Weapon Effect",
     "description": "Enemies hit by this attack will be Frozen if the number of Effects rolled are equal to or more than half the target’s END (or half the target’s BODY for Creatures). A Frozen creature cannot take actions on its next turn."
   },
   {
     "name": "Accurate",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "If you take the Aim minor action before attacking with an Accurate weapon, you may spend up to 3 AP to add +1CD  per AP spent to the attack’s damage. If you gain damage in this way, you may not spend ammunition for extra damage. A weapon cannot be both Accurate and Inaccurate."
   },
   {
     "name": "Blast",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "When you make an attack with a Blast weapon, you do not target a single opponent. Instead, select a single zone you can see, and make the appropriate skill test to attack, with a basic difficulty of 2 (adjusted for range as normal). If you succeed, every creature (and other damageable target) in that zone suffers the weapon’s damage. If you fail, your misplaced attack is less effective: roll only half the weapon’s CD  to determine the damage inflicted to creatures in the target zone and ignore the weapon’s normal damage effects."
   },
   {
     "name": "Close Quarters",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "A Close Quarters weapon is easy to use up-close, and suffers no difficulty increase for being used when within Reach of an enemy."
   },
   {
     "name": "Concealed",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "A Concealed weapon is small, or otherwise easy to hide on your person. Enemies do not spot a Concealed weapon unless you’re wielding it, or if they make a thorough search and succeed at a PER + Survival test with a difficulty of 2."
   },
   {
     "name": "Debilitating",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "The difficulty of any skill test to treat injuries inflicted by a Debilitating weapon increase by +1."
   },
   {
     "name": "Gatling",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "Ammunition is spent at ten times the normal rate by Gatling weapons: whenever you would spend one shot of ammunition, a Gatling weapon instead spends a burst of 10 shots. Whenever you spend ammunition to increase this weapon’s damage, add +2CD  per ten-shot burst (to a maximum number of bursts equal to the weapon’s Fire Rate), rather than +1CD  per shot."
   },
   {
     "name": "Inaccurate",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "When making an attack with an Inaccurate weapon, you gain no benefit from the Aim minor action. A weapon may not be both Accurate and Inaccurate."
   },
   {
     "name": "Mine",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "When a Mine is placed onto a surface and primed, it becomes a dangerous object, inflicting its damage upon anyone who comes within Reach of it (and upon additional characters, if it has the Blast quality)."
   },
   {
     "name": "Night Vision",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "The sights of a weapon with Night Vision have been made to allow you to see more clearly in the dark. When you Aim with a Night Vision weapon, you ignore any increase in the difficulty of an attack due to darkness."
   },
   {
     "name": "Parry",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "When an enemy attempts a melee attack against you, and you are wielding a Parry weapon, you may spend 1 AP to add +1 to your Defense against that attack."
   },
   {
     "name": "Recon",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "When you Aim with a Recon weapon, you may mark the target you aimed at. The next ally to attack that target may re-roll one d20 on their attack."
   },
   {
     "name": "Reliable",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "During each combat encounter, a Reliable weapon ignores the first complication you roll on a test to use that weapon. A weapon may not be both Reliable and Unreliable."
   },
   {
     "name": "Suppressed",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "If an enemy is not aware of you when you attack with a Suppressed weapon, they do not notice the attack unless they are the target or they pass a PER + Survival test with a difficulty of 2."
   },
   {
     "name": "Thrown",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "A Thrown (C) weapon can be thrown, as a ranged attack with an ideal range of Close. A Thrown (M) weapon can be thrown, as a ranged attack with an ideal range of Medium. You make an AGI + Throwing test to attack with the weapon, depending on the type of weapon."
   },
   {
     "name": "Two-Handed",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "A Two-Handed weapon must be held in two hands to be used effectively; attempting to attack with a Two-Handed weapon in one hand increases the difficulty by +2."
   },
   {
     "name": "Unreliable",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "When you make an attack with an Unreliable weapon, increase the complication range of the attack by 1. A weapon may not be both Reliable and Unreliable."
   },
   {
     "name": "Ammo-Hungry (X)",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "The weapon consumes ammo at a much higher rate than other weapons. Each time the weapon is fired, it spends X ammo, rather than 1. In addition, extra damage requires spending X ammo per +1 CD, with a maximum number of  CD equal to the weapon’s Fire Rate. Additional uses of ammunition, such as the Burst damage effect, also spend X ammo for every 1 ammo that would normally be spent."
   },
   {
     "name": "Bombard",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "The weapon can deliver a series of explosions over a wide area. This functions identically to the Blast quality, with one addition: When an attack is made with the weapon, you may spend additional ammunition to target additional zones. Each additional zone requires that 2 ammunition be spent, and additional zones must be adjacent to the initial target zone. Ammunition spent to target additional zones is limited by the weapon’s Fire Rate."
   },
   {
     "name": "Delay (X)",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "The weapon operates on a timer or fuse, and will not detonate immediately. A Thrown Delay weapon can be thrown normally to the target location, while other Delay weapons may be placed in their desired location. A Delay (1) weapon detonates at the start of the first round after it is thrown or otherwise triggered. A Delay (2) weapon detonates at the start of the round after that, and so on."
   },
   {
     "name": "Placed",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "The explosive device is placed in a specific location and set to detonate, often either with the Delay (X) quality or the Remote quality. Placing the explosive requires a PER + Explosives test with a difficulty of 1; this increases to 2 if you’ve been attacked since your last turn. Failure means the bomb hasn’t been set properly and will not detonate (or, if a complication is rolled, may have been set improperly, and may detonate unexpectedly). Success means the bomb has been set up properly."
   },
   {
     "name": "Recoil (X)",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "This weapon has a particularly ferocious ‘kick’ when it fires, which might be too much for weaker users. If the user’s STR score is less than X, then all attacks with the weapon increase in difficulty by 1. You may ignore this effect if you wield the weapon two-handed, or if the weapon is already two-handed, by bracing it against a solid object or a bipod."
   },
   {
     "name": "Slow Load",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "The weapon loads especially slowly. After this weapon has been fired, you must spend a minor action to reload the weapon before it can be fired again."
   },
   {
     "name": "Surge",
-    "type": "Quality",
+    "type": "Weapon Quality",
     "description": "The weapon is especially damaging to machines like robots and powered Armor. The weapon gains the Vicious damage effect against Robots, enemies in Power Armor, and other mechanical or electronic targets (like turrets)."
+  },
+  {
+    "name": "Shadowed",
+    "type": "Armor Effect",
+    "description": "One or two pieces of Shadowed armor: you may ignore the first complication rolled on a Sneak test you attempt while in dim light or darkness. Three or more pieces of Shadowed armor: you may re-roll a single d20 on one Sneak test you attempt each scene while in dim light or darkness. Five or more pieces of Shadowed armor: you may re-roll a single d20 on any Sneak test you attempt while in dim light or darkness. (Torso counts as two)"
+  },
+  {
+    "name": "Alcoholic",
+    "type": "Beverage Effect",
+    "description": "Until the end of the scene, you may re-roll 1d20 on STR and CHA tests, but increase the difficulty of INT tests by +1. In addition, alcoholic drinks are addictive: after drinking the beverage, roll a few CD  equal to the number of alcoholic drinks you’ve consumed during this session. If two or more Effects are rolled, you are addicted, and add +1 to the difficulty of CHA and AGI tests while not under the effects of an alcoholic drink."
   }
 ]
