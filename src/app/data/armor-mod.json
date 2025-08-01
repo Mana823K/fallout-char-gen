@@ -483,5 +483,231 @@
     "weight": 0,
     "cost": 2,
     "perks": ["Armorer 2"]
+  },
+  {
+    "name": "Treated Lining",
+    "type": "Underarmor Lining",
+    "physicalRes": 1,
+    "energyRes": 2,
+    "radiationRes": 1,
+    "weight": 0,
+    "cost": 9,
+    "perks": []
+  },
+  {
+    "name": "Resistant Lining",
+    "type": "Underarmor Lining",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 1,
+    "weight": 0,
+    "cost": 15,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Protective Lining",
+    "type": "Underarmor Lining",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 1,
+    "effects": "May use STR or PER re-rolls twice per scene.",
+    "weight": 0,
+    "cost": 24,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Shielded Lining",
+    "type": "Underarmor Lining",
+    "physicalRes": 3,
+    "energyRes": 3,
+    "radiationRes": 1,
+    "effects": "May use STR or PER re-rolls twice per scene.",
+    "weight": 0,
+    "cost": 36,
+    "perks": ["Armorer 2"]
+  },
+  {
+    "name": "Reinforced",
+    "type": "Legionary Armor",
+    "physicalRes": 1,
+    "energyRes": 1,
+    "radiationRes": 0,
+    "weight": 0,
+    "cost": 6,
+    "perks": []
+  },
+  {
+    "name": "Shadowed",
+    "type": "Legionary Armor",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 0,
+    "effects":"Shadowed: One or two pieces of Shadowed armor: you may ignore the first complication rolled on a Sneak test you attempt while in dim light or darkness. Three or more pieces of Shadowed armor: you may re-roll a single d20 on one Sneak test you attempt each scene while in dim light or darkness. Five or more pieces of Shadowed armor: you may re-roll a single d20 on any Sneak test you attempt while in dim light or darkness. (Torso counts as two)",
+    "weight": 1,
+    "cost": 48,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Treated",
+    "type": "Legionary Armor",
+    "physicalRes": 3,
+    "energyRes": 3,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 15,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Studded",
+    "type": "Legionary Armor",
+    "physicalRes": 4,
+    "energyRes": 4,
+    "radiationRes": 0,
+    "weight": 2,
+    "cost": 30,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Welded",
+    "type": "Marine Armor",
+    "physicalRes": 1,
+    "energyRes": 1,
+    "radiationRes": 1,
+    "weight": 1,
+    "cost": 10,
+    "perks": []
+  },
+  {
+    "name": "Tempered",
+    "type": "Marine Armor",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 2,
+    "weight": 2,
+    "cost": 30,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Hardened",
+    "type": "Marine Armor",
+    "physicalRes": 3,
+    "energyRes": 3,
+    "radiationRes": 3,
+    "weight": 2,
+    "cost": 50,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Buttressed",
+    "type": "Marine Armor",
+    "physicalRes": 4,
+    "energyRes": 4,
+    "radiationRes": 4,
+    "weight": 3,
+    "cost": 75,
+    "perks": ["Armorer 2"]
+  },
+  {
+    "name": "Reinforced",
+    "type": "Scout Armor",
+    "physicalRes": 1,
+    "energyRes": 1,
+    "radiationRes": 0,
+    "weight": 0,
+    "cost": 6,
+    "perks": []
+  },
+  {
+    "name": "Shadowed",
+    "type": "Scout Armor",
+    "physicalRes": 1,
+    "energyRes": 1,
+    "radiationRes": 0,
+    "effects":"Shadowed: One or two pieces of Shadowed armor: you may ignore the first complication rolled on a Sneak test you attempt while in dim light or darkness. Three or more pieces of Shadowed armor: you may re-roll a single d20 on one Sneak test you attempt each scene while in dim light or darkness. Five or more pieces of Shadowed armor: you may re-roll a single d20 on any Sneak test you attempt while in dim light or darkness. (Torso counts as two)",
+    "weight": 1,
+    "cost": 48,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Fiberglass",
+    "type": "Scout Armor",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 0,
+    "weight": 0,
+    "cost": 18,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Polymer",
+    "type": "Scout Armor",
+    "physicalRes": 3,
+    "energyRes": 3,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 30,
+    "perks": ["Armorer 2"]
+  },
+  {
+    "name": "Painted Metal",
+    "type": "Robot Armor",
+    "physicalRes": 1,
+    "energyRes": 1,
+    "radiationRes": 0,
+    "weight": 1,
+    "cost": 10,
+    "perks": []
+  },
+  {
+    "name": "Shadowed Metal",
+    "type": "Robot Armor",
+    "physicalRes": 1,
+    "energyRes": 1,
+    "radiationRes": 0,
+    "effects":"Shadowed: One or two pieces of Shadowed armor: you may ignore the first complication rolled on a Sneak test you attempt while in dim light or darkness. Three or more pieces of Shadowed armor: you may re-roll a single d20 on one Sneak test you attempt each scene while in dim light or darkness. Five or more pieces of Shadowed armor: you may re-roll a single d20 on any Sneak test you attempt while in dim light or darkness. (Torso counts as two)",
+    "weight": 2,
+    "cost": 25,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Enameled Metal",
+    "type": "Robot Armor",
+    "physicalRes": 2,
+    "energyRes": 2,
+    "radiationRes": 0,
+    "weight": 2,
+    "cost": 20,
+    "perks": ["Armorer 1"]
+  },
+  {
+    "name": "Alloyed Metal",
+    "type": "Robot Armor",
+    "physicalRes": 3,
+    "energyRes": 3,
+    "radiationRes": 0,
+    "weight": 3,
+    "cost": 30,
+    "perks": []
+  },
+  {
+    "name": "Polished Metal",
+    "type": "Robot Armor",
+    "physicalRes": 4,
+    "energyRes": 4,
+    "radiationRes": 0,
+    "weight": 4,
+    "cost": 40,
+    "perks": []
+  },
+  {
+    "name": "Shrouded",
+    "type": "Wood Armor",
+    "physicalRes": 0,
+    "energyRes": 0,
+    "radiationRes": 0,
+    "effects":"Shadowed: One or two pieces of Shadowed armor: you may ignore the first complication rolled on a Sneak test you attempt while in dim light or darkness. Three or more pieces of Shadowed armor: you may re-roll a single d20 on one Sneak test you attempt each scene while in dim light or darkness. Five or more pieces of Shadowed armor: you may re-roll a single d20 on any Sneak test you attempt while in dim light or darkness. (Torso counts as two)",
+    "weight": -1,
+    "cost": 10,
+    "perks": ["Armorer 1"]
   }
 ]
