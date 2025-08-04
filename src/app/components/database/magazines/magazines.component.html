@@ -1,1 +1,18 @@
-<p>magazines works!</p>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Roll</th>
+    <th>Perk</th>
+    <th>Issues</th>
+    <th>Issue roll</th>
+    <th>Issue effect</th>
+  </tr>
+  <tr *ngFor="let magazine of magazines">
+    <td>{{magazine.name}}</td>
+    <td>{{magazine.roll}}</td>
+    <td>{{magazine.perk}}</td>
+    <td>{{magazine.issue}}</td>
+    <td>{{magazine.issueRoll}}</td>
+    <td>{{magazine.effect}}</td>
+  </tr>
+</table>

@@ -1,0 +1,557 @@
+[
+  {
+    "name": "¡La Fantoma!",
+    "roll": 1,
+    "perk": "When you succeed at a Sneak test to avoid notice, you may spend 1 AP to create a distraction somewhere within Medium range; the character who failed the opposed test to detect you heads towards the distraction you created. If you learn this perk, you may use it once per scene.",
+    "issues": []
+  },
+  {
+    "name": "Astoundingly Awesome Tales",
+    "roll": 2,
+    "perk": "Depending on the individual issue found, you receive a different perk, granting bonus damage or bonus damage resistance against a single foe or type of attack. This lasts only for a single attack (made or received, respectively), unless the perk is learned, in which case it applies to all attacks.",
+    "issues": [
+      {
+        "name": "Attack of the Fishmen!",
+        "roll": [1, 2],
+        "effect": "+1CD on attacks vs mirelurk"
+      },
+      {
+        "name": "Rise of the Mutants!",
+        "roll": [3, 4],
+        "effect": "+1CD on attacks vs super mutants"
+      },
+      {
+        "name": "Attack of the Metal Men!",
+        "roll": [5, 6],
+        "effect": "+2 to Physical and Energy damage resistances vs Robots"
+      },
+      {
+        "name": "The Mad Russian’s Revenge!",
+        "roll": [7, 8],
+        "effect": "+2 to Poison damage resistance"
+      },
+      {
+        "name": "The Starlet Sniper!",
+        "roll": [9, 10],
+        "effect": "+1CD on attacks with Accurate weapons"
+      },
+      {
+        "name": "Curse of the Burned!",
+        "roll": [11, 12],
+        "effect": "+1CD on attacks vs Ghouls"
+      },
+      {
+        "name": "Giant Insects Invade!",
+        "roll": [13, 14],
+        "effect": "+2 to Radiation damage resistance"
+      },
+      {
+        "name": "Deadly Lasers!",
+        "roll": [15, 16],
+        "effect": "+1CD on attacks with Energy weapons"
+      },
+      {
+        "name": "Science Gone Mad!",
+        "roll": [17, 18],
+        "effect": "+2 to Energy damage resistance"
+      },
+      {
+        "name": "Surrounded by the Dead!",
+        "roll": [19, 20],
+        "effect": "+1CD on attacks where you spend one or more Ammunition for bonus damage"
+      }
+    ]
+  },
+  {
+    "name": "Backwoodsman",
+    "roll": 3,
+    "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene.",
+    "issues": [
+            {
+        "name": "Get Off My Lawn",
+        "roll": [1, 2],
+        "effect": "Find twice as much meat from a butchered creature"
+      },
+      {
+        "name": "Down Home Cookin’",
+        "roll": [3, 4],
+        "effect": "Add +2CD damage to a Thrown weapon attack (other than an Explosive)"
+      },
+      {
+        "name": "Homesteading Horror",
+        "roll": [5, 6],
+        "effect": "Reduce the difficulty of crafting a weapon by 1 (min. of 0)"
+      },
+      {
+        "name": "Hardy as a Sasquatch",
+        "roll": [7, 8],
+        "effect": "When scavenging from plants, gain twice as much"
+      },
+      {
+        "name": "Carnivorous Rabbits of Appalachia",
+        "roll": [9, 10],
+        "effect": "Add +2CD damage to an attack against a Mammal or Lizard"
+      },
+      {
+        "name": "The Appalachia Squirrel Massacre",
+        "roll": [11, 12],
+        "effect": "One item of cooked food you make and eat heals +3 HP"
+      },
+      {
+        "name": "Art of the Tomahawk",
+        "roll": [13, 14],
+        "effect": "Reduce difficulty of a test to resist catching a disease by 1 (min. of 0)"
+      },
+      {
+        "name": "The Gunsmith of Harper’s Ferry",
+        "roll": [15, 16],
+        "effect": "When you find ammo, you find +2CD more shots"
+      },
+      {
+        "name": "The Ohio River Hermit",
+        "roll": [17, 18],
+        "effect": "Reduce the difficulty of repairing a damaged item by 1 (min. 0)"
+      },
+      {
+        "name": "Nightmare in the Garden",
+        "roll": [19, 20],
+        "effect": "Heal +2HP when you consume an Alcoholic drink"
+      }
+    ]
+  },
+  {
+    "name": "Boxing Times",
+    "roll": 4,
+    "perk": "Once, when you succeed at an Unarmed attack, if you spend any AP to increase the damage you dealt, you may add the Stun damage effect to your attack. If you later learn this perk, you may use this on any successful Unarmed attack",
+    "issues": []
+  },
+  {
+    "name": "Duck and Cover!",
+    "roll": 5,
+    "perk": "Once, when you are affected by a Blast weapon, you may choose to fall prone (p.25). If you do so, you add +3 to all damage resistances against the damage caused by that Blast. If you later learn this perk, you may use whenever you are affected by a Blast weapon by spending 1 AP",
+    "issues": []
+  },
+  {
+    "name": "Fixin’ Things",
+    "roll": 6,
+    "perk": "Once, when you attempt to repair an item, halve the amounts of the materials needed to complete the repair (round up). If you later learn this perk, you may use this whenever you attempt repairs",
+    "issues": []
+  },
+  {
+    "name": "Future Weapons Today",
+    "roll": 7,
+    "perk": "Once, when you make an attack with an Energy Weapon, you may overcharge it. Increase the damage by +2CD  for that attack. The weapon cannot be used to make an attack in the turn after an overcharged attack as it cools down. If you later learn this perk, you may overcharge an Energy Weapon once per scene.",
+    "issues": []
+  },
+  {
+    "name": "Grognak the Barbarian",
+    "roll": 8,
+    "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene",
+    "issues": [
+      {
+        "name": "Blood on the Harp",
+        "roll": [1, 2],
+        "effect": "One successful melee attack you make inflicts +2CD damage"
+      },
+      {
+        "name": "Cometh the Trickster",
+        "roll": [3, 4],
+        "effect": "Add +1 to the difficulty of another character’s skill test to detect you"
+      },
+      {
+        "name": "Jungle of the Bat-Babies",
+        "roll": [5, 6],
+        "effect": "When you suffer Poison damage, gain +3 Poison damage resistance"
+      },
+      {
+        "name": "In the Bosom of the Corsair Queen",
+        "roll": [7, 8],
+        "effect": "One successful melee attack you make automatically inflicts a Critical Hit"
+      },
+      {
+        "name": "Demon Slaves, Demon Sands",
+        "roll": [9, 10],
+        "effect": "One attack against Ghouls inflicts +2CD damage"
+      },
+      {
+        "name": "Enter Maula: War Maiden of Mars",
+        "roll": [11, 12],
+        "effect": "When you make a melee attack with a Two-Handed melee weapon, gain the Piercing 1 damage effect (or +1 to anyexisting Piercing effect)"
+      },
+      {
+        "name": "Fatherless Cur!",
+        "roll": [13, 14],
+        "effect": "Ignore one complication on a melee attack"
+      },
+      {
+        "name": "Lost in the Snows of Lust",
+        "roll": [15, 16],
+        "effect": "Gain +2 Physical damage resistance against one attack"
+      },
+      {
+        "name": "The Lair of the Virgin Eaters",
+        "roll": [17, 18],
+        "effect": "Gain +10 Carry weight for one scene"
+      },
+      {
+        "name": "What Sorcery is This?",
+        "roll": [19, 20],
+        "effect": "Gain +2 Energy damage resistance against one attack"
+      }
+    ]
+  },
+  {
+    "name": "Guns and Bullets",
+    "roll": 9,
+    "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene.",
+    "issues": [
+      {
+        "name": "The Future of Hunting?",
+        "roll": [1, 2],
+        "effect": "One attack against Robots inflicts +2CD damage"
+      },
+      {
+        "name": "Lasers & Hunting: Acceptable Overkill",
+        "roll": [3, 4],
+        "effect": "One attack with a Laser weapon gains the Vicious damage effect if it didn’t already have it"
+      },
+      {
+        "name": "Little Guns for Little Ladies",
+        "roll": [5, 6],
+        "effect": "One attack with a Small Guns weapon gains the Vicious damage effect if it didn’t have it already"
+      },
+      {
+        "name": "Street Guns of Detroit",
+        "roll": [7, 8],
+        "effect": "Gain an extra 2 AP after one successful attack. This AP must be spent immediately: it cannot be saved"
+      },
+      {
+        "name": "Avoid Those Pesky Gun Laws!",
+        "roll": [9, 10],
+        "effect": "When you salvage a weapon, gain 2 AP which may only be spent to salvage additional units of materials"
+      },
+      {
+        "name": "The Moon: A Communist Doomsday Device?!",
+        "roll": [11, 12],
+        "effect": "Gain +2 to Physical or Energy damage resistance against one attack at night"
+      },
+      {
+        "name": "Take Aim, Army Style",
+        "roll": [13, 14],
+        "effect": "One aimed attack made with a weapon which lacks the Accurate quality inflicts +2CD damage"
+      },
+      {
+        "name": "Bear-Proofing your Campsite",
+        "roll": [15, 16],
+        "effect": "One attack against Yao Guai inflicts +3CD damage"
+      },
+      {
+        "name": "Plasma: The Weapon of Tomorrow",
+        "roll": [17, 18],
+        "effect": "One attack with a Plasma weapon gains the Vicious damage effect if it didn’t already have it"
+      },
+      {
+        "name": "Guide to Hunting Commies!",
+        "roll": [19, 20],
+        "effect": "One attack against an enemy with a lower level than you inflicts +2CD damage"
+      }
+    ]
+  },
+  {
+    "name": "Live & Love",
+    "roll": 10,
+    "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from for a single scene. If you later learn the perk, you may use that benefit constantly.",
+    "issues": [
+      {
+        "name": "Life Long Best Friends!",
+        "roll": [1, 2],
+        "effect": "+1 Maximum Health Points to all party members for one scene"
+      },
+      {
+        "name": "Nuke-the-Man!",
+        "roll": [3, 4],
+        "effect": "+1CD damage to attacks from all party members for one scene"
+      },
+      {
+        "name": "Trim the Fat!",
+        "roll": [5, 6],
+        "effect": "Regain twice as many HP from fruit or vegetables eaten in one scene"
+      },
+      {
+        "name": "The Secretary Charmer",
+        "roll": [7, 8],
+        "effect": "At the start of one scene, add +1 AP to the group pool"
+      },
+      {
+        "name": "Talk Yourself Sober",
+        "roll": [9, 10],
+        "effect": "Gain 1 Luck point (lost at the end of the scene if not used) when you consume an Alcoholic drink"
+      },
+      {
+        "name": "Advice from Married Men",
+        "roll": [11, 12],
+        "effect": "+1 Physical damage resistance to all party members for one scene"
+      },
+      {
+        "name": "Beware the Man Handler",
+        "roll": [13, 14],
+        "effect": "The group AP pool may contain 1 AP more than normal for one scene"
+      },
+      {
+        "name": "An Experience to Remember",
+        "roll": [15, 16],
+        "effect": "Choose one other Magazine perk you have previously used but not learned; that now takes effect"
+      },
+      {
+        "name": "I Married a Robot",
+        "roll": [17, 18],
+        "effect": "+2 to all damage resistances against Robots for one scene"
+      }
+    ]
+  },
+  {
+    "name": "Massachusetts Surgical Journal",
+    "roll": 11,
+    "perk": "Once, when you provide medical attention to another character and assist their END + Survival test to heal Injuries, you may treat your assistance die as if it had rolled a 1. If you learn this perk, you may do this once per session.",
+    "issues": []
+  },
+  {
+    "name": "Meeting People",
+    "roll": 12,
+    "perk": "Once, when you roll one or more complications on a Speech test, you may ignore those complications. If you learn this perk, you may do this once per scene.",
+    "issues": []
+  },
+  {
+    "name": "Programmer’s Digest",
+    "roll": 13,
+    "perk": "Once, when you fail a Science test to hack into a computer terminal and would be locked out (prevented from trying again), you may choose not to be locked out, allowing you to make another attempt. If you learn this Perk, you may do this whenever you are locked out of a computer.",
+    "issues": []
+  },
+  {
+    "name": "Tales of a Junktown Jerky Vendor",
+    "roll": 14,
+    "perk": "Once, when you succeed or fail at a Barter test to haggle on the price of a trade, you may spend 1 Luck point to shift the price 10% in your favor. If you learn this Perk, you may do this on any Barter test to haggle, though you must spend one additional Luck point each extra time you use it during a session (1 for the first time, 2 for the second, 3 for the third, etc.).",
+    "issues": []
+  },
+  {
+    "name": "Tesla Science Magazine",
+    "roll": 15,
+    "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene.",
+    "issues": [
+      {
+        "name": "Will Robots Rule the World?",
+        "roll": [1, 2],
+        "effect": "+2 to Physical and Energy damage resistances vs Robots"
+      },
+      {
+        "name": "What is Plasma, anyway?",
+        "roll": [3, 4],
+        "effect": "+2 to Physical and Energy damage resistances vs Plasma weapons"
+      },
+      {
+        "name": "Rocket Science for Toddlers",
+        "roll": [5, 6],
+        "effect": "+2CD damage inflicted by one attack with a Blast weapon"
+      },
+      {
+        "name": "Tomorrow’s Technology for Today’s Super Soldiers",
+        "roll": [7, 8],
+        "effect": "After spending a fusion core charge, you may spend 1 Luck point: if you do so the charge is not spent"
+      },
+      {
+        "name": "Giant Super Weapons!",
+        "roll": [9, 10],
+        "effect": "Once, when you fire a Gatling weapon, you consume ammunition at 8x the rate, rather than 10x the rate"
+      },
+      {
+        "name": "Geckos and Gamma Radiation",
+        "roll": [11, 12],
+        "effect": "+2CD damage inflicted on one attack against a Mutated creature"
+      },
+      {
+        "name": "U.S. Army Goes to Space",
+        "roll": [13, 14],
+        "effect": "On a single attack with an Energy weapon, you inflict a Critical Hit if you inflict 3 or more damage after damage resistance (rather than the normal 5 or more damage)"
+      },
+      {
+        "name": "10 Number 1 Hits!!! Rock-o-bot Takes the Nation by Storm!!",
+        "roll": [15, 16],
+        "effect": "Once, when you inflict a Critical Hit, increase the total damage inflicted by +2"
+      },
+      {
+        "name": "Future of Warfare?",
+        "roll": [17, 18],
+        "effect": "On a single attack with a Big Gun, you inflict a Critical Hit if you inflict 3 or more damage after damage resistance (rather than the normal 5 or more damage)"
+      }
+    ]
+  },
+  {
+    "name": "True Police Stories",
+    "roll": 16,
+    "perk": "Once, when you roll the damage of an attack, you may spend a Luck point to turn up to three CD  to any face, rather than rolling them. If you learn this perk, you may do this once per scene.",
+    "issues": []
+  },
+  {
+    "name": "Tumblers Today",
+    "roll": 17,
+    "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene.",
+    "issues": [
+      {
+        "name": "Mysteries of the Master Key Exposed!",
+        "roll": [1, 2, 3, 4],
+        "effect": "You may re-roll 1d20 on a single Lockpicking test"
+      },
+      {
+        "name": "Bobby Pins: More Effective Than Lockpicks?",
+        "roll": [5, 6, 7, 8],
+        "effect": "When using a Bobby Pin, reduce the difficulty of a Lockpicking test by a further 1 (minimum 0)"
+      },
+      {
+        "name": "Confessions of a Housebreaker",
+        "roll": [9, 10, 11, 12],
+        "effect": "When scavenging or looting, spend 1 Luck to find 2+2CD Bobby Pins"
+      },
+      {
+        "name": "Open Any Lock in 5 Seconds Flat",
+        "roll": [13, 14, 15, 16],
+        "effect": "When you successfully pick a lock, you may use the Reduce Time AP option without spending AP"
+      },
+      {
+        "name": "Locksmith Certification Special — Pass with Flying Colors",
+        "roll": [17, 18, 19, 20],
+        "effect": "When suffer one or more complications on a Lockpicking test, spend 1 Luck point to ignore those complications"
+      }
+    ]
+  },
+  {
+    "name": "Unstoppables",
+    "roll": 18,
+    "perk": "Depending on the individual issue found, you receive a different perk, allowing you to spend Luck points to avoid a single instance of damage, which you may benefit from once. If you later learn the perk, you may use that benefit as often as you have Luck points to spend on it.",
+    "issues": [
+      {
+        "name": "Dr. Brainwash and His Army of De-Capitalists!",
+        "roll": [1, 2, 3, 4],
+        "effect": "Spend 3 Luck points to avoid all damage from a single attack or hazard"
+      },
+      {
+        "name": "Who Can Stop the Unstoppable Grog-Na-Rok?!",
+        "roll": [5, 6, 7, 8],
+        "effect": "Spend 2 Luck points to avoid all damage from an attack from a Mutated Human (including Ghouls and super mutants)"
+      },
+      {
+        "name": "Commie-Kazi vs. Manta Man",
+        "roll": [9, 10, 11, 12],
+        "effect": "Spend 1 Luck point to avoid all damage from a Blast weapon"
+      },
+      {
+        "name": "Trapped in the Dimension of the Pterror-dactyls!",
+        "roll": [13, 14, 15, 16],
+        "effect": "Spend 1 Luck point to avoid all damage from a single melee attack"
+      },
+      {
+        "name": "Visit the Ux-Ron Galaxy!",
+        "roll": [17, 18, 19, 20],
+        "effect": "Spend 1 Luck point to avoid all Energy damage from a single attack"
+      }
+    ]
+  },
+  {
+    "name": "U.S. Covert Operations Manual",
+    "roll": 19,
+    "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene.",
+    "issues": [
+      {
+        "name": "FH 5-01 Whistling in the Dark",
+        "roll": [1, 2],
+        "effect": "If you are detected while sneaking, you add +2 to Physical damage resistance against the first attack you receive after being detected"
+      },
+      {
+        "name": "FH 5-02 Urban Camouflage",
+        "roll": [3, 4],
+        "effect": "Enemies suffer +1 difficulty on tests to detect you; this does not stack with any difficulty increases for poor light or darkness"
+      },
+      {
+        "name": "FH 5-03 Facepaint Fundamentals",
+        "roll": [5, 6],
+        "effect": "+1 to all damage resistances against attacks from Character NPCs"
+      },
+      {
+        "name": "FH 5-04 Not the Soldiers You’re Looking For",
+        "roll": [7, 8],
+        "effect": "+1CD damage inflicted by attacks against Character NPCs"
+      },
+      {
+        "name": "FH 5-05 Who Goes There?",
+        "roll": [9, 10],
+        "effect": "When you spend a Luck point to re-roll a d20 on a PER test, instead count that die as if it had rolled a 1"
+      },
+      {
+        "name": "FH 5-06 Squeaky Floorboard,Sudden Death",
+        "roll": [11, 12],
+        "effect": "Once, when you suffer one or more Complications on a Sneak test, ignore the complications"
+      },
+      {
+        "name": "FH 5-07 Getting the Drop on the Communists",
+        "roll": [13, 14],
+        "effect": "Once, when an enemy aims before making an attack against you, you may cause them to lose the benefits of aiming"
+      },
+      {
+        "name": "FH 5-08 Bushes, Boxes, and Beehives: Camouflage Special",
+        "roll": [15, 16],
+        "effect": "+2CD damage inflicted by an unarmed attack or an attack made with a knife"
+      },
+      {
+        "name": "FH 5-09 Look Better in Black",
+        "roll": [17, 18],
+        "effect": "Once, when using a Stealth Boy, it lasts for one additional turn"
+      },
+      {
+        "name": "FH 5-10 Tiptoe Through the Tulips",
+        "roll": [19, 20],
+        "effect": "When you spend a Luck point to re-roll a d20 on an AGI test, instead count that die as if it had rolled a 1"
+      }
+    ]
+  },
+  {
+    "name": "Wasteland Survival Guide",
+    "roll": 20,
+    "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene.",
+    "issues": [
+      {
+        "name": "Farming the Wastes",
+        "roll": [1, 2, 3],
+        "effect": "Consuming a fruit or vegetable food item heals twice as many HP"
+      },
+      {
+        "name": "Insect Repellent Special",
+        "roll": [4, 5, 6],
+        "effect": "Increase all damage resistances by +2 vs an attack from an Insect"
+      },
+      {
+        "name": "The Bright Side of Radiation Poisoning",
+        "roll": [7, 8, 9],
+        "effect": "When you consume irradiated food or drink, heal additional HP equal to the roll on the CD"
+      },
+      {
+        "name": "Coupon Spectacular",
+        "roll": [10, 11, 12],
+        "effect": "When buying food or drink items, the price is shifted an additional 10% in your favor"
+      },
+      {
+        "name": "Water Aerobics for Ghouls",
+        "roll": [13, 14, 15],
+        "effect": "Reduce the difficulty of an Athletics test to swim by 1 (min. 0)"
+      },
+      {
+        "name": "Self Defense Secrets",
+        "roll": [16, 17, 18],
+        "effect": "Gain +1 defense against a melee attack"
+      },
+      {
+        "name": "Hunting in the Wastes",
+        "roll": [19, 20],
+        "effect": "When you butcher an animal you’ve killed, and the amount of meat found can be increased by spending AP, you gain 1 bonus AP for that purpose (this AP is lost if not used)"
+      }
+    ]
+  }
+]
