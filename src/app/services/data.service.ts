@@ -7,6 +7,7 @@ import weaponModsData from "../data/weapon-mods.json";
 import armorData from "../data/armor.json";
 import armorModsData from "../data/armor-mod.json";
 import consumablesData from "../data/consumables.json";
+import chemsData from "../data/chems.json";
 import { Injectable } from "@angular/core";
 import { Origin, OriginData } from "../models/origin";
 import { Perk, PerkData } from "../models/perk";
@@ -17,6 +18,7 @@ import { WeaponMod, WeaponModData } from "../models/weapon-mod";
 import { Armor, ArmorData } from "../models/armor";
 import { ArmorMod, ArmorModData } from "../models/armor-mod";
 import { Consumable, ConsumableData } from "../models/consumable";
+import { Chem, ChemData } from "../models/chem";
 
 @Injectable({
   providedIn: "root"
@@ -31,6 +33,7 @@ export class DataService {
   armor: Armor[] = [];
   armorMods: ArmorMod[] = [];
   consumables: Consumable[] = [];
+  chems: Chem[] = [];
 
   constructor() {
     this.origins = (originsData as OriginData[]).map(OriginData.map);
@@ -42,5 +45,6 @@ export class DataService {
     this.armor = (armorData as ArmorData[]).map(ArmorData.map);
     this.armorMods = (armorModsData as ArmorModData[]).map(ArmorModData.map);
     this.consumables = (consumablesData as ConsumableData[]).map(ConsumableData.map);
+    this.chems = (chemsData as ChemData[]).map(ChemData.map);
   }
 }

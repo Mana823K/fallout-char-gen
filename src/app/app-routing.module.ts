@@ -23,7 +23,7 @@ const routes: Routes = [
     { path: 'armor', component: ArmorComponent },
     { path: 'armor-mods', component: ArmorModsComponent },
     { path: 'consumables', component: ConsumablesComponent },
-    // { path: 'chems', component: ChemsComponent },
+    { path: 'chems', component: ChemsComponent },
     // { path: 'magazines', component: MagazinesComponent },
     // { path: 'miscellany', component: MiscellanyComponent },
   ] },
