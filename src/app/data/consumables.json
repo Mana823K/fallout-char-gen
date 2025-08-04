@@ -1091,5 +1091,27 @@
     "weight": 1,
     "cost": 5,
     "rarity": 3
+  },
+  {
+    "name": "Robot Repair Kit",
+    "type": "Other",
+    "heal": 0,
+    "effects": "Heal 4HP to a Robot or Power Armor",
+    "irradiated": false,
+    "weight": 0,
+    "cost": 48,
+    "rarity": 2,
+    "notes": "A robot repair kit can be used in one of two ways: it can be applied using the Take Chem minor action, healing 4 HP or treating an Injury immediately, or it can be applied as part of a First Aid action, healing 4 HP or treating an Injury in addition to any other healing done. As with any repairs to a robot or Power Armor, this is done using the Repair skill rather than the Medicine skill, but the actions used are otherwise the same."
+  },
+  {
+    "name": "Stealth Boy",
+    "type": "Other",
+    "heal": 0,
+    "effects": "Invisibility",
+    "irradiated": false,
+    "weight": 1,
+    "cost": 100,
+    "rarity": 3,
+    "notes": "A Stealth Boy is activated using the Interact minor action. Once active, the device functions for three full turns: your current turn, your next turn, and your turn after that, after which, it ceases to function and is junk. When activated, a Stealth Boy renders you and the equipment you are carrying nearly invisible. Enemies add +2 to the difficulty of all tests to spot you; they may still hear you or notice your presence in other ways if they’re looking hard enough. In addition, even if you have been detected, the invisibility increases your Defense by +2."
   }
 ]

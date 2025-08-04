@@ -136,6 +136,7 @@
     "name": "Mentats",
     "effects": "Re-roll 1d20 on PER and INT tests",
     "duration": "Lasting",
+    "addiction":"Mentat Addiction: A failed addiction roll renders you addicted to Mentats. You increase the difficulty of all CHA tests by +1 whenever you are not under the effects of a type of Mentat (ordinary Mentats, or the Berry, Grape, or Orange versions).",
     "addictive": 3,
     "cost": 50,
     "rarity": 2
@@ -145,6 +146,7 @@
     "effects": "Reduce the difficulty of PER tests by 2 (min. 0), Aim minor action lets you re-roll one additional d20.",
     "duration": "Lasting",
     "addictive": 2,
+    "addiction":"Mentat Addiction: A failed addiction roll renders you addicted to Mentats. You increase the difficulty of all CHA tests by +1 whenever you are not under the effects of a type of Mentat (ordinary Mentats, or the Berry, Grape, or Orange versions).",
     "cost": 60,
     "rarity": 3
   },
@@ -153,6 +155,7 @@
     "effects": "+3CD damage to all attacks, May re-roll up to 3CD per damage roll",
     "duration": "Lasting",
     "addictive": 1,
+    "addiction": "Overdrive Addiction: A failed addiction roll renders you addicted to Overdrive. You increase the difficulty of all STR and AGI tests by +1 whenever you are not under the effects of Overdrive",
     "cost": 55,
     "rarity": 3
   },
@@ -161,6 +164,7 @@
     "effects": "+2CD damage to all attacks, +3 Physical damage resistance",
     "duration": "Lasting",
     "addictive": 2,
+    "addiction": "Psycho Addiction: A failed addiction roll renders you addicted to Psycho. You increase the difficulty of all STR tests by +1 and suffer +1CD  damage from all physical attacks whenever you are not under the effects of a type of Psycho (ordinary Psycho, Psycho Jet, Psychobuff, or Psychotats).",
     "cost": 50,
     "rarity": 2
   },
@@ -169,6 +173,7 @@
     "effects": "+2CD damage to all attacks, +4 Physical damage resistance. Gain 4 AP immediately (lost if not spent)",
     "duration": "Brief",
     "addictive": 1,
+    "addiction": "Psycho Addiction: A failed addiction roll renders you addicted to Psycho. You increase the difficulty of all STR tests by +1 and suffer +1CD  damage from all physical attacks whenever you are not under the effects of a type of Psycho (ordinary Psycho, Psycho Jet, Psychobuff, or Psychotats).",
     "cost": 70,
     "rarity": 4
   },
@@ -177,6 +182,7 @@
     "effects": "+2CD damage to all attacks, +4 Max HP.Reduce difficulty of all STR and END tests by 1 (minimum 0).",
     "duration": "Lasting",
     "addictive": 1,
+    "addiction": "Psycho Addiction: A failed addiction roll renders you addicted to Psycho. You increase the difficulty of all STR tests by +1 and suffer +1CD  damage from all physical attacks whenever you are not under the effects of a type of Psycho (ordinary Psycho, Psycho Jet, Psychobuff, or Psychotats).",
     "cost": 70,
     "rarity": 4
   },
@@ -185,6 +191,7 @@
     "effects": "+2CD damage to all attacks, +2 Physical damage resistance, Reduce difficulty of PER tests by 1 (min. 0)",
     "duration": "Lasting",
     "addictive": 1,
+    "addiction": "Psycho Addiction: A failed addiction roll renders you addicted to Psycho. You increase the difficulty of all STR tests by +1 and suffer +1CD  damage from all physical attacks whenever you are not under the effects of a type of Psycho (ordinary Psycho, Psycho Jet, Psychobuff, or Psychotats).",
     "cost": 70,
     "rarity": 4
   },
@@ -210,7 +217,8 @@
     "duration": "Instant",
     "addictive": 0,
     "cost": 80,
-    "rarity": 2
+    "rarity": 2,
+    "notes": "RadAway can be used in one of two ways: it can be applied using the Take Chem minor action, healing 4 Radiation damage immediately, or it can be applied as part of a First Aid action, healing 4 Radiation damage in addition to any other healing done (remove Radiation damage before applying other healing effects). Diluted RadAway works in the same way, but only heals 2 Radiation damage."
   },
   {
     "name": "RadAway (Diluted)",
@@ -218,7 +226,8 @@
     "duration": "Instant",
     "addictive": 0,
     "cost": 50,
-    "rarity": 1
+    "rarity": 1,
+    "notes": "RadAway can be used in one of two ways: it can be applied using the Take Chem minor action, healing 4 Radiation damage immediately, or it can be applied as part of a First Aid action, healing 4 Radiation damage in addition to any other healing done (remove Radiation damage before applying other healing effects). Diluted RadAway works in the same way, but only heals 2 Radiation damage."
   },
   {
     "name": "Skeeto Spit",
@@ -234,7 +243,8 @@
     "duration": "Instant",
     "addictive": 0,
     "cost": 50,
-    "rarity": 2
+    "rarity": 2,
+    "notes": "A Stimpak can be used in one of two ways: it can be applied using the Take Chem minor action, healing 4 HP or treating an Injury immediately, or it can be applied as part of a First Aid action, healing 4 HP or treating an Injury in addition to any other healing done."
   },
   {
     "name": "Stimpak (Diluted)",
@@ -242,7 +252,8 @@
     "duration": "Instant",
     "addictive": 0,
     "cost": 30,
-    "rarity": 1
+    "rarity": 1,
+    "notes": "A Diluted Stimpak can be used in one of two ways: it can be applied using the Take Chem minor action, healing 2 HP or treating an Injury immediately, or it can be applied as part of a First Aid action, healing 2 HP or treating an Injury in addition to any other healing done."
   },
   {
     "name": "Super Stimpak",
@@ -250,7 +261,8 @@
     "duration": "Instant",
     "addictive": 0,
     "cost": 90,
-    "rarity": 4
+    "rarity": 4,
+    "notes": "A super Stimpak can be used in one of two ways: it can be applied using the Take Chem minor action, healing 8 HP or treating up to two Injuries immediately, or it can be applied as part of a First Aid action, healing 8 HP or treating up to two Injuries in addition to any other healing done."
   },
   {
     "name": "Stimpak Diffuser",
@@ -258,13 +270,15 @@
     "duration": "Instant",
     "addictive": 0,
     "cost": 200,
-    "rarity": 5
+    "rarity": 5,
+    "notes": "When deployed, using the Interact minor action, it produces a cloud which immediately heals 4 HP on everyone (other than robots) within Close range. One super Stimpak is consumed every time the Stimpak diffuser is used."
   },
   {
     "name": "Ultra jet",
     "effects": "Gain 6 AP immediately (lost if not spent), Extra actions cost 1 less AP",
     "duration": "Brief",
     "addictive": 3,
+    "addiction": "Ultra Jet Addiction: A failed addiction roll renders you addicted to Ultra Jet. You increase the difficulty of all AGI tests by +1, and you generate one fewer AP whenever you succeed at a skill test (minimum 0) whenever you are not under the effects of Ultra Jet. This addiction is permanent and cannot be cured by any known means.",
     "cost": 67,
     "rarity": 2
   },
@@ -273,6 +287,7 @@
     "effects": "First d20 bought on all tests is free",
     "duration": "Lasting",
     "addictive": 1,
+    "addiction": "X-Cell Addiction: A failed addiction roll renders you addicted to X-Cell. You increase the difficulty of all tests by +1 whenever you are not under the effects of X-Cell.",
     "cost": 60,
     "rarity": 4
   }
