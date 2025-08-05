@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Backpack, Large",
+    "effects": "Wearer adds +10xSTR to maximum Carry weight",
+    "weight": 0,
+    "cost": 60,
+    "rarity": 2
+  },
+  {
+    "name": "Backpack, Small",
+    "effects": "Wearer adds +5xSTR to maximum Carry weight",
+    "weight": 0,
+    "cost": 0,
+    "rarity": 0
+  },
+  {
+    "name": "Bobby Pin",
+    "effects": "Reduces difficulty of Lockpick tests by 1 (minimum 1), One bobby pin breaks per complication rolled",
+    "weight": 0,
+    "cost": 1,
+    "rarity": 0
+  },
+  {
+    "name": "Deluxe Toolkit",
+    "effects": "Reduce the difficulty of Repair tests by 1 (minimum 0), May attempt Repair tests which normally require a workbench or similar at +1 difficulty",
+    "weight": 20,
+    "cost": 150,
+    "rarity": 3
+  },
+  {
+    "name": "Doctor’s Bag",
+    "effects": "Reduce the difficulty of Medicine tests by 1 (minimum 0), When providing long-term care, allows care of up to 2 additional patients",
+    "weight": 10,
+    "cost": 300,
+    "rarity": 3
+  },
+  {
+    "name": "Electronic Lockpicker",
+    "effects": "Reduces difficulty of Lockpick tests by 2 (minimum 0), Ignores first complication rolled, Breaks if two or more complications are rolled at once",
+    "weight": 4,
+    "cost": 375,
+    "rarity": 4
+  },
+  {
+    "name": "First Aid Kit",
+    "effects": "Heal +2 HP upon succeeding at the First Aid action",
+    "weight": 4,
+    "cost": 200,
+    "rarity": 2
+  },
+  {
+    "name": "Flashlight",
+    "effects": "Generates bright light in a single zone within Medium range; the user may choose which zone is illuminated",
+    "weight": 2,
+    "cost": 100,
+    "rarity": 3
+  },
+  {
+    "name": "Geiger Counter",
+    "effects": "Allows a PER + Survival test, difficulty 1, to determine if there is radiation present in an area, and how much",
+    "weight": 8,
+    "cost": 325,
+    "rarity": 3
+  },
+  {
+    "name": "Holotags",
+    "effects": "Identifies the fallen",
+    "weight": 0,
+    "cost": 5,
+    "rarity": 2
+  },
+  {
+    "name": "Holotape Player",
+    "effects": "Allows playback of audio holotapes",
+    "weight": 3,
+    "cost": 250,
+    "rarity": 2
+  },
+  {
+    "name": "Lantern",
+    "effects": "Generates bright light within Close range, and dim light within Medium range",
+    "weight": 3,
+    "cost": 15,
+    "rarity": 2
+  },
+  {
+    "name": "Lock Pick Set",
+    "effects": "Reduces difficulty of Lockpick tests by 1 (minimum 0), After 3 complications, the set is broken",
+    "weight": 2,
+    "cost": 150,
+    "rarity": 2
+  },
+  {
+    "name": "Multi-Tool",
+    "effects": "Reduce the difficulty of Repair tests by 1 (minimum 0)",
+    "weight": 1,
+    "cost": 100,
+    "rarity": 2
+  },
+  {
+    "name": "Pack Brahmin",
+    "effects": "A mutant cow that carries heavy loads and produces milk and fertilizer. The brahmin can also be milked once a day, requiring an AGI + Survival test with a difficulty of 1. Success means the brahmin produces one brahmin milk (p.161), plus one extra for each AP spent (maximum 5 brahmin milk). A brahmin also produces 2CD  units of fertilizer each day",
+    "weight": 0,
+    "cost": 200,
+    "rarity": 3
+  },
+  {
+    "name": "Pip-Boy",
+    "effects": "Not all Pip-Boys contain the same functions, but the common functions are: ♦ A personal status indicator allows the wearer to see a report on their current health and wellbeing and any medical problems currently afflicting them. ♦ The device maintains an ongoing log of the wearer’s activities, journey, and condition, and place for personal recordings to be made in either text or audio forms. ♦ An inbuilt holotape reader allows the device to accept compact holotapes, able to read and playback audio, video, data, and even games. ♦ It also functions as a compass, a radio, and a Geiger counter, and can generate light from its screen equivalent to a flashlight. In addition, a character equipped with a Pip-Boy may use V.A.T.S. when they make an attack, ignoring the normal difficulty increase for targeting a specific location on the enemy.",
+    "weight": 0,
+    "cost": 0,
+    "rarity": 0
+  },
+  {
+    "name": "Radio",
+    "effects": "Picks up and plays radio transmissions",
+    "weight": 2,
+    "cost": 75,
+    "rarity": 2
+  },
+  {
+    "name": "Signal Flare",
+    "effects": "Generates bright light within close range until the end of the current scene, One use only",
+    "weight": 0,
+    "cost": 10,
+    "rarity": 1
+  },
+  {
+    "name": "Torch",
+    "effects": "Generates bright light within close range until the end of the current scene, Requires an INT + Survival test to light, difficulty 1, +1 for each previous use",
+    "weight": 1,
+    "cost": 10,
+    "rarity": 1
+  }
+]

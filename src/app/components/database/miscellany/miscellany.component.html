@@ -1,1 +1,16 @@
-<p>miscellany works!</p>
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Effects</th>
+    <th>Weight</th>
+    <th>Cost</th>
+    <th>Rarity</th>
+  </tr>
+  <tr *ngFor="let item of items">
+    <td>{{item.name}}</td>
+    <td>{{item.effects}}</td>
+    <td class="right">{{item.weight}}</td>
+    <td class="right">{{item.cost}}</td>
+    <td class="right">{{item.rarity}}</td>
+  </tr>
+</table>

@@ -25,7 +25,7 @@ const routes: Routes = [
     { path: 'consumables', component: ConsumablesComponent },
     { path: 'chems', component: ChemsComponent },
     { path: 'magazines', component: MagazinesComponent },
-    // { path: 'miscellany', component: MiscellanyComponent },
+    { path: 'miscellany', component: MiscellanyComponent },
   ] },
   { path: '**', redirectTo: '' }
 ];
