@@ -2133,5 +2133,21 @@
     "rarity": 2,
     "special": "When a smoke grenade detonates, it generates a cloud of smoke which fills the affected zone. Characters cannot see while within the cloud, nor can they see into or through the cloud from outside it, adding +2 difficulty to all attacks and PER-based tests made by or against anyone within the cloud. The cloud dissipates over time; at the end of each round, roll 1 CD, plus +1 CD for each round the cloud has persisted: if one or more Effects are rolled, the cloud has dispersed enough to no longer have an effect",
     "mods": []
+  },
+  {
+    "name": "Lightweight Mini-Nuke",
+    "skill": "Explosive",
+    "damage": 6,
+    "effects": ["Radioactive"],
+    "type": "Physical",
+    "rate": 0,
+    "range": "M",
+    "qualities": ["Blast", "Thrown"],
+    "ammo": [],
+    "weight": 1,
+    "cost": 0,
+    "rarity": 0,
+    "special": "Can only be crafted with Nuclear Proliferator rare perk.",
+    "mods": []
   }
 ]

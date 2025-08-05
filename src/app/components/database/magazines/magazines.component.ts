@@ -11,7 +11,7 @@ export class MagazinesComponent {
   magazines: any[] = [];
 
   constructor(private dataService: DataService) {
-    for (var magazineData of dataService.magazines) {
+    for (var magazineData of this.dataService.magazines) {
       this.magazines.push(magazineData);
       for (var issue of magazineData.issues) {
         this.magazines.push({

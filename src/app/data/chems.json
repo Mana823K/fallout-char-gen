@@ -290,5 +290,23 @@
     "addiction": "X-Cell Addiction: A failed addiction roll renders you addicted to X-Cell. You increase the difficulty of all tests by +1 whenever you are not under the effects of X-Cell.",
     "cost": 60,
     "rarity": 4
+  },
+  {
+    "name": "Super Chem Mk I",
+    "effects": "Re-roll 1d20 on STR tests, +2CD to melee damage, +3 Physical damage resistance",
+    "duration": "Lasting",
+    "addictive": 0,
+    "cost": 0,
+    "rarity": 0,
+    "notes": "Can only be created with Brawling Chemist rare perk"
+  },
+  {
+    "name": "Survival Syringe",
+    "effects": "Heals 4 HP (as Stimpak) Cures all illnesses Restores Hunger and Thirst states to full.",
+    "duration": "Lasting",
+    "addictive": 0,
+    "cost": 0,
+    "rarity": 0,
+    "notes": "Can only be created with Survival Shortcut rare perk"
   }
 ]

@@ -20,7 +20,8 @@ export class Perk {
                     && special.charisma >= this.requirements.cha
                     && special.intelligence >= this.requirements.int
                     && special.agility >= this.requirements.agi
-                    && special.luck >= this.requirements.lck;
+                    && special.luck >= this.requirements.lck
+                    && !this.requirements.other?.includes("rare book");
   }
 
   setRequirementText() {

@@ -2,12 +2,14 @@
   {
     "name": "¡La Fantoma!",
     "roll": 1,
+    "rare": false,
     "perk": "When you succeed at a Sneak test to avoid notice, you may spend 1 AP to create a distraction somewhere within Medium range; the character who failed the opposed test to detect you heads towards the distraction you created. If you learn this perk, you may use it once per scene.",
     "issues": []
   },
   {
     "name": "Astoundingly Awesome Tales",
     "roll": 2,
+    "rare": false,
     "perk": "Depending on the individual issue found, you receive a different perk, granting bonus damage or bonus damage resistance against a single foe or type of attack. This lasts only for a single attack (made or received, respectively), unless the perk is learned, in which case it applies to all attacks.",
     "issues": [
       {
@@ -65,6 +67,7 @@
   {
     "name": "Backwoodsman",
     "roll": 3,
+    "rare": false,
     "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene.",
     "issues": [
             {
@@ -122,30 +125,35 @@
   {
     "name": "Boxing Times",
     "roll": 4,
+    "rare": false,
     "perk": "Once, when you succeed at an Unarmed attack, if you spend any AP to increase the damage you dealt, you may add the Stun damage effect to your attack. If you later learn this perk, you may use this on any successful Unarmed attack",
     "issues": []
   },
   {
     "name": "Duck and Cover!",
     "roll": 5,
+    "rare": false,
     "perk": "Once, when you are affected by a Blast weapon, you may choose to fall prone (p.25). If you do so, you add +3 to all damage resistances against the damage caused by that Blast. If you later learn this perk, you may use whenever you are affected by a Blast weapon by spending 1 AP",
     "issues": []
   },
   {
     "name": "Fixin’ Things",
     "roll": 6,
+    "rare": false,
     "perk": "Once, when you attempt to repair an item, halve the amounts of the materials needed to complete the repair (round up). If you later learn this perk, you may use this whenever you attempt repairs",
     "issues": []
   },
   {
     "name": "Future Weapons Today",
     "roll": 7,
+    "rare": false,
     "perk": "Once, when you make an attack with an Energy Weapon, you may overcharge it. Increase the damage by +2CD  for that attack. The weapon cannot be used to make an attack in the turn after an overcharged attack as it cools down. If you later learn this perk, you may overcharge an Energy Weapon once per scene.",
     "issues": []
   },
   {
     "name": "Grognak the Barbarian",
     "roll": 8,
+    "rare": false,
     "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene",
     "issues": [
       {
@@ -203,6 +211,7 @@
   {
     "name": "Guns and Bullets",
     "roll": 9,
+    "rare": false,
     "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene.",
     "issues": [
       {
@@ -260,6 +269,7 @@
   {
     "name": "Live & Love",
     "roll": 10,
+    "rare": false,
     "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from for a single scene. If you later learn the perk, you may use that benefit constantly.",
     "issues": [
       {
@@ -312,30 +322,35 @@
   {
     "name": "Massachusetts Surgical Journal",
     "roll": 11,
+    "rare": false,
     "perk": "Once, when you provide medical attention to another character and assist their END + Survival test to heal Injuries, you may treat your assistance die as if it had rolled a 1. If you learn this perk, you may do this once per session.",
     "issues": []
   },
   {
     "name": "Meeting People",
     "roll": 12,
+    "rare": false,
     "perk": "Once, when you roll one or more complications on a Speech test, you may ignore those complications. If you learn this perk, you may do this once per scene.",
     "issues": []
   },
   {
     "name": "Programmer’s Digest",
     "roll": 13,
+    "rare": false,
     "perk": "Once, when you fail a Science test to hack into a computer terminal and would be locked out (prevented from trying again), you may choose not to be locked out, allowing you to make another attempt. If you learn this Perk, you may do this whenever you are locked out of a computer.",
     "issues": []
   },
   {
     "name": "Tales of a Junktown Jerky Vendor",
     "roll": 14,
+    "rare": false,
     "perk": "Once, when you succeed or fail at a Barter test to haggle on the price of a trade, you may spend 1 Luck point to shift the price 10% in your favor. If you learn this Perk, you may do this on any Barter test to haggle, though you must spend one additional Luck point each extra time you use it during a session (1 for the first time, 2 for the second, 3 for the third, etc.).",
     "issues": []
   },
   {
     "name": "Tesla Science Magazine",
     "roll": 15,
+    "rare": false,
     "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene.",
     "issues": [
       {
@@ -388,12 +403,14 @@
   {
     "name": "True Police Stories",
     "roll": 16,
+    "rare": false,
     "perk": "Once, when you roll the damage of an attack, you may spend a Luck point to turn up to three CD  to any face, rather than rolling them. If you learn this perk, you may do this once per scene.",
     "issues": []
   },
   {
     "name": "Tumblers Today",
     "roll": 17,
+    "rare": false,
     "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene.",
     "issues": [
       {
@@ -426,6 +443,7 @@
   {
     "name": "Unstoppables",
     "roll": 18,
+    "rare": false,
     "perk": "Depending on the individual issue found, you receive a different perk, allowing you to spend Luck points to avoid a single instance of damage, which you may benefit from once. If you later learn the perk, you may use that benefit as often as you have Luck points to spend on it.",
     "issues": [
       {
@@ -458,6 +476,7 @@
   {
     "name": "U.S. Covert Operations Manual",
     "roll": 19,
+    "rare": false,
     "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene.",
     "issues": [
       {
@@ -515,6 +534,7 @@
   {
     "name": "Wasteland Survival Guide",
     "roll": 20,
+    "rare": false,
     "perk": "Depending on the individual issue found, you receive a different perk, which you may benefit from once. If you later learn the perk, you may use that benefit once per scene.",
     "issues": [
       {
@@ -553,5 +573,145 @@
         "effect": "When you butcher an animal you’ve killed, and the amount of meat found can be increased by spending AP, you gain 1 bonus AP for that purpose (this AP is lost if not used)"
       }
     ]
+  },
+  {
+    "name": "101 Heroic Last Stands",
+    "roll": 1,
+    "rare": true,
+    "perk": "Blood Sacrifice!",
+    "issues": []
+  },
+  {
+    "name": "Atomic Command (Holotape)",
+    "roll": 2,
+    "rare": true,
+    "perk": "Nuclear Proliferator",
+    "issues": []
+  },
+  {
+    "name": "Automatron (holotape)",
+    "roll": 3,
+    "rare": true,
+    "perk": "Electric Absorption",
+    "issues": []
+  },
+  {
+    "name": "Big Book of Science",
+    "roll": 4,
+    "rare": true,
+    "perk": "Brawling Chemist",
+    "issues": []
+  },
+  {
+    "name": "Chinese Army: Special Ops Training Manual",
+    "roll": 5,
+    "rare": true,
+    "perk": "Follow-Through",
+    "issues": []
+  },
+  {
+    "name": "Dress to Survive",
+    "roll": 6,
+    "rare": true,
+    "perk": "Funky Duds",
+    "issues": []
+  },
+  {
+    "name": "Duck and Cover Annual",
+    "roll": 7,
+    "rare": true,
+    "perk": "Detonation Contagion",
+    "issues": []
+  },
+  {
+    "name": "Grognak and the Ruby Ruins (holotape",
+    "roll": 8,
+    "rare": true,
+    "perk": "Collateral Damage",
+    "issues": []
+  },
+  {
+    "name": "Guns and Bullets Annual",
+    "roll": 9,
+    "rare": true,
+    "perk": "Ammo Factory",
+    "issues": []
+  },
+  {
+    "name": "Hot Summer Fashions",
+    "roll": 10,
+    "rare": true,
+    "perk": "Sizzling Style",
+    "issues": []
+  },
+  {
+    "name": "Journal of Internal Medicine",
+    "roll": 11,
+    "rare": true,
+    "perk": "Survival Shortcut",
+    "issues": []
+  },
+  {
+    "name": "Nikola Tesla and You",
+    "roll": 12,
+    "rare": true,
+    "perk": "Power Armor Reboot",
+    "issues": []
+  },
+  {
+    "name": "Pipfall (holotape)",
+    "roll": 13,
+    "rare": true,
+    "perk": "What Rads?",
+    "issues": []
+  },
+  {
+    "name": "Pugilism Illustrated",
+    "roll": 14,
+    "rare": true,
+    "perk": "Exploding Palm",
+    "issues": []
+  },
+  {
+    "name": "Red Menace (holotape)",
+    "roll": 15,
+    "rare": true,
+    "perk": "Power Sprinter",
+    "issues": []
+  },
+  {
+    "name": "Scout Handbook",
+    "roll": 16,
+    "rare": true,
+    "perk": "Botany Buddy",
+    "issues": []
+  },
+  {
+    "name": "The Collected Adventures of Grognak the Barbarian",
+    "roll": 17,
+    "rare": true,
+    "perk": "Hack and Slash",
+    "issues": []
+  },
+  {
+    "name": "The Pointy End: A Guide to Swords",
+    "roll": 18,
+    "rare": true,
+    "perk": "Arms Breaking",
+    "issues": []
+  },
+  {
+    "name": "U.S. Army: 30 Handy Flamethrower Recipes",
+    "roll": 19,
+    "rare": true,
+    "perk": "Far-Flung Fireworks",
+    "issues": []
+  },
+  {
+    "name": "Zeta Invaders (holotape)",
+    "roll": 20,
+    "rare": true,
+    "perk": "Retribution",
+    "issues": []
   }
 ]

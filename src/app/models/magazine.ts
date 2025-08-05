@@ -1,6 +1,7 @@
 export class Magazine {
   name: string = "";
   roll: number = 0;
+  rare: boolean = false;
   perk: string = "";
   issues: MagazineIssue[] = [];
 }
@@ -8,6 +9,7 @@ export class Magazine {
 export class MagazineData {
   name: string = "";
   roll: number = 0;
+  rare: boolean = false;
   perk: string = "";
   issues: MagazineIssueData[] = [];
 
@@ -16,6 +18,7 @@ export class MagazineData {
 
     result.name = original.name;
     result.roll = original.roll;
+    result.rare = original.rare;
     result.perk = original.perk;
     result.issues = original.issues.map(MagazineIssueData.map);
 

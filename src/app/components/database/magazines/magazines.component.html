@@ -2,6 +2,7 @@
   <tr>
     <th>Name</th>
     <th>Roll</th>
+    <th>Rare</th>
     <th>Perk</th>
     <th>Issues</th>
     <th>Issue roll</th>
@@ -10,6 +11,7 @@
   <tr *ngFor="let magazine of magazines">
     <td>{{magazine.name}}</td>
     <td>{{magazine.roll}}</td>
+    <td>{{magazine.rare ? 'Yes' : 'No'}}</td>
     <td>{{magazine.perk}}</td>
     <td>{{magazine.issue}}</td>
     <td>{{magazine.issueRoll}}</td>
