@@ -1,5 +1,5 @@
 <div class="header">
-  <p class="header-link" (click)="navigateTo('character')">Character</p>
-  <p class="header-link" (click)="navigateTo('database')">Database</p>
+  <p class="header-link" [ngClass]="{'active-link': selectedTable == 'character'}" (click)="navigateTo('character')">Character</p>
+  <p class="header-link" [ngClass]="{'active-link': selectedTable == 'database'}" (click)="navigateTo('database')">Database</p>
 </div>
 <router-outlet></router-outlet>

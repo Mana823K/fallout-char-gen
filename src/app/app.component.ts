@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,7 @@ import { Route, Router } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  get selectedTable(): string { return this.router.url.split("/")[1] ?? ""; }
 
   constructor(private router: Router) { }
 

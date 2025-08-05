@@ -1,5 +1,5 @@
-@import "./../style/colors.scss";
-@import "./../style/variables.scss";
+@use "./../style/colors.scss" as *;
+@use "./../style/variables.scss";
 
 .header {
   padding-left: 1rem;
@@ -14,7 +14,7 @@
   cursor: pointer;
   padding: 0.5rem 1rem;
   background-color: $primaryLightAccent;
-  border-radius: $borderRadius;
+  border-radius: variables.$borderRadius;
 
   &:hover {
     color: $accentDark;
@@ -24,3 +24,13 @@
     background-color: $accentLightAccent;
   }
 }
+
+.active-link {
+  background-color: $accentLight;
+  color: $accentDark;
+
+  &:hover {
+    background-color: $accentLightAccent;
+  }
+}
+
