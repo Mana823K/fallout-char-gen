@@ -3,48 +3,119 @@
     "name": "Brotherhood Initiate",
     "trait": {
       "name": "The Chain that Binds",
-      "description": "You gain one additional Tag skill, which must be one of Energy Weapons, Science, or Repair",
-      "effectName": "null"
+      "description": "You gain one additional Tag skill, which must be one of Energy Weapons, Science, or Repair"
     }
   },
   {
     "name": "Ghoul",
     "trait": {
       "name": "Necrotic Post-Human",
-      "description": "You are immune to radiation damage. In fact, you’re healed by it—you regain 1 HP for every 3 points of radiation damage inflicted upon you, and if you rest in an irradiated location, you may re-roll your dice pool when checking if your injuries heal. In addition, Survival becomes a Tag skill, increasing it by 2 ranks.",
-      "effectName": "null"
+      "description": "You are immune to radiation damage. In fact, you’re healed by it—you regain 1 HP for every 3 points of radiation damage inflicted upon you, and if you rest in an irradiated location, you may re-roll your dice pool when checking if your injuries heal. In addition, Survival becomes a Tag skill, increasing it by 2 ranks."
     }
   },
   {
     "name": "Super Mutant",
     "trait": {
       "name": "Forced Evolution",
-      "description": "Your initial Strength and Endurance attributes are increased by +2 each, and your maximum Strength and Endurance are increased to 12, but your maximum Intelligence and Charisma are both reduced to 6. You may not have more than 4 ranks in any skill. You are completely immune to radiation and poison damage.",
-      "effectName": "null"
+      "description": "Your initial Strength and Endurance attributes are increased by +2 each, and your maximum Strength and Endurance are increased to 12, but your maximum Intelligence and Charisma are both reduced to 6. You may not have more than 4 ranks in any skill. You are completely immune to radiation and poison damage."
     }
   },
   {
     "name": "Mister Handy",
     "trait": {
       "name": "Mister Handy Robot",
-      "description": "You have 360° vision and improved sensory systems that can detect smells, chemicals, and radiation, reducing the difficulty of Perception tests that rely on sight and smell by 1. You are also immune to radiation and poison damage, but you cannot use chems, nor can you benefit from food, drink, or rest. You move by jet propulsion, hovering above the ground, unaffected by difficult terrain or obstacles. Your carry weight is 150 lbs., and it cannot be increased by your Strength or perks, but it can be increased by modified armor. You cannot recover from your own injuries or heal health points without receiving repairs. You cannot manipulate the physical world like humans do, instead you have three of the arm attachments in the Arm Attachments table, determined by your choice of equipment pack. If you select an arm that features a weapon, you also gain 20 shots of ammo for that weapon.",
-      "effectName": "null"
+      "description": "You have 360° vision and improved sensory systems that can detect smells, chemicals, and radiation, reducing the difficulty of Perception tests that rely on sight and smell by 1. You are also immune to radiation and poison damage, but you cannot use chems, nor can you benefit from food, drink, or rest. You move by jet propulsion, hovering above the ground, unaffected by difficult terrain or obstacles. Your carry weight is 150 lbs., and it cannot be increased by your Strength or perks, but it can be increased by modified armor. You cannot recover from your own injuries or heal health points without receiving repairs. You cannot manipulate the physical world like humans do, instead you have three of the arm attachments in the Arm Attachments table, determined by your choice of equipment pack. If you select an arm that features a weapon, you also gain 20 shots of ammo for that weapon."
     }
   },
   {
     "name": "Survivor",
     "trait": {
       "name": "*Selectable*",
-      "description": "*Selectable*",
-      "effectName": "null"
+      "description": "*Selectable*"
     }
   },
   {
     "name": "Vault Dweller",
     "trait": {
       "name": "Vault Kid",
-      "description": "Your healthier start to life at the hands of trained doctors and sophisticated auto-docs means you reduce the difficulty of all END tests to resist the effects of disease. In addition, your carefully-planned upbringing means you have one additional tag skill of your choice",
-      "effectName": "null"
+      "description": "Your healthier start to life at the hands of trained doctors and sophisticated auto-docs means you reduce the difficulty of all END tests to resist the effects of disease. In addition, your carefully-planned upbringing means you have one additional tag skill of your choice"
+    }
+  },
+  {
+    "name": "Commonwealth Minuteman",
+    "trait": {
+      "name": "United We Stand",
+      "description": "Trade caravan posts in your settlements attract traders every 5 days rather than 7. Settlements you establish, by any means, have a base Defense resource of 4. You gain either Energy Weapons or Small Guns as a bonus tag skill (your choice). Your Damage Resistance is increased by +1 while in cover, and you deal +1CD damage while you and your companions are outnumbered."
+    }
+  },
+  {
+    "name": "New California Republic",
+    "trait": {
+      "name": "*Selectable*",
+      "description": "*Selectable*"
+    }
+  },
+  {
+    "name": "Protectron",
+    "trait": {
+      "name": "Protect or Destroy",
+      "description": "Once per scene, you may reroll a test to overcome an environmental hazard and use the new result. You are also immune to disease, and Radiation and Poison damage, but you cannot use chems, nor can you benefit from food, drink, or rest. You cannot recover from your injuries or heal health points without receiving repairs. You cannot have more than two robot mods installed simultaneously. You may be a Fire Brigadier, Law Enforcer, Construction Worker, Medical Responder, or a model of your own invention. When making a test directly related to your model’s purpose, the first d20 you buy using Action Points costs 0. Additionally, your carry weight is 225 lbs. and cannot be increased by your Strength or perks, but it can be increased by modified armor"
+    }
+  },
+  {
+    "name": "Robobrain",
+    "trait": {
+      "name": "Robobrain Robot",
+      "description": "You can ignore any difficulty increase to Perception tests in darkness. You are also immune to radiation and poison damage, but you cannot use chems, nor can you benefit from food, drink, or rest. You cannot recover your own injuries or heal health points without receiving repairs. You move on two continuous tracks, and have two tube-like manipulators as arms with opposable claws you can use to control tools and objects designed for humans with precision and make unarmed melee attacks. Your head has a built-in mesmetron, which you can use to make ranged attacks. Your carry weight is 150 lbs., and it cannot be increased by your Strength or perks, but it can be increased by modified armor."
+    }
+  },
+  {
+    "name": "Securitron",
+    "trait": {
+      "name": "Mark I Securitron",
+      "description": "You have forward-facing visual sensors that can detect the visual spectrum. You are also immune to radiation and poison damage, but you cannot use chems, nor can you benefit from food, drink, or rest. You cannot recover your own injuries or heal health points without receiving repairs. You move on a single tire, increasing the difficulty of skill tests to balance or remain upright by 1. Your arms are fitted with opposable claws, with which you can manipulate your environment rudimentarily and make unarmed melee attacks. The palms of your claws are outfitted with integrated weapons, as outlined in Choose Equipment, p.95. Your shoulders house missile launchers and a grenade launcher is integrated into the left arm, but they are both inoperable unless you are fitted with the Mk II operating system mod. Your carry weight is 150 lbs. It cannot be increased by your Strength or perks, but by modified armor."
+    }
+  },
+  {
+    "name": "Generation 3 Synth",
+    "trait": {
+      "name": "More Than Human",
+      "description": "You gain one additional tag skill. You cannot suffer from starvation or dehydration and do not need sleep, but you do not gain a benefit from consuming food or beverage items. When you rest, instead of sleeping, you may engage in minor activities such as crafting, reading, or light scouting. Additionally, you are immune to Poison and Radiation damage and disease. You do not age, nor do you gain or lose weight. When interacting with NPCs who know you are a synth—unless they are sympathetic towards synths—the difficulty of CHA tests made by you or your allies increases by 2. When a complication is rolled, they either become hostile, or your Faction Reputation or Settlement Reputation decreases by 1 per complication generated due to their fear of the Institute. The Institute has given you a unique recall code—an unalterable verbal command that resets your personality and memories. When you hear the code spoken, you become incapacitated until you are retrieved and restored by the Institute."
+    }
+  },
+  {
+    "name": "Assaultron",
+    "trait": {
+      "name": "Designed for the Frontline",
+      "description": "You are a robot, immune to disease, Radiation damage and Poison damage, but are unable to use chems or benefit from food, drink, or rest. You cannot recover from your injuries or regain health points without receiving repairs. Your carry weight is 150 lbs., and cannot be increased by your Strength or perks, but it can be increased by modified armor. You move by bipedal motion and can manipulate your environment using your actuated three-fingered claw-like hands. You have chain-powered limbs, built for speed and deadly efficiency in close-quarters fighting, giving you +1CD to unarmed attacks in addition to any bonus CD on melee attacks you receive from your Strength attribute. A powerful laser is integrated into your armored head, allowing you to target foes at range with a powerful energy weapon and you have the ability to critically overload your fusion core, initiating a devasting self-destructive explosion (see Assaultron Weapons)."
+    }
+  },
+  {
+    "name": "Brotherhood Outcast",
+    "trait": {
+      "name": "The Chain that Breaks",
+      "description": "You gain one additional Tag skill, which must be one of Energy Weapons, Science, or Repair. You gain an additional 1d20 junk and can spend 1 AP up to 3 times for 1 Uncommon material per AP spent. You can make one additional roll on the loot table without having to spend AP."
+    }
+  },
+  {
+    "name": "Child of Atom",
+    "trait": {
+      "name": "Rad Sponge",
+      "description": "Your unusual life experience grants you an extra perk at level one. You can resist, store, and even channel radiation through your body. Your base Radiation damage resistance is 1 and can be increased further by armor and perks. Once per scene, when someone in Close range to you would suffer Radiation damage, you can choose to take it instead. Whenever you suffer Radiation damage (minimum of 0), gain one Radiation Point up to a maximum of 5. When you hit with a melee attack, you may spend your stored Radiation Points—for every point you spend, deal an additional 2CD Radiation damage applied separately after inflicting the attack’s normal damage. When you sleep, you lose 1 Radiation Point."
+    }
+  },
+  {
+    "name": "Nightkin",
+    "trait": {
+      "name": "Stealth Boy Addict",
+      "description": "Your initial Strength and Endurance attributes are increased by +2 each, and your maximum Strength and Endurance are increased to 12, but your maximum Intelligence and Charisma are both reduced to 8. You may not have more than 4 ranks in any skill. You are completely immune to Radiation and Poison damage. Whenever you use a Stealth Boys, you roll 1CD for each dose you’ve taken this session. If you roll any Effects, you gain the following symptoms: Stealth Boy Addiction"
+    }
+  },
+  {
+    "name": "Tribal",
+    "trait": {
+      "name": "*Selectable*",
+      "description": "*Selectable*"
     }
   }
 ]
