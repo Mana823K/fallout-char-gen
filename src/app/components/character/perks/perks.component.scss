@@ -1,4 +1,4 @@
-@use "./../../../../style/colors.scss";
+@use "./../../../../style/colors.scss" as *;
 @use "./../../../../style/variables.scss";
 
 .button-container {
@@ -11,20 +11,20 @@
   border: none;
   border-radius: variables.$borderRadius;
   padding: 2pt 4pt;
-  color: colors.$primaryDark;
+  color: $primaryDark;
   font-size: 11pt;
 
   &:hover {
-    background-color: colors.$primaryLight;
+    background-color: $primaryLight;
   }
 }
 
 .selected-button {
-  background-color: colors.$accentLight;
-  color: colors.$accentDark;
+  background-color: $accentLight;
+  color: $accentDark;
 
   &:hover {
-    background-color: colors.$accentLightAccent;
+    background-color: $accentLightAccent;
   }
 }
 
@@ -36,39 +36,39 @@
 }
 
 .card {
-  background-color: colors.$primaryLight;
-  color: colors.$primaryDark;
+  background-color: $primaryLight;
+  color: $primaryDark;
   width: 200px;
-  border: 1pt solid colors.$primary;
+  border: 1pt solid $primary;
   border-radius: 1rem;
   padding: 1rem;
   cursor: pointer;
 }
 
 .card:hover {
-  background-color: colors.$primaryLightAccent;
+  background-color: $primaryLightAccent;
 }
 
 .disabled-card {
-  background-color: colors.$grayLight;
-  color: colors.$gray-text;
-  border-color: colors.$grayLightAccent;
+  background-color: $grayLight;
+  color: $gray-text;
+  border-color: $grayLightAccent;
   cursor: default;
 }
 
 .disabled-card:hover {
-  background-color: colors.$grayLight;
+  background-color: $grayLight;
 }
 
 .selected-card {
-  background-color: colors.$accentLight;
-  color: colors.$accentDark;
-  border-color: colors.$accent;
-  outline: 1pt solid colors.$accent;
+  background-color: $accentLight;
+  color: $accentDark;
+  border-color: $accent;
+  outline: 1pt solid $accent;
 }
 
 .selected-card:hover {
-  background-color: colors.$accentLightAccent;
+  background-color: $accentLightAccent;
 }
 
 p {
@@ -90,4 +90,30 @@ p {
 
 .property {
   text-decoration: underline;
+}
+
+.rank-field {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.rank-button-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rank-button {
+  width: 25px;
+  border: 1pt solid $primary;
+  border-radius: variables.$borderRadius;
+  padding: 2pt 4pt;
+  color: $accentDark;
+  font-size: 14pt;
+  background-color: $primaryLight;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primaryLightAccent;
+  }
 }

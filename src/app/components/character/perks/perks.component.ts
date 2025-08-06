@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Perk } from '../../../models/perk';
+import { Perk, PerkSaveData } from '../../../models/perk';
 import { DataService } from '../../../services/data.service';
 import { Special } from '../../../models/special';
 
@@ -26,7 +26,12 @@ export class PerksComponent implements OnInit {
 
   @Output() perksChanged = new EventEmitter<Perk[]>();
 
-  get selectedCount(): number { return this.perks.filter(x => x.isSelected).length; }
+  get ranksUsed(): number {
+    let sum = 0;
+    this.perks.forEach(x => { sum += x.ranks; });
+    return sum;
+  }
+  get isLimitReached(): boolean { return this.ranksUsed >= this.level; }
 
   showAll: boolean = false;
   showDetails: boolean = false;
@@ -35,39 +40,48 @@ export class PerksComponent implements OnInit {
     this.perks = this.dataService.perks;
 
     var storedData = localStorage.getItem(this.STORAGE_NAME);
-    var selectedNames: string[] = storedData?.split(";") ?? [];
-    this.perks.forEach(x => {
-      x.isSelected = selectedNames.includes(x.name);
-    });
+    var savedPerks = storedData ? JSON.parse(storedData) : [];
+    for (let savedPerk of savedPerks) {
+      let perk = this.perks.find(x => x.name == savedPerk.name);
+      if (perk) {
+        perk.ranks = savedPerk.ranks ?? 0;
+      }
+    }
   }
 
   ngOnInit(): void {
-    this.perks.forEach(x => {
-      x.updateAvailability(this.special, this.level);
-    });
-
-    this.orderPerks();
+    this.updatePerks();
     this.perksChanged.emit(this.perks);
   }
 
   updatePerks() {
     this.perks.forEach(x => {
       x.updateAvailability(this.special, this.level);
-      x.isSelected = x.isAvailable ? x.isSelected : false;
+      if (!x.isAvailable) {
+        x.ranks = 0;
+      }
     });
     this.orderPerks();
   }
 
   onPerksChanged() {
-    localStorage.setItem(this.STORAGE_NAME, this.perks.flatMap(x => x.isSelected ? x.name : []).join(";"));
+    let saveData: PerkSaveData[] = [];
+    for (let perk of this.perks) {
+      if (perk.isSelected)
+        saveData.push({
+          name: perk.name,
+          ranks: perk.ranks
+        });
+    }
+    localStorage.setItem(this.STORAGE_NAME, JSON.stringify(saveData));
     this.perksChanged.emit(this.perks);
   }
 
   perkSelected(perk: Perk) {
-    if (!perk.isAvailable || (this.selectedCount >= this.level && !perk.isSelected))
+    if (!perk.isAvailable || (this.isLimitReached && !perk.isSelected))
       return;
 
-    perk.isSelected = !perk.isSelected;
+    perk.ranks = perk.isSelected ? 0 : 1;
 
     this.onPerksChanged();
     this.orderPerks();
@@ -88,6 +102,20 @@ export class PerksComponent implements OnInit {
       return a.name.localeCompare(b.name);
     });
 
-  this.availablePerks = this.perks.filter(x => x.isAvailable);
+    this.availablePerks = this.perks.filter(x => x.isAvailable);
+  }
+
+  addRank(perk: Perk) {
+    perk.ranks++;
+    this.onPerksChanged();
+  }
+
+  removeRank(perk: Perk) {
+    perk.ranks--;
+
+    this.onPerksChanged();
+    if (perk.ranks == 0) {
+      this.orderPerks();
+    }
   }
 }

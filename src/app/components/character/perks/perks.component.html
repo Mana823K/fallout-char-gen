@@ -6,12 +6,24 @@
 </div>
 
 <div class="cards-container">
-  <div *ngFor="let perk of showAll ? perks : availablePerks" class="card" [ngClass]="{'disabled-card': !perk.isAvailable || (selectedCount >= level && !perk.isSelected), 'selected-card': perk.isSelected}" (click)="perkSelected(perk)">
+  <div *ngFor="let perk of showAll ? perks : availablePerks"
+        class="card"
+        [ngClass]="{'disabled-card': !perk.isAvailable || (isLimitReached && !perk.isSelected), 'selected-card': perk.isSelected}"
+        (click)="perkSelected(perk)">
     <p class="perk-name mb-05" [matTooltip]="perk.description" [matTooltipShowDelay]="400">
       {{perk.name}}
       <mat-icon *ngIf="!showDetails" class="info-icon">info_outline</mat-icon>
     </p>
-    <p class="mb-05"><span class="property">Ranks:</span> {{perk.maxRanks}}</p>
+    <div class="mb-05 rank-field">
+      <span class="property">Ranks:</span> {{perk.ranks}} / {{perk.maxRanks}}
+      <div class="rank-button-group" *ngIf="perk.isSelected" (click)="$event.stopPropagation()">
+        <button class="rank-button" (click)="removeRank(perk)">-</button>
+        <button class="rank-button"
+                [ngClass]="{'rank-button-disabled': perk.ranks == perk.maxRanks}"
+                [disabled]="perk.ranks == perk.maxRanks"
+                (click)="addRank(perk)">+</button>
+      </div>
+    </div>
     <p class="mb-05"><span class="property">Requirements:</span> {{perk.requirementText}}</p>
     <p *ngIf="showDetails">{{perk.description}}</p>
   </div>

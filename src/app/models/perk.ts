@@ -9,7 +9,7 @@ export class Perk {
   description: string = "";
 
   ranks: number = 0;
-  isSelected: boolean = false;
+  get isSelected(): boolean { return this.ranks > 0; }
   isAvailable: boolean = true;
 
   updateAvailability(special: Special, level: number) {
@@ -86,4 +86,9 @@ export class PerkData {
 
     return result;
   }
+}
+
+export class PerkSaveData {
+  name: string = "";
+  ranks: number = 0;
 }
