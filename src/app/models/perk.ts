@@ -5,10 +5,17 @@ export class Perk {
   name: string = "";
   maxRanks: number = 1;
   requirements: PerkRequirement = new PerkRequirement();
+  levelSteps: number = 0;
   requirementText: string = "";
   description: string = "";
 
-  ranks: number = 0;
+  private _ranks: number = 0;
+  public get ranks(): number { return this._ranks; }
+  public set ranks(value: number) {
+    this._ranks = value;
+    this.setRequirementText();
+  }
+
   get isSelected(): boolean { return this.ranks > 0; }
   isAvailable: boolean = true;
 
@@ -33,7 +40,7 @@ export class Perk {
     if (this.requirements.int > 0) { result.push(`${SpecialEnum.INT} ${this.requirements.int}`) }
     if (this.requirements.agi > 0) { result.push(`${SpecialEnum.AGI} ${this.requirements.agi}`) }
     if (this.requirements.lck > 0) { result.push(`${SpecialEnum.LCK} ${this.requirements.lck}`) }
-    if (this.requirements.level > 0) { result.push(`Level ${this.requirements.level}+`) }
+    if (this.requirements.level > 0) { result.push(`Level ${this.requirements.level + this.levelSteps * this.ranks}+`) }
     if (this.requirements.other && this.requirements.other.length > 0) { result.push(this.requirements.other) }
 
     this.requirementText = result.length > 0 ? result.join(", ") : "None";
@@ -64,6 +71,7 @@ export class PerkData {
   agi: number = 0;
   lck: number = 0;
   other?: string;
+  levelSteps?: number;
   desc: string = "";
 
   static map(original: PerkData): Perk {
@@ -80,6 +88,7 @@ export class PerkData {
     result.requirements.agi = original.agi;
     result.requirements.lck = original.lck;
     result.requirements.other = original.other;
+    result.levelSteps = original.levelSteps ?? result.levelSteps;
     result.description = original.desc;
 
     result.setRequirementText();

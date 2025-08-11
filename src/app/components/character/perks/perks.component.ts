@@ -120,6 +120,6 @@ export class PerksComponent implements OnInit {
   }
 
   isAddRankDisabled(perk: Perk): boolean {
-    return perk.ranks == perk.maxRanks || this.isLimitReached;
+    return perk.ranks == perk.maxRanks || this.level < perk.requirements.level + perk.levelSteps * perk.ranks || this.isLimitReached;
   }
 }

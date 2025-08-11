@@ -25,6 +25,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 3,
     "desc": "When you suffer damage, the amount of damage needed to inflict a critical hit on you increases by your rank in this perk. For example, if you have one rank in this perk, you suffer a critical hit from 6 or more damage, rather than 5 or more. Each time you take this perk, the level requirement increases by 3."
   },
   {
@@ -53,6 +54,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "At rank 1, whenever a creature NPC with the Mammal, Lizard, or Insect keyword would attack you, roll 1DCD  : on any result other than an Effect, the creature chooses not to attack you, although it may still attack another character it can target. At rank 2, you can attempt a CHA + Survival test with a difficulty of 2 as a major action. If you succeed, the animal treats you as friendly and will attack anyone who attacks you. Mighty and Legendary animals are unaffected by this perk. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -67,6 +69,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 3,
     "desc": "Water is your ally. At rank 1, you no longer take radiation damage from swimming in irradiated water, and you can hold your breath for twice as long as normal. At rank 2, enemies add +2 to the difficulty to tests to detect you while you are submerged underwater. Each time you take this perk, the level requirement increases by 3."
   },
   {
@@ -179,6 +182,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "You can modify melee weapons with weapon mods. Each rank in this perk unlocks an additional rank of melee weapon mods: rank 1 unlocks rank 1 mods, rank 2 unlocks rank 2 mods, and rank 3 unlocks rank 3 mods. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -193,6 +197,7 @@
     "agi": 9,
     "lck": 0,
     "other": "",
+    "levelSteps": 3,
     "desc": "When you move into reach of an opponent and make a melee attack against them in one turn, you may re-roll one d20 on your attack. At rank 2, you also inflict +1DCD damage with that attack. Each time you take this perk, the level requirement increases by 3."
   },
   {
@@ -277,6 +282,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "At rank 1, roll one fewer CD  when determining if you become addicted to chems, to a minimum of 0. At rank 2, you cannot become addicted to chems. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -305,6 +311,7 @@
     "agi": 8,
     "lck": 0,
     "other": "",
+    "levelSteps": 3,
     "desc": "When you make a ranged attack with any weapon with a Fire Rate of 3 or higher (except heavy weapons), you add +1DCD  per rank to the weapon’s damage. Each time you take this perk, the level requirement increases by 3."
   },
   {
@@ -375,6 +382,7 @@
     "agi": 6,
     "lck": 0,
     "other": "",
+    "levelSteps": 6,
     "desc": "At rank 1, when you take the Defend major action, you reduce the difficulty of the skill test by 1. At rank 2, the AP cost to further increase your Defense is reduced to 1 AP. Each time you take this perk, the level requirement increases by 6."
   },
   {
@@ -417,6 +425,7 @@
     "agi": 0,
     "lck": 0,
     "other": "not a robot",
+    "levelSteps": 3,
     "desc": "When you regain one or more HP from any source other than rest, increase the total HP regained by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 3."
   },
   {
@@ -459,6 +468,7 @@
     "agi": 0,
     "lck": 5,
     "other": "",
+    "levelSteps": 4,
     "desc": "Whenever you roll to determine how much money you find, you find more. At rank 1, you find +3DCD  additional caps. At rank 2, you find +6DCD  additional caps. At rank 3, you find +10CD  additional caps. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -501,6 +511,7 @@
     "agi": 10,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "When you succeed at a ranged attack, you may spend 1 AP and 1 ammo to hit a second target within Close range of your initial target. The second target takes the same damage as the initial target. At rank 2, you may spend 2 AP and 2 ammo to hit two additional targets. At rank 3, you may spend 3 AP and 3 ammo to hit three additional targets. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -515,6 +526,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "You can modify small guns and heavy weapons with weapon mods. Each rank in this perk unlocks an additional rank of weapon mods: rank 1 unlocks rank 1 mods, rank 2 unlocks rank 2 mods, etc. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -529,6 +541,7 @@
     "agi": 7,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "When you make an attack with a onehanded ranged weapon with a Fire Rate of 2 or lower, you increase the weapon’s damage by +1CD  per rank. In addition, you may re-roll the hit location die. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -557,6 +570,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "When you heal a patient’s HP using the First Aid action, increase the amount of HP healed by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -627,6 +641,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 2,
     "desc": "Increase any one S.P.E.C.I.A.L attribute by 1 rank. As usual, your S.P.E.C.I.A.L attributes cannot be increased beyond 10 using this method. Each time you take this perk, the level requirement increases by 2."
   },
   {
@@ -641,6 +656,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "At rank 1, your unarmed attacks inflict +1DCD  damage. At rank 2, your unarmed attacks also gain the Vicious damage effect. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -683,6 +699,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "When you make an attack with a ranged energy weapon, the damage is increased by +1DCD  per rank in this perk. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -697,6 +714,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "At rank 1, you may re-roll the CD  to determine if you suffer radiation damage from irradiated food or drink. At rank 2, you are immune to radiation damage from consuming irradiated food or drink. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -711,6 +729,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "Increase your maximum health points by your Endurance rank. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -823,6 +842,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "While your health is reduced to less than ¼ of your maximum, you add +1 to your physical DR, +1 to your energy DR, and +1CD  to the damage of all your attacks. At rank 2, this increases to +2 DR, and +2CD  damage. At rank 3, this increases to +3 DR and +3CD  damage. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -879,6 +899,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "You may Charge as a major action if you are wearing Power Armor or are a super mutant. This is a movement action, and you may not Move or Sprint in the same turn. When you take this action, you move into reach of an enemy within Medium range (1 zone) and make a STR + Athletics test with a difficulty of 2. If you succeed, the enemy suffers damage equal to your normal unarmed damage, and is knocked prone. At rank 2, you add +1DCD  and the Stun damage effect to the damage inflicted. At the GM’s discretion, especially large or sturdy creatures cannot be knocked prone by this action. Each time you take this perk, the level requirement increases by 5"
   },
   {
@@ -977,6 +998,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "The damage you deal using firebased weapons increases by +1CD per rank. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -1019,6 +1041,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "Your radiation Damage Resistance, to all hit locations, increases by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -1033,6 +1056,7 @@
     "agi": 0,
     "lck": 7,
     "other": "",
+    "levelSteps": 4,
     "desc": "Your energy Damage Resistance to all hit locations increases by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -1061,6 +1085,7 @@
     "agi": 7,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "When you make a ranged attack with any two-handed weapon with a Fire Rate of 2 or lower (except heavy weapons), you add +1 CD  to the weapon’s damage per rank. At rank 2, you also add the Piercing 1 damage effect, or add +1 to the rating of any Piercing X damage effect the weapon already had. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -1075,6 +1100,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "At rank 1, you can modify robot armor, weapon mounts, and modules with rank 1 mods. At rank 2 you gain access to rank 2 mods, and the difficulty of tests to repair robots is permanently reduced by 1. At rank 3 you gain  access to rank 3 mods, and you can reprogram robots to fulfil a different function or alter their behavior at the discretion of the GM. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -1089,6 +1115,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "You can modify energy weapons with weapon mods, and you can also craft certain advanced armor mods. Each rank in this perk unlocks an additional rank of mods: rank 1 unlocks rank 1 mods, rank 2 unlocks rank 2 mods, etc. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -1117,6 +1144,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "When you scrap an item, you can salvage uncommon component materials as well as common ones (see p.208). At rank 2, you can also salvage rare materials. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -1131,6 +1159,7 @@
     "agi": 0,
     "lck": 6,
     "other": "",
+    "levelSteps": 5,
     "desc": "Whenever you roll to determine how much ammunition you find, you find more. At rank 1, you find +3CD  additional shots. At rank 2, you find +6CCD  additional shots. At rank 3, you find +10 CD  additional shots. The additional ammo you find is the same as initially found, for example, if you find 10mm ammunition, this perk increases how much 10mm ammo you find. If you find multiple types of ammunition, Scrounger applies to the ammunition with the lowest rarity (GM’s choice if there is a tie). Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -1159,6 +1188,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 3,
     "desc": "Add +1 rank to two skills or add +2 ranks to one skill. No skill may have more than 6 ranks. Each time you take this perk, the level requirement increases by 3."
   },
   {
@@ -1173,6 +1203,7 @@
     "agi": 6,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "When you make a ranged attack with any heavy weapon, you add +1CD  to the weapon’s damage, per rank. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -1271,6 +1302,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 2,
     "desc": "Your maximum carry weight is increased by +25 lbs., per rank. Each time you take this perk, the level requirement increases by 2."
   },
   {
@@ -1299,6 +1331,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "When you make a Speech test to threaten or scare someone, you may re-roll 1d20. At rank 2, you may use a major action in combat to threaten an enemy within Medium range, using a STR + Speech test with a difficulty of 2. If you succeed, that enemy must move away from you during their next turn (though they can take any other actions they wish). Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -1313,6 +1346,7 @@
     "agi": 0,
     "lck": 6,
     "other": "",
+    "levelSteps": 4,
     "desc": "Your physical Damage Resistance to all hit locations increases by +1 per rank in this perk. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -1341,6 +1375,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "Sometimes you have the wrong bullets for the right gun, and somehow you make it work with the materials that you have. You can craft a single piece of ammunition using materials at a weapons workbench treating its rarity as its complexity (p.211).  At rank 1, you can craft ammunition up to rarity 1. At rank 2, you can craft ammunition up to a rarity of 3. Additionally, you can now dismantle ammunition gaining half of the materials normally required to craft the ammunition (rounded down to a minimum of 1). At rank 3, you can craft ammunition up to a rarity of 5. When crafting ammunition, you can roll a number of CD  equal to 6 reduced by the rarity of the ammunition being crafted. Every hit rolled increases the amount of ammunition crafted by +1. For every effect rolled, double the amount of ammunition crafted. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -1355,7 +1390,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
-    "desc": "Each player character and companion (other than you) within Close range of you increases your Damage Resistance and Energy Resistance  y +1."
+    "desc": "Each player character and companion (other than you) within Close range of you increases your Damage Resistance and Energy Resistance by +1."
   },
   {
     "name": "COMMUNITY ORGANIZER",
@@ -1369,6 +1404,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 3,
     "desc": "Even in the worst of days, you find a way to bring people’s spirits up and maintain a thriving settlement. For each rank of this perk,  our community gains +1 Food and +1 Defense per day so long as the resource is maintained by at least one person. Additionally add +1 CD or the settlement actions Hunting and Gathering as well as Scavenging. Each time you take this perk, the level requirement increases by 3."
   },
   {
@@ -1383,6 +1419,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "When building structures for your settlement, you know how to make the process faster, cheaper, and overall more efficient. At rank 1, when you start constructing something, you can reduce the number of materials required to construct something by half (to a minimum of 1 unit of each material type), decreasing the overall Happiness by 2. You can double the amount of construction time required to ignore the reduction in Happiness. At rank 2, you can have a person take a settlement action to construct an object even if they do not have the required skill. Doing so reduces the settlement’s overall Happiness by 1. If you have at least one person working on the construction object that has the skill, then you can ignore the reduction in Happiness. At rank 3, you can have a person take a settlement action to construct an object even if they do not have the required perk, but at least one person working on the object still must have the perk. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -1453,6 +1490,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "At rank 1, if your hunger state is full or sated, and you have set up a camp with a source of heat like a campfire, your hunger does not deteriorate. At rank 2, if your thirst state is quenched or hydrated, and you have set up a camp with a source of heat like a campfire, your thirst does not deteriorate. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -1481,6 +1519,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "You can set traps to protect your property from intruders! At rank 1, you can craft traps from the Traps section (Settlers p.189). Traps have a complexity of 2 and require the components for a complexity 2 item. If you fail the INT + Repair test, your trap misfires— resolve the trap’s effect against yourself. At rank 2, when you fail the INT + Repair test to set the trap it does not misfire. Instead you succeed at cost, and the gamemaster creates a complication related to the trap (i.e., it is easier to spot, deals less damage, or otherwise doesn’t work as intended). Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -1495,6 +1534,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "You do not need to sleep while in a settlement you belong to recuperate. At rank 1, when you spend an hour in a settlement you belong to or manage, roll a number of CD equal to your Endurance rank, andregain its result in HP. At rank 2, you regain an additional hit point per Effect rolled. Whenever you make an END + Survival test to recover from an injury, the difficulty is reduced to a maximum of 2 (light activity on the Injury Recovery Difficulty table, p.35). Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -1509,6 +1549,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "You are the person that people turn to, and with that have a certain amount of influence on the development of settlements and communities. At rank 1, you can establish a supply line between two settlements you have a reputation rank of at least Friendly (3) with (Settlers, p.52). To establish a supply line, you must have at least one available settler in either settlement to make the shipments. Once established, any available supplies or resources in one settlement can be made available in another settlement so long as that settlement’s Happiness is greater than the number of people in the settlement. At rank 2, you can request the construction of various stores and crafting tables in a settlement. This rank is required for a settlement to add Trading Stores, Clothing Stores, Armor Stores, Weapon Stores, Drinking Establishments, and Medical Establishments, as well as an Armor Workbench, Chemistry Station, Cooking Station, Power Armor Station, Weapons Workbench, and a Robot Workbench. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -1565,6 +1606,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 6,
     "desc": "RadAway you administer now heals 2 additional Radiation damage. At rank 2, it heals an additional 3 Radiation damage, and at rank 3 it heals an additional 4 Radiation damage. Each time you take this perk, the level requirement increases by 6."
   },
   {
@@ -1579,6 +1621,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 10,
     "desc": "When you are in direct sunlight you regenerate 1 HP every hour. At rank 2 you regenerate 2 HP every hour in direct sunlight. Each time you take this perk, the level requirement increases by 10."
   },
   {
@@ -1621,6 +1664,7 @@
     "agi": 0,
     "lck": 8,
     "other": "",
+    "levelSteps": 5,
     "desc": "If you do not take damage from an attack due to your Damage Reduction (DR), recover +1 HP and add 1 AP to the group pool. This effect can only trigger once per round of combat per rank you have in this perk. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -1663,6 +1707,7 @@
     "agi": 0,
     "lck": 6,
     "other": "",
+    "levelSteps": 4,
     "desc": "Whenever you craft an item, roll 1 CD. If you roll any Effects, you regain half the components you spent rounding down. Check each rarity of the components separately and regain half of each, rounding down. At rank 2, you roll 2 CD  . At rank 3, you roll 3 CD. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -1677,6 +1722,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 4,
     "desc": "At rank 1, whenever a creature NPC would roll to damage an ally in the same zone as you, roll 1 CD. On any result other than Effect, you take the damage from the attack instead. This effect can only trigger once per round of combat per rank you have in this perk. At rank 2, if you take damage from the attack after calculating damage reduction, add 1 AP to the pool for each rank you have in this perk. At rank 3, after you have taken the damage you and the ally can reroll 1d20 on the next attack you make against the target that attacked for each rank you have in this perk. Each time you take this perk, the level requirement increases by 4."
   },
   {
@@ -1719,6 +1765,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "At rank 1, when you are struck by a melee attack, count your Physical damage resistance or Energy damage resistance (according to the attack’s damage) as +1 higher. At rank 2, this extra resistance increases to +2. At rank 3, it increases to +3. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -1733,6 +1780,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 6,
     "desc": "When you are wielding a big gun, increase your damage resistance by +2. At rank 2, this increases to +3. At rank 3, this increases to +4. Each time you take this perk, the level requirement increases by 6."
   },
   {
@@ -1747,6 +1795,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "When you are wielding a one-handed melee weapon, increase the weapon’s damage by +1 CD. At rank 2, this increases to +2 CD. At rank 3, this increases to +3 CD. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -1761,6 +1810,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 9,
     "desc": "When you are wielding a melee weapon, the weapon gains the Piercing 1 damage effect, or adds +1 to the rating of any Piercing X damage effect the weapon already had. At rank 2, this increases to Piercing 2, or adding +2 to any Piercing X damage effect the weapon already had. Each time you take this perk, the level requirement increases by 9."
   },
   {
@@ -1775,6 +1825,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "When you are wielding a big gun with a Fire Rate of 2 or higher, the weapon’s Fire Rate is increased by +1. At rank 2, the weapon’s Fire Rate is increased by +2 instead. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -1831,6 +1882,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 8,
     "desc": "Armor you are wearing—except for Power Armor—counts as three-quarters of its listed weight. At rank 2, armor worn counts as half its listed weight. At rank 3, armor worn counts as one-quarter its listed weight. Each time you take this perk, the level requirement increases by 8."
   },
   {
@@ -1845,6 +1897,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 7,
     "desc": "When you are wielding a bow or crossbow, increase the weapon’s damage by +1 CD. At rank 2, this increases to +2 CD. At rank 3, this increases to +3 CD. Each time you take this perk, the level requirement increases by 7."
   },
   {
@@ -1873,7 +1926,8 @@
     "agi": 0,
     "lck": 0,
     "other": "",
-    "desc": "When you successfully butcher a dead animal, you may roll +1 CD, and find additional portions of meat (as noted in the creature’s stat block) equal to the total rolled. At rank 2, this increases to +2 CD. At rank 3, this increases to 3 CD. Each time you take this perk, the level requirement increases by +5."
+    "levelSteps": 5,
+    "desc": "When you successfully butcher a dead animal, you may roll +1 CD, and find additional portions of meat (as noted in the creature’s stat block) equal to the total rolled. At rank 2, this increases to +2 CD. At rank 3, this increases to 3 CD. Each time you take this perk, the level requirement increases by 5."
   },
   {
     "name": "CRACK SHOT",
@@ -1887,7 +1941,8 @@
     "agi": 0,
     "lck": 0,
     "other": "",
-    "desc": "When you make a ranged attack with a one-handed ranged weapon, and you aimed before the attack, the weapon’s range increases by one step (i.e., from Close to Medium, or from Medium to Long). At rank 2, the weapon also gains the Accurate quality if it didn’t possess it already. Each time you take this perk, the level requirement increases by +7."
+    "levelSteps": 7,
+    "desc": "When you make a ranged attack with a one-handed ranged weapon, and you aimed before the attack, the weapon’s range increases by one step (i.e., from Close to Medium, or from Medium to Long). At rank 2, the weapon also gains the Accurate quality if it didn’t possess it already. Each time you take this perk, the level requirement increases by 7."
   },
   {
     "name": "FIRE IN THE HOLE",
@@ -1915,6 +1970,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 8,
     "desc": "When you make an attack against a Glowing enemy, you inflict +1 CD damage. At rank 2, this increases to +2 CD. At rank 3, this increases to +3 CD. Each time you take this perk, the level requirement increases by +8."
   },
   {
@@ -1985,6 +2041,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 7,
     "desc": "You gain +1 Energy damage resistance against Flamers, Molotov Cocktails, and other fire-based weapons, as well as any weapons with the Blast quality. At rank 2, this increases to +2. At rank 3, this increases to +3. Each time you take this perk, the level requirement increases by +7."
   },
   {
@@ -1999,6 +2056,7 @@
     "agi": 0,
     "lck": 0,
     "other": "not a ghoul or robot",
+    "levelSteps": 8,
     "desc": "Like a ghoul, your body heals when you’re exposed to radiation. You regain 1 HP for every 4 Radiation damage you suffer. At rank 2, you instead regain 1 HP for every 3 Radiation damage you suffer. At rank 3, you instead heal 1 HP for every 2 Radiation damage you suffer. Your maximum HP is still reduced by Radiation damage. Each time you take this perk, the level requirement increases by +8"
   },
   {
@@ -2013,6 +2071,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "While wearing armor (except Power Armor), add +1 to your Physical damage resistance and Energy damage resistance. At rank 2, this increases to +2. At rank 3, this increases to +3. Each time you take this perk, the level requirement increases by +5."
   },
   {
@@ -2125,6 +2184,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 7,
     "desc": "When you succeed at a First Aid action in combat to stabilize a dying ally, you no longer need to spend 1 AP to wake them from unconsciousness. In addition, the patient heals 2 HP at the start of their next turn. At rank 2, they heal 4 HP at the start of their next two turns. At rank 3, they heal 6 HP at the start of their next three turns. Each time you take this perk, the level requirement increases by +7."
   },
   {
@@ -2195,6 +2255,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 9,
     "desc": "When you succeed at a First Aid action to stabilize a dying ally, you regain 1 HP. At rank 2, you regain 2 HP, and a further 2 HP at the start of your next turn. At rank 3, you regain 3 HP, and you regain 3 HP at the start of your next two turns. Each time you take this perk, the level requirement increases by +9."
   },
   {
@@ -2209,6 +2270,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 10,
     "desc": "When you successfully attack an enemy, you may spend 1 AP to suppress them until the end of their next turn. A suppressed enemy reduces the damage they inflict with their attacks by 1 CD. At rank 2, a suppressed enemy reduces the damage they inflict by 2 CD. At rank 3, a suppressed enemy reduces the damage they inflict by 3 CD. Each time you take this perk, the level requirement increases by +10."
   },
   {
@@ -2223,6 +2285,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 10,
     "desc": "When you hit an enemy with a melee or ranged attack, you may spend 1 AP to make them vulnerable until the end of their next turn. While vulnerable, any attack made against that enemy is increased by +1 CD. At rank 2, a vulnerable enemy increases damage they receive by +2 CD. At rank 3, a vulnerable enemy increases damage they receive by +3 CD. Each time you take this Perk, the level requirement increases by +10."
   },
   {
@@ -2251,6 +2314,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 7,
     "desc": "When you repair the HP of a piece of Power Armor, repair an additional 2 HP. At rank 2, this increases to 3 HP. At rank 3, this increases to 4 HP. Each time you take this perk, the level requirement increases by +7"
   },
   {
@@ -2265,6 +2329,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
+    "levelSteps": 10,
     "desc": "Fusion Cores you use now contain 3 additional charges. At rank 2, this increases to 6 additional charges. At rank 3, this increases to 10 additional charges. Each time you take this perk, the level requirement increases by 10."
   },
   {
@@ -2293,6 +2358,7 @@
     "agi": 8,
     "lck": 0,
     "other": "",
+    "levelSteps": 8,
     "desc": "When you suffer damage that would reduce your HP to below one-quarter of your maximum HP, you may automatically use a Stimpak (including a Diluted Stimpak or Super Stimpak). You may do this once per scene. At rank 2, you may do this 2 times per scene. At rank 3, you may do this 3 times per scene. Each time you take this perk, the level requirement increases by 8."
   },
   {
@@ -2349,6 +2415,7 @@
     "agi": 7,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "You have +2 Physical damage resistance against falling damage. At rank 2, this increases to +4. At rank 3, this increases to +6. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -2363,6 +2430,7 @@
     "agi": 7,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "When you make an attack with a one-handed ranged weapon and don’t aim, a successful attack scores one additional AP, which may not be saved. At rank 2, this increases to 2 additional AP. At rank 3, this increases to 3 additional AP. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -2377,6 +2445,7 @@
     "agi": 9,
     "lck": 0,
     "other": "",
+    "levelSteps": 5,
     "desc": "When you use a Stealth Boy, it lasts for one additional turn. At rank 2, this increases to 2 additional turns. At rank 3, this increases to 3 additional turns. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -2405,6 +2474,7 @@
     "agi": 0,
     "lck": 7,
     "other": "",
+    "levelSteps": 8,
     "desc": "For every 5 items of Junk you are carrying, add +1 to your Physical damage resistance and Energy damage resistance. The maximum bonus to your Physical damage resistance and Energy damage resistance is equal to your rank in this perk. You do not gain this additional Physical damage resistance or Energy damage resistance while wearing Power Armor. Each time you take this perk, the level requirement increases by 8."
   },
   {
@@ -2433,6 +2503,7 @@
     "agi": 0,
     "lck": 8,
     "other": "",
+    "levelSteps": 6,
     "desc": "When you kill an enemy, roll a number of  CD equal to your rank in this perk. For each Effect rolled, regain 1 Luck point, up to your maximum Luck points. Each time you take this perk, the level requirement increases by 6."
   },
   {
@@ -2447,6 +2518,7 @@
     "agi": 0,
     "lck": 7,
     "other": "",
+    "levelSteps": 6,
     "desc": "When your current HP is below one-third of your maximum HP, whenever you are attacked, you may spend 1 Luck point before any dice are rolled to have the attack miss. You may do this a number of times per scene equal to your rank in this perk. Each time you take this perk, the level requirement increases by 6."
   },
   {
@@ -2489,6 +2561,7 @@
     "agi": 0,
     "lck": 0,
     "other": "rare book",
+    "levelSteps": 6,
     "desc": "When you succeed at a melee attack, if you are wearing Power Armor or are a super mutant, you may spend 3 AP to break a weapon your target was wielding. The broken weapon can no longer be used until repaired. At rank 2, the cost to do this is reduced to 2 AP. At rank 3, the cost to do this is reduced to 1 AP. Each time you take this perk, the level requirement increases by 6"
   },
   {
@@ -2503,6 +2576,7 @@
     "agi": 0,
     "lck": 0,
     "other": "rare book",
+    "levelSteps": 6,
     "desc": "When you are reduced to 0 HP, all other party members and companions gain +2 to Physical and Energy damage resistance, and immediately regain 4 HP. At rank 2, increase the amount of HP regained by 2. At rank 3, increase the amount of Physical and Energy damage resistance +3 each, and increase the amount of HP regained by a further +2. Each time you take this perk, the level requirement increases by 6."
   },
   {
@@ -2531,6 +2605,7 @@
     "agi": 0,
     "lck": 0,
     "other": "rare book",
+    "levelSteps": 5,
     "desc": "You’ve discovered the recipe to a potent combat stimulant, Super Chem Mk I which makes you far tougher and deadlier in a fight with few drawbacks. However, the drug has a very short lifespan, and the mixture becomes useless after a matter of hours. At rank 1, each dose created becomes useless 6 hours after being created. At rank 2, this increases to 12 hours. At rank 3, this increases to 24 hours. Each time you take this perk, the level requirement increases by 5."
   },
   {
@@ -2573,6 +2648,7 @@
     "agi": 0,
     "lck": 0,
     "other": "rare book",
+    "levelSteps": 9,
     "desc": "Once per scene, if you are a robot or wearing power armor, when you are hit by an attack dealing Energy damage, you may spend a Luck point to absorb that attack. An absorbed attack deals no damage. Instead, you regain HP (if in power armor, these will be Armor HP on the location hit) equal to the number of Effects rolled on the attack’s damage roll. In addition, power armor regains one charge to its fusion core. At higher ranks, this perk may be used a number of times per scene equal to its rank. Each time you take this perk, the level requirement increases by 9."
   },
   {
@@ -2587,6 +2663,7 @@
     "agi": 0,
     "lck": 0,
     "other": "rare book",
+    "levelSteps": 9,
     "desc": "When you succeed at a melee attack with an Unarmed weapon, you may spend 1 AP for the attack to be an Exploding Palm strike: when making an Exploding Palm strike, each Effect rolled causes one enemy within Close range of the target (starting with those within Reach of the initial target, excluding yourself) to suffer 3 CD physical damage. At rank 2, the explosion damage increases to 4 CD. At rank 3, this increases to 5 CD. Each time you take this perk, the level requirement increases by 9"
   },
   {
@@ -2615,6 +2692,7 @@
     "agi": 0,
     "lck": 0,
     "other": "rare book",
+    "levelSteps": 7,
     "desc": "When you are wearing a full set of a single type of armor—i.e., all Sturdy Leather Armor, or all Heavy Combat Armor, or all T-51 Power Armor, on all the locations which can have a piece of that type of armor—you gain an additional +5 Poison damage resistance. At rank 2, this increases to +8. At rank 3, this increases to +10. Each time you take this perk, the level requirement increases by 7."
   },
   {
@@ -2629,6 +2707,7 @@
     "agi": 0,
     "lck": 0,
     "other": "rare book",
+    "levelSteps": 8,
     "desc": "When you succeed at a ranged sneak attack against an enemy, all attacks against that enemy until the start of your next turn inflict +1 CD damage. At rank 2, this increases to +2 CD. At rank 3, this increases to +3 CD. Each time you take this perk, the level requirement increases by 8."
   },
   {
@@ -2643,6 +2722,7 @@
     "agi": 0,
     "lck": 0,
     "other": "rare book",
+    "levelSteps": 8,
     "desc": "At rank 1, when you succeed at a melee attack, you may spend AP to have one additional enemy within Reach also takes the attack’s full damage: the AP required is the Defense of the additional target. At rank 2, you may affect up to two additional enemies this way, spending AP for each. At rank 3, you may affect up to three additional enemies, and the AP cost to affect them is reduced by 1, to a minimum of 1. Each time you take this perk, the level requirement increases by 8."
   },
   {
@@ -2657,6 +2737,7 @@
     "agi": 0,
     "lck": 0,
     "other": "rare book",
+    "levelSteps": 8,
     "desc": "When you attempt to unlock a lock using a Lockpick test, or attempt to hack a terminal with a Science test, you may spend 1 Luck point to automatically succeed at a test of a certain difficulty or lower. At rank 1, you may automatically succeed at difficulty 1 tests. At rank 2, you may automatically succeed at difficulty 2 or lower tests. At rank 3, you may automatically succeed at difficulty 3 or lower tests. Each time you take this perk, the level requirement increases by 8."
   },
   {
@@ -2671,6 +2752,7 @@
     "agi": 0,
     "lck": 0,
     "other": "rare book",
+    "levelSteps": 6,
     "desc": "You’ve discovered the plans for a type of lightweight nuclear warhead. However, the radioactive material decays very quickly, and the device becomes useless after a matter of hours. At rank 1, each device created becomes useless 6 hours after being created. At rank 2, this increases to 12 hours. At rank 3, this increases to 24 hours. Each time you take this perk, the level requirement increases by 6."
   },
   {
@@ -2713,6 +2795,7 @@
     "agi": 0,
     "lck": 0,
     "other": "rare book",
+    "levelSteps": 6,
     "desc": "When you use the Defend action, and an enemy misses you with a melee attack, you regain 2 HP and add 1 AP to the group pool. At rank 2, increase this to 3 HP and 2 AP. At rank 3, increase this to 4 HP and 3 AP. Each time you take this perk, the level requirement increases by 6."
   },
   {
@@ -2741,6 +2824,7 @@
     "agi": 0,
     "lck": 0,
     "other": "rare book",
+    "levelSteps": 5,
     "desc": "You’ve discovered the recipe to a potent medicine, the Survival Syringe which seems like a miracle cure-all. However, the dug has a very short lifespan, and the mixture becomes useless after a matter of hours. At rank 1, each dose created becomes useless 6 hours after being created. At rank 2, this increases to 12 hours. At rank 3, this increases to 24 hours. Each time you take this perk, the level requirement increases by 5."
   },
   {
