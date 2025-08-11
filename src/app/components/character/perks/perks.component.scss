@@ -117,3 +117,14 @@ p {
     background-color: $primaryLightAccent;
   }
 }
+
+.rank-button-disabled {
+  border-color: $grayLightAccent;
+  background-color: $grayLight;
+  color: $gray;
+  cursor: default;
+
+  &:hover {
+    background-color: $grayLight;
+  }
+}

@@ -16,11 +16,11 @@
     </p>
     <div class="mb-05 rank-field">
       <span class="property">Ranks:</span> {{perk.ranks}} / {{perk.maxRanks}}
-      <div class="rank-button-group" *ngIf="perk.isSelected" (click)="$event.stopPropagation()">
+      <div class="rank-button-group" *ngIf="perk.isSelected && perk.maxRanks > 1" (click)="$event.stopPropagation()">
         <button class="rank-button" (click)="removeRank(perk)">-</button>
         <button class="rank-button"
-                [ngClass]="{'rank-button-disabled': perk.ranks == perk.maxRanks}"
-                [disabled]="perk.ranks == perk.maxRanks"
+                [ngClass]="{'rank-button-disabled': isAddRankDisabled(perk)}"
+                [disabled]="isAddRankDisabled(perk)"
                 (click)="addRank(perk)">+</button>
       </div>
     </div>
