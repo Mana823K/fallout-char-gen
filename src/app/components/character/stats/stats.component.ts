@@ -12,6 +12,13 @@ export class StatsComponent {
   stats: Stats = new Stats();
   @Input() special: Special = new Special();
 
+  private _hpModifier: number = 0;
+  get hpModifier(): number { return this._hpModifier; }
+  @Input() set hpModifier(value: number) {
+    this._hpModifier = value;
+    this.updateStats();
+  }
+
   private _level: number = 0;
   get level(): number { return this._level; }
   @Input() set level(value: number) {
@@ -20,6 +27,6 @@ export class StatsComponent {
   }
 
   updateStats() {
-    this.stats.updateStats(this.special, this.level);
+    this.stats.updateStats(this.special, this.level, this.hpModifier);
   }
 }

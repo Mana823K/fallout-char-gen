@@ -21,6 +21,7 @@ export class CharacterComponent {
   extraSpecialPoints: number = 0;
   extraSkillTags: number = 0;
   extraSkillLevels: number = 0;
+  hpModifier: number = 1;
 
   constructor() {
     var storedLevel = Number.parseInt(localStorage.getItem(this.LEVEL_STORAGE_NAME) ?? "");
@@ -41,6 +42,11 @@ export class CharacterComponent {
     let specialPerk = perks.find(x => x.name == "INTENSE TRAINING");
     if (specialPerk) {
       this.extraSpecialPoints = specialPerk.ranks;
+    }
+
+    let hpPerk = perks.find(x => x.name == "LIFE GIVER");
+    if (hpPerk) {
+      this.hpModifier = hpPerk.ranks + 1;
     }
   }
 }

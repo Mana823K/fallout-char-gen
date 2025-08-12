@@ -4,7 +4,7 @@
                     (valueChange)="onLevelChanged()"
                     label="LEVEL"
                     [min]="0"></app-number-input>
-  <app-stats #statsComponent [special]="special" [level]="level"></app-stats>
+  <app-stats #statsComponent *ngIf="perksComponent" [special]="special" [level]="level" [hpModifier]="hpModifier"></app-stats>
   <app-special-attributes [extraPoints]="extraSpecialPoints" (specialChanged)="onSpecialChanged($event)"></app-special-attributes>
   <app-perks #perksComponent [special]="special" [level]="level" (perksChanged)="onPerksChanged($event)"></app-perks>
   <app-skills [special]="special" [level]="level"></app-skills>
