@@ -5,7 +5,7 @@
                     label="LEVEL"
                     [min]="0"></app-number-input>
   <app-stats #statsComponent [special]="special" [level]="level"></app-stats>
-  <app-special-attributes (specialChanged)="onSpecialChanged($event)"></app-special-attributes>
-  <app-perks #perksComponent [special]="special" [level]="level"></app-perks>
+  <app-special-attributes [extraPoints]="extraSpecialPoints" (specialChanged)="onSpecialChanged($event)"></app-special-attributes>
+  <app-perks #perksComponent [special]="special" [level]="level" (perksChanged)="onPerksChanged($event)"></app-perks>
   <app-skills [special]="special" [level]="level"></app-skills>
 </div>

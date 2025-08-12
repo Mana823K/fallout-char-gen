@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Special } from '../../models/special';
 import { StatsComponent } from './stats/stats.component';
 import { PerksComponent } from './perks/perks.component';
+import { Perk } from '../../models/perk';
 
 @Component({
   selector: 'app-character',
@@ -17,8 +18,9 @@ export class CharacterComponent {
   special: Special = new Special();
   level: number = 0;
 
-  specialPoints: number = 0;
-  skillTags: number = 0;
+  extraSpecialPoints: number = 0;
+  extraSkillTags: number = 0;
+  extraSkillLevels: number = 0;
 
   constructor() {
     var storedLevel = Number.parseInt(localStorage.getItem(this.LEVEL_STORAGE_NAME) ?? "");
@@ -33,5 +35,12 @@ export class CharacterComponent {
 
   onLevelChanged() {
     localStorage.setItem(this.LEVEL_STORAGE_NAME, this.level.toString());
+  }
+
+  onPerksChanged(perks: Perk[]) {
+    let specialPerk = perks.find(x => x.name == "INTENSE TRAINING");
+    if (specialPerk) {
+      this.extraSpecialPoints = specialPerk.ranks;
+    }
   }
 }

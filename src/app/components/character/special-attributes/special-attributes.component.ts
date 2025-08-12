@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Special, SpecialData } from '../../../models/special';
 
 @Component({
@@ -12,9 +12,11 @@ export class SpecialAttributesComponent implements OnInit {
   readonly MAX_POINTS = 40;
   special: Special = new Special();
 
+  @Input() extraPoints: number = 0;
+
   get minPoints(): number { return Special.MIN_VALUE; }
   get maxPoints(): number { return Special.MAX_VALUE; }
-  get pointsLeft(): number { return this.MAX_POINTS - this.special.pointsSum; }
+  get pointsLeft(): number { return this.MAX_POINTS + this.extraPoints - this.special.pointsSum; }
 
   @Output() specialChanged = new EventEmitter<Special>();
 
