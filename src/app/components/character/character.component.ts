@@ -20,8 +20,9 @@ export class CharacterComponent {
 
   extraSpecialPoints: number = 0;
   extraSkillTags: number = 0;
-  extraSkillLevels: number = 0;
+  extraSkillRanks: number = 0;
   hpModifier: number = 1;
+  carryWeightModifier: number = 0;
 
   constructor() {
     var storedLevel = Number.parseInt(localStorage.getItem(this.LEVEL_STORAGE_NAME) ?? "");
@@ -47,6 +48,21 @@ export class CharacterComponent {
     let hpPerk = perks.find(x => x.name == "LIFE GIVER");
     if (hpPerk) {
       this.hpModifier = hpPerk.ranks + 1;
+    }
+
+    let skillPerk = perks.find(x => x.name == "SKILLED");
+    if (skillPerk) {
+      this.extraSkillRanks = skillPerk.ranks * 2;
+    }
+
+    let carryWeightPerk = perks.find(x => x.name == "STRONG BACK");
+    if (carryWeightPerk) {
+      this.carryWeightModifier = carryWeightPerk.ranks * 25;
+    }
+
+    let tagPerk = perks.find(x => x.name == "TAG!");
+    if (tagPerk) {
+      this.extraSkillTags = tagPerk.ranks;
     }
   }
 }

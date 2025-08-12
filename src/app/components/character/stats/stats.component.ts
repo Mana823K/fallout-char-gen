@@ -19,6 +19,13 @@ export class StatsComponent {
     this.updateStats();
   }
 
+  private _carryWeightModifier: number = 0;
+  get carryWeightModifier(): number { return this._carryWeightModifier; }
+  @Input() set carryWeightModifier(value: number) {
+    this._carryWeightModifier = value;
+    this.updateStats();
+  }
+
   private _level: number = 0;
   get level(): number { return this._level; }
   @Input() set level(value: number) {
@@ -27,6 +34,6 @@ export class StatsComponent {
   }
 
   updateStats() {
-    this.stats.updateStats(this.special, this.level, this.hpModifier);
+    this.stats.updateStats(this.special, this.level, this.hpModifier, this.carryWeightModifier);
   }
 }

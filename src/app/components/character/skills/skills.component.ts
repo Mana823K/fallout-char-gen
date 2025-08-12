@@ -21,12 +21,14 @@ export class SkillsComponent implements OnInit {
 
   @Input() special: Special = new Special();
   @Input() level: number = 0;
+  @Input() extraRanks: number = 0;
+  @Input() extraTags: number = 0;
   @Output() skillChanged = new EventEmitter<Skill[]>();
 
-  get availableTagCount(): number { return this.DEF_TAG_COUNT; }
+  get availableTagCount(): number { return this.DEF_TAG_COUNT + this.extraTags; }
   get tagCount(): number { return this.skills.filter(x => x.isTagged).length; }
 
-  get availableRankPoints(): number { return this.DEF_RANK_POINTS + this.special.intelligence + this.level + this.tagCount * 2; }
+  get availableRankPoints(): number { return this.DEF_RANK_POINTS + this.special.intelligence + this.level + this.tagCount * 2 + this.extraRanks; }
   get totalRankPoints(): number {
     var total = 0;
     this.skills.forEach(x => total += x.ranks);

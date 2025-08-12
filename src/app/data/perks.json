@@ -642,7 +642,7 @@
     "lck": 0,
     "other": "",
     "levelSteps": 2,
-    "desc": "Increase any one S.P.E.C.I.A.L attribute by 1 rank. As usual, your S.P.E.C.I.A.L attributes cannot be increased beyond 10 using this method. Each time you take this perk, the level requirement increases by 2."
+    "desc": "Increase any one S.P.E.C.I.A.L attribute by 1 rank. As usual, your S.P.E.C.I.A.L attributes cannot be increased beyond 10 using this method. Each time you take this perk, the level requirement increases by 2. (Changes automatically applied when selected)"
   },
   {
     "name": "IRON FIST",
@@ -730,7 +730,7 @@
     "lck": 0,
     "other": "",
     "levelSteps": 5,
-    "desc": "Increase your maximum health points by your Endurance rank. Each time you take this perk, the level requirement increases by 5."
+    "desc": "Increase your maximum health points by your Endurance rank. Each time you take this perk, the level requirement increases by 5. (Changes automatically applied when selected)"
   },
   {
     "name": "LIGHT STEP",
@@ -1189,7 +1189,7 @@
     "lck": 0,
     "other": "",
     "levelSteps": 3,
-    "desc": "Add +1 rank to two skills or add +2 ranks to one skill. No skill may have more than 6 ranks. Each time you take this perk, the level requirement increases by 3."
+    "desc": "Add +1 rank to two skills or add +2 ranks to one skill. No skill may have more than 6 ranks. Each time you take this perk, the level requirement increases by 3. (Changes automatically applied when selected)"
   },
   {
     "name": "SIZE MATTERS",
@@ -1303,7 +1303,7 @@
     "lck": 0,
     "other": "",
     "levelSteps": 2,
-    "desc": "Your maximum carry weight is increased by +25 lbs., per rank. Each time you take this perk, the level requirement increases by 2."
+    "desc": "Your maximum carry weight is increased by +25 lbs., per rank. Each time you take this perk, the level requirement increases by 2. (Changes automatically applied when selected)"
   },
   {
     "name": "TAG!",
@@ -1317,7 +1317,7 @@
     "agi": 0,
     "lck": 0,
     "other": "",
-    "desc": "You may select one additional Tag skill. Increase the skill’s rank by 2, to a maximum of 6, and mark it as a Tag skill, allowing you to roll a critical success with a d20 result equal or under the skill’s rank."
+    "desc": "You may select one additional Tag skill. Increase the skill’s rank by 2, to a maximum of 6, and mark it as a Tag skill, allowing you to roll a critical success with a d20 result equal or under the skill’s rank. (Changes automatically applied when selected)"
   },
   {
     "name": "TERRIFYING PRESENCE",
@@ -1405,7 +1405,7 @@
     "lck": 0,
     "other": "",
     "levelSteps": 3,
-    "desc": "Even in the worst of days, you find a way to bring people’s spirits up and maintain a thriving settlement. For each rank of this perk,  our community gains +1 Food and +1 Defense per day so long as the resource is maintained by at least one person. Additionally add +1 CD or the settlement actions Hunting and Gathering as well as Scavenging. Each time you take this perk, the level requirement increases by 3."
+    "desc": "Even in the worst of days, you find a way to bring people’s spirits up and maintain a thriving settlement. For each rank of this perk, our community gains +1 Food and +1 Defense per day so long as the resource is maintained by at least one person. Additionally add +1 CD or the settlement actions Hunting and Gathering as well as Scavenging. Each time you take this perk, the level requirement increases by 3."
   },
   {
     "name": "CONTRACTOR",
