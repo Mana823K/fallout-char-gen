@@ -1,10 +1,10 @@
 export class Weapon {
   name: string = "";
-  skill: string = "";
+  type: string = "";
   damage: number = 0;
   effects: string[] = [];
   effectsText: string = "";
-  type: string = "";
+  damageType: string = "";
   rate: number = 0;
   range: string = "";
   qualities: string[] = [];
@@ -15,15 +15,20 @@ export class Weapon {
   rarity: number = 0;
   special?: string;
   mods: string[] = [];
-  modNotes?: string
+  modNotes?: string;
+
+  updateTexts() {
+    this.effectsText = this.effects.join(", ");
+    this.qualitiesText = this.qualities.join(", ");
+  }
 }
 
 export class WeaponData {
   name: string = "";
-  skill: string = "";
+  type: string = "";
   damage: number = 0;
   effects: string[] = [];
-  type: string = "";
+  damageType: string = "";
   rate: number = 0;
   range: string = "";
   qualities: string[] = [];
@@ -39,11 +44,11 @@ export class WeaponData {
     let result = new Weapon();
 
     result.name = original.name;
-    result.skill = original.skill;
+    result.type = original.type;
     result.damage = original.damage;
     result.effects = original.effects;
     result.effectsText = original.effects.join(", ");
-    result.type = original.type;
+    result.damageType = original.damageType;
     result.rate = original.rate;
     result.range = original.range;
     result.qualities = original.qualities;

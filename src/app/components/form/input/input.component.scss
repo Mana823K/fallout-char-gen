@@ -1,3 +1,30 @@
+@use "../../../../style/colors.scss" as *;
+@use "../../../../style/variables.scss";
+
 .input {
-  width: 100px;
+  font-size: 12pt;
+  height: 16pt;
+  padding: 2pt;
+  padding-left: 5pt;
+  border: 1px solid $dark-text;
+  border-radius: variables.$borderRadius;
+  box-shadow: none;
+}
+
+.input:active {
+  border-color: $primary;
+  outline: 1px solid $primary;
+}
+.input:focus {
+  border-color: $primary;
+  outline: 1px solid $primary;
+}
+
+.input-label {
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+p {
+  margin: 0;
 }

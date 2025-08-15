@@ -11,6 +11,8 @@ import { ConsumablesComponent } from './components/database/consumables/consumab
 import { MagazinesComponent } from './components/database/magazines/magazines.component';
 import { MiscellanyComponent } from './components/database/miscellany/miscellany.component';
 import { ChemsComponent } from './components/database/chems/chems.component';
+import { ToolsComponent } from './components/tools/tools.component';
+import { WeaponModToolComponent } from './components/tools/weapon-mod-tool/weapon-mod-tool.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'character', pathMatch: 'full' },
@@ -26,6 +28,10 @@ const routes: Routes = [
     { path: 'chems', component: ChemsComponent },
     { path: 'magazines', component: MagazinesComponent },
     { path: 'miscellany', component: MiscellanyComponent },
+  ] },
+  { path: 'tools', redirectTo: 'tools/weapon-mod' },
+  { path: 'tools', component: ToolsComponent, children: [
+    { path: 'weapon-mod', component: WeaponModToolComponent },
   ] },
   { path: '**', redirectTo: '' }
 ];

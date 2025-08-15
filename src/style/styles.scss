@@ -1,5 +1,28 @@
 @use "./colors.scss";
+@use "./variables.scss";
 
 body {
   background-color: colors.$background;
+}
+
+.toggle-button {
+  border: none;
+  border-radius: variables.$borderRadius;
+  padding: 2pt 4pt;
+  color: colors.$primaryDark;
+  font-size: 11pt;
+  cursor: pointer;
+
+  &:hover {
+    background-color: colors.$primaryLight;
+  }
+}
+
+.active-toggle-button {
+  background-color: colors.$accentLight;
+  color: colors.$accentDark;
+
+  &:hover {
+    background-color: colors.$accentLightAccent;
+  }
 }

@@ -1,0 +1,41 @@
+@use "./../../../../style/colors.scss" as *;
+
+.selection {
+  margin: 0.5rem;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+.mt {
+  margin-top: 2rem;
+}
+
+tr:nth-child(even) {
+  background-color: $accentLight;
+}
+
+td {
+  padding: 0.5rem;
+}
+
+.right {
+  text-align: end;
+}
+
+.center {
+  text-align: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.changed-property {
+  color: $primaryDark;
+}
+
+.selected-row {
+  color: $primaryDark;
+}

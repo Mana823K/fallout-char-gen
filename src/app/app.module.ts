@@ -27,6 +27,8 @@ import { ConsumablesComponent } from './components/database/consumables/consumab
 import { MagazinesComponent } from './components/database/magazines/magazines.component';
 import { MiscellanyComponent } from './components/database/miscellany/miscellany.component';
 import { ChemsComponent } from './components/database/chems/chems.component';
+import { ToolsComponent } from './components/tools/tools.component';
+import { WeaponModToolComponent } from './components/tools/weapon-mod-tool/weapon-mod-tool.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { ChemsComponent } from './components/database/chems/chems.component';
     ConsumablesComponent,
     MagazinesComponent,
     MiscellanyComponent,
-    ChemsComponent
+    ChemsComponent,
+    ToolsComponent,
+    WeaponModToolComponent
   ],
   imports: [
     BrowserModule,

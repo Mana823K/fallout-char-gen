@@ -5,6 +5,7 @@ export class WeaponMod {
   type: string = "";
   damageChange?: number;
   fixDamage?: number;
+  ammo?: string;
   newDamageType?: string;
   fireRateChange?: number;
   rangeChange?: number;
@@ -26,6 +27,7 @@ export class WeaponModData {
   type: string = "";
   damageChange?: number;
   fixDamage?: number;
+  ammo?: string;
   newDamageType?: string;
   fireRateChange?: number;
   rangeChange?: number;
@@ -47,6 +49,7 @@ export class WeaponModData {
     result.type = original.type;
     result.damageChange = original.damageChange;
     result.fixDamage = original.fixDamage;
+    result.ammo = original.ammo;
     result.newDamageType = original.newDamageType;
     result.fireRateChange = original.fireRateChange;
     result.rangeChange = original.rangeChange;

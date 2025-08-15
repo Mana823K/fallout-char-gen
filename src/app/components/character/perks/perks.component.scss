@@ -7,27 +7,6 @@
   gap: 0.5rem;
 }
 
-.toggle-button {
-  border: none;
-  border-radius: variables.$borderRadius;
-  padding: 2pt 4pt;
-  color: $primaryDark;
-  font-size: 11pt;
-
-  &:hover {
-    background-color: $primaryLight;
-  }
-}
-
-.selected-button {
-  background-color: $accentLight;
-  color: $accentDark;
-
-  &:hover {
-    background-color: $accentLightAccent;
-  }
-}
-
 .cards-container {
   display: flex;
   flex-direction: row;

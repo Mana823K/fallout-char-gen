@@ -1,0 +1,130 @@
+<div *ngIf="selectedWeapon">
+  <h3>Selected Weapon</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Weapon Type</th>
+      <th>Damage</th>
+      <th>Damage Effects</th>
+      <th>Damage Type</th>
+      <th>Fire Rate</th>
+      <th>Range</th>
+      <th>Qualities</th>
+      <th>Ammo</th>
+      <th>Weight</th>
+      <th>Cost</th>
+      <th>Rarity</th>
+    </tr>
+    <tr (click)="unselectWeapon()" class="pointer">
+      <td>{{selectedWeapon.name}}</td>
+      <td>{{selectedWeapon.type}}</td>
+      <td [ngClass]="{'changed-property': selectedWeapon.damage != selectedWeaponOriginal?.damage}" class="right">{{selectedWeapon.damage}}&nbsp;CD</td>
+      <td [ngClass]="{'changed-property': selectedWeapon.effectsText != selectedWeaponOriginal?.effectsText}">{{selectedWeapon.effectsText}}</td>
+      <td [ngClass]="{'changed-property': selectedWeapon.damageType != selectedWeaponOriginal?.damageType}">{{selectedWeapon.damageType}}</td>
+      <td [ngClass]="{'changed-property': selectedWeapon.rate != selectedWeaponOriginal?.rate}" class="right">{{selectedWeapon.rate}}</td>
+      <td [ngClass]="{'changed-property': selectedWeapon.range != selectedWeaponOriginal?.range}" class="center">{{selectedWeapon.range}}</td>
+      <td [ngClass]="{'changed-property': selectedWeapon.qualitiesText != selectedWeaponOriginal?.qualitiesText}">{{selectedWeapon.qualitiesText}}</td>
+      <td [ngClass]="{'changed-property': selectedWeapon.ammo.join(',') != selectedWeaponOriginal?.ammo?.join(',')}" class="right">{{selectedWeapon.ammo}}</td>
+      <td [ngClass]="{'changed-property': selectedWeapon.weight != selectedWeaponOriginal?.weight}" class="right">{{selectedWeapon.weight}}</td>
+      <td [ngClass]="{'changed-property': selectedWeapon.cost != selectedWeaponOriginal?.cost}" class="right">{{selectedWeapon.cost}}</td>
+      <td [ngClass]="{'changed-property': selectedWeapon.rarity != selectedWeaponOriginal?.rarity}" class="right">{{selectedWeapon.rarity}}</td>
+    </tr>
+  </table>
+
+  <div *ngIf="selectedMods.length > 0" class="mt">
+    <h3>Selected Mods</h3>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Prefix</th>
+        <th>Weapon Type</th>
+        <th>Type</th>
+        <th>Effects</th>
+        <th>Weight</th>
+        <th>Cost</th>
+        <th>Perk</th>
+      </tr>
+      <tr *ngFor="let mod of selectedMods" class="pointer" (click)="removeMod(mod)">
+        <td>{{mod.name}}</td>
+        <td>{{mod.prefix}}</td>
+        <td>{{mod.weaponType}}</td>
+        <td>{{mod.type}}</td>
+        <td>{{mod.effectText}}</td>
+        <td class="right">{{mod.weightChange > 0 ? '+': ''}}{{mod.weightChange == 0 ? '-' : mod.weightChange}}</td>
+        <td class="right">{{mod.costChange > 0 ? '+': ''}}{{mod.costChange == 0 ? '-' : mod.costChange}}</td>
+        <td>{{mod.perks}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div *ngIf="!selectedWeapon" class="selection">
+  <h3>Select a weapon</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Weapon Type</th>
+      <th>Damage</th>
+      <th>Damage Effects</th>
+      <th>Qualities</th>
+    </tr>
+
+    <tr>
+      <td>
+        <app-input inputName="weapponNameFilter" [(value)]="weaponNameFilter" (valueChange)="filterWeapons()"></app-input>
+      </td>
+      <td>
+        <app-select inputName="weaponTypeFilter" [(value)]="weaponTypeFilter" (valueChange)="filterWeapons()" [options]="weaponTypeOptions"></app-select>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr *ngFor="let weapon of weaponOptions" class="pointer" (click)="weaponSelected(weapon)">
+      <td>{{weapon.name}}</td>
+      <td>{{weapon.type}}</td>
+      <td class="right">{{weapon.damage}}&nbsp;CD</td>
+      <td>{{weapon.effectsText}}</td>
+      <td>{{weapon.qualitiesText}}</td>
+    </tr>
+  </table>
+</div>
+
+<div *ngIf="selectedWeapon" class="selection mt">
+  <h3>Available mods</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Effects</th>
+      <th>Weight</th>
+      <th>Cost</th>
+      <th>Perks</th>
+    </tr>
+
+    <tr>
+      <td>
+        <app-input inputName="modNameFilter" [(value)]="modNameFilter" (valueChange)="filterMods()"></app-input>
+      </td>
+      <td>
+        <app-select inputName="modTypeFilter" [(value)]="modTypeFilter" (valueChange)="filterMods()" [options]="modTypeOptions"></app-select>
+      </td>
+      <td>
+        <app-input inputName="modEffectFilter" [(value)]="modEffectFilter" (valueChange)="filterMods()"></app-input>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr *ngFor="let mod of modOptions" class="pointer" (click)="modSelected(mod)" [ngClass]="{'selected-row': isModSelected(mod)}">
+      <td>{{mod.name}}</td>
+      <td>{{mod.type}}</td>
+      <td>{{mod.effectText}}</td>
+      <td class="right">{{mod.weightChange > 0 ? '+': ''}}{{mod.weightChange == 0 ? '-' : mod.weightChange}}</td>
+      <td class="right">{{mod.costChange > 0 ? '+': ''}}{{mod.costChange == 0 ? '-' : mod.costChange}}</td>
+      <td>{{mod.perks}}</td>
+    </tr>
+  </table>
+</div>

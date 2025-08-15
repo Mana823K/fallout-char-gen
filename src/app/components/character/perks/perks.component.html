@@ -1,8 +1,8 @@
 <h3>Perks</h3>
 
 <div class="button-container">
-  <button class="toggle-button" [ngClass]="{'selected-button': showAll}" (click)="showAll = !showAll">show all</button>
-  <button class="toggle-button" [ngClass]="{'selected-button': showDetails}" (click)="showDetails = !showDetails">show details</button>
+  <p class="toggle-button" [ngClass]="{'active-toggle-button': showAll}" (click)="showAll = !showAll">show all</p>
+  <p class="toggle-button" [ngClass]="{'active-toggle-button': showDetails}" (click)="showDetails = !showDetails">show details</p>
 </div>
 
 <div class="cards-container">
