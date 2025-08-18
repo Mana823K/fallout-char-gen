@@ -1,6 +1,6 @@
 <div *ngIf="selectedWeapon">
-  <h3>Selected Weapon</h3>
-  <table>
+  <h3 class="active-title">Selected Weapon</h3>
+  <table class="selected-weapon-table">
     <tr>
       <th>Name</th>
       <th>Weapon Type</th>
@@ -14,8 +14,9 @@
       <th>Weight</th>
       <th>Cost</th>
       <th>Rarity</th>
+      <th></th>
     </tr>
-    <tr (click)="unselectWeapon()" class="pointer">
+    <tr>
       <td>{{selectedWeapon.name}}</td>
       <td>{{selectedWeapon.type}}</td>
       <td [ngClass]="{'changed-property': selectedWeapon.damage != selectedWeaponOriginal?.damage}" class="right">{{selectedWeapon.damage}}&nbsp;CD</td>
@@ -28,31 +29,32 @@
       <td [ngClass]="{'changed-property': selectedWeapon.weight != selectedWeaponOriginal?.weight}" class="right">{{selectedWeapon.weight}}</td>
       <td [ngClass]="{'changed-property': selectedWeapon.cost != selectedWeaponOriginal?.cost}" class="right">{{selectedWeapon.cost}}</td>
       <td [ngClass]="{'changed-property': selectedWeapon.rarity != selectedWeaponOriginal?.rarity}" class="right">{{selectedWeapon.rarity}}</td>
+      <td (click)="unselectWeapon()" class="remove-icon">X</td>
     </tr>
   </table>
 
   <div *ngIf="selectedMods.length > 0" class="mt">
-    <h3>Selected Mods</h3>
+    <h3 class="active-title">Selected Mods</h3>
     <table>
       <tr>
         <th>Name</th>
         <th>Prefix</th>
-        <th>Weapon Type</th>
         <th>Type</th>
         <th>Effects</th>
         <th>Weight</th>
         <th>Cost</th>
         <th>Perk</th>
+        <th></th>
       </tr>
-      <tr *ngFor="let mod of selectedMods" class="pointer" (click)="removeMod(mod)">
+      <tr *ngFor="let mod of selectedMods">
         <td>{{mod.name}}</td>
         <td>{{mod.prefix}}</td>
-        <td>{{mod.weaponType}}</td>
         <td>{{mod.type}}</td>
         <td>{{mod.effectText}}</td>
         <td class="right">{{mod.weightChange > 0 ? '+': ''}}{{mod.weightChange == 0 ? '-' : mod.weightChange}}</td>
         <td class="right">{{mod.costChange > 0 ? '+': ''}}{{mod.costChange == 0 ? '-' : mod.costChange}}</td>
         <td>{{mod.perks}}</td>
+      <td  (click)="removeMod(mod)" class="remove-icon">X</td>
       </tr>
     </table>
   </div>

@@ -6,6 +6,15 @@
 
 h3 {
   text-decoration: underline;
+  color: $primaryDark;
+}
+
+.active-title {
+  color: $accentDark;
+}
+
+.selected-weapon-table {
+  width: 100%;
 }
 
 .mt {
@@ -30,6 +39,17 @@ td {
 
 .pointer {
   cursor: pointer;
+}
+
+.remove-icon {
+  background-color: $primaryLight;
+  color: $primaryDark;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primaryLightAccent;
+  }
 }
 
 .changed-property {

@@ -1,10 +1,10 @@
-@import "../../../../style/variables.scss";
-@import "../../../../style/colors.scss";
+@use "../../../../style/variables.scss";
+@use "../../../../style/colors.scss" as *;
 
 .select {
   height: 20pt;
   padding: 2pt;
-  border-radius: $borderRadius;
+  border-radius: variables.$borderRadius;
   min-width: 50px;
 }
 
