@@ -187,7 +187,7 @@ class Range {
 }
 
 const ranges: Range[] = [
-  { name: "S", number: 1 },
+  { name: "C", number: 1 },
   { name: "M", number: 2 },
   { name: "L", number: 3 },
   { name: "XL", number: 4 },
