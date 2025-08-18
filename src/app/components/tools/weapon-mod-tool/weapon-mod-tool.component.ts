@@ -74,7 +74,7 @@ export class WeaponModToolComponent {
       result = result.filter(x => x.type == this.modTypeFilter);
     if (this.modEffectFilter.length > 0)
       result = result.filter(x => x.effectText.toLowerCase().includes(this.modEffectFilter.toLowerCase()));
-    this.modOptions = result;
+    this.modOptions = result.sort((a, b) => a.type > b.type ? 1 : a.type == b.type ? (a.name > b.name ? 1 : -1) : -1);
   }
 
   modSelected(mod: WeaponMod) {
@@ -82,8 +82,11 @@ export class WeaponModToolComponent {
       this.removeMod(mod);
       return;
     }
-    this.selectedMods = this.selectedMods.filter(x => x.type != mod.type)
-    this.selectedMods.push(mod);
+
+    let result = this.selectedMods.filter(x => x.type != mod.type);
+    result.push(mod);
+    this.selectedMods = result.sort((a, b) => a.type > b.type ? 1 : -1);
+
     this.applyMods();
   }
 
@@ -107,20 +110,48 @@ export class WeaponModToolComponent {
         this.selectedWeapon.range = newRange ?? this.selectedWeapon.range;
       }
       for (let effect of mod.gainedEffects ?? []) {
-        if (!this.selectedWeapon.effects.includes(effect))
+        if (effect.startsWith("Piercing")) {
+          let existingEffect = this.selectedWeapon.effects.find(x => x.startsWith("Piercing"));
+          if (!existingEffect) {
+            this.selectedWeapon.effects.push(effect);
+          }
+          else {
+            let value = Number.parseInt(effect.split(" ").pop() ?? "0");
+            let existingValue = Number.parseInt(existingEffect.split(" ").pop() ?? "0");
+            this.selectedWeapon.effects = this.selectedWeapon.effects.filter(x => !x.startsWith("Piercing"));
+            this.selectedWeapon.effects.push("Piercing " + (value + existingValue));
+          }
+        }
+        else if (!this.selectedWeapon.effects.includes(effect))
           this.selectedWeapon.effects.push(effect);
       }
-      // todo: piercing 1
 
       if (mod.removedEffects) {
         this.selectedWeapon.effects = this.selectedWeapon.effects.filter(x => !mod.removedEffects?.includes(x))
       }
 
       for (let quality of mod.gainedQualities ?? []) {
-        if (!this.selectedWeapon.qualities.includes(quality))
+        if (quality.startsWith("Recoil")) {
+          this.selectedWeapon.qualities = this.selectedWeapon.qualities.filter(x => !x.startsWith("Recoil"));
           this.selectedWeapon.qualities.push(quality);
+        }
+        else if (!this.selectedWeapon.qualities.includes(quality))
+          this.selectedWeapon.qualities.push(quality);
+
+        let accurateIndex = this.selectedWeapon.qualities.findIndex(x => x == "Accurate");
+        let inaccurateIndex = this.selectedWeapon.qualities.findIndex(x => x == "Inaccurate");
+        if (accurateIndex >= 0 && inaccurateIndex >= 0) {
+          this.selectedWeapon.qualities.splice(accurateIndex, 1);
+          this.selectedWeapon.qualities.splice(inaccurateIndex, 1);
+        }
+
+        let reliableIndex = this.selectedWeapon.qualities.findIndex(x => x == "Reliable");
+        let unreliableIndex = this.selectedWeapon.qualities.findIndex(x => x == "Unreliable");
+        if (reliableIndex >= 0 && unreliableIndex >= 0) {
+          this.selectedWeapon.qualities.splice(reliableIndex, 1);
+          this.selectedWeapon.qualities.splice(unreliableIndex, 1);
+        }
       }
-      // todo: recoil (x)
 
       if (mod.removedQualities) {
         this.selectedWeapon.qualities = this.selectedWeapon.qualities.filter(x => !mod.removedQualities?.includes(x))
