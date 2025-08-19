@@ -3,6 +3,7 @@ import { Weapon } from '../../../models/weapon';
 import { DataService } from '../../../services/data.service';
 import { WeaponMod } from '../../../models/weapon-mod';
 import * as _ from 'lodash';
+import { ranges } from '../../../models/range';
 
 @Component({
   selector: 'app-weapon-mod-tool',
@@ -180,15 +181,3 @@ export class WeaponModToolComponent {
     return !!this.selectedMods.find(x => x.name == mod.name);
   }
 }
-
-class Range {
-  name: string = "";
-  number: number = 0;
-}
-
-const ranges: Range[] = [
-  { name: "C", number: 1 },
-  { name: "M", number: 2 },
-  { name: "L", number: 3 },
-  { name: "XL", number: 4 },
-]

@@ -1,0 +1,4 @@
+<div (click)="onSort()" class="sort-cell" [ngClass]="{'active': value != undefined}">
+  <mat-icon>sort</mat-icon>
+  <mat-icon *ngIf="value != undefined">{{value ? 'arrow_drop_up' : 'arrow_drop_down'}}</mat-icon>
+</div>

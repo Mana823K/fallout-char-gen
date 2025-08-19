@@ -13,6 +13,22 @@
     <th>Cost</th>
     <th>Rarity</th>
   </tr>
+
+  <tr>
+    <td><app-input inputName="nameFilter" [(value)]="nameFilter" (valueChange)="filter()"></app-input></td>
+    <td><app-select inputName="typeFilter" [options]="typeOptions" [(value)]="typeFilter" (valueChange)="filter()"></app-select></td>
+    <td><app-sort-td [(value)]="damageAscending" (valueChange)="sort()"></app-sort-td></td>
+    <td><app-select inputName="effectsFilter" [options]="effectsOptions" [(value)]="effectsFilter" (valueChange)="filter()"></app-select></td>
+    <td><app-select inputName="damageTypeFilter" [options]="damageTypeOptions" [(value)]="damageTypeFilter" (valueChange)="filter()"></app-select></td>
+    <td><app-sort-td [(value)]="fireRateAscending" (valueChange)="sort()"></app-sort-td></td>
+    <td><app-sort-td [(value)]="rangeAscending" (valueChange)="sort()"></app-sort-td></td>
+    <td><app-select inputName="qualitiesFilter" [options]="qualitiesOptions" [(value)]="qualitiesFilter" (valueChange)="filter()"></app-select></td>
+    <td><app-select inputName="ammoFilter" [options]="ammoOptions" [(value)]="ammoFilter" (valueChange)="filter()"></app-select></td>
+    <td><app-sort-td [(value)]="weightAscending" (valueChange)="sort()"></app-sort-td></td>
+    <td><app-sort-td [(value)]="costAscending" (valueChange)="sort()"></app-sort-td></td>
+    <td><app-sort-td [(value)]="rarityAscending" (valueChange)="sort()"></app-sort-td></td>
+  </tr>
+
   <tr *ngFor="let weapon of weapons">
     <td>{{weapon.name}}</td>
     <td>{{weapon.type}}</td>

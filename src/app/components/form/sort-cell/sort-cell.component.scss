@@ -1,0 +1,10 @@
+@use "../../../../style/colors.scss" as *;
+
+.sort-cell {
+  display: flex;
+  cursor: pointer;
+
+  &.active {
+    color: $primary;
+  }
+}

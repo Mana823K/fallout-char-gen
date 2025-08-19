@@ -29,6 +29,7 @@ import { MiscellanyComponent } from './components/database/miscellany/miscellany
 import { ChemsComponent } from './components/database/chems/chems.component';
 import { ToolsComponent } from './components/tools/tools.component';
 import { WeaponModToolComponent } from './components/tools/weapon-mod-tool/weapon-mod-tool.component';
+import { SortCellComponent } from './components/form/sort-cell/sort-cell.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { WeaponModToolComponent } from './components/tools/weapon-mod-tool/weapo
     MiscellanyComponent,
     ChemsComponent,
     ToolsComponent,
-    WeaponModToolComponent
+    WeaponModToolComponent,
+    SortCellComponent
   ],
   imports: [
     BrowserModule,
