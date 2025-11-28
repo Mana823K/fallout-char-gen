@@ -30,6 +30,7 @@ import { ChemsComponent } from './components/database/chems/chems.component';
 import { ToolsComponent } from './components/tools/tools.component';
 import { WeaponModToolComponent } from './components/tools/weapon-mod-tool/weapon-mod-tool.component';
 import { SortCellComponent } from './components/form/sort-cell/sort-cell.component';
+import { TableComponent } from './components/common/table/table.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { SortCellComponent } from './components/form/sort-cell/sort-cell.compone
     ChemsComponent,
     ToolsComponent,
     WeaponModToolComponent,
-    SortCellComponent
+    SortCellComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

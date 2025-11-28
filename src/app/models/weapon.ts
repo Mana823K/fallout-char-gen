@@ -10,6 +10,7 @@ export class Weapon {
   qualities: string[] = [];
   qualitiesText: string = "";
   ammo: string[] = [];
+  ammoText: string = "";
   weight: number = 0;
   cost: number = 0;
   rarity: number = 0;
@@ -20,6 +21,7 @@ export class Weapon {
   updateTexts() {
     this.effectsText = this.effects.join(", ");
     this.qualitiesText = this.qualities.join(", ");
+    this.ammoText = this.ammo.join(", ");
   }
 }
 
@@ -47,12 +49,10 @@ export class WeaponData {
     result.type = original.type;
     result.damage = original.damage;
     result.effects = original.effects;
-    result.effectsText = original.effects.join(", ");
     result.damageType = original.damageType;
     result.rate = original.rate;
     result.range = original.range;
     result.qualities = original.qualities;
-    result.qualitiesText = original.qualities.join(", ");
     result.ammo = original.ammo;
     result.weight = original.weight;
     result.cost = original.cost;
@@ -61,6 +61,8 @@ export class WeaponData {
     result.mods = original.mods;
     result.modNotes = original.modNotes;
 
+    result.updateTexts();
+    
     return result;
   }
 }
