@@ -117,7 +117,7 @@
     "weight": 12,
     "cost": 109,
     "rarity": 1,
-    "mods": ["Hardened", "Rapid", "Powerful", "Short Barrel", "Full Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Compensator", "Muzzle Break", "Suppressor", "Armor Piercing Receiver", "9mm Receiver"]
+    "mods": ["Hardened", "Rapid Automatic Receiver", "Powerful", "Short Barrel", "Full Stock", "Recoil Compensating Stock", "Large Magazine", "Quick-Eject Magazine", "Large Quick-Eject Magazine", "Reflex Sight", "Compensator", "Muzzle Break", "Suppressor", "Armor Piercing Receiver", "9mm Receiver"]
   },
   {
     "name": "Combat Shotgun",
@@ -240,7 +240,7 @@
     "weight": 4,
     "cost": 50,
     "rarity": 2,
-    "mods": ["Photon Exciter", "Beta Wave Tuner", "Boosted Capacitor", "Photon Agitator", "Long Barrel", "Automatic Barrel", "Improved Barrel", "Standard Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Beam Splitter", "Beam Focuser", "Gyro Compensating Lens", "Gamma Wave Emitter", "Maximized Capacitor", "Boosted Photon Agitator", "Boosted Gamma Wave Emitter", "Overcharged Capacitor", "Improved Long Barrel", "Improved Automatic Barrel", "Amplified Beam Splitter", "Fine-Tuned Beam Focuser", "Quantum Gyro-Compensating Lens"],
+    "mods": ["Photon Exciter", "Beta Wave Tuner", "Boosted Capacitor", "Photon Agitator", "Long Barrel", "Automatic Barrel", "Improved Barrel", "Standard Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Beam Splitter", "Beam Focuser", "Gyro Compensating Lens", "Gamma Wave Emitter", "Maximized Capacitor", "Boosted Photon Agitator", "Boosted Gamma Wave Emitter", "Overcharged Capacitor", "Improved Long Barrel", "Improved Automatic Barrel", "Amplified Beam Splitter", "Fine-Tuned Beam Focuser", "Quantum Gyro Compensating Lens"],
     "modNotes": "Any Stock mods change the weapon to an Institute laser rifle."
   },
   {
@@ -272,7 +272,7 @@
     "weight": 4,
     "cost": 69,
     "rarity": 2,
-    "mods": ["Photon Exciter", "Beta Wave Tuner", "Boosted Capacitor", "Photon Agitator", "Long Barrel", "Automatic Barrel", "Sniper Barrel", "Improved Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Beam Splitter", "Beam Focuser", "Gyro Compensating Lens", "Gamma Wave Emitter", "Maximized Capacitor", "Boosted Photon Agitator", "Boosted Gamma Wave Emitter", "Overcharged Capacitor", "Improved Long Barrel", "Improved Automatic Barrel", "Improved Sniper Barrel", "Amplified Beam Splitter", "Fine-Tuned Beam Focuser", "Quantum Gyro-Compensating Lens"],
+    "mods": ["Photon Exciter", "Beta Wave Tuner", "Boosted Capacitor", "Photon Agitator", "Long Barrel", "Automatic Barrel", "Sniper Barrel", "Improved Barrel", "Sharpshooter’s Grip", "Standard Stock", "Marksman’s Stock", "Recoil Compensating Stock", "Reflex Sight", "Short Scope", "Long Scope", "Short Night Vision Scope", "Long Night Vision Scope", "Recon Scope", "Beam Splitter", "Beam Focuser", "Gyro Compensating Lens", "Gamma Wave Emitter", "Maximized Capacitor", "Boosted Photon Agitator", "Boosted Gamma Wave Emitter", "Overcharged Capacitor", "Improved Long Barrel", "Improved Automatic Barrel", "Improved Sniper Barrel", "Amplified Beam Splitter", "Fine-Tuned Beam Focuser", "Quantum Gyro Compensating Lens"],
     "modNotes": " Any Stock mods change the weapon to a laser rifle."
   },
   {
@@ -335,7 +335,7 @@
     "weight": 16,
     "cost": 137,
     "rarity": 3,
-    "mods": ["Napalm (Flamer)", "Long Barrel (Flamer) (Flamer)", "Large Tank (Flamer)", "Huge Tank (Flamer)", "Compression Nozzle (Flamer)", "Vaporization Nozzle (Flamer)"],
+    "mods": ["Napalm (Flamer)", "Long Barrel (Flamer)", "Large Tank (Flamer)", "Huge Tank (Flamer)", "Compression Nozzle (Flamer)", "Vaporization Nozzle (Flamer)"],
     "modNotes": "Mods installed with the Repair skill"
   },
   {
@@ -1615,7 +1615,7 @@
     "weight": 8,
     "cost": 180,
     "rarity": 4,
-    "mods": ["Automatic Barrel", "Splitter", "Improved Barrel", "Amplified Beam Splitter", "Fine-Tuned Beam Focuser", "Quantum Gyro-Compensating Lens", "Reflex Sight"]
+    "mods": ["Automatic Barrel", "Splitter", "Improved Barrel", "Amplified Beam Splitter", "Fine-Tuned Beam Focuser", "Quantum Gyro Compensating Lens", "Reflex Sight"]
   },
   {
     "name": ".50 Cal Machine Gun",

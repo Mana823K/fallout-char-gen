@@ -397,7 +397,7 @@
     "perks": ["Science! 2"]
   },
   {
-    "name": "Three-crank capacitor (Laser Musket)",
+    "name": "Three-Crank Capacitor (Laser Musket)",
     "prefix": "Three-crank",
     "weaponType": "Energy Weapon",
     "type": "Capacitor",
@@ -408,7 +408,7 @@
     "perks": []
   },
   {
-    "name": "Four-crank capacitor (Laser Musket)",
+    "name": "Four-Crank Capacitor (Laser Musket)",
     "prefix": "Four-crank",
     "weaponType": "Energy Weapon",
     "type": "Capacitor",
@@ -419,7 +419,7 @@
     "perks": ["Science! 1"]
   },
   {
-    "name": "Five-crank capacitor (Laser Musket)",
+    "name": "Five-Crank Capacitor (Laser Musket)",
     "prefix": "Five-crank",
     "weaponType": "Energy Weapon",
     "type": "Capacitor",
@@ -430,7 +430,7 @@
     "perks": ["Science! 2"]
   },
   {
-    "name": "Six-crank capacitor (Laser Musket)",
+    "name": "Six-Crank Capacitor (Laser Musket)",
     "prefix": "Six-crank",
     "weaponType": "Energy Weapon",
     "type": "Capacitor",
@@ -1089,7 +1089,7 @@
     "perks": ["Blacksmith 3", "Science! 1"]
   },
   {
-    "name": "Serrated Blade  (Combat Knife)",
+    "name": "Serrated Blade (Combat Knife)",
     "prefix": "Serrated",
     "weaponType": "Melee Weapon",
     "type": "",
