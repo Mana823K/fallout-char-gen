@@ -1,24 +1,26 @@
 <table class="table">
-  <tr *ngFor="let column of columns">
-      <th>{{column.label}}</th>
-    </tr>
+  <tr>
+    <th *ngFor="let column of columns">{{column.label}}</th>
+  </tr>
     
-  <tr *ngFor="let column of columns">
-    <td>
+  <tr>
+    <td *ngFor="let column of columns">
       <app-input *ngIf="column.filterType == FilterTypeEnum.Text"
-                  [inputName]="column.property + '-filter'"
+                  [inputName]="column.property + 'Filter'"
                   [(value)]="column.filterText"
-                  (valueChange)="column.filterFunc(items)"></app-input>
+                  (valueChange)="filter()"></app-input>
       <app-select *ngIf="column.filterType == FilterTypeEnum.Select"
-                  inputName="typeFilter"
+                  [inputName]="column.property + 'Filter'"
                   [options]="column.options"
                   [(value)]="column.filterText"
-                  (valueChange)="column.filterFunc(items)"></app-select>
-      <app-sort-td [(value)]="column.isAscending" (valueChange)="column.sortFunc(items)"></app-sort-td>
+                  (valueChange)="filter()"></app-select>
+      <app-sort-td *ngIf="column.filterType == FilterTypeEnum.Sort"
+                  [(value)]="column.isAscending"
+                  (valueChange)="sort()"></app-sort-td>
     </td>
   </tr>
 
-  <tr *ngFor="let item of items">
+  <tr *ngFor="let item of displayedItems">
     <td *ngFor="let column of columns" [class]="column.align">{{column.getText(item)}}</td>
   </tr>
 </table>

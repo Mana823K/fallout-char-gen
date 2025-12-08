@@ -1,0 +1,26 @@
+@use "./../../../../style/colors.scss" as *;
+
+.table {
+  margin: 1rem;
+}
+
+tr:nth-child(even) {
+  background-color: $accentLight;
+}
+
+td {
+  padding: 0 0.5rem;
+}
+
+.left {
+  text-align: start;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+  text-align: end;
+}
+
