@@ -10,7 +10,8 @@ import * as _ from 'lodash';
 export class TableComponent<T> implements OnInit {
   @Input() items: T[] = [];
   @Input() columns: TableColumn<T>[] = [];
-  @Input() defaultSort?: (a: T, b: T) => number;
+  @Input() sortProperties: string[] = [];
+
   displayedItems: T[] = [];
   
   FilterTypeEnum = FilterTypeEnum;
@@ -71,9 +72,22 @@ export class TableComponent<T> implements OnInit {
     }
   }
 
+  defaultSort(a: T, b: T): number {
+    for (let property of this.sortProperties) {
+      let aValue = _.get(a, property);
+      let bValue = _.get(b, property);
+      
+      if (aValue != bValue) {
+        return aValue > bValue ? 1 : -1;
+      }
+    }
+    return 0;
+  }
+
+
   sort() {
-    if (this.defaultSort)
-      this.displayedItems.sort(this.defaultSort);
+    if (this.sortProperties.length > 0)
+      this.displayedItems.sort(this.defaultSort.bind(this));
     
     for (var colunm of this.columns) {
       if (colunm.filterType == FilterTypeEnum.Sort && colunm.isAscending != undefined) {
@@ -95,7 +109,7 @@ export class TableColumn<T> {
 
   filterFunc?: (items: T[]) => T[];
   
-  //** for ascending */
+  /** for ascending */
   sortFunc: (a: T, b: T) => number = (a,b) => {
     return _.get(a, this.property) - _.get(b, this.property);
   }
@@ -114,5 +128,6 @@ export enum FilterTypeEnum {
   Text,
   Sort,
   Select,
-  YesNo
+  YesNo,
+  None
 }

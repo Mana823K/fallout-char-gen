@@ -13,25 +13,6 @@ import { FilterTypeEnum, TableColumn } from '../../common/table/table.component'
 export class WeaponsComponent {
   get weapons(): Weapon[] { return this.dataService.weapons; }
 
-  nameFilter: string = "";
-  typeOptions: string[] = [];
-  typeFilter: string = "";
-  effectsOptions: string[] = [];
-  effectsFilter: string = "";
-  damageTypeOptions: string[] = [];
-  damageTypeFilter: string = "";
-  qualitiesOptions: string[] = [];
-  qualitiesFilter: string = "";
-  ammoOptions: string[] = [];
-  ammoFilter: string = "";
-
-  damageAscending?: boolean;
-  fireRateAscending?: boolean;
-  rangeAscending?: boolean;
-  weightAscending?: boolean;
-  costAscending?: boolean;
-  rarityAscending?: boolean;
-
   tableColumns: TableColumn<Weapon>[] = [
     new TableColumn<Weapon>({
       label: "Name",
@@ -103,15 +84,13 @@ export class WeaponsComponent {
     }),
   ];
 
-  constructor(private dataService: DataService) { }
+  sortProperties = ["type", "name"];
 
-  sort(a: Weapon, b: Weapon) {
-    return a.type == b.type ? (a.name > b.name ? 1 : -1) : a.type > b.type ? 1  : -1;
-  }
+  constructor(private dataService: DataService) { }
 
   rangeSort(a: Weapon, b: Weapon) {
     let aRange = ranges.find(x => x.name == a.range);
     let bRange = ranges.find(x => x.name == b.range);
-    return this.rangeAscending ? (aRange?.number ?? 0) - (bRange?.number ?? 0) : (bRange?.number ?? 0) - (aRange?.number ?? 0);
+    return (aRange?.number ?? 0) - (bRange?.number ?? 0);
   }
 }
