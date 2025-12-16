@@ -3,12 +3,17 @@ import { Special } from '../../models/special';
 import { StatsComponent } from './stats/stats.component';
 import { PerksComponent } from './perks/perks.component';
 import { Perk } from '../../models/perk';
+import { OriginComponent } from './origin/origin.component';
+import { NumberInputComponent } from '../form/number-input/number-input.component';
+import { SpecialAttributesComponent } from './special-attributes/special-attributes.component';
+import { SkillsComponent } from './skills/skills.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-character',
-  standalone: false,
   templateUrl: './character.component.html',
-  styleUrl: './character.component.scss'
+  styleUrl: './character.component.scss',
+  imports: [CommonModule, OriginComponent, NumberInputComponent, StatsComponent, SpecialAttributesComponent, PerksComponent, SkillsComponent]
 })
 export class CharacterComponent {
   readonly LEVEL_STORAGE_NAME = "Level";

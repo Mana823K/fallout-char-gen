@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-number-input',
-  standalone: false,
   templateUrl: './number-input.component.html',
-  styleUrl: './number-input.component.scss'
+  styleUrl: './number-input.component.scss',
+  imports: [CommonModule]
 })
 export class NumberInputComponent {
   @Input() value: number = 0;

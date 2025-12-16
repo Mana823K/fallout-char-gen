@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-database',
-  standalone: false,
   templateUrl: './database.component.html',
-  styleUrl: './database.component.scss'
+  styleUrl: './database.component.scss',
+  imports: [RouterModule, CommonModule]
 })
 export class DatabaseComponent {
   get selectedTable(): string { return this.router.url.split("/").pop() ?? ""; }

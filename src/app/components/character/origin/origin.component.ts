@@ -1,12 +1,14 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { Origin } from '../../../models/origin';
+import { SelectComponent } from '../../form/select/select.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-origin',
-  standalone: false,
   templateUrl: './origin.component.html',
-  styleUrl: './origin.component.scss'
+  styleUrl: './origin.component.scss',
+  imports: [SelectComponent, FormsModule]
 })
 export class OriginComponent {
   readonly STORAGE_NAME = "Origin";

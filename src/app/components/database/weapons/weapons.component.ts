@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { Weapon } from '../../../models/weapon';
 import { ranges } from '../../../models/range';
-import { FilterTypeEnum, TableColumn } from '../../common/table/table.component';
+import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
 
 @Component({
   selector: 'app-weapons',
-  standalone: false,
   templateUrl: './weapons.component.html',
-  styleUrl: './weapons.component.scss'
+  styleUrl: './weapons.component.scss',
+  imports: [TableComponent]
 })
 export class WeaponsComponent {
   get weapons(): Weapon[] { return this.dataService.weapons; }

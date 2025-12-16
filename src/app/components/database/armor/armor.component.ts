@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Armor } from '../../../models/armor';
 import { DataService } from '../../../services/data.service';
-import { FilterTypeEnum, TableColumn } from '../../common/table/table.component';
+import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
 
 @Component({
   selector: 'app-armor',
-  standalone: false,
   templateUrl: './armor.component.html',
-  styleUrl: './armor.component.scss'
+  styleUrl: './armor.component.scss',
+  imports: [TableComponent]
 })
 export class ArmorComponent {
   get armor(): Armor[] { return this.dataService.armor; }

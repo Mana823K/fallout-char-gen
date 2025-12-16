@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tools',
-  standalone: false,
   templateUrl: './tools.component.html',
-  styleUrl: './tools.component.scss'
+  styleUrl: './tools.component.scss',
+  imports: [CommonModule, RouterModule]
 })
 export class ToolsComponent {
   get selectedTable(): string { return this.router.url.split("/").pop() ?? ""; }

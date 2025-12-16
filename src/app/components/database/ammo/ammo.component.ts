@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Ammo } from '../../../models/ammo';
 import { DataService } from '../../../services/data.service';
-import { FilterTypeEnum, TableColumn } from '../../common/table/table.component';
+import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
 
 @Component({
   selector: 'app-ammo',
-  standalone: false,
   templateUrl: './ammo.component.html',
-  styleUrl: './ammo.component.scss'
+  styleUrl: './ammo.component.scss',
+  imports: [TableComponent]
 })
 export class AmmoComponent {
   get ammos(): Ammo[] { return this.dataService.ammo; }

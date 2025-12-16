@@ -4,12 +4,15 @@ import { DataService } from '../../../services/data.service';
 import { WeaponMod } from '../../../models/weapon-mod';
 import * as _ from 'lodash';
 import { ranges } from '../../../models/range';
+import { CommonModule } from '@angular/common';
+import { InputComponent } from '../../form/input/input.component';
+import { SelectComponent } from '../../form/select/select.component';
 
 @Component({
   selector: 'app-weapon-mod-tool',
-  standalone: false,
   templateUrl: './weapon-mod-tool.component.html',
-  styleUrl: './weapon-mod-tool.component.scss'
+  styleUrl: './weapon-mod-tool.component.scss',
+  imports: [CommonModule, InputComponent, SelectComponent]
 })
 export class WeaponModToolComponent {
   get weapons(): Weapon[] { return this.dataService.weapons.filter(x => x.mods.length > 0); }

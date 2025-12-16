@@ -2,12 +2,15 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Perk, PerkSaveData } from '../../../models/perk';
 import { DataService } from '../../../services/data.service';
 import { Special } from '../../../models/special';
+import { MatIcon } from '@angular/material/icon';
+import { MatTooltip } from '@angular/material/tooltip';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-perks',
-  standalone: false,
   templateUrl: './perks.component.html',
-  styleUrl: './perks.component.scss'
+  styleUrl: './perks.component.scss',
+  imports: [CommonModule, MatIcon, MatTooltip]
 })
 export class PerksComponent implements OnInit {
   readonly STORAGE_NAME = "Perks";

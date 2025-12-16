@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../../services/data.service';
-import { FilterTypeEnum, TableColumn } from '../../common/table/table.component';
+import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
 
 @Component({
   selector: 'app-magazines',
-  standalone: false,
   templateUrl: './magazines.component.html',
-  styleUrl: './magazines.component.scss'
+  styleUrl: './magazines.component.scss',
+  imports: [TableComponent]
 })
 export class MagazinesComponent {
   magazines: any[] = [];

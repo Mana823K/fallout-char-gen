@@ -1,11 +1,13 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Special, SpecialData } from '../../../models/special';
+import { CommonModule } from '@angular/common';
+import { NumberInputComponent } from '../../form/number-input/number-input.component';
 
 @Component({
   selector: 'app-special-attributes',
-  standalone: false,
   templateUrl: './special-attributes.component.html',
-  styleUrl: './special-attributes.component.scss'
+  styleUrl: './special-attributes.component.scss',
+  imports: [CommonModule, NumberInputComponent]
 })
 export class SpecialAttributesComponent implements OnInit {
   readonly STORAGE_NAME = "Special";

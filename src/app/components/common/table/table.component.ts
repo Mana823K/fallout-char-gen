@@ -1,11 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as _ from 'lodash';
+import { InputComponent } from '../../form/input/input.component';
+import { SelectComponent } from '../../form/select/select.component';
+import { SortCellComponent } from '../../form/sort-cell/sort-cell.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-table',
-  standalone: false,
   templateUrl: './table.component.html',
-  styleUrl: './table.component.scss'
+  styleUrl: './table.component.scss',
+  imports: [InputComponent, SelectComponent, SortCellComponent, CommonModule]
 })
 export class TableComponent<T> implements OnInit {
   @Input() items: T[] = [];

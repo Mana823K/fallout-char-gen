@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { WeaponMod } from '../../../models/weapon-mod';
-import { FilterTypeEnum, TableColumn } from '../../common/table/table.component';
+import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
 
 @Component({
   selector: 'app-mods',
-  standalone: false,
   templateUrl: './weapon-mods.component.html',
-  styleUrl: './weapon-mods.component.scss'
+  styleUrl: './weapon-mods.component.scss',
+  imports: [TableComponent]
 })
 export class WeaponModsComponent {
   get weaponMods(): WeaponMod[] { return this.dataService.weaponMods; }

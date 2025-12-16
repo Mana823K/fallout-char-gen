@@ -2,12 +2,16 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Skill, SkillSaveData } from '../../../models/skill';
 import { DataService } from '../../../services/data.service';
 import { Special } from '../../../models/special';
+import { CommonModule } from '@angular/common';
+import { NumberInputComponent } from '../../form/number-input/number-input.component';
+import { MatCheckbox } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-skills',
-  standalone: false,
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+  styleUrl: './skills.component.scss',
+  imports: [CommonModule, NumberInputComponent, MatCheckbox, FormsModule]
 })
 export class SkillsComponent implements OnInit {
   readonly STORAGE_NAME = "Skills";

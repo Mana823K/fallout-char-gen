@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { MiscellanyItem } from '../../../models/miscellany-item';
-import { FilterTypeEnum, TableColumn } from '../../common/table/table.component';
+import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
 
 @Component({
   selector: 'app-miscellany',
-  standalone: false,
   templateUrl: './miscellany.component.html',
-  styleUrl: './miscellany.component.scss'
+  styleUrl: './miscellany.component.scss',
+  imports: [TableComponent]
 })
 export class MiscellanyComponent {
   get items(): MiscellanyItem[] { return this.dataService.miscellanyItems; }

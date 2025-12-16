@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-sort-td',
-  standalone: false,
   templateUrl: './sort-cell.component.html',
-  styleUrl: './sort-cell.component.scss'
+  styleUrl: './sort-cell.component.scss',
+  imports: [CommonModule, MatIcon]
 })
 export class SortCellComponent {
   @Input() value?: boolean;

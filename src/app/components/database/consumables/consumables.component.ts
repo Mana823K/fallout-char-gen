@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { Consumable } from '../../../models/consumable';
-import { FilterTypeEnum, TableColumn } from '../../common/table/table.component';
+import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
 
 @Component({
   selector: 'app-consumables',
-  standalone: false,
   templateUrl: './consumables.component.html',
-  styleUrl: './consumables.component.scss'
+  styleUrl: './consumables.component.scss',
+  imports: [TableComponent]
 })
 export class ConsumablesComponent {
   get consumables(): Consumable[] { return this.dataService.consumables; }
