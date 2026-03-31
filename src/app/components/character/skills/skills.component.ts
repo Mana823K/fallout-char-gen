@@ -6,12 +6,13 @@ import { CommonModule } from '@angular/common';
 import { NumberInputComponent } from '../../form/number-input/number-input.component';
 import { MatCheckbox } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
+import { MatIcon } from "@angular/material/icon";
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
-  imports: [CommonModule, NumberInputComponent, MatCheckbox, FormsModule]
+  imports: [CommonModule, NumberInputComponent, MatCheckbox, FormsModule, MatIcon]
 })
 export class SkillsComponent implements OnInit {
   readonly STORAGE_NAME = "Skills";
