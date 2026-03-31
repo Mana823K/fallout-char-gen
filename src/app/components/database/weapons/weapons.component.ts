@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { Weapon } from '../../../models/weapon';
 import { ranges } from '../../../models/range';
 import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
+import { Tooltip, TooltipTypeEnum } from '../../../models/tooltip';
+import { MatTooltip } from "@angular/material/tooltip";
 
 @Component({
   selector: 'app-weapons',
   templateUrl: './weapons.component.html',
   styleUrl: './weapons.component.scss',
-  imports: [TableComponent]
+  imports: [TableComponent, MatTooltip]
 })
-export class WeaponsComponent {
+export class WeaponsComponent implements AfterViewInit {
   get weapons(): Weapon[] { return this.dataService.weapons; }
+  get tooltips(): Tooltip[] { return this.dataService.tooltips; }
+  TooltipTypeEnum = TooltipTypeEnum;
 
   tableColumns: TableColumn<Weapon>[] = [
     new TableColumn<Weapon>({
@@ -86,7 +90,25 @@ export class WeaponsComponent {
 
   sortProperties = ["type", "name"];
 
+  @ViewChild('effects') effectsTemplate?: TemplateRef<any>;
+  @ViewChild('qualities') qualitiesTemplate?: TemplateRef<any>;
+
   constructor(private dataService: DataService) { }
+
+  ngAfterViewInit(): void {
+    let effectsColumn = this.tableColumns.find(x => x.property == "effects");
+    if (effectsColumn)
+      effectsColumn.template = this.effectsTemplate;
+    
+    let qualitiesColumn = this.tableColumns.find(x => x.property == "qualities");
+    if (qualitiesColumn)
+      qualitiesColumn.template = this.qualitiesTemplate;
+  }
+
+  getTooltip(effect: string, type: TooltipTypeEnum): string {
+    let tooltips = this.tooltips.filter(x => x.type == type);
+    return tooltips.find(x => x.name == effect.replace(/\s\([0-9]+\)/gm, "").replace(/\s[0-9]+/gm, ""))?.description ?? "";
+  }
 
   rangeSort(a: Weapon, b: Weapon) {
     let aRange = ranges.find(x => x.name == a.range);

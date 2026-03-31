@@ -15,7 +15,7 @@
     "description": "If one or more Effects are rolled, the target suffers the weapon’s damage again at the end of their next and subsequent turns, for a number of rounds equal to the number of Effects rolled. A character may spend a major action to make a test to stop Persistent damage early; the difficulty is equal to the number of Effects rolled, and the attribute + skill used are chosen by the GM. Some Persistent weapons may inflict a different type of damage to the weapon, and where this is the case, it is noted in brackets; for example, Persistent (Poison)."
   },
   {
-    "name": "Piercing X",
+    "name": "Piercing",
     "type": "Weapon Effect",
     "description": "Ignore X points of the target’s damage reduction for each Effect rolled, where X is the rating of this damage effect"
   },
@@ -130,7 +130,7 @@
     "description": "When you make an attack with an Unreliable weapon, increase the complication range of the attack by 1. A weapon may not be both Reliable and Unreliable."
   },
   {
-    "name": "Ammo-Hungry (X)",
+    "name": "Ammo-Hungry",
     "type": "Weapon Quality",
     "description": "The weapon consumes ammo at a much higher rate than other weapons. Each time the weapon is fired, it spends X ammo, rather than 1. In addition, extra damage requires spending X ammo per +1 CD, with a maximum number of  CD equal to the weapon’s Fire Rate. Additional uses of ammunition, such as the Burst damage effect, also spend X ammo for every 1 ammo that would normally be spent."
   },
@@ -140,7 +140,7 @@
     "description": "The weapon can deliver a series of explosions over a wide area. This functions identically to the Blast quality, with one addition: When an attack is made with the weapon, you may spend additional ammunition to target additional zones. Each additional zone requires that 2 ammunition be spent, and additional zones must be adjacent to the initial target zone. Ammunition spent to target additional zones is limited by the weapon’s Fire Rate."
   },
   {
-    "name": "Delay (X)",
+    "name": "Delay",
     "type": "Weapon Quality",
     "description": "The weapon operates on a timer or fuse, and will not detonate immediately. A Thrown Delay weapon can be thrown normally to the target location, while other Delay weapons may be placed in their desired location. A Delay (1) weapon detonates at the start of the first round after it is thrown or otherwise triggered. A Delay (2) weapon detonates at the start of the round after that, and so on."
   },
@@ -150,7 +150,7 @@
     "description": "The explosive device is placed in a specific location and set to detonate, often either with the Delay (X) quality or the Remote quality. Placing the explosive requires a PER + Explosives test with a difficulty of 1; this increases to 2 if you’ve been attacked since your last turn. Failure means the bomb hasn’t been set properly and will not detonate (or, if a complication is rolled, may have been set improperly, and may detonate unexpectedly). Success means the bomb has been set up properly."
   },
   {
-    "name": "Recoil (X)",
+    "name": "Recoil",
     "type": "Weapon Quality",
     "description": "This weapon has a particularly ferocious ‘kick’ when it fires, which might be too much for weaker users. If the user’s STR score is less than X, then all attacks with the weapon increase in difficulty by 1. You may ignore this effect if you wield the weapon two-handed, or if the weapon is already two-handed, by bracing it against a solid object or a bipod."
   },

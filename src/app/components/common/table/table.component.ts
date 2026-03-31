@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 import * as _ from 'lodash';
 import { InputComponent } from '../../form/input/input.component';
 import { SelectComponent } from '../../form/select/select.component';
@@ -110,6 +110,7 @@ export class TableColumn<T> {
   isArray: boolean = false;
   isAscending?: boolean;
   align: "left" | "center" | "right" = "left";
+  template?: TemplateRef<any>;
 
   filterFunc?: (items: T[]) => T[];
   

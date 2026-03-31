@@ -8,6 +8,8 @@ export class Consumable {
   cost:  number = 0;
   rarity: number = 0;
   notes?: string;
+
+  get isAlcoholic(): boolean { return this.effects.includes("Alcoholic"); }
 }
 
 export class ConsumableData {

@@ -1,16 +1,19 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { Consumable } from '../../../models/consumable';
 import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
+import { MatTooltip } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-consumables',
   templateUrl: './consumables.component.html',
   styleUrl: './consumables.component.scss',
-  imports: [TableComponent]
+  imports: [TableComponent, MatTooltip]
 })
-export class ConsumablesComponent {
+export class ConsumablesComponent implements AfterViewInit {
   get consumables(): Consumable[] { return this.dataService.consumables; }
+
+  alcoholicTooltip: string = "";
 
   tableColumns: TableColumn<Consumable>[] = [
     new TableColumn<Consumable>({
@@ -63,6 +66,17 @@ export class ConsumablesComponent {
 
   sortProperties = ["name"];
 
-  constructor(private dataService: DataService) { }
+  @ViewChild('effects') effectsTemplate?: TemplateRef<any>;
+  
+  constructor(private dataService: DataService) {
+    let tooltip = this.dataService.tooltips.find(x => x.name == "Alcoholic")?.description ?? "";
+    this.alcoholicTooltip = "Alcoholic: " + tooltip;
+  }
+  
+  ngAfterViewInit(): void {
+    let effectsColumn = this.tableColumns.find(x => x.property == "effects");
+    if (effectsColumn)
+      effectsColumn.template = this.effectsTemplate;
+  }
 
 }

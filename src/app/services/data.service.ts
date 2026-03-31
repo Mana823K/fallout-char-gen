@@ -10,6 +10,7 @@ import consumablesData from "../data/consumables.json";
 import chemsData from "../data/chems.json";
 import magazinesData from "../data/magazines.json";
 import miscellanyItemsData from "../data/miscellany-items.json";
+import tooltipData from "../data/descriptions.json";
 import { Injectable } from "@angular/core";
 import { Origin, OriginData } from "../models/origin";
 import { Perk, PerkData } from "../models/perk";
@@ -23,6 +24,7 @@ import { Consumable, ConsumableData } from "../models/consumable";
 import { Chem, ChemData } from "../models/chem";
 import { Magazine, MagazineData } from "../models/magazine";
 import { MiscellanyItem, MiscellanyItemData } from "../models/miscellany-item";
+import { Tooltip, TooltipData } from "../models/tooltip";
 
 @Injectable({
   providedIn: "root"
@@ -40,6 +42,7 @@ export class DataService {
   chems: Chem[] = [];
   magazines: Magazine[] = [];
   miscellanyItems: MiscellanyItem[] = [];
+  tooltips: Tooltip[] = [];
 
   constructor() {
     this.origins = (originsData as OriginData[]).map(OriginData.map);
@@ -54,5 +57,6 @@ export class DataService {
     this.chems = (chemsData as ChemData[]).map(ChemData.map);
     this.magazines = (magazinesData as MagazineData[]).map(MagazineData.map);
     this.miscellanyItems = (miscellanyItemsData as MiscellanyItemData[]).map(MiscellanyItemData.map);
+    this.tooltips = (tooltipData as Tooltip[]).map(TooltipData.map);
   }
 }

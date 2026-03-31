@@ -1,1 +1,9 @@
 <app-table [items]="consumables" [columns]="tableColumns" [sortProperties]="sortProperties"></app-table>
+
+<ng-template #effects let-item>
+  <span [matTooltip]="alcoholicTooltip"
+        [matTooltipDisabled]="alcoholicTooltip.length == 0 || !item.isAlcoholic"
+        [matTooltipShowDelay]="500">
+        {{item.effects}}
+  </span>
+</ng-template>
