@@ -1,7 +1,8 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Special, SpecialData } from '../../../models/special';
+import { Component, Input } from '@angular/core';
+import { Special } from '../../../models/character/special';
 import { CommonModule } from '@angular/common';
 import { NumberInputComponent } from '../../form/number-input/number-input.component';
+import { Character } from '../../../models/character/character';
 
 @Component({
   selector: 'app-special-attributes',
@@ -9,30 +10,16 @@ import { NumberInputComponent } from '../../form/number-input/number-input.compo
   styleUrl: './special-attributes.component.scss',
   imports: [CommonModule, NumberInputComponent]
 })
-export class SpecialAttributesComponent implements OnInit {
-  readonly STORAGE_NAME = "Special";
-  readonly MAX_POINTS = 40;
-  special: Special = new Special();
-
-  @Input() extraPoints: number = 0;
+export class SpecialAttributesComponent {
+  @Input() character = new Character();  
+  get special(): Special { return this.character.special; }
 
   get minPoints(): number { return Special.MIN_VALUE; }
   get maxPoints(): number { return Special.MAX_VALUE; }
-  get pointsLeft(): number { return this.MAX_POINTS + this.extraPoints - this.special.pointsSum; }
+  get pointsLeft(): number { return Special.MAX_POINTS + this.character.extraSpecialPoints - this.special.pointsSum; }
 
-  @Output() specialChanged = new EventEmitter<Special>();
-
-  constructor() {
-    var specialData = localStorage.getItem(this.STORAGE_NAME);
-    this.special = specialData ? Special.map(JSON.parse(specialData)) : new Special();
-  }
-
-  ngOnInit(): void {
-    this.specialChanged.emit(this.special);
-  }
 
   onSpecialChanged() {
-    localStorage.setItem(this.STORAGE_NAME, JSON.stringify(new SpecialData(this.special)));
-    this.specialChanged.emit(this.special);
+    this.character.onChange();
   }
 }

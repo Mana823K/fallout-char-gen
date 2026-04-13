@@ -1,11 +1,10 @@
 <div class="container">
-  <app-origin></app-origin>
-  <app-number-input [(value)]="level"
-                    (valueChange)="onLevelChanged()"
+  <app-origin [character]="character"></app-origin>
+  <app-number-input [(value)]="character.level"
                     label="LEVEL"
                     [min]="0"></app-number-input>
-  <app-stats #statsComponent *ngIf="perksComponent" [special]="special" [level]="level" [hpModifier]="hpModifier" [carryWeightModifier]="carryWeightModifier"></app-stats>
-  <app-special-attributes [extraPoints]="extraSpecialPoints" (specialChanged)="onSpecialChanged($event)"></app-special-attributes>
-  <app-perks #perksComponent [special]="special" [level]="level" (perksChanged)="onPerksChanged($event)"></app-perks>
-  <app-skills [special]="special" [level]="level" [extraRanks]="extraSkillRanks" [extraTags]="extraSkillTags"></app-skills>
+  <app-stats #statsComponent *ngIf="perksComponent" [character]="character"></app-stats>
+  <app-special-attributes [character]="character"></app-special-attributes>
+  <app-perks #perksComponent [character]="character"></app-perks>
+  <app-skills [character]="character"></app-skills>
 </div>

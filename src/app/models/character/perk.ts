@@ -100,4 +100,11 @@ export class PerkData {
 export class PerkSaveData {
   name: string = "";
   ranks: number = 0;
+
+  constructor(original: Perk) {
+    return {
+      name: original.name,
+      ranks: original.ranks
+    }
+  }
 }

@@ -1,6 +1,7 @@
 export class Special {
   static MIN_VALUE = 4;
   static MAX_VALUE = 10;
+  static MAX_POINTS = 40;
 
   strength: number = 5;
   perception: number = 5;
@@ -14,23 +15,9 @@ export class Special {
     return this.strength + this.perception + this.endurance
     + this.charisma + this.intelligence + this.agility + this.luck;
   }
-
-  static map(data: SpecialData): Special {
-    let result = new Special();
-
-    result.strength = data.strength;
-    result.perception = data.perception;
-    result.endurance = data.endurance;
-    result.charisma = data.charisma;
-    result.intelligence = data.intelligence;
-    result.agility = data.agility;
-    result.luck = data.luck;
-
-    return result;
-  }
 }
 
-export class SpecialData {
+export class SpecialSaveData {
   strength: number = 5;
   perception: number = 5;
   endurance: number = 5;
@@ -49,5 +36,19 @@ export class SpecialData {
       agility: original.agility,
       luck: original.luck
     }
+  }
+
+  static map(data: SpecialSaveData): Special {
+    let result = new Special();
+
+    result.strength = data.strength;
+    result.perception = data.perception;
+    result.endurance = data.endurance;
+    result.charisma = data.charisma;
+    result.intelligence = data.intelligence;
+    result.agility = data.agility;
+    result.luck = data.luck;
+
+    return result;
   }
 }

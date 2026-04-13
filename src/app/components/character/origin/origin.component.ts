@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DataService } from '../../../services/data.service';
-import { Origin } from '../../../models/origin';
+import { Origin } from '../../../models/character/origin';
 import { SelectComponent } from '../../form/select/select.component';
 import { FormsModule } from '@angular/forms';
+import { Character } from '../../../models/character/character';
 
 @Component({
   selector: 'app-origin',
@@ -11,22 +12,12 @@ import { FormsModule } from '@angular/forms';
   imports: [SelectComponent, FormsModule]
 })
 export class OriginComponent {
-  readonly STORAGE_NAME = "Origin";
   get options(): string[] { return this.dataService.origins.map(x => x.name); }
 
-  _origin: Origin = new Origin();
-  get origin(): Origin  { return this._origin; }
-  set origin(value: string) { this._origin = this.dataService.origins.find(x => x.name == value) ?? this.dataService.origins[0] ?? new Origin(); }
+  get origin(): Origin | undefined { return this.character.origin; }
+  set origin(value: string) { this.character.origin = this.dataService.origins.find(x => x.name == value) ?? this.dataService.origins[0] ?? new Origin(); }
 
-  @Output() originChanged = new EventEmitter<Origin>();
+  @Input() character = new Character();
 
-  constructor(private dataService: DataService) {
-    this.origin = localStorage.getItem(this.STORAGE_NAME) ?? "";
-    this.originChanged.emit(this.origin);
-  }
-
-  onOriginChanged() {
-    localStorage.setItem(this.STORAGE_NAME, this.origin.name);
-    this.originChanged.emit(this.origin);
-  }
+  constructor(private dataService: DataService) { }
 }

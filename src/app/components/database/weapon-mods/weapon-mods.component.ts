@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../../services/data.service';
-import { WeaponMod } from '../../../models/weapon-mod';
+import { WeaponMod } from '../../../models/database/weapon-mod';
 import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Ammo } from '../../../models/ammo';
+import { Ammo } from '../../../models/database/ammo';
 import { DataService } from '../../../services/data.service';
 import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
 

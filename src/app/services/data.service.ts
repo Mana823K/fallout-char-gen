@@ -12,19 +12,19 @@ import magazinesData from "../data/magazines.json";
 import miscellanyItemsData from "../data/miscellany-items.json";
 import tooltipData from "../data/descriptions.json";
 import { Injectable } from "@angular/core";
-import { Origin, OriginData } from "../models/origin";
-import { Perk, PerkData } from "../models/perk";
-import { Skill, SkillData } from "../models/skill";
-import { Weapon, WeaponData } from "../models/weapon";
-import { Ammo, AmmoData } from "../models/ammo";
-import { WeaponMod, WeaponModData } from "../models/weapon-mod";
-import { Armor, ArmorData } from "../models/armor";
-import { ArmorMod, ArmorModData } from "../models/armor-mod";
-import { Consumable, ConsumableData } from "../models/consumable";
-import { Chem, ChemData } from "../models/chem";
-import { Magazine, MagazineData } from "../models/magazine";
-import { MiscellanyItem, MiscellanyItemData } from "../models/miscellany-item";
-import { Tooltip, TooltipData } from "../models/tooltip";
+import { Origin, OriginData } from "../models/character/origin";
+import { Perk, PerkData } from "../models/character/perk";
+import { Skill, SkillData } from "../models/character/skill";
+import { Weapon, WeaponData } from "../models/database/weapon";
+import { Ammo, AmmoData } from "../models/database/ammo";
+import { WeaponMod, WeaponModData } from "../models/database/weapon-mod";
+import { Armor, ArmorData } from "../models/database/armor";
+import { ArmorMod, ArmorModData } from "../models/database/armor-mod";
+import { Consumable, ConsumableData } from "../models/database/consumable";
+import { Chem, ChemData } from "../models/database/chem";
+import { Magazine, MagazineData } from "../models/database/magazine";
+import { MiscellanyItem, MiscellanyItemData } from "../models/database/miscellany-item";
+import { Tooltip, TooltipData } from "../models/database/tooltip";
 
 @Injectable({
   providedIn: "root"

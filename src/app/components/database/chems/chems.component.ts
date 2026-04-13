@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../../services/data.service';
-import { Chem } from '../../../models/chem';
+import { Chem } from '../../../models/database/chem';
 import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
 
 @Component({

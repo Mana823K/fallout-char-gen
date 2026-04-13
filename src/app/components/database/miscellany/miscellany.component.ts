@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../../services/data.service';
-import { MiscellanyItem } from '../../../models/miscellany-item';
+import { MiscellanyItem } from '../../../models/database/miscellany-item';
 import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
 
 @Component({

@@ -1,12 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Skill, SkillSaveData } from '../../../models/skill';
-import { DataService } from '../../../services/data.service';
-import { Special } from '../../../models/special';
+import { Component, Input } from '@angular/core';
+import { Skill } from '../../../models/character/skill';
 import { CommonModule } from '@angular/common';
 import { NumberInputComponent } from '../../form/number-input/number-input.component';
 import { MatCheckbox } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { MatIcon } from "@angular/material/icon";
+import { Character } from '../../../models/character/character';
 
 @Component({
   selector: 'app-skills',
@@ -14,62 +13,31 @@ import { MatIcon } from "@angular/material/icon";
   styleUrl: './skills.component.scss',
   imports: [CommonModule, NumberInputComponent, MatCheckbox, FormsModule, MatIcon]
 })
-export class SkillsComponent implements OnInit {
-  readonly STORAGE_NAME = "Skills";
-  readonly DEF_TAG_COUNT = 3;
-  readonly DEF_MAX_RANK = 6;
-  readonly DEF_STARTER_MAX_RANK = 3;
-  readonly DEF_TAG_MIN_RANK = 2;
-  readonly DEF_RANK_POINTS = 9;
+export class SkillsComponent {
+  @Input() character = new Character()
 
-  skills: Skill[] = [];
+  get skills(): Skill[] { return this.character.skills; }
 
-  @Input() special: Special = new Special();
-  @Input() level: number = 0;
-  @Input() extraRanks: number = 0;
-  @Input() extraTags: number = 0;
-  @Output() skillChanged = new EventEmitter<Skill[]>();
-
-  get availableTagCount(): number { return this.DEF_TAG_COUNT + this.extraTags; }
+  get availableTagCount(): number { return Skill.TAG_COUNT + this.character.extraSkillTags; }
   get tagCount(): number { return this.skills.filter(x => x.isTagged).length; }
 
-  get availableRankPoints(): number { return this.DEF_RANK_POINTS + this.special.intelligence + this.level + this.tagCount * 2 + this.extraRanks; }
+  get availableRankPoints(): number { 
+    return Skill.RANK_POINTS + this.character.special.intelligence 
+    + this.character.level + this.tagCount * 2 + this.character.extraSkillRanks;
+  }
   get totalRankPoints(): number {
     var total = 0;
     this.skills.forEach(x => total += x.ranks);
     return total;
   }
-  get maxRank(): number { return this.level >= 3 ? this.DEF_MAX_RANK : this.DEF_STARTER_MAX_RANK; }
-
-  constructor(private dataService: DataService) {
-    this.skills = this.dataService.skills;
-
-    var storedData = localStorage.getItem(this.STORAGE_NAME);
-    if (storedData) {
-      var storedSkills = JSON.parse(storedData);
-      this.skills.forEach(skill => {
-        var saved = storedSkills.find((x: SkillSaveData) => x.name == skill.name);
-        skill.isTagged = saved.isTagged;
-        skill.ranks = saved.ranks;
-      });
-    }
-  }
-
-  ngOnInit(): void {
-    this.skillChanged.emit(this.skills);
-  }
+  get maxRank(): number { return this.character.level >= 3 ? Skill.MAX_RANK : Skill.STARTER_MAX_RANK; }
 
   onTagChanged(skill: Skill) {
-    if (skill.isTagged && skill.ranks < this.DEF_TAG_MIN_RANK) {
-      skill.ranks = this.DEF_TAG_MIN_RANK;
+    if (skill.isTagged && skill.ranks < Skill.TAG_MIN_RANK) {
+      skill.ranks = Skill.TAG_MIN_RANK;
     }
 
     this.onSkillChange();
-  }
-
-  onSkillChange() {
-    localStorage.setItem(this.STORAGE_NAME, JSON.stringify(this.skills.map(x => new SkillSaveData(x))));
-    this.skillChanged.emit(this.skills);
   }
 
   decreaseRank(skill: Skill) {
@@ -86,5 +54,9 @@ export class SkillsComponent implements OnInit {
     }
     skill.ranks++;
     this.onSkillChange();
+  }
+
+  onSkillChange() {
+    this.character.onChange();
   }
 }

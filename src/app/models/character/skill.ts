@@ -1,4 +1,10 @@
 export class Skill {
+  static readonly TAG_COUNT = 3;
+  static readonly MAX_RANK = 6;
+  static readonly STARTER_MAX_RANK = 3;
+  static readonly TAG_MIN_RANK = 2;
+  static readonly RANK_POINTS = 9;
+
   name: string = "";
   attribute: string = "";
   detail: string = "";

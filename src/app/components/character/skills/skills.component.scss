@@ -1,5 +1,4 @@
-@import "./../../../../style/colors.scss";
-@import "./../../../../style/variables.scss";
+@use "./../../../../style/colors.scss" as *;
 
 .points-left-error {
   color: $errorDark;

@@ -1,9 +1,9 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core';
 import { DataService } from '../../../services/data.service';
-import { Weapon } from '../../../models/weapon';
-import { ranges } from '../../../models/range';
+import { Weapon } from '../../../models/database/weapon';
+import { ranges } from '../../../models/database/range';
 import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
-import { Tooltip, TooltipTypeEnum } from '../../../models/tooltip';
+import { Tooltip, TooltipTypeEnum } from '../../../models/database/tooltip';
 import { MatTooltip } from "@angular/material/tooltip";
 
 @Component({

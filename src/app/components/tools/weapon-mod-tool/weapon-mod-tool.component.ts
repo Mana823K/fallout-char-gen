@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Weapon } from '../../../models/weapon';
+import { Weapon } from '../../../models/database/weapon';
 import { DataService } from '../../../services/data.service';
-import { WeaponMod } from '../../../models/weapon-mod';
+import { WeaponMod } from '../../../models/database/weapon-mod';
 import * as _ from 'lodash';
-import { ranges } from '../../../models/range';
+import { ranges } from '../../../models/database/range';
 import { CommonModule } from '@angular/common';
 import { InputComponent } from '../../form/input/input.component';
 import { SelectComponent } from '../../form/select/select.component';
