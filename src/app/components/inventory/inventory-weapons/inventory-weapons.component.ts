@@ -60,7 +60,7 @@ export class InventoryWeaponsComponent implements AfterViewInit {
   get weaponEffects(): string[] { return this.dataService.weaponEffects.filter(x => !this.newWeapon.item.effects.includes(x)); }
   get weaponQualities(): string[] { return this.dataService.weaponQualities.filter(x => !this.newWeapon.item.qualities.includes(x)); }
   get damageTypes(): string[] { return this.dataService.damageTypes; }
-  ranges = ranges.map(x => x.name);
+  ranges = ['',...ranges.map(x => x.name)];
   _ammoTypes: string[];
   get ammoTypes(): string[] { return this._ammoTypes.filter(x => !this.newWeapon.item.ammo.includes(x)); }
 
