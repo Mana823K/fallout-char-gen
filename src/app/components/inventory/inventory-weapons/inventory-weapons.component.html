@@ -1,0 +1,120 @@
+<div class="button-container">
+  <p class="toggle-button" [ngClass]="{'active-toggle-button': showAmmoTable}" (click)="showAmmoTable = !showAmmoTable">
+    {{showAmmoTable? "hide ammo table": "show ammo table"}}
+  </p>
+</div>
+
+@if (showAmmoTable) {
+  <app-table #ammoTable [items]="ammo" [columns]="ammoTableColumns"></app-table>
+  @if (ammo.length == 0) {
+    <div>No ammo in inventory</div>
+  }
+  <div class="margin">
+    @if (!isSelectAmmo) {
+      <button class="button" (click)="isSelectAmmo = true">Add</button>
+    }
+    @else {
+      <button class="button" (click)="isSelectAmmo = false">Cancel</button>
+    }
+    
+    @if (isSelectAmmo) {
+      <app-table [items]="ammoOptions"
+                [columns]="ammoSelectTableColumns"
+                (rowClicked)="selectAmmo($event)"></app-table>
+    }
+  </div>
+}
+
+<app-table #weaponTable [items]="weapons" [columns]="weaponTableColumns" [sortProperties]="weaponSortProperties">
+  @if (isAddWeapon) {
+    <tr>
+      <td class="input-cell"><app-number-input inputName="new-amount" [(value)]="newWeapon.amount"></app-number-input></td>
+      <td class="input-cell"><app-input inputName="new-name" [(value)]="newWeapon.item.name"></app-input></td>
+      <td class="input-cell"><app-select inputName="new-type" [(value)]="newWeapon.item.type" [options]="weaponTypes"></app-select></td>
+      <td class="input-cell"><app-number-input inputName="new-damage" [(value)]="newWeapon.item.damage"></app-number-input></td>
+      <td class="input-cell">
+        <app-select inputName="new-effects" (valueChange)="addProperty($event, 'Effect')" [options]="weaponEffects"></app-select>
+        <div>
+          @for (effect of newWeapon.item.effects; track $index) {
+            {{effect}}&nbsp;<span class="toggle-button" (click)="removeProperty(effect, 'Effect')">x</span>
+          }
+        </div>
+      </td>
+      <td class="input-cell"><app-select inputName="new-damage-type" [(value)]="newWeapon.item.damageType" [options]="damageTypes"></app-select></td>
+      <td class="input-cell"><app-number-input inputName="new-rate" [(value)]="newWeapon.item.rate"></app-number-input></td>
+      <td class="input-cell"><app-select inputName="new-range" [(value)]="newWeapon.item.range" [options]="ranges"></app-select></td>
+      <td class="input-cell">
+        <app-select inputName="new-qualities" (valueChange)="addProperty($event, 'Quality')" [options]="weaponQualities"></app-select>
+        <div>
+          @for (quality of newWeapon.item.qualities; track $index) {
+            {{quality}}&nbsp;<span class="toggle-button" (click)="removeProperty(quality, 'Quality')">x</span>
+          }
+        </div>
+      </td>
+      <td class="input-cell">
+        <app-select inputName="new-ammo" (valueChange)="addProperty($event, 'Ammo')" [options]="ammoTypes"></app-select>
+        <div>
+          @for (ammo of newWeapon.item.ammo; track $index) {
+            {{ammo}}&nbsp;<span class="toggle-button" (click)="removeProperty(ammo, 'Ammo')">x</span>
+          }
+        </div>
+      </td>
+      <td class="input-cell"></td>
+      <td class="input-cell"><app-number-input inputName="new-weight" [(value)]="newWeapon.item.weight"></app-number-input></td>
+    </tr>
+  }
+</app-table>
+
+@if (weapons.length == 0) {
+  <div class="center-text">No weapon in inventory</div>
+}
+
+<div class="margin">
+  <div class="button-container">
+    @if (!isSelectWeapon && !isAddWeapon) {
+      <button class="button" (click)="isSelectWeapon = true">Add</button>
+      <button class="button" (click)="isAddWeapon = true">Add Custom</button>
+    }
+    @else {
+      <button class="button" (click)="cancelAddWeapon()">Cancel</button>
+      @if (isAddWeapon) {
+        <button class="button" (click)="addCustomWeapon()">Add</button>
+      }
+    }
+  </div>
+  
+  @if (isSelectWeapon) {
+    <app-table [items]="weaponOptions"
+              [columns]="weaponSelectTableColumns"
+              [sortProperties]="weaponSortProperties"
+              (rowClicked)="selectWeapon($event)"></app-table>
+  }
+</div>
+
+
+<ng-template #ammoAmount let-item let-index>
+  <app-amount-cell [item]="item" [index]="index" (changed)="save()" (itemRemoved)="removeAmmo(item)"></app-amount-cell>
+</ng-template>
+<ng-template #weaponAmount let-item let-index>
+  <app-amount-cell [item]="item" [index]="index" (changed)="save()" (itemRemoved)="removeWeapon(item)"></app-amount-cell>
+</ng-template>
+<ng-template #effects let-item>
+  @for (effect of item.item.effects; track $index) {
+    <span [matTooltip]="getTooltip(effect, TooltipTypeEnum.WeaponEffect)"
+          [matTooltipShowDelay]="500">{{effect}}</span>
+    @if($index < item.item.effects.length - 1) {, }
+  }
+</ng-template>
+<ng-template #qualities let-item>
+  @for (quality of item.item.qualities; track $index) {
+    <span [matTooltip]="getTooltip(quality, TooltipTypeEnum.WeaponQuality)"
+          [matTooltipShowDelay]="500">{{quality}}</span>
+    @if($index < item.item.qualities.length - 1) {, }
+  }
+</ng-template>
+<ng-template #ammoCount let-item>
+  {{getAmmoCount(item.item)}}
+  @if (item.item.ammo.length > 1) {
+    <span matTooltip="Check ammo table for details">***</span>
+  }
+</ng-template>

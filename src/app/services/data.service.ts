@@ -44,6 +44,11 @@ export class DataService {
   miscellanyItems: MiscellanyItem[] = [];
   tooltips: Tooltip[] = [];
 
+  weaponTypes: string[] = [];
+  weaponEffects: string[] = [];
+  weaponQualities: string[] = [];
+  damageTypes: string[] = [];
+
   constructor() {
     this.origins = (originsData as OriginData[]).map(OriginData.map);
     this.perks = (perksData as PerkData[]).map(PerkData.map);
@@ -58,5 +63,10 @@ export class DataService {
     this.magazines = (magazinesData as MagazineData[]).map(MagazineData.map);
     this.miscellanyItems = (miscellanyItemsData as MiscellanyItemData[]).map(MiscellanyItemData.map);
     this.tooltips = (tooltipData as Tooltip[]).map(TooltipData.map);
+
+    this.weaponTypes = [...new Set([...this.weapons.map(x => x.type)])];
+    this.weaponEffects = [...new Set([...this.weapons.flatMap(x => x.effects)])];
+    this.weaponQualities = [...new Set([...this.weapons.flatMap(x => x.qualities)])];
+    this.damageTypes = [...new Set([...this.weapons.map(x => x.damageType)])];
   }
 }

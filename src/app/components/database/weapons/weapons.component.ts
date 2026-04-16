@@ -1,10 +1,10 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { Weapon } from '../../../models/database/weapon';
-import { ranges } from '../../../models/database/range';
-import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
 import { Tooltip, TooltipTypeEnum } from '../../../models/database/tooltip';
 import { MatTooltip } from "@angular/material/tooltip";
+import { TableColumn, FilterTypeEnum } from '../../common/table/table-column';
+import { TableComponent } from '../../common/table/table.component';
 
 @Component({
   selector: 'app-weapons',
@@ -56,7 +56,7 @@ export class WeaponsComponent implements AfterViewInit {
       property: "range",
       filterType: FilterTypeEnum.Sort,
       align: "center",
-      sortFunc: this.rangeSort
+      sortFunc: Weapon.rangeSort
     }),
     new TableColumn<Weapon>({
       label: "Qualities",
@@ -108,11 +108,5 @@ export class WeaponsComponent implements AfterViewInit {
   getTooltip(effect: string, type: TooltipTypeEnum): string {
     let tooltips = this.tooltips.filter(x => x.type == type);
     return tooltips.find(x => x.name == effect.replace(/\s\([0-9]+\)/gm, "").replace(/\s[0-9]+/gm, ""))?.description ?? "";
-  }
-
-  rangeSort(a: Weapon, b: Weapon) {
-    let aRange = ranges.find(x => x.name == a.range);
-    let bRange = ranges.find(x => x.name == b.range);
-    return (aRange?.number ?? 0) - (bRange?.number ?? 0);
   }
 }

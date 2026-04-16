@@ -20,7 +20,7 @@
     </td>
   </tr>
 
-  <tr *ngFor="let item of displayedItems; let index = index">
+  <tr *ngFor="let item of displayedItems; let index = index" (click)="rowClicked.emit(item)" [ngClass]="{'pointer': rowClicked.observed}">
     <td *ngFor="let column of columns" [class]="column.align">
       @if (column.template) {
         <ng-container
@@ -33,4 +33,5 @@
       }
     </td>
   </tr>
+  <ng-content></ng-content>
 </table>

@@ -1,8 +1,9 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { Consumable } from '../../../models/database/consumable';
-import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
 import { MatTooltip } from '@angular/material/tooltip';
+import { TableColumn, FilterTypeEnum } from '../../common/table/table-column';
+import { TableComponent } from '../../common/table/table.component';
 
 @Component({
   selector: 'app-consumables',

@@ -5,16 +5,36 @@ body {
   background-color: colors.$background;
 }
 
+.button {
+  border: none;
+  border-radius: variables.$borderRadius;
+  padding: 0.5rem 1rem;
+  color: colors.$primaryDark;
+  background-color: colors.$primaryLight;
+  cursor: pointer;
+
+  &:hover {
+    color: colors.$accentDark;
+    background-color: colors.$accentLight;
+  }
+
+  &:active {
+    color: colors.$accentDark;
+    background-color: colors.$accentLightAccent;
+  }
+}
+
 .toggle-button {
   border: none;
   border-radius: variables.$borderRadius;
   padding: 2pt 4pt;
   color: colors.$primaryDark;
+    background-color: colors.$primaryLight;
   font-size: 11pt;
   cursor: pointer;
 
   &:hover {
-    background-color: colors.$primaryLight;
+    background-color: colors.$primaryLightAccent;
   }
 }
 

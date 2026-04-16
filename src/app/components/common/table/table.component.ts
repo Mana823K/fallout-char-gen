@@ -1,9 +1,10 @@
-import { Component, Input, OnInit, TemplateRef } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import * as _ from 'lodash';
 import { InputComponent } from '../../form/input/input.component';
 import { SelectComponent } from '../../form/select/select.component';
 import { SortCellComponent } from '../../form/sort-cell/sort-cell.component';
 import { CommonModule } from '@angular/common';
+import { FilterTypeEnum, TableColumn } from './table-column';
 
 @Component({
   selector: 'app-table',
@@ -12,15 +13,26 @@ import { CommonModule } from '@angular/common';
   imports: [InputComponent, SelectComponent, SortCellComponent, CommonModule]
 })
 export class TableComponent<T> implements OnInit {
-  @Input() items: T[] = [];
+  private _items: T[] = [];
+  get items(): T[] { return this._items; }
+  @Input() set items(value: T[]) {
+    this._items = value;
+    this.renderRows();
+  }
   @Input() columns: TableColumn<T>[] = [];
   @Input() sortProperties: string[] = [];
+
+  @Output() rowClicked = new EventEmitter<T>();
 
   displayedItems: T[] = [];
   
   FilterTypeEnum = FilterTypeEnum;
   
   ngOnInit(): void {
+    this.renderRows();
+  }
+
+  renderRows() {
     this.displayedItems = this.items.slice();
     this.sort();
     this.setFilterOptions();
@@ -71,7 +83,6 @@ export class TableComponent<T> implements OnInit {
           column.options = [...new Set(['', ...this.items.flatMap(x => _.get(x, column.property))])];
         else
           column.options = [...new Set(['', ...this.items.map(x => _.get(x, column.property))])];
-
       }
     }
   }
@@ -99,40 +110,4 @@ export class TableComponent<T> implements OnInit {
       }
     }
   }
-}
-
-export class TableColumn<T> {
-  label: string = "";
-  property: string = "";
-  filterType?: FilterTypeEnum;
-  filterText: string = "";
-  options: string[] = [];
-  isArray: boolean = false;
-  isAscending?: boolean;
-  align: "left" | "center" | "right" = "left";
-  template?: TemplateRef<any>;
-
-  filterFunc?: (items: T[]) => T[];
-  
-  /** for ascending */
-  sortFunc: (a: T, b: T) => number = (a,b) => {
-    return _.get(a, this.property) - _.get(b, this.property);
-  }
-
-  getText: (item: T) => string = (item) => {
-    let value = _.get(item, this.property);
-    return this.isArray ? value.join(", ") : value;
-  }
-
-  constructor(params: Partial<TableColumn<T>>) {
-    Object.assign(this, params);
-  }
-}
-
-export enum FilterTypeEnum {
-  Text,
-  Sort,
-  Select,
-  YesNo,
-  None
 }

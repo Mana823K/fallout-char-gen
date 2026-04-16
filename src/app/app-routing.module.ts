@@ -13,10 +13,27 @@ import { MiscellanyComponent } from './components/database/miscellany/miscellany
 import { ChemsComponent } from './components/database/chems/chems.component';
 import { ToolsComponent } from './components/tools/tools.component';
 import { WeaponModToolComponent } from './components/tools/weapon-mod-tool/weapon-mod-tool.component';
+import { InventoryComponent } from './components/inventory/inventory.component';
+import { InventoryWeaponsComponent } from './components/inventory/inventory-weapons/inventory-weapons.component';
+import { InventoryArmorComponent } from './components/inventory/inventory-armor/inventory-armor.component';
+import { InventoryConsumablesComponent } from './components/inventory/inventory-consumables/inventory-consumables.component';
+import { InventoryChemsComponent } from './components/inventory/inventory-chems/inventory-chems.component';
+import { InventoryMagazinesComponent } from './components/inventory/inventory-magazines/inventory-magazines.component';
+import { InventoryMiscComponent } from './components/inventory/inventory-misc/inventory-misc.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'character', pathMatch: 'full' },
   { path: 'character', component: CharacterComponent },
+  { path: 'inventory', redirectTo: 'inventory/weapons'},
+  { path: 'inventory', component: InventoryComponent, children: [
+    { path: 'weapons', component: InventoryWeaponsComponent },
+    { path: 'armor', component: InventoryArmorComponent },
+    { path: 'consumables', component: InventoryConsumablesComponent },
+    { path: 'chems', component: InventoryChemsComponent },
+    { path: 'magazines', component: InventoryMagazinesComponent },
+    { path: 'miscellany', component: InventoryMiscComponent },
+    { path: 'hehe', component: InventoryMiscComponent },
+  ] },
   { path: 'database', redirectTo: 'database/weapons' },
   { path: 'database', component: DatabaseComponent, children: [
     { path: 'weapons', component: WeaponsComponent },
@@ -33,7 +50,7 @@ const routes: Routes = [
   { path: 'tools', component: ToolsComponent, children: [
     { path: 'weapon-mod', component: WeaponModToolComponent },
   ] },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: 'character' }
 ];
 
 @NgModule({

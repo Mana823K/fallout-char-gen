@@ -1,0 +1,7 @@
+@use "./../../../style/colors.scss";
+@use "./../../../style/variables.scss";
+
+.header {
+  display: flex;
+  gap: 1rem;
+}

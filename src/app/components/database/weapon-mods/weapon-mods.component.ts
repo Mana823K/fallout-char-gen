@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { WeaponMod } from '../../../models/database/weapon-mod';
-import { FilterTypeEnum, TableColumn, TableComponent } from '../../common/table/table.component';
+import { TableColumn, FilterTypeEnum } from '../../common/table/table-column';
+import { TableComponent } from '../../common/table/table.component';
 
 @Component({
   selector: 'app-mods',

@@ -1,3 +1,5 @@
+import { ranges } from "./range";
+
 export class Weapon {
   name: string = "";
   type: string = "";
@@ -23,6 +25,13 @@ export class Weapon {
     this.qualitiesText = this.qualities.join(", ");
     this.ammoText = this.ammo.join(", ");
   }
+
+  static rangeSort(a: Weapon, b: Weapon): number {
+    let aRange = ranges.find(x => x.name == a.range);
+    let bRange = ranges.find(x => x.name == b.range);
+    return (aRange?.number ?? 0) - (bRange?.number ?? 0);
+  }
+
 }
 
 export class WeaponData {
