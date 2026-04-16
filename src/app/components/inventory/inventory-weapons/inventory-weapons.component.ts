@@ -65,7 +65,7 @@ export class InventoryWeaponsComponent implements AfterViewInit {
   get ammoTypes(): string[] { return this._ammoTypes.filter(x => !this.newWeapon.item.ammo.includes(x)); }
 
   constructor(private inventoryService: InventoryService, private dataService: DataService) {
-    this._ammoTypes = [...new Set([...this.dataService.ammo.map(x => x.name)])];
+    this._ammoTypes = [...new Set([...this.dataService.ammo.map(x => x.name)])].sort();
   }
 
   ngAfterViewInit(): void {

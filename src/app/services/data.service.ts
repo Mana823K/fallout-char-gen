@@ -64,9 +64,9 @@ export class DataService {
     this.miscellanyItems = (miscellanyItemsData as MiscellanyItemData[]).map(MiscellanyItemData.map);
     this.tooltips = (tooltipData as Tooltip[]).map(TooltipData.map);
 
-    this.weaponTypes = [...new Set([...this.weapons.map(x => x.type)])];
-    this.weaponEffects = [...new Set([...this.weapons.flatMap(x => x.effects)])];
-    this.weaponQualities = [...new Set([...this.weapons.flatMap(x => x.qualities)])];
-    this.damageTypes = [...new Set([...this.weapons.map(x => x.damageType)])];
+    this.weaponTypes = [...new Set([...this.weapons.map(x => x.type)])].sort();
+    this.weaponEffects = [...new Set([...this.weapons.flatMap(x => x.effects)])].sort();
+    this.weaponQualities = [...new Set([...this.weapons.flatMap(x => x.qualities)])].sort();
+    this.damageTypes = [...new Set([...this.weapons.map(x => x.damageType)])].sort();
   }
 }
