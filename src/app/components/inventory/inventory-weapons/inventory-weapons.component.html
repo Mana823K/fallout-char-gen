@@ -20,6 +20,7 @@
     @if (isSelectAmmo) {
       <app-table [items]="ammoOptions"
                 [columns]="ammoSelectTableColumns"
+                [sortProperties]="['name', 'subType']"
                 (rowClicked)="selectAmmo($event)"></app-table>
     }
   </div>
