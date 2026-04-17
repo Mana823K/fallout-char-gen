@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { Perk } from '../../../models/character/perk';
 import { Character } from '../../../models/character/character';
 import { Subscription } from 'rxjs';
+import { CharacterService } from '../../../services/character.service';
 
 @Component({
   selector: 'app-perks',
@@ -13,7 +14,7 @@ import { Subscription } from 'rxjs';
   imports: [CommonModule, MatIcon, MatTooltip]
 })
 export class PerksComponent implements AfterContentInit, OnDestroy {
-  @Input() character = new Character();
+  get character(): Character { return this.characterService.character; }
 
   get perks(): Perk[] { return this.character.perks; };
   availablePerks: Perk[] = [];
@@ -30,6 +31,8 @@ export class PerksComponent implements AfterContentInit, OnDestroy {
 
   subs: Subscription[] = [];
 
+  constructor(private characterService: CharacterService) { }
+
   ngAfterContentInit(): void {
     this.subs.push(this.character.perksSub.subscribe(() => this.orderPerks()));
   }
@@ -44,7 +47,7 @@ export class PerksComponent implements AfterContentInit, OnDestroy {
 
     perk.ranks = perk.isSelected ? 0 : 1;
 
-    this.character.onChange();
+    this.characterService.onChange();
     this.orderPerks();
   }
 
@@ -68,13 +71,13 @@ export class PerksComponent implements AfterContentInit, OnDestroy {
 
   addRank(perk: Perk) {
     perk.ranks++;
-    this.character.onChange();
+    this.characterService.onChange();
   }
 
   removeRank(perk: Perk) {
     perk.ranks--;
 
-    this.character.onChange();
+    this.characterService.onChange();
     if (perk.ranks == 0) {
       this.orderPerks();
     }

@@ -7,7 +7,7 @@ import { SpecialAttributesComponent } from './special-attributes/special-attribu
 import { SkillsComponent } from './skills/skills.component';
 import { CommonModule } from '@angular/common';
 import { Character } from '../../models/character/character';
-import { DataService } from '../../services/data.service';
+import { CharacterService } from '../../services/character.service';
 
 @Component({
   selector: 'app-character',
@@ -16,9 +16,7 @@ import { DataService } from '../../services/data.service';
   imports: [CommonModule, OriginComponent, NumberInputComponent, StatsComponent, SpecialAttributesComponent, PerksComponent, SkillsComponent]
 })
 export class CharacterComponent {
-  character = new Character();
+  get character(): Character { return this.characterService.character; }
 
-  constructor(private dataService: DataService) {
-    this.character.init(this.dataService.origins, this.dataService.perks, this.dataService.skills);
-  }
+  constructor(private characterService: CharacterService) { }
 }

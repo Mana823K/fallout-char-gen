@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataService } from '../../../services/data.service';
 import { Origin } from '../../../models/character/origin';
 import { SelectComponent } from '../../form/select/select.component';
 import { FormsModule } from '@angular/forms';
 import { Character } from '../../../models/character/character';
+import { CharacterService } from '../../../services/character.service';
 
 @Component({
   selector: 'app-origin',
@@ -17,7 +18,7 @@ export class OriginComponent {
   get origin(): Origin | undefined { return this.character.origin; }
   set origin(value: string) { this.character.origin = this.dataService.origins.find(x => x.name == value) ?? this.dataService.origins[0] ?? new Origin(); }
 
-  @Input() character = new Character();
+  get character(): Character { return this.characterService.character; }
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private characterService: CharacterService) { }
 }
