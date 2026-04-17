@@ -34,10 +34,10 @@
       <td class="input-cell"><app-select inputName="new-type" [(value)]="newWeapon.item.type" [options]="weaponTypes"></app-select></td>
       <td class="input-cell"><app-number-input inputName="new-damage" [(value)]="newWeapon.item.damage"></app-number-input></td>
       <td class="input-cell">
-        <app-select inputName="new-effects" (valueChange)="addProperty($event, 'Effect')" [options]="weaponEffects"></app-select>
+        <app-select inputName="new-effects" (valueChange)="addCustomProperty($event, 'Effect')" [options]="weaponEffects"></app-select>
         <div>
           @for (effect of newWeapon.item.effects; track $index) {
-            {{effect}}&nbsp;<span class="toggle-button" (click)="removeProperty(effect, 'Effect')">x</span>
+            {{effect}}&nbsp;<span class="toggle-button" (click)="removeCustomProperty(effect, 'Effect')">x</span>
           }
         </div>
       </td>
@@ -45,18 +45,18 @@
       <td class="input-cell"><app-number-input inputName="new-rate" [(value)]="newWeapon.item.rate"></app-number-input></td>
       <td class="input-cell"><app-select inputName="new-range" [(value)]="newWeapon.item.range" [options]="ranges"></app-select></td>
       <td class="input-cell">
-        <app-select inputName="new-qualities" (valueChange)="addProperty($event, 'Quality')" [options]="weaponQualities"></app-select>
+        <app-select inputName="new-qualities" (valueChange)="addCustomProperty($event, 'Quality')" [options]="weaponQualities"></app-select>
         <div>
           @for (quality of newWeapon.item.qualities; track $index) {
-            {{quality}}&nbsp;<span class="toggle-button" (click)="removeProperty(quality, 'Quality')">x</span>
+            {{quality}}&nbsp;<span class="toggle-button" (click)="removeCustomProperty(quality, 'Quality')">x</span>
           }
         </div>
       </td>
       <td class="input-cell">
-        <app-select inputName="new-ammo" (valueChange)="addProperty($event, 'Ammo')" [options]="ammoTypes"></app-select>
+        <app-select inputName="new-ammo" (valueChange)="addCustomProperty($event, 'Ammo')" [options]="ammoTypes"></app-select>
         <div>
           @for (ammo of newWeapon.item.ammo; track $index) {
-            {{ammo}}&nbsp;<span class="toggle-button" (click)="removeProperty(ammo, 'Ammo')">x</span>
+            {{ammo}}&nbsp;<span class="toggle-button" (click)="removeCustomProperty(ammo, 'Ammo')">x</span>
           }
         </div>
       </td>

@@ -1,6 +1,6 @@
-import { Ammo } from "../../../models/database/ammo";
-import { InventoryItem } from "../../../models/inventory/inventory";
-import { TableColumn, FilterTypeEnum } from "../../common/table/table-column";
+import { Ammo } from "../../../../models/database/ammo";
+import { InventoryItem } from "../../../../models/inventory/inventory";
+import { TableColumn, FilterTypeEnum } from "../../../common/table/table-column";
 
 export const invAmmoColumns: TableColumn<InventoryItem<Ammo>>[] = [
     new TableColumn<InventoryItem<Ammo>>({

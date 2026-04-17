@@ -48,6 +48,9 @@ export class DataService {
   weaponEffects: string[] = [];
   weaponQualities: string[] = [];
   damageTypes: string[] = [];
+  
+  armorTypes: string[] = [];
+  armorCoverLocations: string[] = [];
 
   constructor() {
     this.origins = (originsData as OriginData[]).map(OriginData.map);
@@ -68,5 +71,8 @@ export class DataService {
     this.weaponEffects = [...new Set([...this.weapons.flatMap(x => x.effects)])].sort();
     this.weaponQualities = [...new Set([...this.weapons.flatMap(x => x.qualities)])].sort();
     this.damageTypes = [...new Set([...this.weapons.map(x => x.damageType)])].sort();
+
+    this.armorTypes = [...new Set([...this.armor.map(x => x.type)])].sort();
+    this.armorCoverLocations = [...new Set([...this.armor.flatMap(x => x.locationCovered)])].sort();
   }
 }

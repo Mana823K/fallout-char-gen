@@ -1,10 +1,8 @@
   <div class="amount-cell">
     @if (!item.isEditing) {
+      <span class="toggle-button toggle-font" (click)="decreaseAmount()">{{item.amount > 1 ? '-' : 'x'}}</span>
       <span (click)="item.isEditing = true">{{item.amount}}</span>
-      <div class="button-container">
-        <span class="toggle-button toggle-font" (click)="decreaseAmount()">{{item.amount > 1 ? '-' : 'x'}}</span>
-        <span class="toggle-button toggle-font" (click)="increaseAmount()">+</span>
-      </div>
+      <span class="toggle-button toggle-font" (click)="increaseAmount()">+</span>
     }
     @else {
       <app-number-input [inputName]="'amount-input-' + index" [(value)]="item.amount" (valueChange)="confirmEdit()"></app-number-input>

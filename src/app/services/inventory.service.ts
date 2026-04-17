@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { DataService } from "./data.service";
 import { Inventory, InventoryItem, InventoryItemData, InventorySaveData } from "../models/inventory/inventory";
+import _ from "lodash";
 
 @Injectable({
   providedIn: "root"
@@ -45,5 +46,37 @@ export class InventoryService {
   save() {
     let saveData = new InventorySaveData(this.inventory);
     localStorage.setItem(Inventory.STORAGE_NAME, JSON.stringify(saveData));
+  }
+
+  addItem<T>(item: T, listName: keyof Inventory, matchProperties: (keyof T)[]) {
+    let list: any [] = this.inventory[listName];
+    let existingItem = list.find(x => {
+      for (let property of matchProperties) {
+        if (_.get(x.item, property) != item[property])
+          return false;
+      }
+      return true;
+    });
+
+    if (existingItem) {
+      existingItem.amount++;
+    }
+    else {
+      let newItem = new InventoryItem<T>(item);
+      list.push(newItem);
+    }
+    this.save();
+  }
+
+  removeItem<T>(item: InventoryItem<T>, listName: keyof Inventory, matchProperties: (keyof T)[]) {
+    let filteredList: any[] = this.inventory[listName].filter(x => {
+      for (let property of matchProperties) {
+        if (item.item[property] != _.get(x.item, property))
+          return true;
+      }
+      return false;
+    })
+    this.inventory[listName] = filteredList;
+    this.save();
   }
 }

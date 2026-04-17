@@ -6,18 +6,18 @@ import { Weapon } from '../../../models/database/weapon';
 import { InventoryService } from '../../../services/inventory.service';
 import { TooltipTypeEnum } from '../../../models/database/tooltip';
 import { DataService } from '../../../services/data.service';
-import { invWeaponColumns } from './weapon-columns';
-import { invWeaponSelectColumns } from './weapon-select-columns';
+import { invWeaponColumns } from './models/weapon-columns';
+import { invWeaponSelectColumns } from './models/weapon-select-columns';
 import { TableColumn } from '../../common/table/table-column';
 import { Ammo } from '../../../models/database/ammo';
 import { CommonModule } from '@angular/common';
-import { invAmmoColumns } from './ammo-columns';
-import { invAmmoSelectColumns } from './ammo-select-columns';
 import { AmountCellComponent } from "../../common/amount-cell/amount-cell.component";
 import { InputComponent } from "../../form/input/input.component";
 import { NumberInputComponent } from "../../form/number-input/number-input.component";
 import { SelectComponent } from "../../form/select/select.component";
 import { ranges } from '../../../models/database/range';
+import { invAmmoColumns } from './models/ammo-columns';
+import { invAmmoSelectColumns } from './models/ammo-select-columns';
 
 @Component({
   selector: 'app-inventory-weapons',
@@ -105,40 +105,24 @@ export class InventoryWeaponsComponent implements AfterViewInit {
   }
   
   selectAmmo(ammo: Ammo) {
-    let existingItem = this.ammo.find(x => x.item.name == ammo.name && x.item.subType == ammo.subType);
-    if (existingItem) {
-      existingItem.amount++;
-    }
-    else {
-      let newItem = new InventoryItem<Ammo>(ammo);
-      this.ammo.push(newItem);
-      this.ammoTable?.renderRows();
-    }
+    this.inventoryService.addItem(ammo, "ammo", ["name", "subType"]);
+    this.ammoTable?.renderRows();
     this.isSelectAmmo = false;
-    this.save();
   }
 
   selectWeapon(weapon: Weapon) {
-    let existingItem = this.weapons.find(x => x.item.name == weapon.name);
-    if (existingItem) {
-      existingItem.amount++;
-    }
-    else {
-      let newItem = new InventoryItem<Weapon>(weapon);
-      this.weapons.push(newItem);
-      this.weaponTable?.renderRows();
-    }
+    this.inventoryService.addItem(weapon, "weapons", ["name"]);
+    this.weaponTable?.renderRows();
     this.isSelectWeapon = false;
-    this.save();
   }
 
   removeAmmo(item: InventoryItem<Ammo>) {
-    this.ammo = this.ammo.filter(x => x.item.name != item.item.name);
+    this.inventoryService.removeItem(item, "ammo", ["name", "subType"]);
     this.ammoTable?.renderRows();
   }
 
   removeWeapon(item: InventoryItem<Weapon>) {
-    this.weapons = this.weapons.filter(x => x.item.name != item.item.name);
+    this.inventoryService.removeItem(item, "weapons", ["name"]);
     this.weaponTable?.renderRows();
   }
 
@@ -150,7 +134,7 @@ export class InventoryWeaponsComponent implements AfterViewInit {
     this.cancelAddWeapon();
   }
 
-  addProperty(value: string, property: "Effect" | "Quality" | "Ammo") {
+  addCustomProperty(value: string, property: "Effect" | "Quality" | "Ammo") {
     switch (property) {
       case "Effect":
         this.newWeapon.item.effects.push(value);
@@ -166,7 +150,7 @@ export class InventoryWeaponsComponent implements AfterViewInit {
     }
   }
 
-  removeProperty(value: string, property: "Effect" | "Quality" | "Ammo") {
+  removeCustomProperty(value: string, property: "Effect" | "Quality" | "Ammo") {
     switch (property) {
       case "Effect":
         this.newWeapon.item.effects = this.newWeapon.item.effects.filter(x => x != value);

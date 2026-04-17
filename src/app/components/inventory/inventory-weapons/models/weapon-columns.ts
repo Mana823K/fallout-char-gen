@@ -1,6 +1,6 @@
-import { Weapon } from "../../../models/database/weapon";
-import { InventoryItem } from "../../../models/inventory/inventory";
-import { FilterTypeEnum, TableColumn } from "../../common/table/table-column";
+import { Weapon } from "../../../../models/database/weapon";
+import { InventoryItem } from "../../../../models/inventory/inventory";
+import { FilterTypeEnum, TableColumn } from "../../../common/table/table-column";
 
 const rangeSort = (itemA: InventoryItem<Weapon>, itemB: InventoryItem<Weapon>): number => {
   return Weapon.rangeSort(itemA.item, itemB.item);

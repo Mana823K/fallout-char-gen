@@ -33,6 +33,8 @@ export class AmountCellComponent<T> {
     if (this.item.amount == 0) {
       this.itemRemoved.emit()
     }
-    this.changed.emit();
+    else {
+      this.changed.emit();
+    }
   }
 }

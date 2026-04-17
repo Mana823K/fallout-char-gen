@@ -1,1 +1,52 @@
-<p>inventory-armor works!</p>
+<app-table #table [items]="armor" [columns]="inventoryTableColumns" [sortProperties]="sortProperties">
+  @if (isAdd) {
+    <tr>
+      <td class="input-cell"><app-number-input inputName="new-amount" [(value)]="newItem.amount"></app-number-input></td>
+      <td class="input-cell"><app-input inputName="new-name" [(value)]="newItem.item.name"></app-input></td>
+      <td class="input-cell"><app-select inputName="new-type" [(value)]="newItem.item.type" [options]="types"></app-select></td>
+      <td class="input-cell"><app-number-input inputName="new-physical" [(value)]="newItem.item.physicalRes"></app-number-input></td>
+      <td class="input-cell"><app-number-input inputName="new-energy" [(value)]="newItem.item.energyRes"></app-number-input></td>
+      <td class="input-cell"><app-number-input inputName="new-rad" [(value)]="newItem.item.radiationRes"></app-number-input></td>
+      <td class="input-cell">
+        <app-select inputName="new-location" (valueChange)="addLocation($event)" [options]="locations"></app-select>
+        <div>
+          @for (location of newItem.item.locationCovered; track $index) {
+            {{location}}&nbsp;<span class="toggle-button" (click)="removeLocation(location)">x</span>
+          }
+        </div>
+      </td>
+      <td class="input-cell"><app-number-input inputName="new-weight" [(value)]="newItem.item.weight"></app-number-input></td>
+    </tr>
+  }
+</app-table>
+
+@if (armor.length == 0) {
+  <div class="center-text">No armor in inventory</div>
+}
+
+<div class="margin">
+  <div class="button-container">
+    @if (!isSelect && !isAdd) {
+      <button class="button" (click)="isSelect = true">Add</button>
+      <button class="button" (click)="isAdd = true">Add Custom</button>
+    }
+    @else {
+      <button class="button" (click)="cancelAddItem()">Cancel</button>
+      @if (isAdd) {
+        <button class="button" (click)="addCustom()">Add</button>
+      }
+    }
+  </div>
+  
+  @if (isSelect) {
+    <app-table [items]="selectOptions"
+              [columns]="selectTableColumns"
+              [sortProperties]="sortProperties"
+              (rowClicked)="selectItem($event)"></app-table>
+  }
+</div>
+
+
+<ng-template #amount let-item let-index>
+  <app-amount-cell [item]="item" [index]="index" (changed)="save()" (itemRemoved)="removeItem(item)"></app-amount-cell>
+</ng-template>

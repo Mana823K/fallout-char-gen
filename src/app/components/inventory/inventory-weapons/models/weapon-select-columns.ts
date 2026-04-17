@@ -1,5 +1,5 @@
-import { Weapon } from "../../../models/database/weapon";
-import { TableColumn, FilterTypeEnum } from "../../common/table/table-column";
+import { Weapon } from "../../../../models/database/weapon";
+import { TableColumn, FilterTypeEnum } from "../../../common/table/table-column";
 
 export const invWeaponSelectColumns: TableColumn<Weapon>[] = [
   new TableColumn<Weapon>({

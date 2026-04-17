@@ -10,7 +10,11 @@ export class Armor {
   cost:  number = 0;
   rarity: number = 0;
   special?: string;
-  mods: string[] = []
+  mods: string[] = [];
+
+  updateTexts() {
+    this.locationCoveredText = this.locationCovered.join(", ");
+  }
 }
 
 export class ArmorData {

@@ -1,5 +1,5 @@
-import { Ammo } from "../../../models/database/ammo";
-import { TableColumn, FilterTypeEnum } from "../../common/table/table-column";
+import { Ammo } from "../../../../models/database/ammo";
+import { TableColumn, FilterTypeEnum } from "../../../common/table/table-column";
 
 export const invAmmoSelectColumns: TableColumn<Ammo>[] = [
     new TableColumn<Ammo>({
