@@ -63,7 +63,7 @@ export class DataService {
     this.armorMods = (armorModsData as ArmorModData[]).map(ArmorModData.map);
     this.consumables = (consumablesData as ConsumableData[]).map(ConsumableData.map);
     this.chems = (chemsData as ChemData[]).map(ChemData.map);
-    this.magazines = (magazinesData as MagazineData[]).map(MagazineData.map);
+    this.magazines = (magazinesData as MagazineData[]).flatMap(MagazineData.map);
     this.miscellanyItems = (miscellanyItemsData as MiscellanyItemData[]).map(MiscellanyItemData.map);
     this.tooltips = (tooltipData as Tooltip[]).map(TooltipData.map);
 

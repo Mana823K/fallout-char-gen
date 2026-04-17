@@ -1,4 +1,4 @@
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core';
 import { TableComponent } from '../../common/table/table.component';
 import { AmountCellComponent } from '../../common/amount-cell/amount-cell.component';
 import { NumberInputComponent } from '../../form/number-input/number-input.component';
@@ -18,7 +18,7 @@ import { invChemsSelectColumns } from './models/chem-select-columns';
   templateUrl: './inventory-chems.component.html',
   styleUrl: './inventory-chems.component.scss'
 })
-export class InventoryChemsComponent {
+export class InventoryChemsComponent implements AfterViewInit {
   get chems(): InventoryItem<Chem>[] { return this.inventoryService.inventory.chems; }
   set chems(value: InventoryItem<Chem>[]) { this.inventoryService.inventory.chems = value; }
   get selectOptions(): Chem[] { return this.dataService.chems; }

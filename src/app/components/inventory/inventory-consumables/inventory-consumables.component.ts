@@ -1,4 +1,4 @@
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core';
 import { InventoryItem } from '../../../models/inventory/inventory';
 import { Consumable } from '../../../models/database/consumable';
 import { InventoryService } from '../../../services/inventory.service';
@@ -20,7 +20,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './inventory-consumables.component.html',
   styleUrl: './inventory-consumables.component.scss'
 })
-export class InventoryConsumablesComponent {
+export class InventoryConsumablesComponent implements AfterViewInit {
   get consumables(): InventoryItem<Consumable>[] { return this.inventoryService.inventory.consumables; }
   set consumables(value: InventoryItem<Consumable>[]) { this.inventoryService.inventory.consumables = value; }
   get selectOptions(): Consumable[] { return this.dataService.consumables; }

@@ -2,8 +2,9 @@ export class Magazine {
   name: string = "";
   roll: number = 0;
   rare: boolean = false;
-  perk: string = "";
-  issues: MagazineIssue[] = [];
+  issue: string = "";
+  issueRoll: number[] = [];
+  effect: string = "";
 }
 
 export class MagazineData {
@@ -13,37 +14,36 @@ export class MagazineData {
   perk: string = "";
   issues: MagazineIssueData[] = [];
 
-  static map(original: MagazineData): Magazine {
-    let result = new Magazine();
+  static map(original: MagazineData): Magazine[] {
+    let result = [];
 
-    result.name = original.name;
-    result.roll = original.roll;
-    result.rare = original.rare;
-    result.perk = original.perk;
-    result.issues = original.issues.map(MagazineIssueData.map);
+    if (original.issues.length > 0) {
+      for (let issue of original.issues) {
+        let newIssue = new Magazine();
+        newIssue.name = original.name;
+        newIssue.roll = original.roll;
+        newIssue.rare = original.rare;
+        newIssue.effect = issue.effect;
+        newIssue.issue = issue.name;
+        newIssue.issueRoll = issue.roll;
+        result.push(newIssue);
+      }
+    }
+    else {
+      let main = new Magazine();
+      main.name = original.name;
+      main.roll = original.roll;
+      main.rare = original.rare;
+      main.effect = original.perk;
+      result.push(main);
+    }
 
     return result;
   }
-}
-
-export class MagazineIssue {
-  name: string = "";
-  roll: number[] = [];
-  effect: string = "";
 }
 
 export class MagazineIssueData {
   name: string = "";
   roll: number[] = [];
   effect: string = "";
-
-  static map(original: MagazineIssueData): MagazineIssue {
-    let result = new MagazineIssue();
-
-    result.name = original.name;
-    result.roll = original.roll;
-    result.effect = original.effect;
-
-    return result;
-  }
 }
