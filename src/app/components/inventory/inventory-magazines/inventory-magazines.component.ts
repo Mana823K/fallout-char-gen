@@ -10,7 +10,6 @@ import { TableComponent } from '../../common/table/table.component';
 import { AmountCellComponent } from '../../common/amount-cell/amount-cell.component';
 import { NumberInputComponent } from '../../form/number-input/number-input.component';
 import { InputComponent } from '../../form/input/input.component';
-import { SelectComponent } from '../../form/select/select.component';
 
 @Component({
   selector: 'app-inventory-magazines',

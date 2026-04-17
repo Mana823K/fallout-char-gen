@@ -32,7 +32,6 @@ const routes: Routes = [
     { path: 'chems', component: InventoryChemsComponent },
     { path: 'magazines', component: InventoryMagazinesComponent },
     { path: 'miscellany', component: InventoryMiscComponent },
-    { path: 'hehe', component: InventoryMiscComponent },
   ] },
   { path: 'database', redirectTo: 'database/weapons' },
   { path: 'database', component: DatabaseComponent, children: [
