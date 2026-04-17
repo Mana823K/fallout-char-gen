@@ -59,20 +59,11 @@ export class InventoryConsumablesComponent {
 
   addCustom() {
     this.newItem.isCustom = true;
-    // this.newItem.item.updateTexts();
     this.consumables.push(this.newItem);
     this.table?.renderRows();
     this.save();
     this.cancelAddItem();
   }
-
-  // addLocation(value: string) {
-  //   this.newItem.item.locationCovered.push(value);
-  // }
-
-  // removeLocation(value: string) {
-  //   this.newItem.item.locationCovered = this.newItem.item.locationCovered.filter(x => x != value);
-  // }
 
   cancelAddItem() {
     if (this.isAdd)

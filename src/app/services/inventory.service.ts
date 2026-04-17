@@ -8,6 +8,7 @@ import _ from "lodash";
 })
 export class InventoryService {
   inventory = new Inventory();
+  weight: number = 0;
 
   constructor(private dataService: DataService) { }
 
@@ -23,6 +24,8 @@ export class InventoryService {
       this.inventory.magazines = saveData.magazines.flatMap(x => this.initItem(x, this.dataService.magazines, y => y.name));
       this.inventory.misc = saveData.misc.flatMap(x => this.initItem(x, this.dataService.miscellanyItems, y => y.name));
     }
+
+    this.calculateWeight();
   }
 
   initItem<T>(savedItem: InventoryItemData<T>, dataList: T[], nameFunc: (x: T) => string): InventoryItem<T> | [] {
@@ -46,6 +49,7 @@ export class InventoryService {
   save() {
     let saveData = new InventorySaveData(this.inventory);
     localStorage.setItem(Inventory.STORAGE_NAME, JSON.stringify(saveData));
+    this.calculateWeight();
   }
 
   addItem<T>(item: T, listName: keyof Inventory, matchProperties: (keyof T)[]) {
@@ -78,5 +82,14 @@ export class InventoryService {
     })
     this.inventory[listName] = filteredList;
     this.save();
+  }
+
+  calculateWeight() {
+    this.weight = 0;
+    this.inventory.weapons.forEach(x => this.weight += x.amount * x.item.weight);
+    this.inventory.ammo.forEach(x => this.weight += x.amount * x.item.weight);
+    this.inventory.armor.forEach(x => this.weight += x.amount * x.item.weight);
+    this.inventory.consumables.forEach(x => this.weight += x.amount * x.item.weight);
+    this.inventory.misc.forEach(x => this.weight += x.amount * x.item.weight);
   }
 }
