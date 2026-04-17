@@ -83,5 +83,4 @@ export class InventoryArmorComponent implements AfterViewInit {
   save() {
     this.inventoryService.save();
   }
-
 }

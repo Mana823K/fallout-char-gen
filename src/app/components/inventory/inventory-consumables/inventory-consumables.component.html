@@ -1,1 +1,46 @@
-<p>inventory-consumables works!</p>
+<app-table #table [items]="consumables" [columns]="inventoryTableColumns" [sortProperties]="sortProperties">
+  @if (isAdd) {
+    <tr>
+      <td class="input-cell"><app-number-input inputName="new-amount" [(value)]="newItem.amount"></app-number-input></td>
+      <td class="input-cell"><app-input inputName="new-name" [(value)]="newItem.item.name"></app-input></td>
+      <td class="input-cell"><app-select inputName="new-type" [(value)]="newItem.item.type" [options]="types"></app-select></td>
+      <td class="input-cell"><app-number-input inputName="new-heal" [(value)]="newItem.item.heal"></app-number-input></td>
+      <td class="input-cell"><app-input inputName="new-effects" [(value)]="newItem.item.effects"></app-input></td>
+      <td class="input-cell">
+        <mat-checkbox class="checkbox" [(ngModel)]="newItem.item.irradiated"></mat-checkbox>
+      </td>
+      <td class="input-cell"><app-number-input inputName="new-weight" [(value)]="newItem.item.weight"></app-number-input></td>
+    </tr>
+  }
+</app-table>
+
+@if (consumables.length == 0 && !isAdd) {
+  <div class="center-text">No consumable in inventory</div>
+}
+
+<div class="margin">
+  <div class="button-container">
+    @if (!isSelect && !isAdd) {
+      <button class="button" (click)="isSelect = true">Add</button>
+      <button class="button" (click)="isAdd = true">Add Custom</button>
+    }
+    @else {
+      <button class="button" (click)="cancelAddItem()">Cancel</button>
+      @if (isAdd) {
+        <button class="button" (click)="addCustom()">Add</button>
+      }
+    }
+  </div>
+  
+  @if (isSelect) {
+    <app-table [items]="selectOptions"
+              [columns]="selectTableColumns"
+              [sortProperties]="sortProperties"
+              (rowClicked)="selectItem($event)"></app-table>
+  }
+</div>
+
+
+<ng-template #amount let-item let-index>
+  <app-amount-cell [item]="item" [index]="index" (changed)="save()" (itemRemoved)="removeItem(item)"></app-amount-cell>
+</ng-template>
