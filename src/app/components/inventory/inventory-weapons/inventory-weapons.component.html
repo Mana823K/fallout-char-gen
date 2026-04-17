@@ -5,25 +5,7 @@
 </div>
 
 @if (showAmmoTable) {
-  <app-table #ammoTable [items]="ammo" [columns]="ammoTableColumns"></app-table>
-  @if (ammo.length == 0) {
-    <div>No ammo in inventory</div>
-  }
-  <div class="margin">
-    @if (!isSelectAmmo) {
-      <button class="button" (click)="isSelectAmmo = true">Add</button>
-    }
-    @else {
-      <button class="button" (click)="isSelectAmmo = false">Cancel</button>
-    }
-    
-    @if (isSelectAmmo) {
-      <app-table [items]="ammoOptions"
-                [columns]="ammoSelectTableColumns"
-                [sortProperties]="['name', 'subType']"
-                (rowClicked)="selectAmmo($event)"></app-table>
-    }
-  </div>
+  <app-inventory-ammo></app-inventory-ammo>
 }
 
 <app-table #weaponTable [items]="weapons" [columns]="weaponTableColumns" [sortProperties]="weaponSortProperties">
@@ -93,11 +75,14 @@
 </div>
 
 
-<ng-template #ammoAmount let-item let-index>
-  <app-amount-cell [item]="item" [index]="index" (changed)="save()" (itemRemoved)="removeAmmo(item)"></app-amount-cell>
-</ng-template>
-<ng-template #weaponAmount let-item let-index>
+<ng-template #amount let-item let-index>
   <app-amount-cell [item]="item" [index]="index" (changed)="save()" (itemRemoved)="removeWeapon(item)"></app-amount-cell>
+</ng-template>
+<ng-template #tag let-item>
+  {{getTag(item.item)}}
+</ng-template>
+<ng-template #targetNumber let-item>
+  {{getTargetNumber(item.item)}}
 </ng-template>
 <ng-template #effects let-item>
   @for (effect of item.item.effects; track $index) {

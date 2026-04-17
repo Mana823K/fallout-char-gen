@@ -22,6 +22,18 @@ export const invWeaponColumns: TableColumn<InventoryItem<Weapon>>[] = [
     property: "item.type",
     filterType: FilterTypeEnum.Select,
   }),
+  // todo: add filter
+  new TableColumn<InventoryItem<Weapon>>({
+    label: "Tagged",
+    property: "tag",
+    filterType: FilterTypeEnum.None,
+  }),
+  // todo: add sort
+  new TableColumn<InventoryItem<Weapon>>({
+    label: "Target Number",
+    property: "targetNumber",
+    filterType: FilterTypeEnum.None,
+  }),
   new TableColumn<InventoryItem<Weapon>>({
     label: "Damage",
     property: "item.damage",

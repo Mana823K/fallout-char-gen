@@ -9,33 +9,24 @@ import { DataService } from '../../../services/data.service';
 import { invWeaponColumns } from './models/weapon-columns';
 import { invWeaponSelectColumns } from './models/weapon-select-columns';
 import { TableColumn } from '../../common/table/table-column';
-import { Ammo } from '../../../models/database/ammo';
 import { CommonModule } from '@angular/common';
 import { AmountCellComponent } from "../../common/amount-cell/amount-cell.component";
 import { InputComponent } from "../../form/input/input.component";
 import { NumberInputComponent } from "../../form/number-input/number-input.component";
 import { SelectComponent } from "../../form/select/select.component";
 import { ranges } from '../../../models/database/range';
-import { invAmmoColumns } from './models/ammo-columns';
-import { invAmmoSelectColumns } from './models/ammo-select-columns';
+import { InventoryAmmoComponent } from '../inventory-ammo/inventory-ammo.component';
+import { CharacterService } from '../../../services/character.service';
 
 @Component({
   selector: 'app-inventory-weapons',
-  imports: [TableComponent, MatTooltip, CommonModule, AmountCellComponent, InputComponent, NumberInputComponent, SelectComponent],
+  imports: [TableComponent,MatTooltip, CommonModule, AmountCellComponent,
+    InputComponent, NumberInputComponent, SelectComponent, InventoryAmmoComponent],
   templateUrl: './inventory-weapons.component.html',
   styleUrl: './inventory-weapons.component.scss'
 })
 export class InventoryWeaponsComponent implements AfterViewInit {
   showAmmoTable: boolean = false;
-  get ammo(): InventoryItem<Ammo>[] { return this.inventoryService.inventory.ammo; }
-  set ammo(value: InventoryItem<Ammo>[]) { this.inventoryService.inventory.ammo = value; }
-  get ammoOptions(): Ammo[] { return this.dataService.ammo; }
-  
-  ammoTableColumns: TableColumn<InventoryItem<Ammo>>[] = invAmmoColumns;
-  ammoSelectTableColumns: TableColumn<Ammo>[] = invAmmoSelectColumns;
-  isSelectAmmo: boolean = false;
-  @ViewChild('ammoAmount') ammoAmountTemplate?: TemplateRef<any>;
-  @ViewChild('ammoTable') ammoTable?: TableComponent<InventoryItem<Ammo>>;
   
   TooltipTypeEnum = TooltipTypeEnum;
   get weapons(): InventoryItem<Weapon>[] { return this.inventoryService.inventory.weapons; }
@@ -46,7 +37,9 @@ export class InventoryWeaponsComponent implements AfterViewInit {
   weaponSelectTableColumns: TableColumn<Weapon>[] = invWeaponSelectColumns;
   weaponSortProperties = ["type", "name"];
   
-  @ViewChild('weaponAmount') weaponAmountTemplate?: TemplateRef<any>;
+  @ViewChild('amount') amountTemplate?: TemplateRef<any>;
+  @ViewChild('tag') tagTemplate?: TemplateRef<any>;
+  @ViewChild('targetNumber') targetNumberTemplate?: TemplateRef<any>;
   @ViewChild('effects') effectsTemplate?: TemplateRef<any>;
   @ViewChild('qualities') qualitiesTemplate?: TemplateRef<any>;
   @ViewChild('ammoCount') ammoCountTemplate?: TemplateRef<any>;
@@ -64,17 +57,24 @@ export class InventoryWeaponsComponent implements AfterViewInit {
   _ammoTypes: string[];
   get ammoTypes(): string[] { return this._ammoTypes.filter(x => !this.newWeapon.item.ammo.includes(x)); }
 
-  constructor(private inventoryService: InventoryService, private dataService: DataService) {
+  constructor(private inventoryService: InventoryService,
+              private dataService: DataService,
+              private characterService: CharacterService) {
     this._ammoTypes = [...new Set([...this.dataService.ammo.map(x => x.name)])].sort();
   }
 
   ngAfterViewInit(): void {
-    let amountColumnAmmo = this.ammoTableColumns.find(x => x.property == "amount");
-    if (amountColumnAmmo)
-      amountColumnAmmo.template = this.ammoAmountTemplate;
-    let amountColumnWeapon = this.weaponTableColumns.find(x => x.property == "amount");
-    if (amountColumnWeapon)
-      amountColumnWeapon.template = this.weaponAmountTemplate;
+    let amountColumn = this.weaponTableColumns.find(x => x.property == "amount");
+    if (amountColumn)
+      amountColumn.template = this.amountTemplate;
+
+    let tagColumn = this.weaponTableColumns.find(x => x.property == "tag");
+    if (tagColumn)
+      tagColumn.template = this.tagTemplate;
+
+    let targetNumber = this.weaponTableColumns.find(x => x.property == "targetNumber");
+    if (targetNumber)
+      targetNumber.template = this.targetNumberTemplate;
 
     let effectsColumn = this.weaponTableColumns.find(x => x.property == "item.effects");
     if (effectsColumn)
@@ -98,27 +98,38 @@ export class InventoryWeaponsComponent implements AfterViewInit {
     let result = [];
     for (let ammoType of weapon.ammo) {
       let count = 0
-      this.ammo.filter(x => x.item.name == ammoType).forEach(x => count += x.amount);
+      this.inventoryService.inventory.ammo.filter(x => x.item.name == ammoType).forEach(x => count += x.amount);
       result.push(count);
     }
     return result.length > 0 ? result.join(" + ") : "0";
   }
-  
-  selectAmmo(ammo: Ammo) {
-    this.inventoryService.addItem(ammo, "ammo", ["name", "subType"]);
-    this.ammoTable?.renderRows();
-    this.isSelectAmmo = false;
+
+  getTag(weapon: Weapon): string {
+    let skill;
+    if (weapon.type == "Bow") {
+      skill = this.characterService.character.skills.find(x => x.name == "Athletics");
+    }
+    else {
+      skill = this.characterService.character.skills.find(x => x.name == weapon.type);
+    }
+    return skill?.isTagged ? "O" : "";
   }
 
+  getTargetNumber(weapon: Weapon) {
+    let skill;
+    if (weapon.type == "Bow") {
+      skill = this.characterService.character.skills.find(x => x.name == "Athletics");
+    }
+    else {
+      skill = this.characterService.character.skills.find(x => x.name == weapon.type);
+    }
+    return skill?.ranks ?? 0;
+  }
+  
   selectWeapon(weapon: Weapon) {
     this.inventoryService.addItem(weapon, "weapons", ["name"]);
     this.weaponTable?.renderRows();
     this.isSelectWeapon = false;
-  }
-
-  removeAmmo(item: InventoryItem<Ammo>) {
-    this.inventoryService.removeItem(item, "ammo", ["name", "subType"]);
-    this.ammoTable?.renderRows();
   }
 
   removeWeapon(item: InventoryItem<Weapon>) {
