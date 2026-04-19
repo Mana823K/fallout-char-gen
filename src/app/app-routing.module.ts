@@ -21,10 +21,12 @@ import { InventoryChemsComponent } from './components/inventory/inventory-chems/
 import { InventoryMagazinesComponent } from './components/inventory/inventory-magazines/inventory-magazines.component';
 import { InventoryMiscComponent } from './components/inventory/inventory-misc/inventory-misc.component';
 import { ImportExportComponent } from './components/import-export/import-export.component';
+import { GameplayComponent } from './components/gameplay/gameplay.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'character', pathMatch: 'full' },
   { path: 'character', component: CharacterComponent },
+  // { path: 'gameplay', component: GameplayComponent },
   { path: 'inventory', redirectTo: 'inventory/weapons'},
   { path: 'inventory', component: InventoryComponent, children: [
     { path: 'weapons', component: InventoryWeaponsComponent },
