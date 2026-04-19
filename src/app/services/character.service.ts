@@ -17,10 +17,11 @@ export class CharacterService {
 
   constructor(private dataService: DataService) { }
 
-  init() {
+  init(testData?: string) {
+    this.character = new Character();
     this.character.skills = this.dataService.skills;
     this.character.perks = this.dataService.perks;
-    const storedData = localStorage.getItem(Character.STORAGE_NAME)
+    const storedData = testData ?? localStorage.getItem(Character.STORAGE_NAME);
     if (storedData) {
       let characterData: CharacterSaveData = JSON.parse(storedData);
       this.character.origin = this.dataService.origins.find(x => x.name == characterData.origin);
@@ -44,15 +45,21 @@ export class CharacterService {
       }
     }
 
-    this.onChange();
+    if (testData)
+      return;
+
+    this.onChange(false);
 
     this.character.onChange.subscribe(() => this.onChange());
   }
 
-  onChange() {
+  onChange(save: boolean = true) {
     this.character.stats.updateStats(this.character.special, this.character.level, this.hpModifier, this.carryWeightModifier);
 
     this.updatePerks();
+
+    if (!save)
+      return;
 
     let saveData = new CharacterSaveData(this.character);
     localStorage.setItem(Character.STORAGE_NAME, JSON.stringify(saveData));

@@ -3,5 +3,6 @@
   <p class="header-link" [ngClass]="{'active-link': selectedTab == 'inventory'}" (click)="navigateTo('inventory')">Inventory</p>
   <p class="header-link" [ngClass]="{'active-link': selectedTab == 'database'}" (click)="navigateTo('database')">Database</p>
   <p class="header-link" [ngClass]="{'active-link': selectedTab == 'tools'}" (click)="navigateTo('tools')">Tools</p>
+  <p class="header-link" [ngClass]="{'active-link': selectedTab == 'import-export'}" (click)="navigateTo('import-export')">Import/Export</p>
 </div>
 <router-outlet></router-outlet>

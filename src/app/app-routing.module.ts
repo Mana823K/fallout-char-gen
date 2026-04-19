@@ -20,6 +20,7 @@ import { InventoryConsumablesComponent } from './components/inventory/inventory-
 import { InventoryChemsComponent } from './components/inventory/inventory-chems/inventory-chems.component';
 import { InventoryMagazinesComponent } from './components/inventory/inventory-magazines/inventory-magazines.component';
 import { InventoryMiscComponent } from './components/inventory/inventory-misc/inventory-misc.component';
+import { ImportExportComponent } from './components/import-export/import-export.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'character', pathMatch: 'full' },
@@ -49,6 +50,7 @@ const routes: Routes = [
   { path: 'tools', component: ToolsComponent, children: [
     { path: 'weapon-mod', component: WeaponModToolComponent },
   ] },
+  { path: 'import-export', component: ImportExportComponent },
   { path: '**', redirectTo: 'character' }
 ];
 

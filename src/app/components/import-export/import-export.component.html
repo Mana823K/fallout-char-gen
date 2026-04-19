@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="section">
+    <h3>Export data</h3>
+    <div class="checkbox-group">
+      <mat-checkbox [(ngModel)]="isCharacterChecked">Character</mat-checkbox>
+      <mat-checkbox [(ngModel)]="isInventoryChecked">Inventory</mat-checkbox>
+    </div>
+    <button class="button" (click)="exportData()">Export</button>
+    @if (characterData.length > 0;) {
+      <p class="export-data-title">Character data</p>
+      <div class="export-data">{{characterData}}</div>
+    }
+    @if (inventoryData.length > 0) {
+      <p class="export-data-title">Inventory data</p>
+      <div class="export-data">{{inventoryData}}</div>
+    }
+  </div>
+  <div class="section">
+    <h3>Import data</h3>
+    <app-select inputName="select-import-type" [(value)]="selectedImportOption" [options]="importOptions"></app-select>
+    <app-text-area inputName="import-data" [(value)]="importDataInput"></app-text-area>
+    <button class="button" (click)="importData()" [disabled]="importDataInput.length == 0 || selectedImportOption.length == 0">Import</button>
+    @if (isFail) {
+      <p class="fail-message">Invalid data</p>
+    }
+    @else if (isSuccess) {
+      <p class="success-message">Successful import!</p>
+    }
+  </div>
+</div>
+

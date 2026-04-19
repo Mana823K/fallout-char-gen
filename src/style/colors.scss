@@ -85,6 +85,11 @@ $accentLightAccent: map.get($palette-map, accent, light-accent);
 $accent: map.get($palette-map, accent, default);
 $accentDark: map.get($palette-map, accent, dark);
 
+$successLight: map.get($palette-map, success, light);
+$successLightsuccess: map.get($palette-map, success, light-success);
+$success: map.get($palette-map, success, default);
+$successDark: map.get($palette-map, success, dark);
+
 $warnLight: map.get($palette-map, warn, light);
 $warnLightAccent: map.get($palette-map, warn, light-accent);
 $warn: map.get($palette-map, warn, default);

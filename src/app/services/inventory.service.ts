@@ -12,8 +12,9 @@ export class InventoryService {
 
   constructor(private dataService: DataService) { }
 
-  init() {
-    const storedData = localStorage.getItem(Inventory.STORAGE_NAME)
+  init(testData?: string) {
+    this.inventory = new Inventory();
+    const storedData = testData ?? localStorage.getItem(Inventory.STORAGE_NAME);
     if (storedData) {
       let saveData: InventorySaveData = JSON.parse(storedData);
       this.inventory.weapons = saveData.weapons.flatMap(x => this.initItem(x, this.dataService.weapons, y => y.name));
