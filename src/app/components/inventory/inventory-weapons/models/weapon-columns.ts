@@ -30,7 +30,7 @@ export const invWeaponColumns: TableColumn<InventoryItem<Weapon>>[] = [
   }),
   // todo: add sort
   new TableColumn<InventoryItem<Weapon>>({
-    label: "Target Number",
+    label: "TN",
     property: "targetNumber",
     filterType: FilterTypeEnum.None,
   }),

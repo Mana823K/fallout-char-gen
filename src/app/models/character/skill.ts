@@ -1,3 +1,5 @@
+import { SpecialEnum } from "./special-enum";
+
 export class Skill {
   static readonly TAG_COUNT = 3;
   static readonly MAX_RANK = 6;
@@ -6,7 +8,7 @@ export class Skill {
   static readonly RANK_POINTS = 9;
 
   name: string = "";
-  attribute: string = "";
+  attribute: SpecialEnum = SpecialEnum.STR;
   detail: string = "";
 
   isTagged: boolean = false;
@@ -24,7 +26,7 @@ export class SkillData {
     let result = new Skill();
 
     result.name = original.name;
-    result.attribute = original.attribute;
+    result.attribute = SpecialEnum[original.attribute as keyof typeof SpecialEnum] ?? SpecialEnum.STR;
     result.detail = original.detail;
 
     return result;

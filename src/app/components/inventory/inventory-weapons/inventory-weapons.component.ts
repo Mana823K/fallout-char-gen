@@ -17,6 +17,7 @@ import { SelectComponent } from "../../form/select/select.component";
 import { ranges } from '../../../models/database/range';
 import { InventoryAmmoComponent } from '../inventory-ammo/inventory-ammo.component';
 import { CharacterService } from '../../../services/character.service';
+import { SpecialEnum } from '../../../models/character/special-enum';
 
 @Component({
   selector: 'app-inventory-weapons',
@@ -27,7 +28,7 @@ import { CharacterService } from '../../../services/character.service';
 })
 export class InventoryWeaponsComponent implements AfterViewInit {
   showAmmoTable: boolean = false;
-  
+
   TooltipTypeEnum = TooltipTypeEnum;
   get weapons(): InventoryItem<Weapon>[] { return this.inventoryService.inventory.weapons; }
   set weapons(value: InventoryItem<Weapon>[]) { this.inventoryService.inventory.weapons = value; }
@@ -36,7 +37,7 @@ export class InventoryWeaponsComponent implements AfterViewInit {
   weaponTableColumns: TableColumn<InventoryItem<Weapon>>[] = invWeaponColumns;
   weaponSelectTableColumns: TableColumn<Weapon>[] = invWeaponSelectColumns;
   weaponSortProperties = ["type", "name"];
-  
+
   @ViewChild('amount') amountTemplate?: TemplateRef<any>;
   @ViewChild('tag') tagTemplate?: TemplateRef<any>;
   @ViewChild('targetNumber') targetNumberTemplate?: TemplateRef<any>;
@@ -79,7 +80,7 @@ export class InventoryWeaponsComponent implements AfterViewInit {
     let effectsColumn = this.weaponTableColumns.find(x => x.property == "item.effects");
     if (effectsColumn)
       effectsColumn.template = this.effectsTemplate;
-    
+
     let qualitiesColumn = this.weaponTableColumns.find(x => x.property == "item.qualities");
     if (qualitiesColumn)
       qualitiesColumn.template = this.qualitiesTemplate;
@@ -112,20 +113,26 @@ export class InventoryWeaponsComponent implements AfterViewInit {
     else {
       skill = this.characterService.character.skills.find(x => x.name == weapon.type);
     }
-    return skill?.isTagged ? "O" : "";
+    return skill?.isTagged ? `\u2713 (${skill.ranks})` : "";
   }
 
   getTargetNumber(weapon: Weapon) {
     let skill;
     if (weapon.type == "Bow") {
       skill = this.characterService.character.skills.find(x => x.name == "Athletics");
+      if (!skill)
+        return 0;
+      return this.characterService.character.getSpecialPoints(SpecialEnum.AGI) + skill.ranks;
     }
     else {
       skill = this.characterService.character.skills.find(x => x.name == weapon.type);
+      if (!skill)
+        return 0;
+
+      return this.characterService.character.getSpecialPoints(skill.attribute) + skill.ranks;
     }
-    return skill?.ranks ?? 0;
   }
-  
+
   selectWeapon(weapon: Weapon) {
     this.inventoryService.addItem(weapon, "weapons", ["name"]);
     this.weaponTable?.renderRows();

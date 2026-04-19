@@ -5,6 +5,7 @@ import { Skill, SkillSaveData } from "./skill";
 import { Special, SpecialSaveData } from "./special";
 import { Stats } from "./stats";
 import { EventEmitter } from "@angular/core";
+import { SpecialEnum } from "./special-enum";
 
 export class Character {
   static readonly STORAGE_NAME = "CharacterData"
@@ -14,7 +15,7 @@ export class Character {
     this.originSub.next(value);
     this.onChange.emit();
   }
-  
+
   levelSub = new BehaviorSubject<number>(0);
   get level(): number { return this.levelSub.value; }
   set level(value: number) {
@@ -48,6 +49,10 @@ export class Character {
   set stats(value: Stats) { this.statsSub.next(value); }
 
   onChange = new EventEmitter<void>();
+
+  getSpecialPoints(attribute: SpecialEnum) {
+    return this.special.getValue(attribute);
+  }
 }
 
 export class CharacterSaveData {

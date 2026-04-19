@@ -1,3 +1,5 @@
+import { SpecialEnum } from "./special-enum";
+
 export class Special {
   static MIN_VALUE = 4;
   static MAX_VALUE = 10;
@@ -14,6 +16,25 @@ export class Special {
   get pointsSum(): number {
     return this.strength + this.perception + this.endurance
     + this.charisma + this.intelligence + this.agility + this.luck;
+  }
+
+  getValue(special: SpecialEnum) {
+    switch (special) {
+      case SpecialEnum.STR:
+        return this.strength;
+      case SpecialEnum.PER:
+        return this.perception;
+      case SpecialEnum.END:
+        return this.endurance;
+      case SpecialEnum.CHA:
+        return this.charisma;
+      case SpecialEnum.INT:
+        return this.intelligence;
+      case SpecialEnum.AGI:
+        return this.agility;
+      case SpecialEnum.LCK:
+        return this.luck;
+    }
   }
 }
 
