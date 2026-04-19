@@ -46,12 +46,12 @@ export class CharacterService {
 
     this.onChange();
 
-    this.character.onChange.subscribe(this.onChange)
+    this.character.onChange.subscribe(() => this.onChange());
   }
 
   onChange() {
     this.character.stats.updateStats(this.character.special, this.character.level, this.hpModifier, this.carryWeightModifier);
-    
+
     this.updatePerks();
 
     let saveData = new CharacterSaveData(this.character);
