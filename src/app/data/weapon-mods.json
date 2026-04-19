@@ -367,7 +367,7 @@
   {
     "name": "Beta Wave Tuner",
     "prefix": "Incendiary",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "gainedEffects": ["Persistent"],
     "weightChange": 0,
@@ -377,7 +377,7 @@
   {
     "name": "Boosted Capacitor",
     "prefix": "Boosted",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 1,
     "fireRateChange": -1,
@@ -388,7 +388,7 @@
   {
     "name": "Photon Exciter",
     "prefix": "Excited",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "gainedEffects": ["Vicious"],
     "weightChange": 0,
@@ -398,7 +398,7 @@
   {
     "name": "Photon Agitator",
     "prefix": "Agitated",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 1,
     "gainedEffects": ["Vicious"],
@@ -409,7 +409,7 @@
   {
     "name": "Three-Crank Capacitor (Laser Musket)",
     "prefix": "Three-crank",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 1,
     "effects": "consumes 3 shots per attack",
@@ -420,7 +420,7 @@
   {
     "name": "Four-Crank Capacitor (Laser Musket)",
     "prefix": "Four-crank",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 2,
     "effects": "consumes 4 shots per attack",
@@ -431,7 +431,7 @@
   {
     "name": "Five-Crank Capacitor (Laser Musket)",
     "prefix": "Five-crank",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 3,
     "effects": "consumes 5 shots per attack",
@@ -442,7 +442,7 @@
   {
     "name": "Six-Crank Capacitor (Laser Musket)",
     "prefix": "Six-crank",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 4,
     "effects": "consumes 6 shots per attack",
@@ -453,7 +453,7 @@
   {
     "name": "Bracketed Short Barrel",
     "prefix": "",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Barrel",
     "effects": "Allows the weapon to take a Muzzle mod",
     "weightChange": 0,
@@ -463,7 +463,7 @@
   {
     "name": "Long Barrel",
     "prefix": "Long",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Barrel",
     "rangeChange": 1,
     "removedQualities": ["Close Quarters"],
@@ -474,7 +474,7 @@
   {
     "name": "Splitter",
     "prefix": "Scattergun",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Barrel",
     "damageChange": -1,
     "gainedEffects": ["Spread"],
@@ -486,7 +486,7 @@
   {
     "name": "Automatic Barrel",
     "prefix": "Automatic",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Barrel",
     "damageChange": -1,
     "fireRateChange": 1,
@@ -499,7 +499,7 @@
   {
     "name": "Bracketed Long Barrel",
     "prefix": "",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Barrel",
     "rangeChange": 1,
     "removedQualities": ["Close Quarters"],
@@ -511,7 +511,7 @@
   {
     "name": "Improved Barrel",
     "prefix": "Improved",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Barrel",
     "damageChange": 1,
     "weightChange": 1,
@@ -521,7 +521,7 @@
   {
     "name": "Sniper Barrel",
     "prefix": "Sniper",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Barrel",
     "damageChange": 2,
     "rangeChange": 1,
@@ -534,7 +534,7 @@
   {
     "name": "Flamer Barrel",
     "prefix": "Thrower",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Barrel",
     "damageChange": -2,
     "fireRateChange": 2,
@@ -548,7 +548,7 @@
   {
     "name": "Sharpshooter’s Grip",
     "prefix": "Sharpshooter’s",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Grip",
     "gainedEffects": ["Piercing 1"],
     "removedQualities": ["Inaccurate"],
@@ -559,7 +559,7 @@
   {
     "name": "Standard Stock",
     "prefix": "",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Stock",
     "gainedQualities": ["Two-Handed"],
     "removedQualities": ["Inaccurate", "Close Quarters"],
@@ -570,7 +570,7 @@
   {
     "name": "Full Stock",
     "prefix": "",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Stock",
     "gainedEffects": ["Piercing 1"],
     "removedQualities": ["Close Quarters"],
@@ -581,7 +581,7 @@
   {
     "name": "Marksman’s Stock",
     "prefix": "Marksman’s",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Stock",
     "gainedQualities": ["Two-Handed", "Accurate"],
     "removedQualities": ["Inaccurate", "Close Quarters"],
@@ -592,7 +592,7 @@
   {
     "name": "Recoil Compensating Stock",
     "prefix": "Recoil Compensated",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Stock",
     "fireRateChange": 1,
     "gainedQualities": ["Two-Handed"],
@@ -604,7 +604,7 @@
   {
     "name": "Reflex Sight",
     "prefix": "Tactical",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Sight",
     "effects": "May re-roll hit location die",
     "weightChange": 0,
@@ -614,7 +614,7 @@
   {
     "name": "Short Scope",
     "prefix": "Scoped",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Sight",
     "gainedQualities": ["Accurate"],
     "weightChange": 1,
@@ -624,7 +624,7 @@
   {
     "name": "Long Scope",
     "prefix": "Scoped",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Sight",
     "rangeChange": 1,
     "gainedQualities": ["Accurate"],
@@ -635,7 +635,7 @@
   {
     "name": "Short Night Vision Scope",
     "prefix": "Night Vision",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Sight",
     "gainedQualities": ["Accurate", "Night Vision"],
     "weightChange": 1,
@@ -645,7 +645,7 @@
   {
     "name": "Long Night Vision Scope",
     "prefix": "Night Vision",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Sight",
     "rangeChange": 1,
     "gainedQualities": ["Accurate", "Night Vision"],
@@ -656,7 +656,7 @@
   {
     "name": "Recon Scope",
     "prefix": "Recon",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Sight",
     "gainedQualities": ["Accurate", "Recon"],
     "weightChange": 1,
@@ -666,7 +666,7 @@
   {
     "name": "Deep Dish (Gamma Gun)",
     "prefix": "Long",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Dish",
     "damageChange": 1,
     "rangeChange": 1,
@@ -677,7 +677,7 @@
   {
     "name": "Electric Signal Carrier Antennae (Gamma Gun)",
     "prefix": "Electrified",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Muzzle",
     "fixDamage": 7,
     "newDamageType": "Energy",
@@ -689,7 +689,7 @@
   {
     "name": "Signal Repeater (Gamma Gun)",
     "prefix": "Automatic",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Muzzle",
     "fireRateChange": 2,
     "gainedEffects": ["Burst"],
@@ -701,7 +701,7 @@
   {
     "name": "Beam Splitter",
     "prefix": "Scattered",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Muzzle",
     "damageChange": -1,
     "fireRateChange": -1,
@@ -715,7 +715,7 @@
   {
     "name": "Beam Focuser",
     "prefix": "Focused",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Muzzle",
     "rangeChange": 1,
     "weightChange": 1,
@@ -725,7 +725,7 @@
   {
     "name": "Gyro Compensating Lens",
     "prefix": "Targeting",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Muzzle",
     "fireRateChange": 1,
     "removedQualities": ["Inaccurate"],
@@ -1035,7 +1035,7 @@
   {
     "name": "Serrated Blade (Sword)",
     "prefix": "Serrated",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "gainedEffects": ["Persistent"],
     "weightChange": 0,
@@ -1045,7 +1045,7 @@
   {
     "name": "Electrified Blade (Sword)",
     "prefix": "Electrified",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "newDamageType": "Energy",
@@ -1056,7 +1056,7 @@
   {
     "name": "Electrified Serrated Blade (Sword)",
     "prefix": "Electrified Serrated",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "newDamageType": "Energy",
@@ -1068,7 +1068,7 @@
   {
     "name": "Stun Pack (Sword)",
     "prefix": "Stunning",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "newDamageType": "Energy",
@@ -1080,7 +1080,7 @@
   {
     "name": "Serrated Blade (Combat Knife)",
     "prefix": "Serrated",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Persistent"],
@@ -1091,7 +1091,7 @@
   {
     "name": "Stealth Blade (Combat Knife)",
     "prefix": "Stealth",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Persistent"],
@@ -1103,7 +1103,7 @@
   {
     "name": "Serrated Blade (Machete)",
     "prefix": "Serrated",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "gainedEffects": ["Persistent"],
@@ -1114,7 +1114,7 @@
   {
     "name": "Curved Blade (Ripper)",
     "prefix": "Curved",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "effects": "On successful attack, spend 2 AP to disarm opponent, knocking one held weapon away",
@@ -1125,7 +1125,7 @@
   {
     "name": "Extended Blade (Ripper)",
     "prefix": "Extended",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Persistent"],
@@ -1136,7 +1136,7 @@
   {
     "name": "Extra Flame Jets (Shishkebab)",
     "prefix": "MuzzSearingled",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Persistent"],
@@ -1147,7 +1147,7 @@
   {
     "name": "Serrated Blade (Switchblade)",
     "prefix": "Serrated",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Persistent"],
@@ -1158,7 +1158,7 @@
   {
     "name": "Barbed (Baseball Bat)",
     "prefix": "Barbed",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "gainedEffects": ["Piercing 1"],
     "weightChange": 0,
@@ -1168,7 +1168,7 @@
   {
     "name": "Spiked (Baseball Bat)",
     "prefix": "Spiked",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Piercing 1"],
@@ -1179,7 +1179,7 @@
   {
     "name": "Sharp (Baseball Bat)",
     "prefix": "Sharp",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Persistent"],
@@ -1190,7 +1190,7 @@
   {
     "name": "Chain-Wrapped (Baseball Bat)",
     "prefix": "Chain-Wrapped",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "weightChange": 1,
@@ -1200,7 +1200,7 @@
   {
     "name": "Bladed (Baseball Bat)",
     "prefix": "Bladed",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "gainedEffects": ["Persistent"],
@@ -1211,7 +1211,7 @@
   {
     "name": "Spiked (Board)",
     "prefix": "Spiked",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Piercing 1"],
@@ -1222,7 +1222,7 @@
   {
     "name": "Puncturing (Board)",
     "prefix": "Puncturing",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "weightChange": 1,
@@ -1232,7 +1232,7 @@
   {
     "name": "Bladed (Board)",
     "prefix": "Bladed",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "gainedEffects": ["Persistent"],
@@ -1243,7 +1243,7 @@
   {
     "name": "Spiked (Lead Pipe)",
     "prefix": "Spiked",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Piercing 1"],
@@ -1254,7 +1254,7 @@
   {
     "name": "Heavy (Lead Pipe)",
     "prefix": "Heavy",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "weightChange": 2,
@@ -1264,7 +1264,7 @@
   {
     "name": "Hooked (Pipe Wrench)",
     "prefix": "Hooked",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "effects": "On successful attack, spend 2 AP to disarm opponent, knocking one held weapon away",
@@ -1275,7 +1275,7 @@
   {
     "name": "Heavy (Pipe Wrench)",
     "prefix": "Weighted",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "weightChange": 7,
@@ -1285,7 +1285,7 @@
   {
     "name": "Puncturing (Pipe Wrench)",
     "prefix": "Puncturing",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "gainedEffects": ["Piercing 1"],
@@ -1296,7 +1296,7 @@
   {
     "name": "Extra Heavy (Pipe Wrench)",
     "prefix": "Heavy",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 3,
     "weightChange": 2,
@@ -1306,7 +1306,7 @@
   {
     "name": "Barbed (Pool Cue)",
     "prefix": "Barbed",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Piercing 1"],
@@ -1317,7 +1317,7 @@
   {
     "name": "Sharp (Pool Cue)",
     "prefix": "Sharp",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Persistent"],
@@ -1328,7 +1328,7 @@
   {
     "name": "Spiked (Rolling Pin)",
     "prefix": "Barbed",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Piercing 1"],
@@ -1339,7 +1339,7 @@
   {
     "name": "Sharp (Rolling Pin)",
     "prefix": "Sharp",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Persistent"],
@@ -1350,7 +1350,7 @@
   {
     "name": "Electrified (Baton)",
     "prefix": "Shock",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "newDamageType": "Energy",
@@ -1361,7 +1361,7 @@
   {
     "name": "Stun Pack (Baton)",
     "prefix": "Stun",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 3,
     "newDamageType": "Energy",
@@ -1373,7 +1373,7 @@
   {
     "name": "Puncturing (Sledgehammer)",
     "prefix": "Puncturing",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Piercing 1"],
@@ -1384,7 +1384,7 @@
   {
     "name": "Heavy (Sledgehammer)",
     "prefix": "Heavy",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "weightChange": 9,
@@ -1394,7 +1394,7 @@
   {
     "name": "Heating Coil (Super Sledge)",
     "prefix": "Heated",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "newDamageType": "Energy",
@@ -1405,7 +1405,7 @@
   {
     "name": "Stun Pack (Super Sledge)",
     "prefix": "Stunning",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "newDamageType": "Energy",
@@ -1417,7 +1417,7 @@
   {
     "name": "Bladed (Tire Iron)",
     "prefix": "Bladed",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Persistent"],
@@ -1428,7 +1428,7 @@
   {
     "name": "Barbed (Walking Cane)",
     "prefix": "Barbed",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Piercing 1"],
@@ -1439,7 +1439,7 @@
   {
     "name": "Spiked (Walking Cane)",
     "prefix": "Spiked",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Piercing 1"],
@@ -1450,7 +1450,7 @@
   {
     "name": "Spiked (Boxing Glove)",
     "prefix": "Spiked",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "gainedEffects": ["Piercing 1"],
     "weightChange": 0,
@@ -1460,7 +1460,7 @@
   {
     "name": "Puncturing (Boxing Glove)",
     "prefix": "Puncturing",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Piercing 1"],
@@ -1471,7 +1471,7 @@
   {
     "name": "Lead lining (Boxing Glove)",
     "prefix": "Lead-lined",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "weightChange": 1,
@@ -1481,7 +1481,7 @@
   {
     "name": "Extra Claw (Deathclaw Gauntlet)",
     "prefix": "Large",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "effects": "On successful attack, spend 2 AP to disarm opponent, knocking one held weapon away",
@@ -1492,7 +1492,7 @@
   {
     "name": "Sharp (Knuckles)",
     "prefix": "Sharp",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "gainedEffects": ["Persistent"],
     "weightChange": 0,
@@ -1502,7 +1502,7 @@
   {
     "name": "Spiked (Knuckles)",
     "prefix": "Spiked",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "gainedEffects": ["Piercing 1"],
     "weightChange": 0,
@@ -1512,7 +1512,7 @@
   {
     "name": "Puncturing (Knuckles)",
     "prefix": "Puncturing",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Piercing 1"],
@@ -1523,7 +1523,7 @@
   {
     "name": "Bladed (Knuckles)",
     "prefix": "Bladed",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "gainedEffects": ["Persistent"],
@@ -1534,7 +1534,7 @@
   {
     "name": "Puncturing (Power Fist)",
     "prefix": "Puncturing",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "gainedEffects": ["Piercing 1"],
@@ -1545,7 +1545,7 @@
   {
     "name": "Heating Coil (Power Fist)",
     "prefix": "Heated",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "newDamageType": "Energy",
@@ -1577,7 +1577,7 @@
   {
     "name": "Caustic (Acid Soaker)",
     "prefix": "Caustic",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Concentrate",
     "damageChange": 1,
     "weightChange": 2,
@@ -1587,7 +1587,7 @@
   {
     "name": "Large Ampoule (Acid Soaker)",
     "prefix": "High Capacity",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Container",
     "fireRateChange": 1,
     "weightChange": 2,
@@ -1597,7 +1597,7 @@
   {
     "name": "Large Vial (Acid Soaker)",
     "prefix": "Maximum Capacity",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Container",
     "fireRateChange": 3,
     "weightChange": 4,
@@ -1607,7 +1607,7 @@
   {
     "name": "Fusion Mag (Alien Blaster)",
     "prefix": "Converted",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Magazine",
     "fixDamage": 3,
     "fireRateChange": -1,
@@ -1619,7 +1619,7 @@
   {
     "name": "Capacitor Mk III (Assaultron Head)",
     "prefix": "Mk III",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 1,
     "effects": "consumes 3 shots per attack",
@@ -1630,7 +1630,7 @@
   {
     "name": "Capacitor Mk IV (Assaultron Head)",
     "prefix": "Mk IV",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 2,
     "effects": "consumes 4 shots per attack",
@@ -1641,7 +1641,7 @@
   {
     "name": "Capacitor Mk V (Assaultron Head)",
     "prefix": "Mk V",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 3,
     "effects": "consumes 5 shots per attack",
@@ -1652,7 +1652,7 @@
   {
     "name": "Capacitor Mk VI (Assaultron Head)",
     "prefix": "Mk VI",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 4,
     "effects": "consumes 6 shots per attack",
@@ -1931,7 +1931,7 @@
   {
     "name": "Gamma Wave Emitter",
     "prefix": "Fiery",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 1,
     "gainedEffects": ["Persistent"],
@@ -1942,7 +1942,7 @@
   {
     "name": "Maximized Capacitor",
     "prefix": "Maximized",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 2,
     "weightChange": 1,
@@ -1952,7 +1952,7 @@
   {
     "name": "Boosted Photon Agitator",
     "prefix": "Boosted, Agitated",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 2,
     "gainedEffects": ["Vicious"],
@@ -1963,7 +1963,7 @@
   {
     "name": "Boosted Gamma Wave Emitter",
     "prefix": "Boosted, Fiery",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 2,
     "gainedEffects": ["Persistent"],
@@ -1974,7 +1974,7 @@
   {
     "name": "Overcharged Capacitor",
     "prefix": "Overcharged",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Capacitor",
     "damageChange": 3,
     "weightChange": 1,
@@ -1984,7 +1984,7 @@
   {
     "name": "Improved Long Barrel",
     "prefix": "Improved Long",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Barrel",
     "damageChange": 1,
     "rangeChange": 1,
@@ -1996,7 +1996,7 @@
   {
     "name": "Improved Automatic Barrel",
     "prefix": "Improved Automatic",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Barrel",
     "rangeChange": 1,
     "fireRateChange": 1,
@@ -2010,7 +2010,7 @@
   {
     "name": "Improved Sniper Barrel",
     "prefix": "Improved Charging",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Barrel",
     "damageChange": 3,
     "rangeChange": 1,
@@ -2023,7 +2023,7 @@
   {
     "name": "Improved Splitter",
     "prefix": "Improved Scattergun",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Barrel",
     "gainedEffects": ["Spread"],
     "gainedQualities": ["Inaccurate"],
@@ -2034,7 +2034,7 @@
   {
     "name": "Amplified Beam Splitter",
     "prefix": "Improved Scattered",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Muzzle",
     "fireRateChange": -1,
     "rangeChange": -1,
@@ -2046,7 +2046,7 @@
   {
     "name": "Fine-Tuned Beam Focuser",
     "prefix": "Improved Focused",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Muzzle",
     "rangeChange": 1,
     "gainedQualities": ["Accurate"],
@@ -2057,7 +2057,7 @@
   {
     "name": "Quantum Gyro Compensating Lens",
     "prefix": "Improved Targeting",
-    "weaponType": "Energy Weapon",
+    "weaponType": "Energy Weapons",
     "type": "Muzzle",
     "fireRateChange": 2,
     "removedQualities": ["Inaccurate"],
@@ -2456,7 +2456,7 @@
   {
     "name": "Electrified Blade (Assaultron Blade)",
     "prefix": "Electrified",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "newDamageType": "Energy",
@@ -2467,7 +2467,7 @@
   {
     "name": "Electrified (Auto-Axe)",
     "prefix": "Electrified",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "newDamageType": "Energy",
@@ -2478,7 +2478,7 @@
   {
     "name": "Burning (Auto-Axe)",
     "prefix": "Burning",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "newDamageType": "Energy",
     "gainedEffects": ["Persistent"],
@@ -2489,7 +2489,7 @@
   {
     "name": "Poisoned (Auto-Axe)",
     "prefix": "Toxic",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "gainedEffects": ["Persistent (Posion)"],
     "weightChange": 0,
@@ -2499,7 +2499,7 @@
   {
     "name": "Turbo (Auto-Axe)",
     "prefix": "Turbo",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "effects": "Each AP spent for extra damage adds +2CD instead of +1CD.",
     "weightChange": 2,
@@ -2509,7 +2509,7 @@
   {
     "name": "Dual Bar (Chainsaw)",
     "prefix": "Dual",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 2,
     "weightChange": 1,
@@ -2519,7 +2519,7 @@
   {
     "name": "Bow Bar (Chainsaw)",
     "prefix": "Bow bar",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "gainedEffects": ["Piercing 1"],
     "weightChange": 2,
@@ -2529,7 +2529,7 @@
   {
     "name": "Long Bow Bar (Chainsaw)",
     "prefix": "Bow bow bar",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "gainedEffects": ["Persistent"],
     "weightChange": 3,
@@ -2539,7 +2539,7 @@
   {
     "name": "Flamer (Chainsaw)",
     "prefix": "Flaming",
-    "weaponType": "Melee Weapon",
+    "weaponType": "Melee Weapons",
     "type": "",
     "damageChange": 1,
     "newDamageType": "Energy",

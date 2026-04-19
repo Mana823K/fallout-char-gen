@@ -229,7 +229,7 @@
   },
   {
     "name": "Institute Laser",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 3,
     "effects": ["Burst"],
     "damageType": "Energy",
@@ -245,7 +245,7 @@
   },
   {
     "name": "Laser Musket",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 5,
     "effects": ["Piercing 1"],
     "damageType": "Energy",
@@ -261,7 +261,7 @@
   },
   {
     "name": "Laser Gun",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 4,
     "effects": ["Piercing 1"],
     "damageType": "Energy",
@@ -277,7 +277,7 @@
   },
   {
     "name": "Plasma Gun",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 6,
     "effects": [],
     "damageType": "Physical/Energy",
@@ -294,7 +294,7 @@
   },
   {
     "name": "Gamma Gun",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 3,
     "effects": ["Piercing 1", "Stun"],
     "damageType": "Radiation",
@@ -450,7 +450,7 @@
   },
   {
     "name": "Gun Bash (1H)",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 2,
     "effects": ["Stun"],
     "damageType": "Physical",
@@ -465,7 +465,7 @@
   },
   {
     "name": "Gun Bash",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 3,
     "effects": ["Stun"],
     "damageType": "Physical",
@@ -480,7 +480,7 @@
   },
   {
     "name": "Sword",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 4,
     "effects": ["Piercing 1"],
     "damageType": "Physical",
@@ -495,7 +495,7 @@
   },
   {
     "name": "Combat Knife",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 3,
     "effects": ["Piercing 1"],
     "damageType": "Physical",
@@ -510,7 +510,7 @@
   },
   {
     "name": "Machete",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 3,
     "effects": ["Piercing 1"],
     "damageType": "Physical",
@@ -525,7 +525,7 @@
   },
   {
     "name": "Ripper",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 4,
     "effects": ["Vicious"],
     "damageType": "Physical",
@@ -540,7 +540,7 @@
   },
   {
     "name": "Shishkebab",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 5,
     "effects": ["Piercing 1"],
     "damageType": "Energy",
@@ -555,7 +555,7 @@
   },
   {
     "name": "Switchblade",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 2,
     "effects": ["Piercing 1"],
     "damageType": "Physical",
@@ -570,7 +570,7 @@
   },
   {
     "name": "Baseball Bat",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 4,
     "effects": [],
     "damageType": "Physical",
@@ -585,7 +585,7 @@
   },
   {
     "name": "Aluminum Baseball Bat",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 5,
     "effects": [],
     "damageType": "Physical",
@@ -601,7 +601,7 @@
   },
   {
     "name": "Board",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 4,
     "effects": [],
     "damageType": "Physical",
@@ -616,7 +616,7 @@
   },
   {
     "name": "Lead Pipe",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 3,
     "effects": [],
     "damageType": "Physical",
@@ -631,7 +631,7 @@
   },
   {
     "name": "Pipe Wrench",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 3,
     "effects": [],
     "damageType": "Physical",
@@ -647,7 +647,7 @@
   },
   {
     "name": "Pool cue",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 3,
     "effects": [],
     "damageType": "Physical",
@@ -662,7 +662,7 @@
   },
   {
     "name": "Rolling Pin",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 3,
     "effects": [],
     "damageType": "Physical",
@@ -677,7 +677,7 @@
   },
   {
     "name": "Baton",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 3,
     "effects": [],
     "damageType": "Physical",
@@ -692,7 +692,7 @@
   },
   {
     "name": "Sledgehammer",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 5,
     "effects": [],
     "damageType": "Physical",
@@ -707,7 +707,7 @@
   },
   {
     "name": "Super Sledge",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 6,
     "effects": ["Breaking"],
     "damageType": "Physical",
@@ -722,7 +722,7 @@
   },
   {
     "name": "Tire Iron",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 3,
     "effects": [],
     "damageType": "Physical",
@@ -737,7 +737,7 @@
   },
   {
     "name": "Walking Cane",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 3,
     "effects": [],
     "damageType": "Physical",
@@ -1056,7 +1056,7 @@
   },
   {
     "name": "Acid Soaker",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 3,
     "effects": ["Breaking", "Persistent"],
     "damageType": "Poison",
@@ -1071,7 +1071,7 @@
   },
   {
     "name": "Alien Blaster",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 5,
     "effects": ["Vicious"],
     "damageType": "Energy/Radiation",
@@ -1088,7 +1088,7 @@
   },
   {
     "name": "Assaultron Head Laser",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 5,
     "effects": ["Piercing 1"],
     "damageType": "Energy",
@@ -1104,7 +1104,7 @@
   },
   {
     "name": "Cryojet",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 3,
     "effects": ["Burst", "Freeze"],
     "damageType": "Energy",
@@ -1120,7 +1120,7 @@
   },
   {
     "name": "Mesmetron",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 3,
     "effects": ["Stun"],
     "damageType": "Energy",
@@ -1135,7 +1135,7 @@
   },
   {
     "name": "Tesla Rifle",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 4,
     "effects": ["Arc"],
     "damageType": "Energy",
@@ -1198,7 +1198,7 @@
   },
   {
     "name": "Buzz Saw",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 3,
     "effects": ["Piercing 1"],
     "damageType": "Physical",
@@ -1528,7 +1528,7 @@
   },
   {
     "name": "Alien Atomizer",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 6,
     "effects": ["Vicious"],
     "damageType": "Energy",
@@ -1543,7 +1543,7 @@
   },
   {
     "name": "Alien Disintegrator",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 8,
     "effects": ["Vicious"],
     "damageType": "Energy",
@@ -1558,7 +1558,7 @@
   },
   {
     "name": "Arc Welder",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 3,
     "effects": ["Stun"],
     "damageType": "Energy",
@@ -1573,7 +1573,7 @@
   },
   {
     "name": "Assaultron Head",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 5,
     "effects": ["Piercing 1"],
     "damageType": "Energy",
@@ -1589,7 +1589,7 @@
   },
   {
     "name": "Microwave Emitter",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 6,
     "effects": ["Persistent", "Piercing 3"],
     "damageType": "Energy",
@@ -1604,7 +1604,7 @@
   },
   {
     "name": "Tesla Rifle",
-    "type": "Energy Weapon",
+    "type": "Energy Weapons",
     "damage": 5,
     "effects": ["Arc"],
     "damageType": "Energy",
@@ -1779,7 +1779,7 @@
   },
   {
     "name": "Assaultron Blade",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 4,
     "effects": ["Piercing 1"],
     "damageType": "Physical",
@@ -1794,7 +1794,7 @@
   },
   {
     "name": "Auto-Axe",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 5,
     "effects": ["Vicious"],
     "damageType": "Physical",
@@ -1820,12 +1820,12 @@
     "weight": 6,
     "cost": 150,
     "rarity": 4,
-    "special": "This melee weapon requires ammunition, expending one shotgun shell with each attack. Without a shotgun shell, a ballistic fist simply makes a normal unarmed attack",
+    "special": "This melee weapons requires ammunition, expending one shotgun shell with each attack. Without a shotgun shell, a ballistic fist simply makes a normal unarmed attack",
     "mods": []
   },
   {
     "name": "Bumper Sword",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 6,
     "effects": ["Piercing 1"],
     "damageType": "Physical",
@@ -1840,7 +1840,7 @@
   },
   {
     "name": "Cattle Prod",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 7,
     "effects": ["Stun"],
     "damageType": "Energy",
@@ -1855,7 +1855,7 @@
   },
   {
     "name": "Chainsaw",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 6,
     "effects": ["Vicious"],
     "damageType": "Physical",
@@ -1903,7 +1903,7 @@
   },
   {
     "name": "Guitar Sword",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 4,
     "effects": ["Piercing 1"],
     "damageType": "Physical",
@@ -1919,7 +1919,7 @@
   },
   {
     "name": "Mr Handy Buzz Blade",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 4,
     "effects": ["Vicious"],
     "damageType": "Physical",
@@ -1934,7 +1934,7 @@
   },
   {
     "name": "Multi-Purpose Axe",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 5,
     "effects": [],
     "damageType": "Physical",
@@ -1949,7 +1949,7 @@
   },
   {
     "name": "Proton Axe",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 5,
     "effects": ["Piercing 1"],
     "damageType": "Energy",
@@ -1964,7 +1964,7 @@
   },
   {
     "name": "War Drum",
-    "type": "Melee Weapon",
+    "type": "Melee Weapons",
     "damage": 5,
     "effects": ["Stun"],
     "damageType": "Physical",
