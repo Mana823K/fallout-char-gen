@@ -1,66 +1,57 @@
-<p>Level</p>
-<p>{{character.level}}</p>
-
-<h3>Special</h3>
-<div class="special-list">
-  <div>
-    <p>STRENGTH</p>
-    <p>{{special.strength}}</p>
+<div class="container">
+  <app-level-sheet></app-level-sheet>
+  
+  <app-special-sheet></app-special-sheet>
+  <div class="main-container">
+    <app-skills-sheet></app-skills-sheet>
+    <app-combat-sheet class="combat-sheet"></app-combat-sheet>
   </div>
   <div>
-    <p>PERCEPTION</p>
-    <p>{{special.perception}}</p>
-  </div>
-  <div>
-    <p>ENDURANCE</p>
-    <p>{{special.endurance}}</p>
-  </div>
-  <div>
-    <p>CHARISMA</p>
-    <p>{{special.charisma}}</p>
-  </div>
-  <div>
-    <p>INTELLIGENCE</p>
-    <p>{{special.intelligence}}</p>
-  </div>
-  <div>
-    <p>AGILITY</p>
-    <p>{{special.agility}}</p>
-  </div>
-  <div>
-    <p>LUCK</p>
-    <p>{{special.luck}}</p>
-  </div>
-</div>
-
-<div class="main-container">
-  <div>
-    <h3>Skills</h3>
-    @for (skill of skills; track $index) {
-      <p>{{skill.name}} [{{skill.attribute}}]: {{skill.isTagged ? '\u2713 ': ''}} {{skill.ranks}}</p>
-    }
-  </div>
-  <div>
-    <div class="main-container">
-      <div>Melee damage: +{{stats.meleeBonus}}</div>
-      <div>Defense: {{stats.defense}}</div>
-      <div>Initiative: {{stats.initiative}}</div>
-    </div>
-    <div>
-      HP: ???/{{stats.maxHp}}
-    </div>
-    <div>
-
-      <p>Head: ???</p>
-      <p>Left Arm: ???</p>
-      <p>Right Arm: ???</p>
-      <p>Torso: ???</p>
-      <p>Left Leg: ???</p>
-      <p>Right Leg: ???</p>
-    </div>
     <div>
       <h3>Weapons</h3>
-      <table></table>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td>Damage</td>
+          <td>Quality</td>
+          <td>Effect</td>
+        </tr>
+        @for (weapon of state.markedWeapons; track $index) {
+          <tr>
+            <td>{{weapon.name}}</td>
+            <td>{{weapon.damage}} CD</td>
+            <td>{{weapon.qualitiesText}}</td>
+            <td>{{weapon.effectsText}}</td>
+          </tr>
+        }
+      </table>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td>Physical</td>
+          <td>Energy</td>
+          <td>Radiation</td>
+        </tr>
+        @for (armor of state.armor; track $index) {
+          <tr>
+            <td>{{armor.name}}</td>
+            <td>{{armor.physicalRes}}</td>
+            <td>{{armor.energyRes}}</td>
+            <td>{{armor.radiationRes}}</td>
+          </tr>
+        }
+      </table>
+    </div>
+    <div>
+      <h3>Perks</h3>
+      @for (perk of perks; track $index) {
+        <p>{{perk.name}}</p>
+        <p>{{perk.ranks}}</p>
+        <p>{{perk.description}}</p>
+      }
     </div>
   </div>
 </div>

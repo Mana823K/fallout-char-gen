@@ -11,5 +11,6 @@ export class TextAreaComponent {
   @Input() value: string = "";
   @Output() valueChange = new EventEmitter<string>();
   @Input() inputName!: string;
+  @Input() label?: string;
 
 }

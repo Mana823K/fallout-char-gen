@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="section">
+    <p class="origin-label">ORIGIN</p>
+    <p class="origin">{{character.origin?.name}}</p>
+  </div>
+  <div class="section">
+    <p class="level-label">LEVEL</p>
+    <p class="level">{{character.level}}</p>
+    <div>
+      <strong>Exp: </strong> <app-number-input inputName="xp-input" [(value)]="state.xp"></app-number-input> / ???
+    </div>
+  </div>
+</div>

@@ -11,4 +11,5 @@ export class InputComponent {
   @Input() value: string = "";
   @Output() valueChange = new EventEmitter<string>();
   @Input() inputName!: string;
+  @Input() label?: string;
 }

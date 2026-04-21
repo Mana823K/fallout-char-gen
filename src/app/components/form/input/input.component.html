@@ -1,1 +1,4 @@
+@if (label) {
+  <p class="input-label">{{label}}</p>
+}
 <input [name]="inputName" [ngModel]="value" (ngModelChange)="valueChange.emit($event)" class="input">

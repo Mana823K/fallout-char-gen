@@ -26,7 +26,7 @@ import { GameplayComponent } from './components/gameplay/gameplay.component';
 const routes: Routes = [
   { path: '', redirectTo: 'character', pathMatch: 'full' },
   { path: 'character', component: CharacterComponent },
-  // { path: 'gameplay', component: GameplayComponent },
+  { path: 'gameplay', component: GameplayComponent },
   { path: 'inventory', redirectTo: 'inventory/weapons'},
   { path: 'inventory', component: InventoryComponent, children: [
     { path: 'weapons', component: InventoryWeaponsComponent },

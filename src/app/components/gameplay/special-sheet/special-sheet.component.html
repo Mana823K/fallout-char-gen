@@ -1,0 +1,36 @@
+<div class="special-list">
+  <div class="point-column">
+    <p class="label">STRENGTH</p>
+    <p class="point">{{special.strength}}</p>
+  </div>
+  <div class="point-column">
+    <p class="label">PERCEPTION</p>
+    <p class="point">{{special.perception}}</p>
+  </div>
+  <div class="point-column">
+    <p class="label">ENDURANCE</p>
+    <p class="point">{{special.endurance}}</p>
+  </div>
+  <div class="point-column">
+    <p class="label">CHARISMA</p>
+    <p class="point">{{special.charisma}}</p>
+  </div>
+  <div class="point-column">
+    <p class="label">INTELLIGENCE</p>
+    <p class="point">{{special.intelligence}}</p>
+  </div>
+  <div class="point-column">
+    <p class="label">AGILITY</p>
+    <p class="point">{{special.agility}}</p>
+  </div>
+  <div class="point-column">
+    <p class="label">LUCK</p>
+    <p class="point">{{special.luck}}</p>
+  </div>
+</div>
+<div class="luck-section">
+  <p>
+    <strong>Luck points: </strong>
+    <app-number-input inputName="luck-input" [(value)]="state.luckPoints" [max]="special.luck" [min]="0"></app-number-input>
+  </p>  
+</div>

@@ -1,0 +1,21 @@
+@use "../../../../style/colors.scss" as *;
+
+h3 {
+  margin: 0 0 1rem 0;
+}
+
+table {
+  width: 250px;
+}
+
+tr:nth-child(even) {
+  background-color: $accentLight;
+}
+
+td {
+  padding: 0 0.5rem;
+}
+
+.gray {
+  color: $gray-text;
+}

@@ -1,0 +1,19 @@
+.stats {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.part-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.part-center {
+  justify-items: center;
+}
+
+.part {
+  display: flex;
+  gap: 1rem;
+}

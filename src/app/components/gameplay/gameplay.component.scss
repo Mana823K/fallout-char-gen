@@ -1,9 +1,12 @@
-.special-list {
-  display: flex;
-  gap: 1rem;
+.container {
+  margin: 1.5rem;
 }
 
 .main-container {
   display: flex;
   gap: 1rem;
+}
+
+.combat-sheet {
+  flex-grow: 1;
 }

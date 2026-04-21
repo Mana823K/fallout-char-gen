@@ -1,0 +1,40 @@
+@use "../../../../style/colors.scss" as *;
+
+.container {
+  display: flex;
+  justify-content: end;
+  gap: 3rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.level-label {
+  margin: 0;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.level {
+  margin: 0.5rem 0;
+  font-size: 16pt;
+  color: $accentDark;
+  background-color: $accentLight;
+  padding: 1rem;
+  border-radius: 50%;
+  height: 20pt;
+  width: 20pt;
+  text-align: center;
+}
+
+.origin-label {
+  font-weight: bold;
+  font-size: 11pt;
+}
+
+.origin {
+  margin: 0;
+}

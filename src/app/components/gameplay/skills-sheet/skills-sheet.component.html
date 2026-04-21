@@ -1,0 +1,17 @@
+    <div>
+      <h3>SKILLS</h3>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Tag</th>
+          <th>Rank</th>
+        </tr>
+        @for (skill of skills; track $index) {
+          <tr>
+            <td>{{skill.name}} <span class="gray">[{{skill.attribute}}]</span></td>
+            <td>{{skill.isTagged ? '\u2713' : ''}}</td>
+            <td>{{skill.ranks}}</td>
+          </tr>
+        }
+      </table>
+    </div>
