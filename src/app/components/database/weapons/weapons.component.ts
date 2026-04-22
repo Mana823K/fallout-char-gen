@@ -2,15 +2,15 @@ import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core'
 import { DataService } from '../../../services/data.service';
 import { Weapon } from '../../../models/database/weapon';
 import { Tooltip, TooltipTypeEnum } from '../../../models/database/tooltip';
-import { MatTooltip } from "@angular/material/tooltip";
 import { TableColumn, FilterTypeEnum } from '../../common/table/table-column';
 import { TableComponent } from '../../common/table/table.component';
+import { TooltipedListCellComponent } from "../../common/tooltiped-list-cell/tooltiped-list-cell.component";
 
 @Component({
   selector: 'app-weapons',
   templateUrl: './weapons.component.html',
   styleUrl: './weapons.component.scss',
-  imports: [TableComponent, MatTooltip]
+  imports: [TableComponent, TooltipedListCellComponent]
 })
 export class WeaponsComponent implements AfterViewInit {
   get weapons(): Weapon[] { return this.dataService.weapons; }
@@ -99,14 +99,9 @@ export class WeaponsComponent implements AfterViewInit {
     let effectsColumn = this.tableColumns.find(x => x.property == "effects");
     if (effectsColumn)
       effectsColumn.template = this.effectsTemplate;
-    
+
     let qualitiesColumn = this.tableColumns.find(x => x.property == "qualities");
     if (qualitiesColumn)
       qualitiesColumn.template = this.qualitiesTemplate;
-  }
-
-  getTooltip(effect: string, type: TooltipTypeEnum): string {
-    let tooltips = this.tooltips.filter(x => x.type == type);
-    return tooltips.find(x => x.name == effect.replace(/\s\([0-9]+\)/gm, "").replace(/\s[0-9]+/gm, ""))?.description ?? "";
   }
 }

@@ -3,7 +3,7 @@ import { GameplaySaveData, GameplayState } from "../models/gameplay/gameplay-sta
 import { CharacterService } from "./character.service";
 import { Character } from "../models/character/character";
 import { InventoryService } from "./inventory.service";
-import { CombatState } from "../models/gameplay/armor-state";
+import { BodyPart, CombatState } from "../models/gameplay/armor-state";
 
 @Injectable({
   providedIn: "root"
@@ -23,25 +23,37 @@ export class GameplayService {
     let storedData = localStorage.getItem(this.STORAGE_NAME);
     if (storedData) {
       let saveData: GameplaySaveData = JSON.parse(storedData);
-      
+
       this.state.hp = saveData.hp;
       this.state.xp = saveData.xp;
       this.state.luckPoints = saveData.luckPoints;
-      this.state.poisonDuration = saveData.poisonDuration;
+      this.state.poisonResistance = saveData.poisonResistance;
       this.state.combatState = new CombatState(saveData.combatState);
-      this.state.armor = this.inventoryService.inventory.armor
-          .filter(x => saveData.armor.includes(x.item.name))
-          .map(x => x.item);
-      this.state.markedWeapons = this.inventoryService.inventory.weapons
-          .filter(x => saveData.markedWeapons.includes(x.item.name))
-          .map(x => x.item);
-      
+
       this.updateCombatState();
     }
   }
 
   updateCombatState() {
-    // todo
+    this.updateBodyPartState(this.state.combatState.head, "Head");
+    this.updateBodyPartState(this.state.combatState.leftArm, "Arms");
+    this.updateBodyPartState(this.state.combatState.rightArm, "Arms");
+    this.updateBodyPartState(this.state.combatState.torso, "Torso");
+    this.updateBodyPartState(this.state.combatState.leftLeg, "Legs");
+    this.updateBodyPartState(this.state.combatState.rightLeg, "Legs");
+  }
+
+  private updateBodyPartState(part: BodyPart, name: string) {
+    part.physicalRes = 0;
+    part.energyRes = 0;
+    part.radRes = 0;
+
+    let armor = this.inventoryService.inventory.armor.filter(x => x.isEquipped && x.item.locationCovered.includes(name));
+    armor.forEach(x => {
+      if (x.item.physicalRes > part.physicalRes) part.physicalRes = x.item.physicalRes;
+      if (x.item.energyRes > part.energyRes) part.energyRes = x.item.energyRes;
+      if (x.item.radiationRes > part.radRes) part.radRes = x.item.radiationRes;
+    });
   }
 
   save() {

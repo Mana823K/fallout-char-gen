@@ -1,6 +1,7 @@
 <h3>Skills</h3>
 
 <p [ngClass]="{'points-left-error': availableRankPoints - totalRankPoints < 0}"><span class="points-left-label">Points left:</span> {{availableRankPoints - totalRankPoints}}</p>
+<p [ngClass]="{'points-left-error': availableTagCount - tagCount < 0}"><span class="points-left-label">Tags left:</span> {{availableTagCount - tagCount}}</p>
 
 <div class="skills-container">
   <div *ngFor="let skill of skills" class="skill">
@@ -10,7 +11,7 @@
       <mat-icon (click)="increaseRank(skill)" class="arrow-icon" [ngClass]="skill.ranks >= maxRank ? 'arrow-icon-disabled' : 'arrow-icon-active'">keyboard_arrow_right</mat-icon>
     </div>
     <div class="skill-name">
-      <mat-checkbox color="primary" [disabled]="tagCount >= availableTagCount && !skill.isTagged" [(ngModel)]="skill.isTagged" (ngModelChange)="onTagChanged(skill)"></mat-checkbox>
+      <mat-checkbox color="primary" [(ngModel)]="skill.isTagged" (ngModelChange)="onTagChanged(skill)"></mat-checkbox>
       <p>{{skill.name}}</p>
     </div>
   </div>

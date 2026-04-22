@@ -1,17 +1,21 @@
 <h3>Armor</h3>
 <table>
   <tr>
-    <td>Name</td>
-    <td>Physical</td>
-    <td>Energy</td>
-    <td>Radiation</td>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Physical Resistance</th>
+    <th>Energy Resistance</th>
+    <th>Radiation Resistance</th>
+    <th>Locations Covered</th>
   </tr>
-  @for (armor of state.armor; track $index) {
+  @for (armor of armor; track $index) {
     <tr>
       <td>{{armor.name}}</td>
+      <td>{{armor.type}}</td>
       <td>{{armor.physicalRes}}</td>
       <td>{{armor.energyRes}}</td>
       <td>{{armor.radiationRes}}</td>
+      <td>{{armor.locationCoveredText}}</td>
     </tr>
   }
     @if (armor.length == 0) {
@@ -19,4 +23,4 @@
   }
 </table>
 
-<button class="button">Equip</button>
+<button class="button" (click)="navigateToInventory()">Go to inventory</button>

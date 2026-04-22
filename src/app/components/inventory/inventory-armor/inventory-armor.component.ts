@@ -27,7 +27,7 @@ export class InventoryArmorComponent implements AfterViewInit {
   inventoryTableColumns: TableColumn<InventoryItem<Armor>>[] = invArmorColumns;
   selectTableColumns: TableColumn<Armor>[] = invArmorSelectColumns;
   sortProperties = ["name"];
-  
+
   @ViewChild('amount') amountTemplate?: TemplateRef<any>;
   @ViewChild('equip') equipTemplate?: TemplateRef<any>;
   @ViewChild('table') table?: TableComponent<InventoryItem<Armor>>;
@@ -39,10 +39,20 @@ export class InventoryArmorComponent implements AfterViewInit {
   get types(): string[] { return this.dataService.armorTypes; }
   get locations(): string[] { return this.dataService.armorCoverLocations.filter(x => !this.newItem.item.locationCovered.includes(x)); }
 
+  headCoverCl: number = 0;
+  armsCoverCl: number = 0;
+  torsoCoverCl: number = 0;
+  legsCoverCl: number = 0;
+  headCover: number = 0;
+  armsCover: number = 0;
+  torsoCover: number = 0;
+  legsCover: number = 0;
+
   constructor(private inventoryService: InventoryService, private dataService: DataService) {
     this.sort();
+    this.updateCoverCount();
   }
-  
+
   ngAfterViewInit(): void {
     let amountColumn = this.inventoryTableColumns.find(x => x.property == "amount");
     if (amountColumn)
@@ -62,6 +72,24 @@ export class InventoryArmorComponent implements AfterViewInit {
         return a.isEquipped ? -1 : 1;
       }
     });
+  }
+
+  updateCoverCount() {
+    let head = this.armor.filter(x => x.isEquipped && x.item.locationCovered.includes("Head"));
+    this.headCover = head.filter(x => x.item.type != "Clothing").length;
+    this.headCoverCl = head.filter(x => x.item.type == "Clothing").length;
+
+    let arms = this.armor.filter(x => x.isEquipped && x.item.locationCovered.includes("Arms"));
+    this.armsCover = arms.filter(x => x.item.type != "Clothing").length;
+    this.armsCoverCl = arms.filter(x => x.item.type == "Clothing").length;
+
+    let torso = this.armor.filter(x => x.isEquipped && x.item.locationCovered.includes("Torso"));
+    this.torsoCover = torso.filter(x => x.item.type != "Clothing").length;
+    this.torsoCoverCl = torso.filter(x => x.item.type == "Clothing").length;
+
+    let legs = this.armor.filter(x => x.isEquipped && x.item.locationCovered.includes("Legs"));
+    this.legsCover = legs.filter(x => x.item.type != "Clothing").length;
+    this.legsCoverCl = legs.filter(x => x.item.type == "Clothing").length;
   }
 
   selectItem(item: Armor) {
@@ -106,28 +134,11 @@ export class InventoryArmorComponent implements AfterViewInit {
   }
 
   equipArmor(item: InventoryItem<Armor>) {
-    if (item.isEquipped) {
-      item.isEquipped = false;
-    }
-    else {
-      let equippedItems = this.armor.filter(x => x.isEquipped);
-      if (item.item.type == "Clothing") {
-        equippedItems.filter(x => x.item.type == "Clothing").forEach(x => {
-          if (x.item.locationCovered.find(y => item.item.locationCovered.includes(y)))
-            x.isEquipped = false;
-        });
-      }
-      else {
-        equippedItems.filter(x => x.item.type != "Clothing").forEach(x => {
-          if (x.item.locationCovered.find(y => item.item.locationCovered.includes(y)))
-            x.isEquipped = false;
-        });
-      }
+    item.isEquipped = !item.isEquipped;
 
-      item.isEquipped = true;
-    }
     this.sort();
     this.save();
     this.table?.renderRows();
+    this.updateCoverCount();
   }
 }

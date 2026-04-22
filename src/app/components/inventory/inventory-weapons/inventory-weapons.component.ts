@@ -19,11 +19,12 @@ import { InventoryAmmoComponent } from '../inventory-ammo/inventory-ammo.compone
 import { CharacterService } from '../../../services/character.service';
 import { SpecialEnum } from '../../../models/character/special-enum';
 import { MatIcon } from "@angular/material/icon";
+import { TooltipedListCellComponent } from "../../common/tooltiped-list-cell/tooltiped-list-cell.component";
 
 @Component({
   selector: 'app-inventory-weapons',
   imports: [TableComponent, MatTooltip, CommonModule, AmountCellComponent,
-    InputComponent, NumberInputComponent, SelectComponent, InventoryAmmoComponent, MatIcon],
+    InputComponent, NumberInputComponent, SelectComponent, InventoryAmmoComponent, MatIcon, TooltipedListCellComponent],
   templateUrl: './inventory-weapons.component.html',
   styleUrl: './inventory-weapons.component.scss'
 })
@@ -106,11 +107,6 @@ export class InventoryWeaponsComponent implements AfterViewInit {
         return a.isEquipped ? -1 : 1;
       }
     });
-  }
-
-  getTooltip(effect: string, type: TooltipTypeEnum): string {
-    let tooltips = this.dataService.tooltips.filter(x => x.type == type);
-    return tooltips.find(x => x.name == effect.replace(/\s\([0-9]+\)/gm, "").replace(/\s[0-9]+/gm, ""))?.description ?? "";
   }
 
   getAmmoCount(weapon: Weapon) {

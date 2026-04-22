@@ -1,17 +1,47 @@
 <h3>Weapons</h3>
 <table>
   <tr>
-    <td>Name</td>
-    <td>Damage</td>
-    <td>Quality</td>
-    <td>Effect</td>
+    <th>Name</th>
+    <th>Weapon Type</th>
+    <th>Tagged</th>
+    <th>TN</th>
+    <th>Damage</th>
+    <th>Effects</th>
+    <th>Damage Type</th>
+    <th>Fire Rate</th>
+    <th>Range</th>
+    <th>Qualities</th>
+    <th>Ammo</th>
+    <th>Ammo Count</th>
+    <th></th>
   </tr>
   @for (weapon of weapons; track $index) {
     <tr>
       <td>{{weapon.name}}</td>
+      <td>{{weapon.type}}</td>
+      <td>{{getTag(weapon)}}</td>
+      <td>{{getTargetNumber(weapon)}}</td>
       <td>{{weapon.damage}} CD</td>
-      <td>{{weapon.qualitiesText}}</td>
-      <td>{{weapon.effectsText}}</td>
+      <td><app-tooltiped-list-cell [items]="weapon.effects" [type]="TooltipTypeEnum.WeaponEffect"></app-tooltiped-list-cell></td>
+      <td>{{weapon.damageType}}</td>
+      <td>{{weapon.rate}}</td>
+      <td>{{weapon.range}}</td>
+      <td><app-tooltiped-list-cell [items]="weapon.qualities" [type]="TooltipTypeEnum.WeaponQuality"></app-tooltiped-list-cell></td>
+      <td>{{weapon.ammo}}</td>
+      <td>{{getAmmoCount(weapon)}}</td>
+      <td class="use-weapon-cell">
+        @if (weapon.ammo.length > 0) {
+          <app-number-input #ammoCount [inputName]="'useAmmoCount' + $index" [value]="1" [max]="1 + weapon.rate"></app-number-input>
+          @if (weapon.ammo.length == 1) {
+            <p class="toggle-button" (click)="useAmmo(weapon.ammo[0], ammoCount)">use</p>
+          }
+          @else {
+          <p class="toggle-button" (click)="useAmmo(ammoSelect.value, ammoCount)">use</p>
+            <app-select #ammoSelect [inputName]="'useAmmoType' + $index" [value]="weapon.ammo[0]" [options]="weapon.ammo"></app-select>
+          }
+
+        }
+      </td>
     </tr>
   }
   @if (weapons.length == 0) {
@@ -19,4 +49,4 @@
   }
 </table>
 
-<button class="button">Add weapon</button>
+<button class="button" (click)="navigateToInventory()">Go to inventory</button>

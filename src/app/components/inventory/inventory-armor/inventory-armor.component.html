@@ -1,3 +1,13 @@
+<div>
+  <p>Locations covered:</p>
+  <div class="locations">
+    <p><strong>Head: </strong> {{headCover}} @if (headCoverCl > 0) {+ {{headCoverCl}} clothing}</p>
+    <p><strong>Arms: </strong> {{armsCover}} @if (armsCoverCl > 0) {+ {{armsCoverCl}} clothing}</p>
+    <p><strong>Torso: </strong> {{torsoCover}} @if (torsoCoverCl > 0) {+ {{torsoCoverCl}} clothing}</p>
+    <p><strong>Legs: </strong> {{legsCover}} @if (legsCoverCl > 0) {+ {{legsCoverCl}} clothing}</p>
+  </div>
+</div>
+
 <app-table #table [items]="armor" [columns]="inventoryTableColumns" [sortProperties]="sortProperties">
   @if (isAdd) {
     <tr>
@@ -37,7 +47,7 @@
       }
     }
   </div>
-  
+
   @if (isSelect) {
     <app-table [items]="selectOptions"
               [columns]="selectTableColumns"

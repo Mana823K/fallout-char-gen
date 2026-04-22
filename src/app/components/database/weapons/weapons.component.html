@@ -1,14 +1,8 @@
 <app-table [items]="weapons" [columns]="tableColumns" [sortProperties]="sortProperties"></app-table>
 
 <ng-template #effects let-item>
-  @for (effect of item.effects; track $index) {
-    <span [matTooltip]="getTooltip(effect, TooltipTypeEnum.WeaponEffect)"
-          [matTooltipShowDelay]="500">{{effect}}</span>@if($index < item.effects.length - 1) {, }
-  }
+  <app-tooltiped-list-cell [items]="item.effects" [type]="TooltipTypeEnum.WeaponEffect"></app-tooltiped-list-cell>
 </ng-template>
 <ng-template #qualities let-item>
-  @for (quality of item.qualities; track $index) {
-    <span [matTooltip]="getTooltip(quality, TooltipTypeEnum.WeaponQuality)"
-          [matTooltipShowDelay]="500">{{quality}}</span>@if($index < item.qualities.length - 1) {, }
-  }
+  <app-tooltiped-list-cell [items]="item.qualities" [type]="TooltipTypeEnum.WeaponQuality"></app-tooltiped-list-cell>
 </ng-template>

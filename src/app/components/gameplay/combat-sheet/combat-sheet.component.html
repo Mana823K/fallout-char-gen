@@ -5,7 +5,7 @@
 </div>
 <div class="stats">
   <div><strong>Posion DR: </strong>
-    <app-number-input inputName="poisonDR" [(value)]="state.poisonDuration" (valueChange)="save()"></app-number-input>
+    <app-number-input inputName="poisonDR" [(value)]="state.poisonResistance" (valueChange)="save()"></app-number-input>
   </div>
   <div><strong>HP: </strong>
     <app-number-input inputName="currentHP" [(value)]="state.hp" (valueChange)="save()"></app-number-input>
@@ -17,11 +17,11 @@
     <p><strong>HEAD</strong></p>
     <table>
       <tr>
-        <td>Phys. DR: {{state.combatState.head.physicalRes}}</td>
-        <td>En. DR: {{state.combatState.head.energyRes}}</td>
+        <td>Phys. DR: <strong>{{state.combatState.head.physicalRes}}</strong></td>
+        <td>Rad. DR: <strong>{{state.combatState.head.radRes}}</strong></td>
       </tr>
       <tr>
-        <td>Rad. DR: {{state.combatState.head.radRes}}</td>
+        <td>En. DR: <strong>{{state.combatState.head.energyRes}}</strong></td>
         <td>HP:
           <app-number-input inputName="head-hp" [(value)]="state.combatState.head.hp" (valueChange)="save()"></app-number-input>
         </td>
@@ -33,11 +33,11 @@
       <p><strong>LEFT ARM</strong></p>
       <table>
         <tr>
-          <td>Phys. DR: {{state.combatState.leftArm.physicalRes}}</td>
-          <td>En. DR: {{state.combatState.leftArm.energyRes}}</td>
+          <td>Phys. DR: <strong>{{state.combatState.leftArm.physicalRes}}</strong></td>
+          <td>Rad. DR: <strong>{{state.combatState.leftArm.radRes}}</strong></td>
         </tr>
         <tr>
-          <td>Rad. DR: {{state.combatState.leftArm.radRes}}</td>
+          <td>En. DR: <strong>{{state.combatState.leftArm.energyRes}}</strong></td>
           <td>HP:
             <app-number-input inputName="leftArm-hp" [(value)]="state.combatState.leftArm.hp" (valueChange)="save()"></app-number-input>
           </td>
@@ -48,11 +48,11 @@
       <p><strong>RIGHT ARM</strong></p>
       <table>
         <tr>
-          <td>Phys. DR: {{state.combatState.rightArm.physicalRes}}</td>
-          <td>En. DR: {{state.combatState.rightArm.energyRes}}</td>
+          <td>Phys. DR: <strong>{{state.combatState.rightArm.physicalRes}}</strong></td>
+          <td>Rad. DR: <strong>{{state.combatState.rightArm.radRes}}</strong></td>
         </tr>
         <tr>
-          <td>Rad. DR: {{state.combatState.rightArm.radRes}}</td>
+          <td>En. DR: <strong>{{state.combatState.rightArm.energyRes}}</strong></td>
           <td>HP:
             <app-number-input inputName="rightArm-hp" [(value)]="state.combatState.rightArm.hp" (valueChange)="save()"></app-number-input>
           </td>
@@ -64,11 +64,11 @@
     <p><strong>TORSO</strong></p>
     <table>
       <tr>
-        <td>Phys. DR: {{state.combatState.torso.physicalRes}}</td>
-        <td>En. DR: {{state.combatState.torso.energyRes}}</td>
+        <td>Phys. DR: <strong>{{state.combatState.torso.physicalRes}}</strong></td>
+        <td>Rad. DR: <strong>{{state.combatState.torso.radRes}}</strong></td>
       </tr>
       <tr>
-        <td>Rad. DR: {{state.combatState.torso.radRes}}</td>
+        <td>En. DR: <strong>{{state.combatState.torso.energyRes}}</strong></td>
         <td>HP:
           <app-number-input inputName="torso-hp" [(value)]="state.combatState.torso.hp" (valueChange)="save()"></app-number-input>
         </td>
@@ -80,11 +80,11 @@
       <p><strong>LEFT LEG</strong></p>
       <table>
         <tr>
-          <td>Phys. DR: {{state.combatState.leftLeg.physicalRes}}</td>
-          <td>En. DR: {{state.combatState.leftLeg.energyRes}}</td>
+          <td>Phys. DR: <strong>{{state.combatState.leftLeg.physicalRes}}</strong></td>
+          <td>Rad. DR: <strong>{{state.combatState.leftLeg.radRes}}</strong></td>
         </tr>
         <tr>
-          <td>Rad. DR: {{state.combatState.leftLeg.radRes}}</td>
+          <td>En. DR: <strong>{{state.combatState.leftLeg.energyRes}}</strong></td>
           <td>HP:
             <app-number-input inputName="leftLeg-hp" [(value)]="state.combatState.leftLeg.hp" (valueChange)="save()"></app-number-input>
           </td>
@@ -95,11 +95,11 @@
       <p><strong>RIGHT LEG</strong></p>
       <table>
         <tr>
-          <td>Phys. DR: {{state.combatState.rightLeg.physicalRes}}</td>
-          <td>En. DR: {{state.combatState.rightLeg.energyRes}}</td>
+          <td>Phys. DR: <strong>{{state.combatState.rightLeg.physicalRes}}</strong></td>
+          <td>Rad. DR: <strong>{{state.combatState.rightLeg.radRes}}</strong></td>
         </tr>
         <tr>
-          <td>Rad. DR: {{state.combatState.rightLeg.radRes}}</td>
+          <td>En. DR: <strong>{{state.combatState.rightLeg.energyRes}}</strong></td>
           <td>HP:
             <app-number-input inputName="rightLeg-hp" [(value)]="state.combatState.rightLeg.hp" (valueChange)="save()"></app-number-input>
           </td>

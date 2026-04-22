@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { GameplayService } from '../../../services/gameplay.service';
 import { GameplayState } from '../../../models/gameplay/gameplay-state';
 import { Armor } from '../../../models/database/armor';
+import { InventoryService } from '../../../services/inventory.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-armor-sheet',
@@ -11,12 +13,17 @@ import { Armor } from '../../../models/database/armor';
 })
 export class ArmorSheetComponent {
   get state(): GameplayState { return this.gameplayService.state; }
-  get armor(): Armor[] { return this.gameplayService.state.armor; }
+  armor: Armor[];
 
-  constructor(private gameplayService: GameplayService) { }
+  constructor(private gameplayService: GameplayService, private inventoryService: InventoryService, private router: Router) {
+    this.armor = this.inventoryService.inventory.armor.filter(x => x.isEquipped).map(x => x.item);
+  }
 
   save() {
     this.gameplayService.save();
   }
 
+  navigateToInventory() {
+    this.router.navigate(["inventory", "armor"]);
+  }
 }

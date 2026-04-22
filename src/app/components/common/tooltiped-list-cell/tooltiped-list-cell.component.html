@@ -1,0 +1,5 @@
+@for (item of items; track $index) {
+  <span [matTooltip]="getTooltip(item)"
+        [matTooltipShowDelay]="500">{{item}}</span>
+  @if($index < items.length - 1) {, }
+}
