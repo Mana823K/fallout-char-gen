@@ -1,3 +1,5 @@
+@use "../../../../style/colors.scss" as *;
+
 .button-container {
   display: flex;
   gap: 1rem;
@@ -13,4 +15,14 @@
 
 .input-cell {
   align-content: start;
+}
+
+.star-icon {
+  font-size: 16pt;
+  color: $accent;
+}
+
+.star-icon-selected {
+  font-size: 16pt;
+  color: $primary;
 }

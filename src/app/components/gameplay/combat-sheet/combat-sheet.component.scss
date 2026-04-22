@@ -1,7 +1,10 @@
+@use "../../../../style/colors.scss" as *;
+
 .stats {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .part-row {
@@ -13,7 +16,6 @@
   justify-items: center;
 }
 
-.part {
-  display: flex;
-  gap: 1rem;
+tr {
+  background-color: $accentLight;
 }

@@ -1,6 +1,6 @@
 import { Armor } from "../database/armor";
 import { Weapon } from "../database/weapon";
-import { CombatState } from "./armor-state";
+import { CombatState, CombatStateSaveData } from "./armor-state";
 
 export class GameplayState {
   xp: number = 0;
@@ -9,7 +9,7 @@ export class GameplayState {
   poisonDuration: number = 0;
   
   armor: Armor[] = [];
-  bodyState: CombatState = new CombatState();
+  combatState: CombatState = new CombatState();
   markedWeapons: Weapon[] = [];
 
   constructor(maxHP: number, luck: number) {
@@ -24,6 +24,7 @@ export class GameplaySaveData {
   luckPoints: number;
   poisonDuration: number;
   
+  combatState: CombatStateSaveData;
   armor: string[];
   markedWeapons: string[];
 
@@ -32,6 +33,7 @@ export class GameplaySaveData {
     this.hp = original.hp;
     this.luckPoints = original.luckPoints;
     this.poisonDuration = original.poisonDuration;
+    this.combatState = new CombatStateSaveData(original.combatState);
     this.armor = original.armor.map(x => x.name);
     this.markedWeapons = original.markedWeapons.map(x => x.name);
   }

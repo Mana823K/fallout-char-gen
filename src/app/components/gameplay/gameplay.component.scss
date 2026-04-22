@@ -1,10 +1,11 @@
 .container {
   margin: 1.5rem;
+  max-width: 68rem;
 }
 
 .main-container {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .combat-sheet {

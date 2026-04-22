@@ -1,1 +1,22 @@
-<p>weapon-sheet works!</p>
+<h3>Weapons</h3>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Damage</td>
+    <td>Quality</td>
+    <td>Effect</td>
+  </tr>
+  @for (weapon of weapons; track $index) {
+    <tr>
+      <td>{{weapon.name}}</td>
+      <td>{{weapon.damage}} CD</td>
+      <td>{{weapon.qualitiesText}}</td>
+      <td>{{weapon.effectsText}}</td>
+    </tr>
+  }
+  @if (weapons.length == 0) {
+    No weapon selected
+  }
+</table>
+
+<button class="button">Add weapon</button>

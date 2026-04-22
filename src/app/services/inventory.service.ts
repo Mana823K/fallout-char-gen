@@ -10,7 +10,9 @@ export class InventoryService {
   inventory = new Inventory();
   weight: number = 0;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {
+    this.init();
+  }
 
   init(testData?: string) {
     this.inventory = new Inventory();
@@ -43,7 +45,8 @@ export class InventoryService {
     else {
       return [];
     }
-    result.amount = savedItem.amount
+    result.amount = savedItem.amount;
+    result.isEquipped = savedItem.isEquiped;
     return result;
   }
 

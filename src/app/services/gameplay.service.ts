@@ -3,6 +3,7 @@ import { GameplaySaveData, GameplayState } from "../models/gameplay/gameplay-sta
 import { CharacterService } from "./character.service";
 import { Character } from "../models/character/character";
 import { InventoryService } from "./inventory.service";
+import { CombatState } from "../models/gameplay/armor-state";
 
 @Injectable({
   providedIn: "root"
@@ -15,6 +16,7 @@ export class GameplayService {
 
   constructor(private characterService: CharacterService, private inventoryService: InventoryService) {
     this.state = new GameplayState(this.character.stats.maxHp, this.character.special.luck);
+    this.init();
   }
 
   init() {
@@ -26,13 +28,15 @@ export class GameplayService {
       this.state.xp = saveData.xp;
       this.state.luckPoints = saveData.luckPoints;
       this.state.poisonDuration = saveData.poisonDuration;
+      this.state.combatState = new CombatState(saveData.combatState);
       this.state.armor = this.inventoryService.inventory.armor
-                          .filter(x => saveData.armor.includes(x.item.name))
-                          .map(x => x.item);
+          .filter(x => saveData.armor.includes(x.item.name))
+          .map(x => x.item);
       this.state.markedWeapons = this.inventoryService.inventory.weapons
-                                  .filter(x => saveData.markedWeapons.includes(x.item.name))
-                                  .map(x => x.item);
-                                
+          .filter(x => saveData.markedWeapons.includes(x.item.name))
+          .map(x => x.item);
+      
+      this.updateCombatState();
     }
   }
 

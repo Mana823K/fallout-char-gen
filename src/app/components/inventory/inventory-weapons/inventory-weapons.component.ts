@@ -18,11 +18,12 @@ import { ranges } from '../../../models/database/range';
 import { InventoryAmmoComponent } from '../inventory-ammo/inventory-ammo.component';
 import { CharacterService } from '../../../services/character.service';
 import { SpecialEnum } from '../../../models/character/special-enum';
+import { MatIcon } from "@angular/material/icon";
 
 @Component({
   selector: 'app-inventory-weapons',
-  imports: [TableComponent,MatTooltip, CommonModule, AmountCellComponent,
-    InputComponent, NumberInputComponent, SelectComponent, InventoryAmmoComponent],
+  imports: [TableComponent, MatTooltip, CommonModule, AmountCellComponent,
+    InputComponent, NumberInputComponent, SelectComponent, InventoryAmmoComponent, MatIcon],
   templateUrl: './inventory-weapons.component.html',
   styleUrl: './inventory-weapons.component.scss'
 })
@@ -39,6 +40,7 @@ export class InventoryWeaponsComponent implements AfterViewInit {
   weaponSortProperties = ["type", "name"];
 
   @ViewChild('amount') amountTemplate?: TemplateRef<any>;
+  @ViewChild('favorite') favoriteTemplate?: TemplateRef<any>;
   @ViewChild('tag') tagTemplate?: TemplateRef<any>;
   @ViewChild('targetNumber') targetNumberTemplate?: TemplateRef<any>;
   @ViewChild('effects') effectsTemplate?: TemplateRef<any>;
@@ -62,12 +64,17 @@ export class InventoryWeaponsComponent implements AfterViewInit {
               private dataService: DataService,
               private characterService: CharacterService) {
     this._ammoTypes = [...new Set([...this.dataService.ammo.map(x => x.name)])].sort();
+    this.sort();
   }
 
   ngAfterViewInit(): void {
     let amountColumn = this.weaponTableColumns.find(x => x.property == "amount");
     if (amountColumn)
       amountColumn.template = this.amountTemplate;
+
+    let favoriteColumn = this.weaponTableColumns.find(x => x.property == "favorite");
+    if (favoriteColumn)
+      favoriteColumn.template = this.favoriteTemplate;
 
     let tagColumn = this.weaponTableColumns.find(x => x.property == "tag");
     if (tagColumn)
@@ -88,6 +95,17 @@ export class InventoryWeaponsComponent implements AfterViewInit {
     let ammoCountColumn = this.weaponTableColumns.find(x => x.property == "ammoCount");
     if (ammoCountColumn)
       ammoCountColumn.template = this.ammoCountTemplate;
+  }
+
+  sort() {
+    this.weapons.sort((a, b) => {
+      if (a.isEquipped == b.isEquipped) {
+        return a.item.name > b.item.name ? 1 : -1;
+      }
+      else {
+        return a.isEquipped ? -1 : 1;
+      }
+    });
   }
 
   getTooltip(effect: string, type: TooltipTypeEnum): string {
@@ -135,6 +153,7 @@ export class InventoryWeaponsComponent implements AfterViewInit {
 
   selectWeapon(weapon: Weapon) {
     this.inventoryService.addItem(weapon, "weapons", ["name"]);
+    this.sort();
     this.weaponTable?.renderRows();
     this.isSelectWeapon = false;
   }
@@ -147,6 +166,7 @@ export class InventoryWeaponsComponent implements AfterViewInit {
   addCustomWeapon() {
     this.newWeapon.isCustom = true;
     this.weapons.push(this.newWeapon);
+    this.sort();
     this.weaponTable?.renderRows();
     this.save();
     this.cancelAddWeapon();
@@ -193,5 +213,20 @@ export class InventoryWeaponsComponent implements AfterViewInit {
 
   save() {
     this.inventoryService.save();
+  }
+
+  markWeapon(item: InventoryItem<Weapon>) {
+    if (item.isEquipped) {
+      item.isEquipped = false;
+    }
+    else {
+      let selectedCount = this.weapons.filter(x => x.isEquipped).length;
+      if (selectedCount == 5)
+        return;
+      item.isEquipped = true;
+    }
+    this.sort();
+    this.save();
+    this.weaponTable?.renderRows();
   }
 }

@@ -13,6 +13,11 @@ export const invWeaponColumns: TableColumn<InventoryItem<Weapon>>[] = [
     filterType: FilterTypeEnum.Sort,
   }),
   new TableColumn<InventoryItem<Weapon>>({
+    label: "Mark",
+    property: "favorite",
+    filterType: FilterTypeEnum.None,
+  }),
+  new TableColumn<InventoryItem<Weapon>>({
     label: "Name",
     property: "item.name",
     filterType: FilterTypeEnum.Text,

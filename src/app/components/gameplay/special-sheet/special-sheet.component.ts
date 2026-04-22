@@ -17,4 +17,8 @@ export class SpecialSheetComponent {
 
   constructor(private gameplayService: GameplayService, private characterService: CharacterService) { }
 
+  save() {
+    this.gameplayService.save();
+  }
+
 }

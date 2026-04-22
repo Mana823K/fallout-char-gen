@@ -23,6 +23,7 @@ export class InventoryItem<T> {
   amount: number = 1;
   isCustom: boolean = false;
   isEditing: boolean = false;
+  isEquipped: boolean = false;
   
   constructor(item: T) {
     this.item = item;
@@ -52,7 +53,8 @@ export class InventorySaveData {
 export class InventoryItemData<T> {
   item?: T;
   itemName?: string;
-  amount: number = 1;
+  amount: number;;
+  isEquiped: boolean;
 
   constructor(original: InventoryItem<T>, nameFunc: (x: T) => string) {
     if (original.isCustom) {
@@ -62,5 +64,6 @@ export class InventoryItemData<T> {
       this.itemName = nameFunc(original.item);
     }
     this.amount = original.amount;
+    this.isEquiped = original.isEquipped;
   }
 }

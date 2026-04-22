@@ -1,1 +1,22 @@
-<p>armor-sheet works!</p>
+<h3>Armor</h3>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Physical</td>
+    <td>Energy</td>
+    <td>Radiation</td>
+  </tr>
+  @for (armor of state.armor; track $index) {
+    <tr>
+      <td>{{armor.name}}</td>
+      <td>{{armor.physicalRes}}</td>
+      <td>{{armor.energyRes}}</td>
+      <td>{{armor.radiationRes}}</td>
+    </tr>
+  }
+    @if (armor.length == 0) {
+    No armor equipped
+  }
+</table>
+
+<button class="button">Equip</button>

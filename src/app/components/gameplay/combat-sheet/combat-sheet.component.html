@@ -4,90 +4,107 @@
   <div><strong>Initiative: </strong>{{stats.initiative}}</div>
 </div>
 <div class="stats">
-  <div><strong>Posion DR: </strong>{{state.poisonDuration}}</div>
-  <div><strong>HP: </strong>{{state.hp}}/{{stats.maxHp}}</div>
+  <div><strong>Posion DR: </strong>
+    <app-number-input inputName="poisonDR" [(value)]="state.poisonDuration" (valueChange)="save()"></app-number-input>
+  </div>
+  <div><strong>HP: </strong>
+    <app-number-input inputName="currentHP" [(value)]="state.hp" (valueChange)="save()"></app-number-input>
+    /{{stats.maxHp}}
+  </div>
 </div>
 <div>
   <div class="part-center">
     <p><strong>HEAD</strong></p>
-    <div class="part">
-      <div>
-        <p>Phys. DR: {{state.bodyState.head.physicalRes}}</p>
-        <p>En. DR: {{state.bodyState.head.energyRes}}</p>
-      </div>
-      <div>
-        <p>Rad. DR: {{state.bodyState.head.radRes}}</p>
-        <p>HP: <app-number-input inputName="head-hp" [(value)]="state.bodyState.head.hp"></app-number-input></p>
-      </div>
-    </div>
+    <table>
+      <tr>
+        <td>Phys. DR: {{state.combatState.head.physicalRes}}</td>
+        <td>En. DR: {{state.combatState.head.energyRes}}</td>
+      </tr>
+      <tr>
+        <td>Rad. DR: {{state.combatState.head.radRes}}</td>
+        <td>HP:
+          <app-number-input inputName="head-hp" [(value)]="state.combatState.head.hp" (valueChange)="save()"></app-number-input>
+        </td>
+      </tr>
+    </table>
   </div>
   <div class="part-row">
     <div>
       <p><strong>LEFT ARM</strong></p>
-      <div class="part">
-        <div>
-          <p>Phys. DR: {{state.bodyState.leftArm.physicalRes}}</p>
-          <p>En. DR: {{state.bodyState.leftArm.energyRes}}</p>
-        </div>
-        <div>
-          <p>Rad. DR: {{state.bodyState.leftArm.radRes}}</p>
-          <p>HP: <app-number-input inputName="leftArm-hp" [(value)]="state.bodyState.leftArm.hp"></app-number-input></p>
-        </div>
-      </div>
+      <table>
+        <tr>
+          <td>Phys. DR: {{state.combatState.leftArm.physicalRes}}</td>
+          <td>En. DR: {{state.combatState.leftArm.energyRes}}</td>
+        </tr>
+        <tr>
+          <td>Rad. DR: {{state.combatState.leftArm.radRes}}</td>
+          <td>HP:
+            <app-number-input inputName="leftArm-hp" [(value)]="state.combatState.leftArm.hp" (valueChange)="save()"></app-number-input>
+          </td>
+        </tr>
+      </table>
     </div>
     <div>
       <p><strong>RIGHT ARM</strong></p>
-      <div class="part">
-        <div>
-          <p>Phys. DR: {{state.bodyState.rightArm.physicalRes}}</p>
-          <p>En. DR: {{state.bodyState.rightArm.energyRes}}</p>
-        </div>
-        <div>
-          <p>Rad. DR: {{state.bodyState.rightArm.radRes}}</p>
-          <p>HP: <app-number-input inputName="rightArm-hp" [(value)]="state.bodyState.rightArm.hp"></app-number-input></p>
-        </div>
-      </div>
+      <table>
+        <tr>
+          <td>Phys. DR: {{state.combatState.rightArm.physicalRes}}</td>
+          <td>En. DR: {{state.combatState.rightArm.energyRes}}</td>
+        </tr>
+        <tr>
+          <td>Rad. DR: {{state.combatState.rightArm.radRes}}</td>
+          <td>HP:
+            <app-number-input inputName="rightArm-hp" [(value)]="state.combatState.rightArm.hp" (valueChange)="save()"></app-number-input>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
   <div class="part-center">
     <p><strong>TORSO</strong></p>
-    <div class="part">
-      <div>
-        <p>Phys. DR: {{state.bodyState.torso.physicalRes}}</p>
-        <p>En. DR: {{state.bodyState.torso.energyRes}}</p>
-      </div>
-      <div>
-        <p>Rad. DR: {{state.bodyState.torso.radRes}}</p>
-        <p>HP: <app-number-input inputName="torso-hp" [(value)]="state.bodyState.torso.hp"></app-number-input></p>
-      </div>
-    </div>
+    <table>
+      <tr>
+        <td>Phys. DR: {{state.combatState.torso.physicalRes}}</td>
+        <td>En. DR: {{state.combatState.torso.energyRes}}</td>
+      </tr>
+      <tr>
+        <td>Rad. DR: {{state.combatState.torso.radRes}}</td>
+        <td>HP:
+          <app-number-input inputName="torso-hp" [(value)]="state.combatState.torso.hp" (valueChange)="save()"></app-number-input>
+        </td>
+      </tr>
+    </table>
   </div>
   <div class="part-row">
     <div>
       <p><strong>LEFT LEG</strong></p>
-      <div class="part">
-        <div>
-          <p>Phys. DR: {{state.bodyState.leftLeg.physicalRes}}</p>
-          <p>En. DR: {{state.bodyState.leftLeg.energyRes}}</p>
-        </div>
-        <div>
-          <p>Rad. DR: {{state.bodyState.leftLeg.radRes}}</p>
-          <p>HP: <app-number-input inputName="leftLeg-hp" [(value)]="state.bodyState.leftLeg.hp"></app-number-input></p>
-        </div>
-      </div>
+      <table>
+        <tr>
+          <td>Phys. DR: {{state.combatState.leftLeg.physicalRes}}</td>
+          <td>En. DR: {{state.combatState.leftLeg.energyRes}}</td>
+        </tr>
+        <tr>
+          <td>Rad. DR: {{state.combatState.leftLeg.radRes}}</td>
+          <td>HP:
+            <app-number-input inputName="leftLeg-hp" [(value)]="state.combatState.leftLeg.hp" (valueChange)="save()"></app-number-input>
+          </td>
+        </tr>
+      </table>
     </div>
     <div>
       <p><strong>RIGHT LEG</strong></p>
-      <div class="part">
-        <div>
-          <p>Phys. DR: {{state.bodyState.rightLeg.physicalRes}}</p>
-          <p>En. DR: {{state.bodyState.rightLeg.energyRes}}</p>
-        </div>
-        <div>
-          <p>Rad. DR: {{state.bodyState.rightLeg.radRes}}</p>
-          <p>HP: <app-number-input inputName="rightLeg-hp" [(value)]="state.bodyState.rightLeg.hp"></app-number-input></p>
-        </div>
-      </div>
+      <table>
+        <tr>
+          <td>Phys. DR: {{state.combatState.rightLeg.physicalRes}}</td>
+          <td>En. DR: {{state.combatState.rightLeg.energyRes}}</td>
+        </tr>
+        <tr>
+          <td>Rad. DR: {{state.combatState.rightLeg.radRes}}</td>
+          <td>HP:
+            <app-number-input inputName="rightLeg-hp" [(value)]="state.combatState.rightLeg.hp" (valueChange)="save()"></app-number-input>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
 </div>

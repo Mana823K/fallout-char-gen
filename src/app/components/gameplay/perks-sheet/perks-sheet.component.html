@@ -1,1 +1,22 @@
-<p>perks-sheet works!</p>
+<h3>Perks</h3>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Ranks</th>
+    <th>Effect</th>
+  </tr>
+  @if (origin) {
+    <tr>
+      <td>{{origin.name}}</td>
+      <td></td>
+      <td>{{origin.trait.description}}</td>
+    </tr>
+  }
+  @for (perk of perks; track $index) {
+    <tr>
+      <td>{{perk.name}}</td>
+      <td>{{perk.ranks}}</td>
+      <td>{{perk.description}}</td>
+    </tr>
+  }
+</table>

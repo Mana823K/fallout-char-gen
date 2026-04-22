@@ -15,7 +15,9 @@ export class CharacterService {
   hpModifier: number = 1;
   carryWeightModifier: number = 0;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {
+    this.init();
+  }
 
   init(testData?: string) {
     this.character = new Character();

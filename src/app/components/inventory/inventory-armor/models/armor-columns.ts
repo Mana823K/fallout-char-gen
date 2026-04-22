@@ -9,6 +9,11 @@ export const invArmorColumns: TableColumn<InventoryItem<Armor>>[] = [
     filterType: FilterTypeEnum.Sort,
   }),
   new TableColumn<InventoryItem<Armor>>({
+    label: "Equip",
+    property: "equip",
+    filterType: FilterTypeEnum.None,
+  }),
+  new TableColumn<InventoryItem<Armor>>({
     label: "Name",
     property: "item.name",
     filterType: FilterTypeEnum.Text,

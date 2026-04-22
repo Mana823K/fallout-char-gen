@@ -31,6 +31,10 @@
 <div class="luck-section">
   <p>
     <strong>Luck points: </strong>
-    <app-number-input inputName="luck-input" [(value)]="state.luckPoints" [max]="special.luck" [min]="0"></app-number-input>
+    <app-number-input inputName="luck-input"
+                      [(value)]="state.luckPoints"
+                      (valueChange)="save()"
+                      [max]="special.luck"
+                      [min]="0"></app-number-input>
   </p>  
 </div>

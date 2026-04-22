@@ -11,20 +11,15 @@ import { LevelSheetComponent } from "./level-sheet/level-sheet.component";
 import { SpecialSheetComponent } from "./special-sheet/special-sheet.component";
 import { SkillsSheetComponent } from "./skills-sheet/skills-sheet.component";
 import { CombatSheetComponent } from "./combat-sheet/combat-sheet.component";
+import { WeaponSheetComponent } from "./weapon-sheet/weapon-sheet.component";
+import { ArmorSheetComponent } from "./armor-sheet/armor-sheet.component";
+import { PerksSheetComponent } from "./perks-sheet/perks-sheet.component";
 
 @Component({
   selector: 'app-gameplay',
-  imports: [LevelSheetComponent, SpecialSheetComponent, SkillsSheetComponent, CombatSheetComponent],
+  imports: [LevelSheetComponent, SpecialSheetComponent, SkillsSheetComponent, CombatSheetComponent, WeaponSheetComponent, ArmorSheetComponent, PerksSheetComponent],
   templateUrl: './gameplay.component.html',
   styleUrl: './gameplay.component.scss'
 })
 export class GameplayComponent {
-  get state(): GameplayState { return this.gameplayService.state; }
-  get character(): Character { return this.characterService.character; }
-  get stats(): Stats { return this.characterService.character.stats; }
-  perks: Perk[] = [];
-
-  constructor(private gameplayService: GameplayService, private characterService: CharacterService) {
-    this.perks = characterService.character.perks.filter(x => x.isSelected);
-  }
 }

@@ -17,4 +17,7 @@ export class CombatSheetComponent {
 
   constructor(private gameplayService: GameplayService, private characterService: CharacterService) { }
 
+  save() {
+    this.gameplayService.save();
+  }
 }

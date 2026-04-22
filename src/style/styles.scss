@@ -53,3 +53,11 @@ body {
     background-color: colors.$accentLightAccent;
   }
 }
+
+tr:nth-child(even) {
+  background-color: colors.$accentLight;
+}
+
+td {
+  padding: 0 0.5rem;
+}

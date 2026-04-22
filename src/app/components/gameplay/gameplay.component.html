@@ -7,51 +7,8 @@
     <app-combat-sheet class="combat-sheet"></app-combat-sheet>
   </div>
   <div>
-    <div>
-      <h3>Weapons</h3>
-      <table>
-        <tr>
-          <td>Name</td>
-          <td>Damage</td>
-          <td>Quality</td>
-          <td>Effect</td>
-        </tr>
-        @for (weapon of state.markedWeapons; track $index) {
-          <tr>
-            <td>{{weapon.name}}</td>
-            <td>{{weapon.damage}} CD</td>
-            <td>{{weapon.qualitiesText}}</td>
-            <td>{{weapon.effectsText}}</td>
-          </tr>
-        }
-      </table>
-    </div>
-    <div>
-      <h3>Armor</h3>
-      <table>
-        <tr>
-          <td>Name</td>
-          <td>Physical</td>
-          <td>Energy</td>
-          <td>Radiation</td>
-        </tr>
-        @for (armor of state.armor; track $index) {
-          <tr>
-            <td>{{armor.name}}</td>
-            <td>{{armor.physicalRes}}</td>
-            <td>{{armor.energyRes}}</td>
-            <td>{{armor.radiationRes}}</td>
-          </tr>
-        }
-      </table>
-    </div>
-    <div>
-      <h3>Perks</h3>
-      @for (perk of perks; track $index) {
-        <p>{{perk.name}}</p>
-        <p>{{perk.ranks}}</p>
-        <p>{{perk.description}}</p>
-      }
-    </div>
+    <app-weapon-sheet></app-weapon-sheet>
+    <app-armor-sheet></app-armor-sheet>
+    <app-perks-sheet></app-perks-sheet>
   </div>
 </div>

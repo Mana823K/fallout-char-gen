@@ -80,6 +80,14 @@
 <ng-template #amount let-item let-index>
   <app-amount-cell [item]="item" [index]="index" (changed)="save()" (itemRemoved)="removeWeapon(item)"></app-amount-cell>
 </ng-template>
+<ng-template #favorite let-item>
+  @if (item.isEquipped) {
+    <mat-icon class="star-icon-selected" (click)="markWeapon(item)">star</mat-icon>
+  }
+  @else {
+    <mat-icon class="star-icon" (click)="markWeapon(item)">star_border</mat-icon>
+  }
+</ng-template>
 <ng-template #tag let-item>
   {{getTag(item.item)}}
 </ng-template>
