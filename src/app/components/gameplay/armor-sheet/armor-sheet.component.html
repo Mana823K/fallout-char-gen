@@ -10,12 +10,17 @@
   </tr>
   @for (armor of armor; track $index) {
     <tr>
-      <td>{{armor.name}}</td>
-      <td>{{armor.type}}</td>
-      <td>{{armor.physicalRes}}</td>
-      <td>{{armor.energyRes}}</td>
-      <td>{{armor.radiationRes}}</td>
-      <td>{{armor.locationCoveredText}}</td>
+      <td>{{armor.armor.name}}</td>
+      <td>{{armor.armor.type}}</td>
+      <td>{{armor.armor.physicalRes}}</td>
+      <td>{{armor.armor.energyRes}}</td>
+      <td>{{armor.armor.radiationRes}}</td>
+      <td>
+        @if (oneSidedLocations.includes(armor.armor.locationCovered)) {
+          {{armor.side}}
+        }
+        {{armor.armor.locationCovered}}
+      </td>
     </tr>
   }
     @if (armor.length == 0) {
@@ -23,4 +28,87 @@
   }
 </table>
 
-<button class="button" (click)="navigateToInventory()">Go to inventory</button>
+@if (!isEdit) {
+  <button class="button" (click)="isEdit = true;">Edit armor</button>
+}
+@else {
+  <button class="button" (click)="isEdit = false">Close</button>
+}
+
+@if (isEdit) {
+  <div class="armor-view-section">
+    <div class="armor-view-row-center">
+      
+      <p>Head</p>
+      <div>
+        <div>
+          <p>Armor: {{combatSate.head.armor}}</p>
+          <p>Clothing: {{combatSate.head.clothing}}</p>
+        </div>
+        <table>
+          <tr>
+            <th>P</th>
+            <th>E</th>
+            <th>R</th>
+          </tr>
+          <tr>
+            <td>{{combatSate.head.physicalRes}}</td>
+            <td>{{combatSate.head.energyRes}}</td>
+            <td>{{combatSate.head.radRes}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    
+    <div class="armor-view-row">
+      <div>
+        <p>Left Arm</p>
+        <p>Armor: {{combatSate.leftArm.armor}}</p>
+        <p>Clothing: {{combatSate.leftArm.clothing}}</p>
+        <p>Phys.: {{combatSate.leftArm.physicalRes}}</p>
+        <p>En.: {{combatSate.leftArm.energyRes}}</p>
+        <p>Rad.: {{combatSate.leftArm.radRes}}</p>
+      </div>
+      <div>      
+        <p>Right Arm</p>
+        <p>Armor: {{combatSate.rightArm.armor}}</p>
+        <p>Clothing: {{combatSate.rightArm.clothing}}</p>
+        <p>Phys.: {{combatSate.rightArm.physicalRes}}</p>
+        <p>En.: {{combatSate.rightArm.energyRes}}</p>
+        <p>Rad.: {{combatSate.rightArm.radRes}}</p>
+      </div>
+    </div>
+    <div class="armor-view-row-center">
+      
+      <p>Torso</p>
+      <p>Armor: {{combatSate.torso.armor}}</p>
+      <p>Clothing: {{combatSate.torso.clothing}}</p>
+      <p>Phys.: {{combatSate.torso.physicalRes}}</p>
+      <p>En.: {{combatSate.torso.energyRes}}</p>
+      <p>Rad.: {{combatSate.torso.radRes}}</p>
+    </div>
+    
+    <div class="armor-view-row">
+      <div>
+        
+        <p>Left Leg</p>
+        <p>Armor: {{combatSate.leftLeg.armor}}</p>
+        <p>Clothing: {{combatSate.leftLeg.clothing}}</p>
+        <p>Phys.: {{combatSate.leftLeg.physicalRes}}</p>
+        <p>En.: {{combatSate.leftLeg.energyRes}}</p>
+        <p>Rad.: {{combatSate.leftLeg.radRes}}</p>
+      </div>
+      
+      <div>
+        
+        <p>Right Leg</p>
+        <p>Armor: {{combatSate.rightLeg.armor}}</p>
+        <p>Clothing: {{combatSate.rightLeg.clothing}}</p>
+        <p>Phys.: {{combatSate.rightLeg.physicalRes}}</p>
+        <p>En.: {{combatSate.rightLeg.energyRes}}</p>
+        <p>Rad.: {{combatSate.rightLeg.radRes}}</p>
+      </div>
+    </div>
+  </div>
+}
+  

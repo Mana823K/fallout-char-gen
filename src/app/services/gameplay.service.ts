@@ -3,7 +3,8 @@ import { GameplaySaveData, GameplayState } from "../models/gameplay/gameplay-sta
 import { CharacterService } from "./character.service";
 import { Character } from "../models/character/character";
 import { InventoryService } from "./inventory.service";
-import { BodyPart, CombatState } from "../models/gameplay/armor-state";
+import { BodyPart, CombatState } from "../models/gameplay/combat-state";
+import { EquippedArmor } from "../models/gameplay/equipped-armor";
 
 @Injectable({
   providedIn: "root"
@@ -28,6 +29,12 @@ export class GameplayService {
       this.state.xp = saveData.xp;
       this.state.luckPoints = saveData.luckPoints;
       this.state.poisonResistance = saveData.poisonResistance;
+      this.state.armor = saveData.armor.flatMap(x => {
+        let invArmor = this.inventoryService.inventory.armor.find(y => y.item.name == x.armor)?.item;
+        if (invArmor)
+          return new EquippedArmor(invArmor, x.side);
+        return [];
+      });
       this.state.combatState = new CombatState(saveData.combatState);
 
       this.updateCombatState();
@@ -43,17 +50,20 @@ export class GameplayService {
     this.updateBodyPartState(this.state.combatState.rightLeg, "Legs");
   }
 
-  private updateBodyPartState(part: BodyPart, name: string) {
+  private updateBodyPartState(part: BodyPart, name: string, side?: "Left" | "Right") {
     part.physicalRes = 0;
     part.energyRes = 0;
     part.radRes = 0;
 
-    let armor = this.inventoryService.inventory.armor.filter(x => x.isEquipped && x.item.locationCovered.includes(name));
+    let armor = this.state.armor.filter(x => x.side == side && x.armor.locationCovered.includes(name));
     armor.forEach(x => {
-      if (x.item.physicalRes > part.physicalRes) part.physicalRes = x.item.physicalRes;
-      if (x.item.energyRes > part.energyRes) part.energyRes = x.item.energyRes;
-      if (x.item.radiationRes > part.radRes) part.radRes = x.item.radiationRes;
+      if (x.armor.physicalRes > part.physicalRes) part.physicalRes = x.armor.physicalRes;
+      if (x.armor.energyRes > part.energyRes) part.energyRes = x.armor.energyRes;
+      if (x.armor.radiationRes > part.radRes) part.radRes = x.armor.radiationRes;
     });
+
+    part.clothing = armor.filter(x => x.armor.type == "Clothing").map(x => x.armor.name);
+    part.armor = armor.filter(x => x.armor.type != "Clothing").map(x => x.armor.name);
   }
 
   save() {

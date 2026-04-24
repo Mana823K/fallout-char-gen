@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { GameplayService } from '../../../services/gameplay.service';
 import { GameplayState } from '../../../models/gameplay/gameplay-state';
+import { EquippedArmor } from '../../../models/gameplay/equipped-armor';
 import { Armor } from '../../../models/database/armor';
+import { InventoryItem } from '../../../models/inventory/inventory';
 import { InventoryService } from '../../../services/inventory.service';
-import { Router } from '@angular/router';
+import { CombatState } from '../../../models/gameplay/combat-state';
 
 @Component({
   selector: 'app-armor-sheet',
@@ -12,18 +14,23 @@ import { Router } from '@angular/router';
   styleUrl: './armor-sheet.component.scss'
 })
 export class ArmorSheetComponent {
-  get state(): GameplayState { return this.gameplayService.state; }
-  armor: Armor[];
+  readonly legOnlyLocations = ["Legs"];
+  readonly armOnlyLocations = ["Arms"];
+  readonly oneSidedLocations = [this.legOnlyLocations, this.armOnlyLocations];
+  
+  get armor(): EquippedArmor[] { return this.gameplayService.state.armor; }
+  get combatSate(): CombatState { return this.gameplayService.state.combatState; }
+  get availableArmor(): InventoryItem<Armor>[] { return this.inventoryService.inventory.armor; }
 
-  constructor(private gameplayService: GameplayService, private inventoryService: InventoryService, private router: Router) {
-    this.armor = this.inventoryService.inventory.armor.filter(x => x.isEquipped).map(x => x.item);
-  }
+  isEdit: boolean = false;
+
+  constructor(private gameplayService: GameplayService, private inventoryService: InventoryService) { }
 
   save() {
     this.gameplayService.save();
   }
 
-  navigateToInventory() {
-    this.router.navigate(["inventory", "armor"]);
+  editArmor() {
+    this.isEdit = true;
   }
 }

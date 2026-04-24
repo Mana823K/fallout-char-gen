@@ -12,6 +12,7 @@ import { NumberInputComponent } from '../../form/number-input/number-input.compo
 import { InputComponent } from '../../form/input/input.component';
 import { SelectComponent } from '../../form/select/select.component';
 import { MatIcon } from '@angular/material/icon';
+import { GameplayService } from '../../../services/gameplay.service';
 
 @Component({
   selector: 'app-inventory-armor',
@@ -48,9 +49,10 @@ export class InventoryArmorComponent implements AfterViewInit {
   torsoCover: number = 0;
   legsCover: number = 0;
 
-  constructor(private inventoryService: InventoryService, private dataService: DataService) {
+  constructor(private inventoryService: InventoryService, private dataService: DataService, private gameplayService: GameplayService) {
     this.sort();
     this.updateCoverCount();
+    this.armor.forEach(x => x.isEquipped = !!this.gameplayService.state.armor.find(y => y.armor.name == x.item.name));
   }
 
   ngAfterViewInit(): void {
@@ -131,14 +133,5 @@ export class InventoryArmorComponent implements AfterViewInit {
 
   save() {
     this.inventoryService.save();
-  }
-
-  equipArmor(item: InventoryItem<Armor>) {
-    item.isEquipped = !item.isEquipped;
-
-    this.sort();
-    this.save();
-    this.table?.renderRows();
-    this.updateCoverCount();
   }
 }

@@ -62,9 +62,6 @@
 </ng-template>
 <ng-template #equip let-item>
   @if (item.isEquipped) {
-    <mat-icon class="star-icon-selected" (click)="equipArmor(item)">star</mat-icon>
-  }
-  @else {
-    <mat-icon class="star-icon" (click)="equipArmor(item)">star_border</mat-icon>
+    <mat-icon class="star-icon">star</mat-icon>
   }
 </ng-template>

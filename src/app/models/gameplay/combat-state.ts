@@ -19,10 +19,14 @@ export class CombatState {
 }
 
 export class BodyPart {
+  hp: number = 0;
+  
   physicalRes: number = 0;
   energyRes: number = 0;
   radRes: number = 0;
-  hp: number = 0;
+
+  clothing: string[] = [];
+  armor: string[] = [];
 }
 
 export class CombatStateSaveData {
