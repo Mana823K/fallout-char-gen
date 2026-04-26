@@ -26,7 +26,7 @@ export const invAmmoColumns: TableColumn<InventoryItem<Ammo>>[] = [
     }),
     new TableColumn<InventoryItem<Ammo>>({
       label: "Notes",
-      property: "notes",
+      property: "item.notes",
       filterType: FilterTypeEnum.None,
     }),
 ];
