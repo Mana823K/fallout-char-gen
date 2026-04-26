@@ -12,6 +12,7 @@
   @if (isAddWeapon) {
     <tr>
       <td class="input-cell"><app-number-input inputName="new-amount" [(value)]="newWeapon.amount"></app-number-input></td>
+      <td></td>
       <td class="input-cell"><app-input inputName="new-name" [(value)]="newWeapon.item.name"></app-input></td>
       <td class="input-cell"><app-select inputName="new-type" [(value)]="newWeapon.item.type" [options]="weaponTypes"></app-select></td>
       <td></td>
