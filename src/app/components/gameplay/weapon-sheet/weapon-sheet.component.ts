@@ -81,6 +81,7 @@ export class WeaponSheetComponent {
     if (inventoryAmmo) {
       inventoryAmmo.amount -= amountInput.value;
       amountInput.value = 1;
+      this.inventoryService.save();
     }
   }
 
