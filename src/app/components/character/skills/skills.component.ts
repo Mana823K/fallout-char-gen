@@ -22,9 +22,9 @@ export class SkillsComponent {
   get availableTagCount(): number { return Skill.TAG_COUNT + this.characterService.extraSkillTags; }
   get tagCount(): number { return this.skills.filter(x => x.isTagged).length; }
 
-  get availableRankPoints(): number { 
-    return Skill.RANK_POINTS + this.character.special.intelligence 
-    + this.character.level + this.tagCount * 2 + this.characterService.extraSkillRanks;
+  get availableRankPoints(): number {
+    return Skill.RANK_POINTS + this.character.special.intelligence
+    + (this.character.level - 1) + this.tagCount * 2 + this.characterService.extraSkillRanks;
   }
   get totalRankPoints(): number {
     var total = 0;
