@@ -1,4 +1,5 @@
 @use "../../../../style/colors.scss" as *;
+@use "../../../../style/variables.scss" as *;
 
 .stats {
   display: flex;
@@ -18,4 +19,42 @@
 
 tr {
   background-color: $accentLight;
+}
+
+.injury-cell {
+  display: flex;
+  gap: 4pt;
+  padding: 2pt 0;
+}
+
+.status-pill {
+  border: none;
+  border-radius: $borderRadius;
+  padding: 1pt 6pt;
+  font-size: 9pt;
+  background-color: $grayLight;
+  color: $grayDark;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $grayLightAccent;
+  }
+
+  &.injured {
+    background-color: $error;
+    color: $light-text;
+
+    &:hover {
+      background-color: $errorDark;
+    }
+  }
+
+  &.treated {
+    background-color: $accent;
+    color: $light-text;
+
+    &:hover {
+      background-color: $accentDark;
+    }
+  }
 }

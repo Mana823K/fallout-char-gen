@@ -30,13 +30,12 @@ export class CombatSheetComponent {
   }
 
   toggleInjured(part: BodyPart) {
-    part.injuryStatus = part.injuryStatus === 'healthy' ? 'injured' : 'healthy';
+    part.injuryStatus = part.injuryStatus === 'injured' ? 'healthy' : 'injured';
     this.save();
   }
 
   toggleTreated(part: BodyPart) {
-    if (part.injuryStatus === 'healthy') return;
-    part.injuryStatus = part.injuryStatus === 'treated' ? 'injured' : 'treated';
+    part.injuryStatus = part.injuryStatus === 'treated' ? 'healthy' : 'treated';
     this.save();
   }
 }
