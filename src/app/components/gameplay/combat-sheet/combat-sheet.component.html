@@ -29,6 +29,12 @@
           <app-number-input inputName="head-hp" [(value)]="state.combatState.head.hp" (valueChange)="save()"></app-number-input>
         </td>
       </tr>
+      <tr>
+        <td colspan="2">
+          <label><input type="checkbox" [checked]="state.combatState.head.injuryStatus !== 'healthy'" (change)="toggleInjured(state.combatState.head)"> Injured</label>
+          <label><input type="checkbox" [checked]="state.combatState.head.injuryStatus === 'treated'" [disabled]="state.combatState.head.injuryStatus === 'healthy'" (change)="toggleTreated(state.combatState.head)"> Treated</label>
+        </td>
+      </tr>
     </table>
   </div>
   <div class="part-row">
@@ -45,6 +51,12 @@
             <app-number-input inputName="leftArm-hp" [(value)]="state.combatState.leftArm.hp" (valueChange)="save()"></app-number-input>
           </td>
         </tr>
+        <tr>
+          <td colspan="2">
+            <label><input type="checkbox" [checked]="state.combatState.leftArm.injuryStatus !== 'healthy'" (change)="toggleInjured(state.combatState.leftArm)"> Injured</label>
+            <label><input type="checkbox" [checked]="state.combatState.leftArm.injuryStatus === 'treated'" [disabled]="state.combatState.leftArm.injuryStatus === 'healthy'" (change)="toggleTreated(state.combatState.leftArm)"> Treated</label>
+          </td>
+        </tr>
       </table>
     </div>
     <div>
@@ -58,6 +70,12 @@
           <td>En. DR: <strong>{{state.combatState.rightArm.energyRes}}</strong></td>
           <td>HP:
             <app-number-input inputName="rightArm-hp" [(value)]="state.combatState.rightArm.hp" (valueChange)="save()"></app-number-input>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <label><input type="checkbox" [checked]="state.combatState.rightArm.injuryStatus !== 'healthy'" (change)="toggleInjured(state.combatState.rightArm)"> Injured</label>
+            <label><input type="checkbox" [checked]="state.combatState.rightArm.injuryStatus === 'treated'" [disabled]="state.combatState.rightArm.injuryStatus === 'healthy'" (change)="toggleTreated(state.combatState.rightArm)"> Treated</label>
           </td>
         </tr>
       </table>
@@ -76,6 +94,12 @@
           <app-number-input inputName="torso-hp" [(value)]="state.combatState.torso.hp" (valueChange)="save()"></app-number-input>
         </td>
       </tr>
+      <tr>
+        <td colspan="2">
+          <label><input type="checkbox" [checked]="state.combatState.torso.injuryStatus !== 'healthy'" (change)="toggleInjured(state.combatState.torso)"> Injured</label>
+          <label><input type="checkbox" [checked]="state.combatState.torso.injuryStatus === 'treated'" [disabled]="state.combatState.torso.injuryStatus === 'healthy'" (change)="toggleTreated(state.combatState.torso)"> Treated</label>
+        </td>
+      </tr>
     </table>
   </div>
   <div class="part-row">
@@ -92,6 +116,12 @@
             <app-number-input inputName="leftLeg-hp" [(value)]="state.combatState.leftLeg.hp" (valueChange)="save()"></app-number-input>
           </td>
         </tr>
+        <tr>
+          <td colspan="2">
+            <label><input type="checkbox" [checked]="state.combatState.leftLeg.injuryStatus !== 'healthy'" (change)="toggleInjured(state.combatState.leftLeg)"> Injured</label>
+            <label><input type="checkbox" [checked]="state.combatState.leftLeg.injuryStatus === 'treated'" [disabled]="state.combatState.leftLeg.injuryStatus === 'healthy'" (change)="toggleTreated(state.combatState.leftLeg)"> Treated</label>
+          </td>
+        </tr>
       </table>
     </div>
     <div>
@@ -105,6 +135,12 @@
           <td>En. DR: <strong>{{state.combatState.rightLeg.energyRes}}</strong></td>
           <td>HP:
             <app-number-input inputName="rightLeg-hp" [(value)]="state.combatState.rightLeg.hp" (valueChange)="save()"></app-number-input>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <label><input type="checkbox" [checked]="state.combatState.rightLeg.injuryStatus !== 'healthy'" (change)="toggleInjured(state.combatState.rightLeg)"> Injured</label>
+            <label><input type="checkbox" [checked]="state.combatState.rightLeg.injuryStatus === 'treated'" [disabled]="state.combatState.rightLeg.injuryStatus === 'healthy'" (change)="toggleTreated(state.combatState.rightLeg)"> Treated</label>
           </td>
         </tr>
       </table>

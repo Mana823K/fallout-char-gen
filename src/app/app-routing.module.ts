@@ -13,6 +13,7 @@ import { MiscellanyComponent } from './components/database/miscellany/miscellany
 import { ChemsComponent } from './components/database/chems/chems.component';
 import { ToolsComponent } from './components/tools/tools.component';
 import { WeaponModToolComponent } from './components/tools/weapon-mod-tool/weapon-mod-tool.component';
+import { ArmorModToolComponent } from './components/tools/armor-mod-tool/armor-mod-tool.component';
 import { InventoryComponent } from './components/inventory/inventory.component';
 import { InventoryWeaponsComponent } from './components/inventory/inventory-weapons/inventory-weapons.component';
 import { InventoryArmorComponent } from './components/inventory/inventory-armor/inventory-armor.component';
@@ -51,6 +52,7 @@ const routes: Routes = [
   { path: 'tools', redirectTo: 'tools/weapon-mod' },
   { path: 'tools', component: ToolsComponent, children: [
     { path: 'weapon-mod', component: WeaponModToolComponent },
+    { path: 'armor-mod', component: ArmorModToolComponent },
   ] },
   { path: 'import-export', component: ImportExportComponent },
   { path: '**', redirectTo: 'character' }

@@ -1,0 +1,143 @@
+<div *ngIf="selectedArmor">
+  <h3 class="active-title">Selected Armor</h3>
+  <table class="selected-armor-table">
+    <tr>
+      <th>Name</th>
+      <th>Armor Type</th>
+      <th>Physical Res</th>
+      <th>Energy Res</th>
+      <th>Radiation Res</th>
+      <th>Location Covered</th>
+      <th>Weight</th>
+      <th>Cost</th>
+      <th>Rarity</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>{{selectedArmor.name}}</td>
+      <td>{{selectedArmor.type}}</td>
+      <td [ngClass]="{'changed-property': selectedArmor.physicalRes != selectedArmorOriginal?.physicalRes}" class="right">{{selectedArmor.physicalRes}}</td>
+      <td [ngClass]="{'changed-property': selectedArmor.energyRes != selectedArmorOriginal?.energyRes}" class="right">{{selectedArmor.energyRes}}</td>
+      <td [ngClass]="{'changed-property': selectedArmor.radiationRes != selectedArmorOriginal?.radiationRes}" class="right">{{selectedArmor.radiationRes}}</td>
+      <td>{{selectedArmor.locationCoveredText}}</td>
+      <td [ngClass]="{'changed-property': selectedArmor.weight != selectedArmorOriginal?.weight}" class="right">{{selectedArmor.weight}}</td>
+      <td [ngClass]="{'changed-property': selectedArmor.cost != selectedArmorOriginal?.cost}" class="right">{{selectedArmor.cost}}</td>
+      <td [ngClass]="{'changed-property': selectedArmor.rarity != selectedArmorOriginal?.rarity}" class="right">{{selectedArmor.rarity}}</td>
+      <td (click)="unselectArmor()" class="remove-icon">X</td>
+    </tr>
+  </table>
+
+  <div *ngIf="selectedMod" class="mt">
+    <h3 class="active-title">Selected Mod</h3>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Physical Res</th>
+        <th>Energy Res</th>
+        <th>Radiation Res</th>
+        <th>Effects</th>
+        <th>Weight</th>
+        <th>Cost</th>
+        <th>Perk</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>{{selectedMod.name}}</td>
+        <td>{{selectedMod.type}}</td>
+        <td class="right">{{selectedMod.physicalRes > 0 ? '+': ''}}{{selectedMod.physicalRes == 0 ? '-' : selectedMod.physicalRes}}</td>
+        <td class="right">{{selectedMod.energyRes > 0 ? '+': ''}}{{selectedMod.energyRes == 0 ? '-' : selectedMod.energyRes}}</td>
+        <td class="right">{{selectedMod.radiationRes > 0 ? '+': ''}}{{selectedMod.radiationRes == 0 ? '-' : selectedMod.radiationRes}}</td>
+        <td>{{selectedMod.effects}}</td>
+        <td class="right">{{selectedMod.weight > 0 ? '+': ''}}{{selectedMod.weight == 0 ? '-' : selectedMod.weight}}</td>
+        <td class="right">{{selectedMod.cost > 0 ? '+': ''}}{{selectedMod.cost == 0 ? '-' : selectedMod.cost}}</td>
+        <td>{{selectedMod.perks}}</td>
+      <td  (click)="removeMod()" class="remove-icon">X</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+@if (selectedArmor) {
+  <button class="button mt" (click)="addToInventory()">Add to Inventory</button>
+}
+
+<div *ngIf="!selectedArmor" class="selection">
+  <h3>Select an armor</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Armor Type</th>
+      <th>Physical Res</th>
+      <th>Energy Res</th>
+      <th>Radiation Res</th>
+    </tr>
+
+    <tr>
+      <td>
+        <app-input inputName="armorNameFilter" [(value)]="armorNameFilter" (valueChange)="filterArmors()"></app-input>
+      </td>
+      <td>
+        <app-select inputName="armorTypeFilter" [(value)]="armorTypeFilter" (valueChange)="filterArmors()" [options]="armorTypeOptions"></app-select>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr *ngFor="let armor of armorOptions" class="pointer" (click)="armorSelected(armor)">
+      <td>{{armor.name}}</td>
+      <td>{{armor.type}}</td>
+      <td class="right">{{armor.physicalRes}}</td>
+      <td class="right">{{armor.energyRes}}</td>
+      <td class="right">{{armor.radiationRes}}</td>
+    </tr>
+  </table>
+</div>
+
+<div *ngIf="selectedArmor" class="selection mt">
+  <h3>Available mods</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Physical Res</th>
+      <th>Energy Res</th>
+      <th>Radiation Res</th>
+      <th>Effects</th>
+      <th>Weight</th>
+      <th>Cost</th>
+      <th>Perks</th>
+    </tr>
+
+    <tr>
+      <td>
+        <app-input inputName="modNameFilter" [(value)]="modNameFilter" (valueChange)="filterMods()"></app-input>
+      </td>
+      <td>
+        <app-select inputName="modTypeFilter" [(value)]="modTypeFilter" (valueChange)="filterMods()" [options]="modTypeOptions"></app-select>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>
+        <app-input inputName="modEffectFilter" [(value)]="modEffectFilter" (valueChange)="filterMods()"></app-input>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <tr *ngFor="let mod of modOptions" class="pointer" (click)="modSelected(mod)" [ngClass]="{'selected-row': isModSelected(mod)}">
+      <td>{{mod.name}}</td>
+      <td>{{mod.type}}</td>
+      <td class="right">{{mod.physicalRes > 0 ? '+': ''}}{{mod.physicalRes == 0 ? '-' : mod.physicalRes}}</td>
+      <td class="right">{{mod.energyRes > 0 ? '+': ''}}{{mod.energyRes == 0 ? '-' : mod.energyRes}}</td>
+      <td class="right">{{mod.radiationRes > 0 ? '+': ''}}{{mod.radiationRes == 0 ? '-' : mod.radiationRes}}</td>
+      <td>{{mod.effects}}</td>
+      <td class="right">{{mod.weight > 0 ? '+': ''}}{{mod.weight == 0 ? '-' : mod.weight}}</td>
+      <td class="right">{{mod.cost > 0 ? '+': ''}}{{mod.cost == 0 ? '-' : mod.cost}}</td>
+      <td>{{mod.perks}}</td>
+    </tr>
+  </table>
+</div>

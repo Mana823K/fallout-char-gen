@@ -1,0 +1,53 @@
+@use "./../../../../style/colors.scss" as *;
+
+.selection {
+  margin: 0.5rem;
+}
+
+h3 {
+  text-decoration: underline;
+  color: $primaryDark;
+}
+
+.active-title {
+  color: $accentDark;
+}
+
+.selected-armor-table {
+  width: 100%;
+}
+
+.mt {
+  margin-top: 2rem;
+}
+
+.right {
+  text-align: end;
+}
+
+.center {
+  text-align: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.remove-icon {
+  background-color: $primaryLight;
+  color: $primaryDark;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primaryLightAccent;
+  }
+}
+
+.changed-property {
+  color: $primaryDark;
+}
+
+.selected-row {
+  color: $primaryDark;
+}

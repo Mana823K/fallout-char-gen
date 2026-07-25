@@ -60,7 +60,9 @@
   </div>
 </div>
 
-<button class="button mt" (click)="addToInventory()">Add to Inventory</button>
+@if (selectedWeapon) {
+  <button class="button mt" (click)="addToInventory()">Add to Inventory</button>
+}
 
 <div *ngIf="!selectedWeapon" class="selection">
   <h3>Select a weapon</h3>

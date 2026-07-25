@@ -5,6 +5,7 @@ import { GameplayState } from '../../../models/gameplay/gameplay-state';
 import { CharacterService } from '../../../services/character.service';
 import { Stats } from '../../../models/character/stats';
 import { NumberInputComponent } from "../../form/number-input/number-input.component";
+import { BodyPart } from '../../../models/gameplay/armor-state';
 
 @Component({
   selector: 'app-combat-sheet',
@@ -25,6 +26,17 @@ export class CombatSheetComponent {
 
   onRadiationChange() {
     if (this.state.hp > this.maxHp) this.state.hp = this.maxHp;
+    this.save();
+  }
+
+  toggleInjured(part: BodyPart) {
+    part.injuryStatus = part.injuryStatus === 'healthy' ? 'injured' : 'healthy';
+    this.save();
+  }
+
+  toggleTreated(part: BodyPart) {
+    if (part.injuryStatus === 'healthy') return;
+    part.injuryStatus = part.injuryStatus === 'treated' ? 'injured' : 'treated';
     this.save();
   }
 }

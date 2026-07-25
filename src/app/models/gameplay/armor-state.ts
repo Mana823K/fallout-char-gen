@@ -1,3 +1,5 @@
+export type InjuryStatus = "healthy" | "injured" | "treated";
+
 export class CombatState {
   head: BodyPart = new BodyPart();
   leftArm: BodyPart = new BodyPart();
@@ -8,12 +10,21 @@ export class CombatState {
 
   constructor(saveData?: CombatStateSaveData) {
     if (saveData) {
-      this.head.hp = saveData.head;
-      this.leftArm.hp = saveData.leftArm;
-      this.rightArm.hp = saveData.rightArm;
-      this.torso.hp = saveData.torso;
-      this.leftLeg.hp = saveData.leftLeg;
-      this.rightLeg.hp = saveData.rightLeg;
+      this.loadPart(this.head, saveData.head);
+      this.loadPart(this.leftArm, saveData.leftArm);
+      this.loadPart(this.rightArm, saveData.rightArm);
+      this.loadPart(this.torso, saveData.torso);
+      this.loadPart(this.leftLeg, saveData.leftLeg);
+      this.loadPart(this.rightLeg, saveData.rightLeg);
+    }
+  }
+
+  private loadPart(part: BodyPart, data: BodyPartSaveData | number) {
+    if (typeof data === "number") {
+      part.hp = data;
+    } else {
+      part.hp = data.hp;
+      part.injuryStatus = data.injuryStatus ?? "healthy";
     }
   }
 }
@@ -23,22 +34,33 @@ export class BodyPart {
   energyRes: number = 0;
   radRes: number = 0;
   hp: number = 0;
+  injuryStatus: InjuryStatus = "healthy";
+}
+
+export class BodyPartSaveData {
+  hp: number;
+  injuryStatus: InjuryStatus;
+
+  constructor(original: BodyPart) {
+    this.hp = original.hp;
+    this.injuryStatus = original.injuryStatus;
+  }
 }
 
 export class CombatStateSaveData {
-  head: number;
-  leftArm: number;
-  rightArm: number;
-  torso: number;
-  leftLeg: number;
-  rightLeg: number;
+  head: BodyPartSaveData;
+  leftArm: BodyPartSaveData;
+  rightArm: BodyPartSaveData;
+  torso: BodyPartSaveData;
+  leftLeg: BodyPartSaveData;
+  rightLeg: BodyPartSaveData;
 
   constructor(original: CombatState) {
-    this.head = original.head.hp;
-    this.leftArm = original.leftArm.hp;
-    this.rightArm = original.rightArm.hp;
-    this.torso = original.torso.hp;
-    this.leftLeg = original.leftLeg.hp;
-    this.rightLeg = original.rightLeg.hp;
+    this.head = new BodyPartSaveData(original.head);
+    this.leftArm = new BodyPartSaveData(original.leftArm);
+    this.rightArm = new BodyPartSaveData(original.rightArm);
+    this.torso = new BodyPartSaveData(original.torso);
+    this.leftLeg = new BodyPartSaveData(original.leftLeg);
+    this.rightLeg = new BodyPartSaveData(original.rightLeg);
   }
 }
