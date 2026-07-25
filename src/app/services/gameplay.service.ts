@@ -28,6 +28,7 @@ export class GameplayService {
       this.state.xp = saveData.xp;
       this.state.luckPoints = saveData.luckPoints;
       this.state.poisonResistance = saveData.poisonResistance;
+      this.state.radiation = saveData.radiation ?? 0;
       this.state.combatState = new CombatState(saveData.combatState);
 
       this.updateCombatState();

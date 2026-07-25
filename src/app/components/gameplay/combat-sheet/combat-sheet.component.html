@@ -7,9 +7,12 @@
   <div><strong>Posion DR: </strong>
     <app-number-input inputName="poisonDR" [(value)]="state.poisonResistance" (valueChange)="save()"></app-number-input>
   </div>
+  <div><strong>Radiation: </strong>
+    <app-number-input inputName="radiation" [min]="0" [(value)]="state.radiation" (valueChange)="onRadiationChange()"></app-number-input>
+  </div>
   <div><strong>HP: </strong>
     <app-number-input inputName="currentHP" [(value)]="state.hp" (valueChange)="save()"></app-number-input>
-    /{{stats.maxHp}}
+    /{{maxHp}}<span *ngIf="state.radiation > 0"> (of {{stats.maxHp}})</span>
   </div>
 </div>
 <div>

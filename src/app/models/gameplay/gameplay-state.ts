@@ -5,6 +5,7 @@ export class GameplayState {
   hp: number = 0;
   luckPoints: number = 0;
   poisonResistance: number = 0;
+  radiation: number = 0;
 
   combatState: CombatState = new CombatState();
 
@@ -19,6 +20,7 @@ export class GameplaySaveData {
   hp: number;
   luckPoints: number;
   poisonResistance: number;
+  radiation: number;
 
   combatState: CombatStateSaveData;
 
@@ -27,6 +29,7 @@ export class GameplaySaveData {
     this.hp = original.hp;
     this.luckPoints = original.luckPoints;
     this.poisonResistance = original.poisonResistance;
+    this.radiation = original.radiation;
     this.combatState = new CombatStateSaveData(original.combatState);
   }
 }
