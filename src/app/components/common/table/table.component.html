@@ -22,19 +22,6 @@
     <td *ngIf="editable || addable"></td>
   </tr>
 
-  <tr *ngIf="addable && isAdding" (keydown.enter)="onAddKeydown($event)">
-    <td *ngFor="let column of columns" [class]="column.align">
-      @if (column.editType !== undefined) {
-        <ng-container [ngTemplateOutlet]="editCell"
-                      [ngTemplateOutletContext]="{ $implicit: newItem, column: column, id: 'new' }"></ng-container>
-      }
-    </td>
-    <td class="edit-cell">
-      <span class="toggle-button" (click)="confirmAdd()">&#10003;</span>
-      <span class="toggle-button" (click)="cancelAdd()">&#10005;</span>
-    </td>
-  </tr>
-
   <tr *ngFor="let item of displayedItems; let index = index" (click)="rowClicked.emit(item)" (keydown.enter)="onEditKeydown($event, item)" [ngClass]="{'pointer': rowClicked.observed}">
     <td *ngFor="let column of columns" [class]="column.align">
       @if (editable && isEditingRow(item) && column.editType !== undefined) {
@@ -58,6 +45,18 @@
       @else {
         <span class="toggle-button" (click)="startEdit(item)">&#9998;</span>
       }
+    </td>
+  </tr>
+  <tr *ngIf="addable && isAdding" (keydown.enter)="onAddKeydown($event)">
+    <td *ngFor="let column of columns" [class]="column.align">
+      @if (column.editType !== undefined) {
+        <ng-container [ngTemplateOutlet]="editCell"
+                      [ngTemplateOutletContext]="{ $implicit: newItem, column: column, id: 'new' }"></ng-container>
+      }
+    </td>
+    <td class="edit-cell">
+      <span class="toggle-button" (click)="confirmAdd()">&#10003;</span>
+      <span class="toggle-button" (click)="cancelAdd()">&#10005;</span>
     </td>
   </tr>
   <ng-content></ng-content>
