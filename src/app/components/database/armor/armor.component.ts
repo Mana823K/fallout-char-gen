@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core';
 import { Armor } from '../../../models/database/armor';
 import { DataService } from '../../../services/data.service';
+import { InventoryService } from '../../../services/inventory.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatIcon } from '@angular/material/icon';
 import { TableColumn, FilterTypeEnum } from '../../common/table/table-column';
 import { TableComponent } from '../../common/table/table.component';
 
@@ -8,11 +11,11 @@ import { TableComponent } from '../../common/table/table.component';
   selector: 'app-armor',
   templateUrl: './armor.component.html',
   styleUrl: './armor.component.scss',
-  imports: [TableComponent]
+  imports: [TableComponent, MatIcon]
 })
-export class ArmorComponent {
+export class ArmorComponent implements AfterViewInit {
   get armor(): Armor[] { return this.dataService.armor; }
-  
+
   tableColumns: TableColumn<Armor>[] = [
     new TableColumn<Armor>({
       label: "Name",
@@ -65,10 +68,32 @@ export class ArmorComponent {
       property: "rarity",
       filterType: FilterTypeEnum.Sort,
     }),
+    new TableColumn<Armor>({
+      label: "Owned",
+      property: "add",
+      filterType: FilterTypeEnum.None,
+    }),
   ];
 
   sortProperties = ["type", "name"];
 
-  constructor(private dataService: DataService) { }
+  @ViewChild('add') addTemplate?: TemplateRef<any>;
+
+  constructor(private dataService: DataService, private inventoryService: InventoryService, private snackBar: MatSnackBar) { }
+
+  getOwnedCount(armor: Armor): number {
+    return this.inventoryService.inventory.armor.find(x => x.item.name == armor.name)?.amount ?? 0;
+  }
+
+  addToInventory(armor: Armor) {
+    this.inventoryService.addItem(armor, "armor", ["name"]);
+    this.snackBar.open(`Added "${armor.name}" to inventory.`, undefined, { duration: 2000 });
+  }
+
+  ngAfterViewInit(): void {
+    let addColumn = this.tableColumns.find(x => x.property == "add");
+    if (addColumn)
+      addColumn.template = this.addTemplate;
+  }
 
 }

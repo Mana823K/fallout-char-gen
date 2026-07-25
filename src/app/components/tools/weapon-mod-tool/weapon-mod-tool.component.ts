@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Weapon } from '../../../models/database/weapon';
 import { DataService } from '../../../services/data.service';
+import { InventoryService } from '../../../services/inventory.service';
+import { InventoryItem } from '../../../models/inventory/inventory';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { WeaponMod } from '../../../models/database/weapon-mod';
 import * as _ from 'lodash';
 import { ranges } from '../../../models/database/range';
@@ -33,7 +36,7 @@ export class WeaponModToolComponent {
   modTypeFilter: string = "";
   modEffectFilter: string = "";
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private inventoryService: InventoryService, private snackBar: MatSnackBar) {
     this.weaponOptions = this.weapons;
     for (let weapon of this.weapons) {
       if (!this.weaponTypeOptions.includes(weapon.type))
@@ -182,5 +185,16 @@ export class WeaponModToolComponent {
 
   isModSelected(mod: WeaponMod): boolean {
     return !!this.selectedMods.find(x => x.name == mod.name);
+  }
+
+  addToInventory() {
+    if (!this.selectedWeapon) return;
+
+    let item = new InventoryItem<Weapon>(_.cloneDeep(this.selectedWeapon));
+    item.isCustom = true;
+    this.inventoryService.inventory.weapons.push(item);
+    this.inventoryService.save();
+
+    this.snackBar.open(`Added "${this.selectedWeapon.name}" to inventory.`, undefined, { duration: 2000 });
   }
 }

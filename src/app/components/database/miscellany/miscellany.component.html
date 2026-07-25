@@ -1,1 +1,10 @@
 <app-table [items]="items" [columns]="tableColumns" [sortProperties]="sortProperties"></app-table>
+
+<ng-template #add let-item>
+  <div class="add-cell">
+    <mat-icon class="add-icon" (click)="addToInventory(item)">add_circle</mat-icon>
+    @if (getOwnedCount(item) > 0) {
+      <span class="owned-count">{{getOwnedCount(item)}}</span>
+    }
+  </div>
+</ng-template>

@@ -1,5 +1,8 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core';
 import { DataService } from '../../../services/data.service';
+import { InventoryService } from '../../../services/inventory.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatIcon } from '@angular/material/icon';
 import { Weapon } from '../../../models/database/weapon';
 import { Tooltip, TooltipTypeEnum } from '../../../models/database/tooltip';
 import { TableColumn, FilterTypeEnum } from '../../common/table/table-column';
@@ -10,7 +13,7 @@ import { TooltipedListCellComponent } from "../../common/tooltiped-list-cell/too
   selector: 'app-weapons',
   templateUrl: './weapons.component.html',
   styleUrl: './weapons.component.scss',
-  imports: [TableComponent, TooltipedListCellComponent]
+  imports: [TableComponent, TooltipedListCellComponent, MatIcon]
 })
 export class WeaponsComponent implements AfterViewInit {
   get weapons(): Weapon[] { return this.dataService.weapons; }
@@ -86,14 +89,29 @@ export class WeaponsComponent implements AfterViewInit {
       filterType: FilterTypeEnum.Sort,
       align: "right"
     }),
+    new TableColumn<Weapon>({
+      label: "Owned",
+      property: "add",
+      filterType: FilterTypeEnum.None,
+    }),
   ];
 
   sortProperties = ["type", "name"];
 
   @ViewChild('effects') effectsTemplate?: TemplateRef<any>;
   @ViewChild('qualities') qualitiesTemplate?: TemplateRef<any>;
+  @ViewChild('add') addTemplate?: TemplateRef<any>;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private inventoryService: InventoryService, private snackBar: MatSnackBar) { }
+
+  getOwnedCount(weapon: Weapon): number {
+    return this.inventoryService.inventory.weapons.find(x => x.item.name == weapon.name)?.amount ?? 0;
+  }
+
+  addToInventory(weapon: Weapon) {
+    this.inventoryService.addItem(weapon, "weapons", ["name"]);
+    this.snackBar.open(`Added "${weapon.name}" to inventory.`, undefined, { duration: 2000 });
+  }
 
   ngAfterViewInit(): void {
     let effectsColumn = this.tableColumns.find(x => x.property == "effects");
@@ -103,5 +121,9 @@ export class WeaponsComponent implements AfterViewInit {
     let qualitiesColumn = this.tableColumns.find(x => x.property == "qualities");
     if (qualitiesColumn)
       qualitiesColumn.template = this.qualitiesTemplate;
+
+    let addColumn = this.tableColumns.find(x => x.property == "add");
+    if (addColumn)
+      addColumn.template = this.addTemplate;
   }
 }

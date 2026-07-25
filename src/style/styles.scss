@@ -61,3 +61,24 @@ tr:nth-child(even) {
 td {
   padding: 0 0.5rem;
 }
+
+.add-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.add-icon {
+  font-size: 18pt;
+  color: colors.$primary;
+  cursor: pointer;
+
+  &:hover {
+    color: colors.$primaryDark;
+  }
+}
+
+.owned-count {
+  color: colors.$grayDark;
+  font-size: 10pt;
+}

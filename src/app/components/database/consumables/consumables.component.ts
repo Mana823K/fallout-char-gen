@@ -1,5 +1,8 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core';
 import { DataService } from '../../../services/data.service';
+import { InventoryService } from '../../../services/inventory.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatIcon } from '@angular/material/icon';
 import { Consumable } from '../../../models/database/consumable';
 import { MatTooltip } from '@angular/material/tooltip';
 import { TableColumn, FilterTypeEnum } from '../../common/table/table-column';
@@ -9,7 +12,7 @@ import { TableComponent } from '../../common/table/table.component';
   selector: 'app-consumables',
   templateUrl: './consumables.component.html',
   styleUrl: './consumables.component.scss',
-  imports: [TableComponent, MatTooltip]
+  imports: [TableComponent, MatTooltip, MatIcon]
 })
 export class ConsumablesComponent implements AfterViewInit {
   get consumables(): Consumable[] { return this.dataService.consumables; }
@@ -63,21 +66,40 @@ export class ConsumablesComponent implements AfterViewInit {
       filterType: FilterTypeEnum.Sort,
       align: "right"
     }),
+    new TableColumn<Consumable>({
+      label: "Owned",
+      property: "add",
+      filterType: FilterTypeEnum.None,
+    }),
   ];
 
   sortProperties = ["name"];
 
   @ViewChild('effects') effectsTemplate?: TemplateRef<any>;
-  
-  constructor(private dataService: DataService) {
+  @ViewChild('add') addTemplate?: TemplateRef<any>;
+
+  constructor(private dataService: DataService, private inventoryService: InventoryService, private snackBar: MatSnackBar) {
     let tooltip = this.dataService.tooltips.find(x => x.name == "Alcoholic")?.description ?? "";
     this.alcoholicTooltip = "Alcoholic: " + tooltip;
   }
-  
+
+  getOwnedCount(consumable: Consumable): number {
+    return this.inventoryService.inventory.consumables.find(x => x.item.name == consumable.name)?.amount ?? 0;
+  }
+
   ngAfterViewInit(): void {
     let effectsColumn = this.tableColumns.find(x => x.property == "effects");
     if (effectsColumn)
       effectsColumn.template = this.effectsTemplate;
+
+    let addColumn = this.tableColumns.find(x => x.property == "add");
+    if (addColumn)
+      addColumn.template = this.addTemplate;
+  }
+
+  addToInventory(consumable: Consumable) {
+    this.inventoryService.addItem(consumable, "consumables", ["name"]);
+    this.snackBar.open(`Added "${consumable.name}" to inventory.`, undefined, { duration: 2000 });
   }
 
 }
