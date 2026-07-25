@@ -76,14 +76,14 @@ export class TableComponent<T> implements OnInit {
     this.newItem = undefined;
   }
 
-  onEditKeydown(event: KeyboardEvent, item: T) {
+  onEditKeydown(event: Event, item: T) {
     if (!this.isEditingRow(item))
       return;
     event.preventDefault();
     this.confirmEdit(item);
   }
 
-  onAddKeydown(event: KeyboardEvent) {
+  onAddKeydown(event: Event) {
     event.preventDefault();
     this.confirmAdd();
   }
