@@ -23,6 +23,7 @@ export class InventoryItem<T> {
   amount: number = 1;
   isCustom: boolean = false;
   isEditing: boolean = false;
+  isEditingRow: boolean = false;
   isEquipped: boolean = false;
   
   constructor(item: T) {

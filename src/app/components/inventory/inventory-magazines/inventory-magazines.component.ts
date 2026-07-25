@@ -8,12 +8,10 @@ import { invMagazineColumns } from './models/magazine-columns';
 import { invMagazineSelectColumns } from './models/magazine-select-columns';
 import { TableComponent } from '../../common/table/table.component';
 import { AmountCellComponent } from '../../common/amount-cell/amount-cell.component';
-import { NumberInputComponent } from '../../form/number-input/number-input.component';
-import { InputComponent } from '../../form/input/input.component';
 
 @Component({
   selector: 'app-inventory-magazines',
-  imports: [TableComponent, AmountCellComponent, NumberInputComponent, InputComponent],
+  imports: [TableComponent, AmountCellComponent],
   templateUrl: './inventory-magazines.component.html',
   styleUrl: './inventory-magazines.component.scss'
 })
@@ -25,13 +23,12 @@ export class InventoryMagazinesComponent implements AfterViewInit{
   inventoryTableColumns: TableColumn<InventoryItem<Magazine>>[] = invMagazineColumns;
   selectTableColumns: TableColumn<Magazine>[] = invMagazineSelectColumns;
   sortProperties = ["name"];
-  
+
   @ViewChild('amount') amountTemplate?: TemplateRef<any>;
   @ViewChild('table') table?: TableComponent<InventoryItem<Magazine>>;
 
   isSelect: boolean = false;
-  isAdd: boolean = false;
-  newItem = new InventoryItem<Magazine>(new Magazine());
+  newItemFactory = () => new InventoryItem<Magazine>(new Magazine());
 
   constructor(private inventoryService: InventoryService, private dataService: DataService) { }
 
@@ -52,19 +49,11 @@ export class InventoryMagazinesComponent implements AfterViewInit{
     this.table?.renderRows();
   }
 
-  addCustom() {
-    this.newItem.isCustom = true;
-    this.magazines.push(this.newItem);
+  addCustom(item: InventoryItem<Magazine>) {
+    item.isCustom = true;
+    this.magazines.push(item);
     this.table?.renderRows();
     this.save();
-    this.cancelAddItem();
-  }
-
-  cancelAddItem() {
-    if (this.isAdd)
-      this.newItem = new InventoryItem<Magazine>(new Magazine());
-    this.isSelect = false;
-    this.isAdd = false;
   }
 
   save() {

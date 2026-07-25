@@ -12,8 +12,12 @@ export class TableColumn<T> {
   align: "left" | "center" | "right" = "left";
   template?: TemplateRef<any>;
 
+  editType?: EditTypeEnum;
+  editOptions: string[] = [];
+  editProperty?: string;
+
   filterFunc?: (items: T[]) => T[];
-  
+
   /** for ascending */
   sortFunc: (a: T, b: T) => number = (a,b) => {
     return _.get(a, this.property) - _.get(b, this.property);
@@ -35,4 +39,12 @@ export enum FilterTypeEnum {
   Select,
   YesNo,
   None
+}
+
+export enum EditTypeEnum {
+  Text,
+  Number,
+  Select,
+  Checkbox,
+  Multiselect
 }

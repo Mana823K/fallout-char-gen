@@ -8,14 +8,11 @@ import { invArmorSelectColumns } from './models/armor-select-columns';
 import { TableColumn } from '../../common/table/table-column';
 import { TableComponent } from '../../common/table/table.component';
 import { AmountCellComponent } from '../../common/amount-cell/amount-cell.component';
-import { NumberInputComponent } from '../../form/number-input/number-input.component';
-import { InputComponent } from '../../form/input/input.component';
-import { SelectComponent } from '../../form/select/select.component';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-inventory-armor',
-  imports: [TableComponent, AmountCellComponent, NumberInputComponent, InputComponent, SelectComponent, MatIcon],
+  imports: [TableComponent, AmountCellComponent, MatIcon],
   templateUrl: './inventory-armor.component.html',
   styleUrl: './inventory-armor.component.scss'
 })
@@ -33,11 +30,7 @@ export class InventoryArmorComponent implements AfterViewInit {
   @ViewChild('table') table?: TableComponent<InventoryItem<Armor>>;
 
   isSelect: boolean = false;
-  isAdd: boolean = false;
-  newItem = new InventoryItem<Armor>(new Armor());
-
-  get types(): string[] { return this.dataService.armorTypes; }
-  get locations(): string[] { return this.dataService.armorCoverLocations.filter(x => !this.newItem.item.locationCovered.includes(x)); }
+  newItemFactory = () => new InventoryItem<Armor>(new Armor());
 
   headCoverCl: number = 0;
   armsCoverCl: number = 0;
@@ -61,6 +54,22 @@ export class InventoryArmorComponent implements AfterViewInit {
     let equipColumn = this.inventoryTableColumns.find(x => x.property == "equip");
     if (equipColumn)
       equipColumn.template = this.equipTemplate;
+
+    let typeColumn = this.inventoryTableColumns.find(x => x.property == "item.type");
+    if (typeColumn)
+      typeColumn.editOptions = this.dataService.armorTypes;
+
+    let locationColumn = this.inventoryTableColumns.find(x => x.property == "item.locationCoveredText");
+    if (locationColumn)
+      locationColumn.editOptions = this.dataService.armorCoverLocations;
+  }
+
+  onEdited(item: InventoryItem<Armor>) {
+    item.item.updateTexts();
+    this.sort();
+    this.save();
+    this.table?.renderRows();
+    this.updateCoverCount();
   }
 
   sort() {
@@ -104,29 +113,13 @@ export class InventoryArmorComponent implements AfterViewInit {
     this.table?.renderRows();
   }
 
-  addCustom() {
-    this.newItem.isCustom = true;
-    this.newItem.item.updateTexts();
-    this.armor.push(this.newItem);
+  addCustom(item: InventoryItem<Armor>) {
+    item.isCustom = true;
+    item.item.updateTexts();
+    this.armor.push(item);
     this.sort();
     this.table?.renderRows();
     this.save();
-    this.cancelAddItem();
-  }
-
-  addLocation(value: string) {
-    this.newItem.item.locationCovered.push(value);
-  }
-
-  removeLocation(value: string) {
-    this.newItem.item.locationCovered = this.newItem.item.locationCovered.filter(x => x != value);
-  }
-
-  cancelAddItem() {
-    if (this.isAdd)
-      this.newItem = new InventoryItem<Armor>(new Armor());
-    this.isSelect = false;
-    this.isAdd = false;
   }
 
   save() {

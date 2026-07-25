@@ -8,64 +8,22 @@
   <app-inventory-ammo></app-inventory-ammo>
 }
 
-<app-table #weaponTable [items]="weapons" [columns]="weaponTableColumns" [sortProperties]="weaponSortProperties">
-  @if (isAddWeapon) {
-    <tr>
-      <td class="input-cell"><app-number-input inputName="new-amount" [(value)]="newWeapon.amount"></app-number-input></td>
-      <td></td>
-      <td class="input-cell"><app-input inputName="new-name" [(value)]="newWeapon.item.name"></app-input></td>
-      <td class="input-cell"><app-select inputName="new-type" [(value)]="newWeapon.item.type" [options]="weaponTypes"></app-select></td>
-      <td></td>
-      <td></td>
-      <td class="input-cell"><app-number-input inputName="new-damage" [(value)]="newWeapon.item.damage"></app-number-input></td>
-      <td class="input-cell">
-        <app-select inputName="new-effects" (valueChange)="addCustomProperty($event, 'Effect')" [options]="weaponEffects"></app-select>
-        <div>
-          @for (effect of newWeapon.item.effects; track $index) {
-            {{effect}}&nbsp;<span class="toggle-button" (click)="removeCustomProperty(effect, 'Effect')">x</span>
-          }
-        </div>
-      </td>
-      <td class="input-cell"><app-select inputName="new-damage-type" [(value)]="newWeapon.item.damageType" [options]="damageTypes"></app-select></td>
-      <td class="input-cell"><app-number-input inputName="new-rate" [(value)]="newWeapon.item.rate"></app-number-input></td>
-      <td class="input-cell"><app-select inputName="new-range" [(value)]="newWeapon.item.range" [options]="ranges"></app-select></td>
-      <td class="input-cell">
-        <app-select inputName="new-qualities" (valueChange)="addCustomProperty($event, 'Quality')" [options]="weaponQualities"></app-select>
-        <div>
-          @for (quality of newWeapon.item.qualities; track $index) {
-            {{quality}}&nbsp;<span class="toggle-button" (click)="removeCustomProperty(quality, 'Quality')">x</span>
-          }
-        </div>
-      </td>
-      <td class="input-cell">
-        <app-select inputName="new-ammo" (valueChange)="addCustomProperty($event, 'Ammo')" [options]="ammoTypes"></app-select>
-        <div>
-          @for (ammo of newWeapon.item.ammo; track $index) {
-            {{ammo}}&nbsp;<span class="toggle-button" (click)="removeCustomProperty(ammo, 'Ammo')">x</span>
-          }
-        </div>
-      </td>
-      <td class="input-cell"></td>
-      <td class="input-cell"><app-number-input inputName="new-weight" [(value)]="newWeapon.item.weight"></app-number-input></td>
-    </tr>
-  }
-</app-table>
+<app-table #weaponTable [items]="weapons" [columns]="weaponTableColumns" [sortProperties]="weaponSortProperties"
+          [editable]="true" (edited)="onEdited()"
+          [addable]="true" [newItemFactory]="newItemFactory" (added)="addCustomWeapon($event)"></app-table>
 
-@if (weapons.length == 0 && !isAddWeapon) {
+@if (weapons.length == 0 && !weaponTable.isAdding) {
   <div class="center-text">No weapon in inventory</div>
 }
 
 <div class="margin">
   <div class="button-container">
-    @if (!isSelectWeapon && !isAddWeapon) {
+    @if (!isSelectWeapon && !weaponTable.isAdding) {
       <button class="button" (click)="isSelectWeapon = true">Add</button>
-      <button class="button" (click)="isAddWeapon = true">Add Custom</button>
+      <button class="button" (click)="weaponTable.startAdd()">Add Custom</button>
     }
-    @else {
-      <button class="button" (click)="cancelAddWeapon()">Cancel</button>
-      @if (isAddWeapon) {
-        <button class="button" (click)="addCustomWeapon()">Add</button>
-      }
+    @else if (isSelectWeapon) {
+      <button class="button" (click)="isSelectWeapon = false">Cancel</button>
     }
   </div>
 

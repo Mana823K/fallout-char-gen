@@ -5,15 +5,13 @@ import { DataService } from '../../../services/data.service';
 import { InventoryService } from '../../../services/inventory.service';
 import { TableComponent } from '../../common/table/table.component';
 import { AmountCellComponent } from '../../common/amount-cell/amount-cell.component';
-import { NumberInputComponent } from '../../form/number-input/number-input.component';
-import { InputComponent } from '../../form/input/input.component';
 import { TableColumn } from '../../common/table/table-column';
 import { invMiscColumns } from './models/misc-columns';
 import { invMiscSelectColumns } from './models/misc-select-columns';
 
 @Component({
   selector: 'app-inventory-misc',
-  imports: [TableComponent, AmountCellComponent, NumberInputComponent, InputComponent],
+  imports: [TableComponent, AmountCellComponent],
   templateUrl: './inventory-misc.component.html',
   styleUrl: './inventory-misc.component.scss'
 })
@@ -30,11 +28,10 @@ export class InventoryMiscComponent implements AfterViewInit {
   @ViewChild('table') table?: TableComponent<InventoryItem<MiscellanyItem>>;
 
   isSelect: boolean = false;
-  isAdd: boolean = false;
-  newItem = new InventoryItem<MiscellanyItem>(new MiscellanyItem());
+  newItemFactory = () => new InventoryItem<MiscellanyItem>(new MiscellanyItem());
 
   constructor(private inventoryService: InventoryService, private dataService: DataService) { }
-  
+
   ngAfterViewInit(): void {
     let amountColumn = this.inventoryTableColumns.find(x => x.property == "amount");
     if (amountColumn)
@@ -52,19 +49,11 @@ export class InventoryMiscComponent implements AfterViewInit {
     this.table?.renderRows();
   }
 
-  addCustom() {
-    this.newItem.isCustom = true;
-    this.misc.push(this.newItem);
+  addCustom(item: InventoryItem<MiscellanyItem>) {
+    item.isCustom = true;
+    this.misc.push(item);
     this.table?.renderRows();
     this.save();
-    this.cancelAddItem();
-  }
-
-  cancelAddItem() {
-    if (this.isAdd)
-      this.newItem = new InventoryItem<MiscellanyItem>(new MiscellanyItem());
-    this.isSelect = false;
-    this.isAdd = false;
   }
 
   save() {

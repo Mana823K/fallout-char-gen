@@ -1,8 +1,9 @@
 <table class="table">
   <tr>
     <th *ngFor="let column of columns">{{column.label}}</th>
+    <th *ngIf="editable || addable"></th>
   </tr>
-    
+
   <tr>
     <td *ngFor="let column of columns">
       <app-input *ngIf="column.filterType == FilterTypeEnum.Text"
@@ -18,11 +19,29 @@
                   [(value)]="column.isAscending"
                   (valueChange)="sort()"></app-sort-td>
     </td>
+    <td *ngIf="editable || addable"></td>
   </tr>
 
-  <tr *ngFor="let item of displayedItems; let index = index" (click)="rowClicked.emit(item)" [ngClass]="{'pointer': rowClicked.observed}">
+  <tr *ngIf="addable && isAdding" (keydown.enter)="onAddKeydown($event)">
     <td *ngFor="let column of columns" [class]="column.align">
-      @if (column.template) {
+      @if (column.editType !== undefined) {
+        <ng-container [ngTemplateOutlet]="editCell"
+                      [ngTemplateOutletContext]="{ $implicit: newItem, column: column, id: 'new' }"></ng-container>
+      }
+    </td>
+    <td class="edit-cell">
+      <span class="toggle-button" (click)="confirmAdd()">&#10003;</span>
+      <span class="toggle-button" (click)="cancelAdd()">&#10005;</span>
+    </td>
+  </tr>
+
+  <tr *ngFor="let item of displayedItems; let index = index" (click)="rowClicked.emit(item)" (keydown.enter)="onEditKeydown($event, item)" [ngClass]="{'pointer': rowClicked.observed}">
+    <td *ngFor="let column of columns" [class]="column.align">
+      @if (editable && isEditingRow(item) && column.editType !== undefined) {
+        <ng-container [ngTemplateOutlet]="editCell"
+                      [ngTemplateOutletContext]="{ $implicit: item, column: column, id: index }"></ng-container>
+      }
+      @else if (column.template) {
         <ng-container
           *ngIf="column.template"
           [ngTemplateOutlet]="column.template"
@@ -32,6 +51,50 @@
         {{column.getText(item)}}
       }
     </td>
+    <td *ngIf="editable" class="edit-cell">
+      @if (isEditingRow(item)) {
+        <span class="toggle-button" (click)="confirmEdit(item)">&#10003;</span>
+      }
+      @else {
+        <span class="toggle-button" (click)="startEdit(item)">&#9998;</span>
+      }
+    </td>
   </tr>
   <ng-content></ng-content>
 </table>
+
+<ng-template #editCell let-item let-column="column" let-id="id">
+  @switch (column.editType) {
+    @case (EditTypeEnum.Text) {
+      <app-input [inputName]="column.property + '-edit-' + id"
+                 [value]="getEditValue(item, column)"
+                 (valueChange)="setEditValue(item, column, $event)"></app-input>
+    }
+    @case (EditTypeEnum.Number) {
+      <app-number-input [inputName]="column.property + '-edit-' + id"
+                        [value]="getEditValue(item, column)"
+                        (valueChange)="setEditValue(item, column, $event)"></app-number-input>
+    }
+    @case (EditTypeEnum.Select) {
+      <app-select [inputName]="column.property + '-edit-' + id"
+                  [options]="column.editOptions"
+                  [value]="getEditValue(item, column)"
+                  (valueChange)="setEditValue(item, column, $event)"></app-select>
+    }
+    @case (EditTypeEnum.Checkbox) {
+      <mat-checkbox class="checkbox"
+                    [ngModel]="getEditValue(item, column)"
+                    (ngModelChange)="setEditValue(item, column, $event)"></mat-checkbox>
+    }
+    @case (EditTypeEnum.Multiselect) {
+      <app-select [inputName]="column.property + '-edit-' + id"
+                  [options]="availableEditOptions(item, column)"
+                  (valueChange)="addEditValue(item, column, $event)"></app-select>
+      <div>
+        @for (value of getEditValue(item, column); track $index) {
+          {{value}}&nbsp;<span class="toggle-button" (click)="removeEditValue(item, column, value)">x</span>
+        }
+      </div>
+    }
+  }
+</ng-template>

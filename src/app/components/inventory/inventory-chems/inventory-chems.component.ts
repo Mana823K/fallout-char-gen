@@ -1,9 +1,6 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core';
 import { TableComponent } from '../../common/table/table.component';
 import { AmountCellComponent } from '../../common/amount-cell/amount-cell.component';
-import { NumberInputComponent } from '../../form/number-input/number-input.component';
-import { InputComponent } from '../../form/input/input.component';
-import { SelectComponent } from '../../form/select/select.component';
 import { InventoryItem } from '../../../models/inventory/inventory';
 import { Chem } from '../../../models/database/chem';
 import { InventoryService } from '../../../services/inventory.service';
@@ -14,7 +11,7 @@ import { invChemsSelectColumns } from './models/chem-select-columns';
 
 @Component({
   selector: 'app-inventory-chems',
-  imports: [TableComponent, AmountCellComponent, NumberInputComponent, InputComponent, SelectComponent],
+  imports: [TableComponent, AmountCellComponent],
   templateUrl: './inventory-chems.component.html',
   styleUrl: './inventory-chems.component.scss'
 })
@@ -26,18 +23,15 @@ export class InventoryChemsComponent implements AfterViewInit {
   inventoryTableColumns: TableColumn<InventoryItem<Chem>>[] = invChemsColumns;
   selectTableColumns: TableColumn<Chem>[] = invChemsSelectColumns;
   sortProperties = ["name"];
-  
+
   @ViewChild('amount') amountTemplate?: TemplateRef<any>;
   @ViewChild('table') table?: TableComponent<InventoryItem<Chem>>;
 
   isSelect: boolean = false;
-  isAdd: boolean = false;
-  newItem = new InventoryItem<Chem>(new Chem());
-
-  durations: string[] = ["Instant", "Lasting", "Brief"];
+  newItemFactory = () => new InventoryItem<Chem>(new Chem());
 
   constructor(private inventoryService: InventoryService, private dataService: DataService) { }
-  
+
   ngAfterViewInit(): void {
     let amountColumn = this.inventoryTableColumns.find(x => x.property == "amount");
     if (amountColumn)
@@ -55,19 +49,11 @@ export class InventoryChemsComponent implements AfterViewInit {
     this.table?.renderRows();
   }
 
-  addCustom() {
-    this.newItem.isCustom = true;
-    this.chems.push(this.newItem);
+  addCustom(item: InventoryItem<Chem>) {
+    item.isCustom = true;
+    this.chems.push(item);
     this.table?.renderRows();
     this.save();
-    this.cancelAddItem();
-  }
-
-  cancelAddItem() {
-    if (this.isAdd)
-      this.newItem = new InventoryItem<Chem>(new Chem());
-    this.isSelect = false;
-    this.isAdd = false;
   }
 
   save() {
