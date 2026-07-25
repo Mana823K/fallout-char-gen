@@ -6,5 +6,12 @@
   <p class="toggle-button" [ngClass]="{'active-toggle-button': selectedTable == 'magazines'}" (click)="navigateTo('magazines')">Magazines</p>
   <p class="toggle-button" [ngClass]="{'active-toggle-button': selectedTable == 'miscellany'}" (click)="navigateTo('miscellany')">Miscellany</p>
   <p class="weight"><strong>Carried Weight:</strong> {{inventoryWeight}} / {{carryWeight}}</p>
+  <div class="caps">
+    <strong>Caps:</strong>
+    <app-number-input inputName="caps"
+                      [value]="caps"
+                      [min]="0"
+                      (valueChange)="onCapsChange($event)"></app-number-input>
+  </div>
 </div>
 <router-outlet></router-outlet>

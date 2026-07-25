@@ -16,7 +16,12 @@ export class Inventory {
   chems: InventoryItem<Chem>[] = [];
   magazines: InventoryItem<Magazine>[] = [];
   misc: InventoryItem<MiscellanyItem>[] = [];
+  caps: number = 0;
 }
+
+export type InventoryListName = {
+  [K in keyof Inventory]: Inventory[K] extends InventoryItem<any>[] ? K : never
+}[keyof Inventory];
 
 export class InventoryItem<T> {
   item: T;
@@ -39,6 +44,7 @@ export class InventorySaveData {
   chems: InventoryItemData<Chem>[] = [];
   magazines: InventoryItemData<Magazine>[] = [];
   misc: InventoryItemData<MiscellanyItem>[] = [];
+  caps: number = 0;
 
   constructor(original: Inventory) {
     this.weapons = original.weapons.map<InventoryItemData<Weapon>>(item => new InventoryItemData<Weapon>(item, (x) => x.name));
@@ -48,6 +54,7 @@ export class InventorySaveData {
     this.chems = original.chems.map<InventoryItemData<Chem>>(item => new InventoryItemData<Chem>(item, (x) => x.name));
     this.magazines = original.magazines.map<InventoryItemData<Magazine>>(item => new InventoryItemData<Magazine>(item, (x) => x.name));
     this.misc = original.misc.map<InventoryItemData<MiscellanyItem>>(item => new InventoryItemData<MiscellanyItem>(item, (x) => x.name));
+    this.caps = original.caps;
   }
 }
 

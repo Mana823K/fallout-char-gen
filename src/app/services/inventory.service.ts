@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { DataService } from "./data.service";
-import { Inventory, InventoryItem, InventoryItemData, InventorySaveData } from "../models/inventory/inventory";
+import { Inventory, InventoryItem, InventoryItemData, InventoryListName, InventorySaveData } from "../models/inventory/inventory";
 import _ from "lodash";
 
 @Injectable({
@@ -26,6 +26,7 @@ export class InventoryService {
       this.inventory.chems = saveData.chems.flatMap(x => this.initItem(x, this.dataService.chems, y => y.name));
       this.inventory.magazines = saveData.magazines.flatMap(x => this.initItem(x, this.dataService.magazines, y => y.name));
       this.inventory.misc = saveData.misc.flatMap(x => this.initItem(x, this.dataService.miscellanyItems, y => y.name));
+      this.inventory.caps = saveData.caps ?? 0;
     }
 
     this.calculateWeight();
@@ -56,7 +57,7 @@ export class InventoryService {
     this.calculateWeight();
   }
 
-  addItem<T>(item: T, listName: keyof Inventory, matchProperties: (keyof T)[]) {
+  addItem<T>(item: T, listName: InventoryListName, matchProperties: (keyof T)[]) {
     let list: any [] = this.inventory[listName];
     let existingItem = list.find(x => {
       for (let property of matchProperties) {
@@ -76,7 +77,7 @@ export class InventoryService {
     this.save();
   }
 
-  removeItem<T>(item: InventoryItem<T>, listName: keyof Inventory, matchProperties: (keyof T)[]) {
+  removeItem<T>(item: InventoryItem<T>, listName: InventoryListName, matchProperties: (keyof T)[]) {
     let filteredList: any[] = this.inventory[listName].filter(x => {
       for (let property of matchProperties) {
         if (item.item[property] != _.get(x.item, property))

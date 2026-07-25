@@ -4,10 +4,11 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Inventory } from '../../models/inventory/inventory';
 import { InventoryService } from '../../services/inventory.service';
 import { CharacterService } from '../../services/character.service';
+import { NumberInputComponent } from '../form/number-input/number-input.component';
 
 @Component({
   selector: 'app-inventory',
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, NumberInputComponent],
   templateUrl: './inventory.component.html',
   styleUrl: './inventory.component.scss'
 })
@@ -16,6 +17,7 @@ export class InventoryComponent {
 
   get inventoryWeight(): number { return this.inventoryService.weight; }
   get carryWeight(): number { return this.characterService.character.stats.carryWeight; }
+  get caps(): number { return this.inventoryService.inventory.caps; }
 
   get selectedTable(): string { return this.router.url.split("/").pop() ?? ""; }
 
@@ -26,6 +28,11 @@ export class InventoryComponent {
 
   navigateTo(path: string) {
     this.router.navigate([path], {relativeTo: this.route});
+  }
+
+  onCapsChange(value: number) {
+    this.inventoryService.inventory.caps = value;
+    this.inventoryService.save();
   }
 
 }
