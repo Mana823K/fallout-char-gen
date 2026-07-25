@@ -698,7 +698,7 @@
     "damageType": "Physical",
     "rate": 0,
     "range": "",
-    "qualities": [],
+    "qualities": ["Two-Handed"],
     "ammo": [],
     "weight": 12,
     "cost": 40,
